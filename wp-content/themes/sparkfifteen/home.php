@@ -26,7 +26,14 @@ $sparkHeader = new SparkHeader(array(
   ,'isJs'         =>  false
 ));
 
+//Get Gallery Using SparkGallery Class
+global $sparkGallery;
+$sparkGallery = new SparkGallery(array(
+  'template'     =>  'rotator' //Name of Gallery template
+));
+
 $context['header'] = $sparkHeader::getView();
+$context['gallery'] = $sparkGallery::getView();
 
 
 

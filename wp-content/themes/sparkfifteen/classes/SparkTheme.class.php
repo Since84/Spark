@@ -17,6 +17,7 @@ class SparkTheme {
 		require_once(get_template_directory().'/functions/nav.php');
 		require_once(get_template_directory().'/functions/sidebars.php');
 		require_once(get_template_directory().'/functions/post_types.php');
+		require_once(get_template_directory().'/functions/hooks_filters.php');
 
 		// Theme Support
 		add_theme_support( 'custom-header' );

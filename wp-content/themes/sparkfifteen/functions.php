@@ -12,16 +12,17 @@
   * Class Autoloader
   * autoloads classes from all files
 **/
-	function my_autoloader($class) {
+  function my_autoloader($class) {
       if ( $class != "ACF" )
-	     include 'classes/' . $class . '.class.php';
-	}
+       include 'classes/' . $class . '.class.php';
+  }
 
-	spl_autoload_register('my_autoloader');
+  spl_autoload_register('my_autoloader');
+
 
 /**
   * Include Spark Class
   * Base class for all spark functions and definitions
 **/
-	global $sparkTheme;
-	$sparkTheme = new SparkTheme();
+  global $sparkTheme;
+  $sparkTheme = new SparkTheme();
