@@ -1,7 +1,7 @@
 footer.spark_region{
 	background: $purple4;
 	padding: 80px 0; 
-	section{
+	& > section, & > ul{
 		@include container;
 		&.footer-heading{
 			text-align: center;
@@ -19,22 +19,48 @@ footer.spark_region{
 	}
 	.footer-content{
 		background: $lightgray;
+		padding: 0;
+		white-space: nowrap;
+		padding-bottom: 40px;
 		li{
 			display: inline-block;
 			vertical-align: top;
 			width: 33.1%;
+			white-space: normal;
+			padding: 0 20px;
 
 			h2{
 				@include h4;
 				color: $purple3;
-				margin: 1em 0;
+				margin: 1em 0 .5em;
 			}
 
 			&.twitter, &.newsletter {
-				border-top: 20px solid $purple4;
+				border-top: 50px solid $purple4;
+			}
+			&.petition {
+				padding-top: 30px;
+				.text {
+					background: $purple1;
+					padding: 30px;
+					color: white;
+					text-align: center;
+					a{
+						display: block;
+						color: white;
+						margin: 5px;
+					}
+				}
 			}
 			&.twitter {
-
+				.widget_display-latest-tweets{
+					padding: 0;
+					@include h7;
+					li {
+						width: 100%;
+						padding: 0;
+					}
+				}
 			}
 		}
 	}

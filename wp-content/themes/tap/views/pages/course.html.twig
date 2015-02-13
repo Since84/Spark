@@ -15,6 +15,9 @@
 				<h2>Duration</h2>
 				<span>{{page.duration}} wks</span>
 			</li>
+			<li class="share">
+				
+			</li>
 		</ul>
 		<ul class="course-locations">
 			{% for location in page.get_field('location') %}
@@ -22,7 +25,16 @@
 				{{location.city}}
 			</li>
 			{% endfor %}
-		</ul>		
+		</ul>	
+		<ul class="course-schedules">
+			{% for schedule in page.get_field('schedule') %}
+			<li>
+				<h4>{{schedule.location}}</h4>
+				{{schedule.date}}
+
+			</li>
+			{% endfor %}
+		</ul>	
 </section>
 
 

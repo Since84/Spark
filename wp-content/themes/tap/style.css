@@ -4,6 +4,8 @@
 body,html{
 	background: white;
 	height: 100%;
+	font-size: 14px;
+	font-family: "merriweather";
 }
 
 /* header  */
@@ -16,8 +18,9 @@ header{
 	background: #5d839e;
 }
 
+
 header h1{
-	font-size: 100px
+	font-size: 100px;
 }
 
 header h2{
@@ -26,6 +29,7 @@ header h2{
 header a{
 	color: white;
 	text-decoration: none;
+	display: block;
 }
 
 header a:visited{
@@ -41,10 +45,35 @@ header img{
 	height: auto;
 }
 
+header:not(.home){
+	height: auto;
+	position: relative;
+	text-align: left;
+	padding: 20px 40px;
+	background: white;
+	border:1px solid #5d839e;
+}
+
+header:not(.home) img {
+	width: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+header:not(.home) h1{
+	font-size: 50px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 40px;
+	color: #5d839e;
+
+}
+header:not(.home) h2{
+	display:none;
+}
 /*navigation */
 nav{
 	background: white;
-	visibility: hidden;  
+	display:none;  
 }
 
 nav a{
@@ -75,3 +104,20 @@ nav a{
 	width: 45%
 }
 	
+.page-title{
+	color: #5d839e;
+	font-size:40px;
+	padding: 20px;
+}
+
+.course-description{
+	padding: 20px;
+}
+
+.price, .duration{
+	font-weight: 700;
+	display: inline-block;
+	font-size:40px;
+	padding:20px;
+	width: 300px;
+}

@@ -600,7 +600,7 @@ footer.spark_region {
   padding: 80px 0;
 }
 /* line 4, style/components/_footer.scss */
-footer.spark_region section {
+footer.spark_region > section, footer.spark_region > ul {
   display: block;
   margin: auto;
   width: 1200px;
@@ -608,12 +608,12 @@ footer.spark_region section {
   position: relative;
 }
 /* line 6, style/components/_footer.scss */
-footer.spark_region section.footer-heading {
+footer.spark_region > section.footer-heading, footer.spark_region > ul.footer-heading {
   text-align: center;
   margin-bottom: 3em;
 }
 /* line 9, style/components/_footer.scss */
-footer.spark_region section.footer-heading h2 {
+footer.spark_region > section.footer-heading h2, footer.spark_region > ul.footer-heading h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -623,7 +623,7 @@ footer.spark_region section.footer-heading h2 {
   margin-bottom: .25em;
 }
 /* line 14, style/components/_footer.scss */
-footer.spark_region section.footer-heading h4 {
+footer.spark_region > section.footer-heading h4, footer.spark_region > ul.footer-heading h4 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
@@ -632,14 +632,19 @@ footer.spark_region section.footer-heading h4 {
 /* line 20, style/components/_footer.scss */
 footer.spark_region .footer-content {
   background: #dedade;
+  padding: 0;
+  white-space: nowrap;
+  padding-bottom: 40px;
 }
-/* line 22, style/components/_footer.scss */
+/* line 25, style/components/_footer.scss */
 footer.spark_region .footer-content li {
   display: inline-block;
   vertical-align: top;
   width: 33.1%;
+  white-space: normal;
+  padding: 0 20px;
 }
-/* line 27, style/components/_footer.scss */
+/* line 32, style/components/_footer.scss */
 footer.spark_region .footer-content li h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -647,9 +652,41 @@ footer.spark_region .footer-content li h2 {
   font-weight: 700;
   font-size: 38px;
   color: #6b0269;
-  margin: 1em 0;
+  margin: 1em 0 .5em;
 }
-/* line 33, style/components/_footer.scss */
+/* line 38, style/components/_footer.scss */
 footer.spark_region .footer-content li.twitter, footer.spark_region .footer-content li.newsletter {
-  border-top: 20px solid #81026e;
+  border-top: 50px solid #81026e;
+}
+/* line 41, style/components/_footer.scss */
+footer.spark_region .footer-content li.petition {
+  padding-top: 30px;
+}
+/* line 43, style/components/_footer.scss */
+footer.spark_region .footer-content li.petition .text {
+  background: #380d36;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+/* line 48, style/components/_footer.scss */
+footer.spark_region .footer-content li.petition .text a {
+  display: block;
+  color: white;
+  margin: 5px;
+}
+/* line 56, style/components/_footer.scss */
+footer.spark_region .footer-content li.twitter .widget_display-latest-tweets {
+  padding: 0;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+}
+/* line 59, style/components/_footer.scss */
+footer.spark_region .footer-content li.twitter .widget_display-latest-tweets li {
+  width: 100%;
+  padding: 0;
 }
