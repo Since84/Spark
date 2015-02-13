@@ -24,6 +24,7 @@
 <?php
 $context=Timber::get_context();
 $context['header_image'] = get_header_image();
+$context['hero'] = get_field('home_hero', 'option');
 $navContext["spark_class"] = "home-nav"; //This is a key inside the template that adds "main-nav" as a class to the nav element;
 $navContext["nav"] = new TimberMenu('main-nav');// "main-nav" here is the slug for the menu we created in the admin, they're different, they just have the same name
 $context["nav"]= Timber::compile('/views/components/nav.html.twig', $navContext);

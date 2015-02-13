@@ -1,11 +1,25 @@
 /* Theme Name: TAP15 */
 /* Template: Spark15 */
 
+/*
+Colors 
+#ededf5 light gray
+#afcae6 light blue
+#5d839e mid blue
+#25334f dark blue
+*/
+
+
 body,html{
 	background: white;
 	height: 100%;
-	font-size: 14px;
-	font-family: "merriweather";
+	font-size: 16px;
+	font-family: "freight-sans-pro";
+	padding-bottom: 400px;
+}
+
+p{
+	line-height: 1.4em;
 }
 
 /* header  */
@@ -14,22 +28,52 @@ header{
 	text-align: center;
 	font-size: 20;
 	padding: 40px;
-	height: 75%;
-	background: #5d839e;
+	height: 59%;
+	background: #25334f;
+	overflow: hidden;
+	font-family: "quatro-slab";
+	font-size: 60%;
 }
 
 
 header h1{
-	font-size: 100px;
+	font-size: 8vw;
+	font-family: "quatro-slab";
+	margin-bottom: 8px;
 }
 
 header h2{
-	font-size: 70px;
+	font-size: 4.5vw;
+	font-family: "quatro-slab";
 }
 header a{
 	color: white;
 	text-decoration: none;
 	display: block;
+	position: absolute;
+	top: 15em;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	z-index: 10;
+	transition: .25s color ease-in-out;
+	width: 100vw;
+	height: 70vw;
+}
+
+header::after {
+	content: "";
+	background-image: url('../../uploads/tap/2015/02/relief.jpg');
+	opacity: .06;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: 0;   
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 
 header a:visited{
@@ -37,15 +81,16 @@ header a:visited{
 }
 
 header a:hover{
-	color: #b39e8c;
+	color: #afcae6;
 }
 
 header img{
-	width: 400px;
+	width: 40%;
 	height: auto;
+	max-width: 200px;
 }
 
-header:not(.home){
+body:not(.home) header{
 	height: auto;
 	position: relative;
 	text-align: left;
@@ -54,12 +99,12 @@ header:not(.home){
 	border:1px solid #5d839e;
 }
 
-header:not(.home) img {
+body:not(.home) header img {
 	width: 50px;
 	display: inline-block;
 	vertical-align: middle;
 }
-header:not(.home) h1{
+body:not(.home) header h1{
 	font-size: 50px;
 	display: inline-block;
 	vertical-align: middle;
@@ -67,26 +112,69 @@ header:not(.home) h1{
 	color: white;
 
 }
-header:not(.home) h2{
+body:not(.home) header h2{
 	display:none;
 }
 /*navigation */
 nav{
-	background: white;
-	display:none;  
+	max-height: 0;
+	width: 100%;
+	position: fixed;
+	bottom: 124px;
+	overflow: hidden;
+	z-index: 20;
+	padding-top: 30px;
+	background: #afcae6;
+	transition: .5s all ease-in-out;
+}
+
+nav:before {
+	content: '\f077';
+	font-family: "FontAwesome";
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: 0;
+	right: 0;
+	margin: auto;	
+	width: 1em;
+	color: #ededf5;
+	transition: .25s all ease-in-out;
+}
+
+nav.open {
+	max-height: 1000px;
+}
+
+nav.open:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 nav a{
 	text-decoration: none;
 	color: #5d839e;
+	background: #ededf5;
+	display: block;
+	width: 100%;
+	padding: 13px 20px;
+	font-size: 22px;
+	border-bottom: 1px solid #afcae6;
 }
 
+
+
 .location {
-	border-bottom: 1px solid #5d839e;
+	border-bottom: 1px solid #ededf5s;
+	color: white;
 }
 .address, .contact, .contact li {
 	display: inline-block;
 	vertical-align: middle;
+	color: white;
 }
 
 .address{
@@ -103,58 +191,276 @@ nav a{
 .contact li{
 	width: 45%
 }
-	
+
 .page-title{
 	color: #5d839e;
-	font-size:40px;
-	padding: 20px;
+	font-size: 29px;
+	padding: 20px 0;
 }
 
 .course-description{
-	padding: 20px;
+	padding: 0px 0px;
 }
 
 .price, .duration{
-	font-weight: 700;
+	font-weight: 500;
 	display: inline-block;
-	font-size:40px;
-	padding:20px;
-	width: 250px;
+	font-size: 16px;
+	padding: 20px 20px 20px 0;
+	width: auto;
+	
+}
+
+.price h2, .duration h2 {
+	margin-bottom: 5px;
+}
+
+.price span, .duration span {
+	font-weight: 600
+}
+
+.course-locations{
+	white-space: nowrap;	
+	text-align: left;
+	background: #ededf5;
 }
 
 .course-locations li{
 	display: inline-block;
-	width: 45%;
-	background: #D9D9D9;
+	width: auto;
 	font-weight: 500;
-	padding: 15px;
-	font-size:40px;
+	padding: 8px 10px;
+	font-size:20px;
+	text-align: left;
+	border-right: 10px solid white;
 }
 
 .course-schedules li{
 	padding: 20px;
 	border-bottom: 1px solid #5d839e;
+	position: relative;
 }
 
 .address, .contact{
 	padding: 20px;
-	width: 400px;
+	width: 40%;
 
 }
 .address{
 	font-size: 30px;
+	padding-left: 1em;
 }
 .contact a{
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 40px;
 }
 
+
+/* Course List */
+.course-list a{
+	text-decoration: none;
+	color: #25334f;
+}
+
+.course-list h2{
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.course-summary{
+	border-top: 1px solid #5d839e;
+}
+
+.course-summary p {
+	width: 70%;
+	font-size: 14px;
+	height: 3em;
+	overflow: hidden;
+}
+
+.course-summary::after {
+	content: '\f054';
+	position: absolute;
+	display: inline-block;
+	right: 24px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	color: #ededf5;
+	font-family: "FontAwesome";
+	height: 1em;
+	font-size: 40px;
+}
+
+article, .course {
+	max-width: 900px;
+	margin: auto;
+}
+
+.course p, article p {
+	max-width: 540px;
+	margin-bottom: 1.25em;
+}
+
+article h2 {
+	font-size: 1.25em;
+	margin-bottom: .5em;
+}
+
+section.spark-text-block.mission-statement {
+	padding: 30px;
+	font-size: 18px;
+	line-height: 1.4em;
+	display: block;
+	margin: auto;
+}
+
+@media screen and ( max-width: 900px ){
+	article, .course {
+		padding: 40px;
+	}		
+}
+
+/* Footer */
 footer {
 	position: fixed;
 	bottom: 0;
 	z-index: 100;
-	border-top: 1px solid #5d839e;
+	border-top: 1px solid white;
 	width: 100%;
+	background: #25334f;
+}
+footer > ul {
+	text-align: center;
+}
 
+footer > ul > li {
+	max-width: 400px;
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+}
+
+section.spark-text-block.mission-statement {
+	padding: 60px 0 100px;
+	font-size: 20px;
+	max-width: 640px;
+	text-align: center;
+}
+
+section.spark-text-block.mission-statement a {
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+	margin-top: 1em;
+	padding: 15px 40px;
+	border-radius: 3px;
+	color: #5d839e;
+	/*background: #5d839e;*/
+	clear: both;
+	text-decoration: none;
+	border: 2px solid #5d839e;
+	text-transform: uppercase;
+	transition: all .25s ease-in-out;
+}
+
+section.spark-text-block.mission-statement a:hover {
+	color: white;
+	background: #5d839e; 
+}
+
+
+footer .location a, footer .address{
+	font-size: 14px;
+	padding: 10px 15px;
+}
+
+
+footer .contact {
+	text-align: right;
+}
+
+footer .contact a{
+	font-size: 20px;
+	color: #afcae6;
+	border: 1px solid #afcae6;
+	border-radius: 3px;
+	transition: .25s all ease-in-out;
+}
+
+footer .contact a:hover{
+	background-color: #afcae6;
+	color: #25334f;
+}
+
+
+@media screen and ( max-width: 815px ){
+
+	.page-title {
+		padding: 0 0 20px 0;
+	}
+	header a {
+		top: 7em;
+	}
+
+	section.spark-text-block.mission-statement {
+		padding: 35px; 
+	
+		text-align: left;
+}
+}
+
+@media screen and ( min-width: 815px ){
+
+	footer > ul > li:first-child{
+		border-right: 1px solid #fff;
+	}
+
+	header {
+		height: 95%;
+		overflow: hidden;
+	} 
+	header a {
+		height: auto;
+	}
+
+	header h1 {
+		font-size: 5em;
+	}
+	header h2 {
+		font-size: 4em;
+	}
+
+	nav {
+		top: 33px;
+		padding: 0;
+		height: auto;
+		width:100%;
+		background: rgba(237, 237, 245, 0.06);
+		bottom:  auto;
+		border-bottom: none;
+		text-align: center;
+	
+		max-height: none;
+}
+
+	nav a {
+		border: none;
+
+		background: none;
+		color:  white;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 500;
+		padding: 15px 25px;
+	}
+
+	nav li {
+		display: inline-block;
+		border-bottom: none;
+	}
+
+	nav:before { content: '';}
 }
