@@ -1,0 +1,22 @@
+<footer>
+	<ul>
+		{% for location in locations %}
+		<li class="location">
+			<div class="address">
+				<p>{{location.city}}</p>
+				<p>{{location.address}}</p>
+				<P>{{location.address2}}</P>
+			</div>
+			<ul class="contact">
+				<li>
+					<a href="{{location.email}}">Email</a>
+				</li>
+				<li>
+					<a href="{{location.phone}}">Phone</a>
+				</li>
+			</ul>
+			
+		</li>
+		{% endfor %}	
+	</ul>
+</footer>

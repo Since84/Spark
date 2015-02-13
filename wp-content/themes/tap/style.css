@@ -1,10 +1,28 @@
 /* Theme Name: TAP15 */
 /* Template: Spark15 */
 
-body{
+body,html{
+	background: white;
+	height: 100%;
+}
+
+/* header  */
+
+header{
+	text-align: center;
+	font-size: 20;
+	padding: 40px;
+	height: 75%;
 	background: #5d839e;
 }
 
+header h1{
+	font-size: 100px
+}
+
+header h2{
+	font-size: 70px;
+}
 header a{
 	color: white;
 	text-decoration: none;
@@ -18,30 +36,42 @@ header a:hover{
 	color: #b39e8c;
 }
 
+header img{
+	width: 400px;
+	height: auto;
+}
 
-/* Main Nav */
-nav.main-nav{}
+/*navigation */
+nav{
+	background: white;
+	visibility: hidden;  
+}
 
-nav.main-nav ul{}
+nav a{
+	text-decoration: none;
+	color: #5d839e;
+}
 
-nav.main-nav li{}
+.location {
+	border-bottom: 1px solid #5d839e;
+}
+.address, .contact, .contact li {
+	display: inline-block;
+	vertical-align: middle;
+}
 
-nav.main-nav ul li a{}
+.address{
+	width: 60%;
+	padding: 10px;
+	
 
-HERE!!!
-5 Navs on the Page
-nav { background: black; }
+}
 
-.main-nav { background: red; }
+.contact{
+	width: 30%;
+}
 
-
-4 Black Navs 
-1 Red Nav
-Yo 
-
-
-
-
-
-
-
+.contact li{
+	width: 45%
+}
+	
