@@ -6,7 +6,23 @@
 <section class="course">
 	<h2 class="course-title page-title">{{page.post_title}}</h2>
 	<div class="course-description">{{page.post_content}}</div>
-	<div>
-		<ul>
-			<li>{{}}
+		<ul> 
+			<li class="price">
+				<h2>Price</h2>
+				<span>${{page.price}}</span>
+			</li>
+			<li class="duration">
+				<h2>Duration</h2>
+				<span>{{page.duration}} wks</span>
+			</li>
+		</ul>
+		<ul class="course-locations">
+			{% for location in page.get_field('location') %}
+			<li>
+				{{location.city}}
+			</li>
+			{% endfor %}
+		</ul>		
 </section>
+
+

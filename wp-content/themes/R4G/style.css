@@ -593,3 +593,63 @@ section.our_mission .container {
 .featured-news .slide:not(:nth-child(3n)) {
   margin-right: 50px;
 }
+
+/* line 1, style/components/_footer.scss */
+footer.spark_region {
+  background: #81026e;
+  padding: 80px 0;
+}
+/* line 4, style/components/_footer.scss */
+footer.spark_region section {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 6, style/components/_footer.scss */
+footer.spark_region section.footer-heading {
+  text-align: center;
+  margin-bottom: 3em;
+}
+/* line 9, style/components/_footer.scss */
+footer.spark_region section.footer-heading h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  color: #21e3db;
+  margin-bottom: .25em;
+}
+/* line 14, style/components/_footer.scss */
+footer.spark_region section.footer-heading h4 {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+}
+/* line 20, style/components/_footer.scss */
+footer.spark_region .footer-content {
+  background: #dedade;
+}
+/* line 22, style/components/_footer.scss */
+footer.spark_region .footer-content li {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.1%;
+}
+/* line 27, style/components/_footer.scss */
+footer.spark_region .footer-content li h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  color: #6b0269;
+  margin: 1em 0;
+}
+/* line 33, style/components/_footer.scss */
+footer.spark_region .footer-content li.twitter, footer.spark_region .footer-content li.newsletter {
+  border-top: 20px solid #81026e;
+}

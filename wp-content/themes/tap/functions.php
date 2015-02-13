@@ -20,3 +20,25 @@
 	$stylesheet_uri = "/wp/Spark15/Site/".$stylesheet_dir_uri;
 	return $stylesheet_uri;
 	}
+
+
+
+	//Course Post Type
+
+	add_action('init','create_post_type' );
+	function create_post_type(){
+		register_post_type('course_page',
+			array(
+				'labels' => array(
+					'name'=>__('Courses'),
+					'singular_name' =>__('Course')
+					),
+				'public'=> true,
+				'has_archive'=> true,
+				)
+		);
+		}
+
+
+
+

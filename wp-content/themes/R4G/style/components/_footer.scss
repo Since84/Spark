@@ -1,0 +1,41 @@
+footer.spark_region{
+	background: $purple4;
+	padding: 80px 0; 
+	section{
+		@include container;
+		&.footer-heading{
+			text-align: center;
+			margin-bottom: 3em;
+			h2 {
+				@include h2;
+				color: $teal;
+				margin-bottom: .25em;
+			}
+			h4{
+				@include short-body; 
+				color: white;
+			}
+		}
+	}
+	.footer-content{
+		background: $lightgray;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 33.1%;
+
+			h2{
+				@include h4;
+				color: $purple3;
+				margin: 1em 0;
+			}
+
+			&.twitter, &.newsletter {
+				border-top: 20px solid $purple4;
+			}
+			&.twitter {
+
+			}
+		}
+	}
+}
