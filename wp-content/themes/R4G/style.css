@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/* 
+ *	Theme Name: Rights for Girls 15
+ *	Author:	Damon ( Elefint )
+ *	Description: Child Theme of Spark15 for Rights For Girls
+ *	Version: 0.1
+ *	Template: Spark15 
+ */
+/* Rights For Girls Color Palette */
+/* icons */
+/* graphics */
+/* Rights For Girls Typography Variables and Mixins */
+/** Base Styles for Rights for Girls **/
+/* line 31, style/_base.scss */
+body.rights_app {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+}
+/* line 34, style/_base.scss */
+body.rights_app * {
+  box-sizing: border-box;
+}
+/* line 38, style/_base.scss */
+body.rights_app .container {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+
+/** Header Styles **/
+/* line 3, style/components/_header.scss */
+header.spark-header {
+  background: #2f2f2f;
+  white-space: nowrap;
+}
+/* line 7, style/components/_header.scss */
+header.spark-header .left-container {
+  width: 360px;
+  display: inline-block;
+  margin-left: -3px;
+}
+/* line 11, style/components/_header.scss */
+header.spark-header .site-logo {
+  display: inline-block;
+  width: 200px;
+  height: 35px;
+  background: url("style/images/logo.png") no-repeat;
+  background-size: contain;
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+/* line 19, style/components/_header.scss */
+header.spark-header .site-logo::before {
+  content: "";
+  display: inline-block;
+  margin-left: -2rem;
+  vertical-align: middle;
+  font-family: "FontAwesome";
+  color: #81026e;
+}
+/* line 27, style/components/_header.scss */
+header.spark-header .site-logo:hover {
+  background-image: url("style/images/logo_hover.png");
+}
+/* line 29, style/components/_header.scss */
+header.spark-header .site-logo:hover::before {
+  color: #ff00ff;
+}
+/* line 35, style/components/_header.scss */
+header.spark-header .right-container {
+  width: 360px;
+  display: inline-block;
+  margin-left: -3px;
+  margin-left: 360px;
+}
+/* line 40, style/components/_header.scss */
+header.spark-header .social li {
+  display: inline-block;
+  margin-right: 1em;
+  text-align: center;
+}
+/* line 44, style/components/_header.scss */
+header.spark-header .social li a {
+  color: #81026e;
+  text-decoration: none;
+}
+/* line 47, style/components/_header.scss */
+header.spark-header .social li a::before {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  font-family: "FontAwesome";
+  color: #81026e;
+}
+/* line 55, style/components/_header.scss */
+header.spark-header .social li a:hover::before {
+  color: #21e3db;
+}
+/* line 60, style/components/_header.scss */
+header.spark-header .social li.twitter a::before {
+  content: "";
+}
+/* line 61, style/components/_header.scss */
+header.spark-header .social li.facebook a::before {
+  content: "";
+}
+/* line 62, style/components/_header.scss */
+header.spark-header .social li.mail a::before {
+  content: "";
+}
+/* line 63, style/components/_header.scss */
+header.spark-header .social li.donate a {
+  background: #c4c2c7;
+  padding: 25px 40px;
+  display: inline-block;
+}
+/* line 67, style/components/_header.scss */
+header.spark-header .social li.donate a::hover {
+  background: #dedade;
+}
+/* line 70, style/components/_header.scss */
+header.spark-header .social li.donate a::before {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  color: #81026e;
+}
+
+/* line 2, style/components/_mainnav.scss */
+nav.full-width-nav {
+  position: relative;
+  z-index: 1;
+  background: #4a1249;
+}
+/* line 7, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li {
+  display: inline-block;
+  margin-right: 80px;
+  padding: 10px 0;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+}
+/* line 13, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li a {
+  text-decoration: none;
+  color: white;
+}
+/* line 19, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop {
+  position: absolute;
+  background: #380d36;
+  width: 100%;
+  left: 0;
+  padding: 0 60px;
+  line-height: 1.5rem;
+  z-index: -1;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  transition: .5s all ease-in-out;
+}
+/* line 32, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop ul {
+  position: absolute;
+  bottom: 0;
+}
+/* line 36, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop li {
+  display: inline-block;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  margin-right: 1.5rem;
+  line-height: 2rem;
+}
+/* line 43, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li:hover .nav-drop {
+  height: 32px;
+  bottom: -32px;
+}
+
+/* line 2, style/components/_home_feature.scss */
+section.home-feature {
+  position: relative;
+  height: 560px;
+  background-color: #2f2f2f;
+}
+/* line 7, style/components/_home_feature.scss */
+section.home-feature .container {
+  height: 100%;
+  background-size: cover;
+}
+/* line 11, style/components/_home_feature.scss */
+section.home-feature hgroup {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  left: 0px;
+}
+/* line 16, style/components/_home_feature.scss */
+section.home-feature hgroup h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  color: white;
+  background: rgba(107, 2, 105, 0.5);
+  padding: 1rem 1.25rem;
+}
+/* line 17, style/components/_home_feature.scss */
+section.home-feature hgroup h2 b, section.home-feature hgroup h2 strong {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+}
+/* line 23, style/components/_home_feature.scss */
+section.home-feature hgroup h3 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  width: auto;
+  display: inline-block;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  color: white;
+  background: #380d36;
+}
+/* line 32, style/components/_home_feature.scss */
+section.home-feature hgroup .link-peek {
+  position: absolute;
+  bottom: 0px;
+  height: 146px;
+  width: 40px;
+  right: -40px;
+  padding: 10px;
+  background: #380d36;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+/* line 42, style/components/_home_feature.scss */
+section.home-feature hgroup .link-peek:before {
+  content: "See The Campaign";
+  color: #21e3db;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.5rem;
+  margin: auto;
+  display: inline-block;
+  height: 3.2rem;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 20px;
+  width: 80px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+/* line 58, style/components/_home_feature.scss */
+section.home-feature hgroup .link-peek:after {
+  content: "";
+  display: inline-block;
+  color: #21e3db;
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  font-size: 46px;
+  height: 60px;
+}
+/* line 72, style/components/_home_feature.scss */
+section.home-feature hgroup:hover .link-peek {
+  width: 145px;
+  right: -145px;
+}
+/* line 75, style/components/_home_feature.scss */
+section.home-feature hgroup:hover .link-peek:before {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+/* line 2, style/components/_our_mission.scss */
+section.our_mission {
+  background: #dedade;
+}
+/* line 4, style/components/_our_mission.scss */
+section.our_mission .container {
+  width: 930px;
+  padding: 80px 0;
+  line-height: 1.5em;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  color: #6b0269;
+  font-size: 32px;
+}
+
+/* line 1, style/components/_why_it_matters.scss */
+.why-it-matters {
+  background: #4a1249;
+  position: relative;
+  display: block;
+  padding: 70px 0 100px;
+}
+/* line 6, style/components/_why_it_matters.scss */
+.why-it-matters > h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/* line 16, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container {
+  padding: 0 70px;
+  white-space: nowrap;
+}
+/* line 20, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 305px;
+  height: 365px;
+  white-space: normal;
+  background-size: cover;
+  border: 10px solid #dedade;
+}
+/* line 31, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide:not(:nth-child(3n)) {
+  margin-right: 70px;
+}
+/* line 35, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide .content, .why-it-matters .slides.container .slide .stat-highlight, .why-it-matters .slides.container .slide .learn-more {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 100px 30px 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  transition: .5s opacity ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 52, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide .content h2, .why-it-matters .slides.container .slide .stat-highlight h2, .why-it-matters .slides.container .slide .learn-more h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+  font-size: 50px;
+  color: #21e3db;
+  width: 100%;
+}
+/* line 58, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide .content h3, .why-it-matters .slides.container .slide .stat-highlight h3, .why-it-matters .slides.container .slide .learn-more h3 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+/* line 59, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide .content p, .why-it-matters .slides.container .slide .stat-highlight p, .why-it-matters .slides.container .slide .learn-more p {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+/* line 63, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide .learn-more {
+  opacity: 0;
+}
+/* line 69, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide:hover .stat-highlight {
+  opacity: 0;
+}
+/* line 72, style/components/_why_it_matters.scss */
+.why-it-matters .slides.container .slide:hover .learn-more {
+  opacity: 1;
+}
+/* line 80, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 66px;
+  height: 66px;
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 89, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span::before {
+  content: '';
+  font-family: "FontAwesome";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #21e3db;
+  margin: auto;
+  width: 0.3em;
+  height: 1em;
+  font-size: 2em;
+}
+/* line 106, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span.next {
+  right: 0;
+}
+/* line 108, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span.next::before {
+  content: "";
+}
+/* line 112, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span.prev {
+  left: 0;
+}
+/* line 114, style/components/_why_it_matters.scss */
+.why-it-matters .pager > span.prev::before {
+  content: "";
+}
+
+/* line 1, style/components/_call_to_action.scss */
+.call-to-action {
+  padding: 95px 0;
+  text-align: center;
+  background: url("style/images/call_to_action_background.jpg");
+  background-size: auto 100%;
+}
+/* line 6, style/components/_call_to_action.scss */
+.call-to-action li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 470px;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1em;
+  padding: 10px;
+  background: #4a1249;
+}
+/* line 14, style/components/_call_to_action.scss */
+.call-to-action li:nth-child(1) {
+  margin-right: 50px;
+}
+/* line 17, style/components/_call_to_action.scss */
+.call-to-action li a {
+  display: inline-block;
+  background: #ab01a7;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 160px;
+  padding: 25px;
+  text-transform: uppercase;
+  box-shadow: 0 0 .5em #555;
+  transition: .5s all ease-in;
+}
+/* line 28, style/components/_call_to_action.scss */
+.call-to-action li a:hover {
+  box-shadow: none;
+}
+/* line 32, style/components/_call_to_action.scss */
+.call-to-action li .description {
+  display: inline-block;
+  vertical-align: middle;
+  width: 235px;
+  margin-left: 25px;
+  font-size: 20px;
+  color: white;
+}
+
+/* line 1, style/components/featured_news.scss */
+.featured-news {
+  background: #dedade;
+  padding: 70px 0;
+}
+/* line 5, style/components/featured_news.scss */
+.featured-news .slides, .featured-news > h2 {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 9, style/components/featured_news.scss */
+.featured-news h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  color: #6b0269;
+  margin-bottom: 1em;
+}
+/* line 15, style/components/featured_news.scss */
+.featured-news h4 {
+  color: white;
+  background: #6b0269;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+/* line 22, style/components/featured_news.scss */
+.featured-news h5 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: .5em;
+}
+/* line 28, style/components/featured_news.scss */
+.featured-news p {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+}
+/* line 32, style/components/featured_news.scss */
+.featured-news .content {
+  text-decoration: none;
+  color: black;
+}
+/* line 37, style/components/featured_news.scss */
+.featured-news .readmore {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  font-size: 16px;
+  color: #81026e;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+/* line 44, style/components/featured_news.scss */
+.featured-news .readmore:before {
+  content: "";
+  font-family: "Font Awesome";
+}
+/* line 51, style/components/featured_news.scss */
+.featured-news .slide {
+  width: 300px;
+  height: 280px;
+  padding: 20px;
+  background: #dedade;
+  box-shadow: 0 0 0.25em #2f2f2f;
+  display: inline-block;
+  position: relative;
+}
+/* line 59, style/components/featured_news.scss */
+.featured-news .slide:not(:nth-child(3n)) {
+  margin-right: 50px;
+}

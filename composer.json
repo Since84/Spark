@@ -32,7 +32,6 @@
         "fancyguy/webroot-installer": "1.0.0",
         "wordpress/core": "4.0",
         "wpackagist-plugin/advanced-custom-fields": "4.4.*",
-        "wpackagist-plugin/addthis",
         "wpackagist-plugin/contact-form-7": "4.*",
         "wpackagist-plugin/display-latest-tweets": "1.*",
         "wpackagist-plugin/font-awesome": "3.2.*",

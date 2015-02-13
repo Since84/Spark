@@ -1,0 +1,41 @@
+.call-to-action {
+	padding: 95px 0;
+	text-align: center;
+	background: $call_to_action_background;
+	background-size: auto 100%;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		width: 470px;
+		@include call-to-action;
+		line-height: 1em;
+		padding: 10px;
+		background: $purple2;
+		&:nth-child(1){
+			margin-right: 50px;
+		}
+		a {
+			display: inline-block;
+			background: $purple5;
+			color: white;
+			text-decoration: none;
+			text-align: center;
+			width: 160px;
+			padding: 25px;
+			text-transform: uppercase;
+			box-shadow: 0 0 .5em #555;
+			transition: .5s all ease-in;
+			&:hover {
+				box-shadow: none;
+			}
+		}
+		.description{
+			display: inline-block;
+			vertical-align: middle;
+			width: 235px;
+			margin-left: 25px;
+			font-size: 20px;
+			color: white;
+		}
+	}
+}

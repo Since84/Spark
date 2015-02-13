@@ -1,0 +1,27 @@
+<header class="spark-header spark-region">
+  <div class="container">
+  	<div class="left-container spark-region"><a class="site-logo" href="home"></a></div>
+  	<div class="right-container spark-region">
+        {{ action.template }}
+  	</div>
+  	<div class="mobile-btn search-btn "><i class="search-button spark-icon-search"></i></div>
+  </div>
+</header>
+<nav class="full-width-nav spark-region">
+	<ul class="container">
+        {% for item in nav.get_items %}
+                <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
+                    {% if item.get_children %}
+                        <div class="nav-drop">
+                          <ul>
+                          {% for child in item.get_children %}
+                            <li class="nav-drop-item"><a href="{{child.get_link}}">{{child.title}}</a></li>
+                          {% endfor %}
+                          </ul>
+                        </div>
+                     {% endif %}
+                </li>
+        {% endfor %}
+	</ul>
+</nav>
+{{ feature }}

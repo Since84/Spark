@@ -1,0 +1,122 @@
+.why-it-matters{
+	background: $purple2;
+	position: relative;
+	display: block;
+	padding: 70px 0 100px;
+	& > h2{
+		@include h2;
+		text-align: center; 
+		color: white;
+		margin-bottom: 50px;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		width: 100%;
+	}
+	.slides.container{
+		padding: 0 70px;
+		white-space: nowrap;
+		
+		.slide{ 
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			width: 305px;
+			height: 365px;
+			white-space: normal;
+
+			background-size: cover;
+			border: 10px solid $lightgray;
+
+			&:not(:nth-child(3n)){
+				margin-right: 70px;
+			}
+
+			.content, .stat-highlight, .learn-more {
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+
+				text-align: center;
+				padding: 100px 30px 0;
+				background: $opaqueblack;
+				color: white;
+
+				transition: .5s opacity ease-in-out;	
+				cursor: pointer;
+				text-decoration: none;
+
+				h2{ 
+					@include h1; 
+					font-size: 50px;
+					color: $teal;
+					width: 100%;
+				}
+				h3{ @include h5; font-size: 30px; margin-bottom: 1rem; }
+				p { @include h7; line-height: 1.5em; }
+
+			}
+			//Interaction
+			.learn-more {
+				opacity: 0;
+
+			}
+
+			&:hover {
+				.stat-highlight {
+					opacity: 0;
+				}
+				.learn-more {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.pager {
+		& > span {
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 66px;
+			height: 66px;
+			background: rgba(0,0,0,.2);
+			&::before {
+				content: '';
+				font-family: "FontAwesome";
+				position: absolute;
+				display: block;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				color: $teal;
+				margin: auto;
+				width: 0.3em;
+				height: 1em;
+				font-size: 2em;
+
+			}
+
+			&.next{ 
+				right: 0; 
+				&::before{
+					content: $rightarrow;
+				}
+			}
+			&.prev{ 
+				left: 0; 
+				&::before{
+					content: $leftarrow;
+				}
+			}
+		}
+	}
+
+}
+

@@ -1,0 +1,47 @@
+/* Theme Name: TAP15 */
+/* Template: Spark15 */
+
+body{
+	background: #5d839e;
+}
+
+header a{
+	color: white;
+	text-decoration: none;
+}
+
+header a:visited{
+	color: white;
+}
+
+header a:hover{
+	color: #b39e8c;
+}
+
+
+/* Main Nav */
+nav.main-nav{}
+
+nav.main-nav ul{}
+
+nav.main-nav li{}
+
+nav.main-nav ul li a{}
+
+HERE!!!
+5 Navs on the Page
+nav { background: black; }
+
+.main-nav { background: red; }
+
+
+4 Black Navs 
+1 Red Nav
+Yo 
+
+
+
+
+
+
+

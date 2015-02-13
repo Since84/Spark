@@ -26,6 +26,7 @@
 <?php
 
 	$context['nav'] = new TimberMenu('main-nav');
+	$context['header_image'] = get_header_image();
 	$context['action'] = array(
 							'template' 	=> Timber::compile('/views/components/social.html.twig')
 							,'twitter' 	=> get_option('twitter_link')
