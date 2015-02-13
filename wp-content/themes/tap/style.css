@@ -50,7 +50,7 @@ header:not(.home){
 	position: relative;
 	text-align: left;
 	padding: 20px 40px;
-	background: white;
+	background: #5d839e;
 	border:1px solid #5d839e;
 }
 
@@ -64,7 +64,7 @@ header:not(.home) h1{
 	display: inline-block;
 	vertical-align: middle;
 	padding: 40px;
-	color: #5d839e;
+	color: white;
 
 }
 header:not(.home) h2{
@@ -119,5 +119,42 @@ nav a{
 	display: inline-block;
 	font-size:40px;
 	padding:20px;
-	width: 300px;
+	width: 250px;
+}
+
+.course-locations li{
+	display: inline-block;
+	width: 45%;
+	background: #D9D9D9;
+	font-weight: 500;
+	padding: 15px;
+	font-size:40px;
+}
+
+.course-schedules li{
+	padding: 20px;
+	border-bottom: 1px solid #5d839e;
+}
+
+.address, .contact{
+	padding: 20px;
+	width: 400px;
+
+}
+.address{
+	font-size: 30px;
+}
+.contact a{
+	text-decoration: none;
+	color: black;
+	font-size: 40px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+	border-top: 1px solid #5d839e;
+	width: 100%;
+
 }

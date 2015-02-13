@@ -1,6 +1,6 @@
 footer.spark_region{
 	background: $purple4;
-	padding: 80px 0; 
+	padding: 80px 0 0; 
 	& > section, & > ul{
 		@include container;
 		&.footer-heading{
@@ -49,6 +49,10 @@ footer.spark_region{
 						display: block;
 						color: white;
 						margin: 5px;
+						background: $purple4;
+						text-decoration: none;
+						padding: 20px;
+						margin-top: 1em;
 					}
 				}
 			}
@@ -56,12 +60,45 @@ footer.spark_region{
 				.widget_display-latest-tweets{
 					padding: 0;
 					@include h7;
+					font-size: 10px;
 					li {
 						width: 100%;
 						padding: 0;
 					}
 				}
 			}
+		}
+	}
+	.footer-contact {
+		padding-top: 1em;
+		nav{
+			margin: 20px 0;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 1em;
+				color: $teal;
+				a{ 
+					color: $teal; 
+					text-decoration: none;
+					@include h7;
+				}
+				&:nth-child(odd){
+					border-right: 1px solid $teal;
+					padding-right: .5em;
+					margin-right: .5em;
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		background: $black;
+		width: 100%;
+
+		.designed.by {
+			width: 100px;
+			display: inline-block;
+			margin-left: 70%;
 		}
 	}
 }

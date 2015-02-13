@@ -597,7 +597,7 @@ section.our_mission .container {
 /* line 1, style/components/_footer.scss */
 footer.spark_region {
   background: #81026e;
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 /* line 4, style/components/_footer.scss */
 footer.spark_region > section, footer.spark_region > ul {
@@ -674,8 +674,12 @@ footer.spark_region .footer-content li.petition .text a {
   display: block;
   color: white;
   margin: 5px;
+  background: #81026e;
+  text-decoration: none;
+  padding: 20px;
+  margin-top: 1em;
 }
-/* line 56, style/components/_footer.scss */
+/* line 60, style/components/_footer.scss */
 footer.spark_region .footer-content li.twitter .widget_display-latest-tweets {
   padding: 0;
   font-family: "franklin-gothic-urw-comp";
@@ -684,9 +688,53 @@ footer.spark_region .footer-content li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw";
   font-weight: 400;
   font-size: 16px;
+  font-size: 10px;
 }
-/* line 59, style/components/_footer.scss */
+/* line 64, style/components/_footer.scss */
 footer.spark_region .footer-content li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
+}
+/* line 72, style/components/_footer.scss */
+footer.spark_region .footer-contact {
+  padding-top: 1em;
+}
+/* line 74, style/components/_footer.scss */
+footer.spark_region .footer-contact nav {
+  margin: 20px 0;
+}
+/* line 76, style/components/_footer.scss */
+footer.spark_region .footer-contact nav li {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  color: #21e3db;
+}
+/* line 81, style/components/_footer.scss */
+footer.spark_region .footer-contact nav li a {
+  color: #21e3db;
+  text-decoration: none;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+}
+/* line 86, style/components/_footer.scss */
+footer.spark_region .footer-contact nav li:nth-child(odd) {
+  border-right: 1px solid #21e3db;
+  padding-right: .5em;
+  margin-right: .5em;
+}
+/* line 94, style/components/_footer.scss */
+footer.spark_region .footer-bottom {
+  background: #2f2f2f;
+  width: 100%;
+}
+/* line 98, style/components/_footer.scss */
+footer.spark_region .footer-bottom .designed.by {
+  width: 100px;
+  display: inline-block;
+  margin-left: 70%;
 }
