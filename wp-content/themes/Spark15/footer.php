@@ -1,7 +1,6 @@
 <?php 
 
 	$footerContext = Timber::get_context();
-	
 
 	/// Contact Area
 	$sitemapContext = array( 'nav' => new TimberMenu('Main Nav') );
