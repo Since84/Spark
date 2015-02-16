@@ -13,13 +13,17 @@ Colors
 body,html{
 	background: white;
 	height: 100%;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: "freight-sans-pro";
 	padding-bottom: 400px;
 }
 
 p{
 	line-height: 1.4em;
+}
+
+a {
+	color: #5d839e;
 }
 
 /* header  */
@@ -120,7 +124,7 @@ nav{
 	max-height: 0;
 	width: 100%;
 	position: fixed;
-	bottom: 124px;
+	bottom: 155px;
 	overflow: hidden;
 	z-index: 20;
 	padding-top: 30px;
@@ -243,7 +247,7 @@ nav a{
 
 .address, .contact{
 	padding: 20px;
-	width: 40%;
+	width: 38%;
 
 }
 .address{
@@ -295,7 +299,7 @@ nav a{
 }
 
 article, .course {
-	max-width: 900px;
+	max-width: 525px;
 	margin: auto;
 }
 
@@ -319,8 +323,13 @@ section.spark-text-block.mission-statement {
 
 @media screen and ( max-width: 900px ){
 	article, .course {
-		padding: 40px;
-	}		
+		padding: 20px 25px 220px;
+	}	
+
+	
+	.course > *:not(.course-locations) {
+		padding: 20px 20px 0;
+	}	
 }
 
 /* Footer */
@@ -399,17 +408,23 @@ footer .contact a:hover{
 @media screen and ( max-width: 815px ){
 
 	.page-title {
-		padding: 0 0 20px 0;
+		/* padding: 0px 0px 0px 19px; */
 	}
 	header a {
 		top: 7em;
 	}
 
 	section.spark-text-block.mission-statement {
-		padding: 35px; 
-	
+		padding: 35px 35px 250px; 
 		text-align: left;
+	}
+	.course-summary{
+		padding: 15px !important;
+	
+		line-height: 1.6em;
 }
+	.course-summary p{ display: none; }
+	.course-summary:after { font-size: 27px; }
 }
 
 @media screen and ( min-width: 815px ){
