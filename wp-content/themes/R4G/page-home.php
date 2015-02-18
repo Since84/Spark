@@ -3,6 +3,17 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
+
+	$context['nav'] = new TimberMenu('main-nav');
+	$context['header_image'] = get_header_image();
+	$context['action'] = array(
+							'template' 	=> Timber::compile('/views/components/social.html.twig')
+							,'twitter' 	=> get_option('twitter_link')
+							,'facebook'	=> get_option('facebook_link')
+							,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
+						);
+
+	Timber::render('/views/components/header.html.twig', $context);
 	
 	///Page Feature
 	$featureContext	= Timber::get_context();
@@ -13,23 +24,21 @@
 
 	$context['feature'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
 
-
 	/// Mission Statement
 	$missionContext['spark_class'] = 'our_mission';
 	$missionID = get_page_by_title('Mission');
 	$missionID = $missionID->ID;
 	$missionContext['text'] = new TimberPost($missionID);
-	$missionContext['text'] = $missionContext['text']->content;
+	$missionContext['text'] = $missionContext['text']->mission_statement;
 	
 	$context['mission'] = Timber::compile('/views/components/text_block.html.twig', $missionContext);
-
 	
 	/// Why It Matters
 	$issueAreasId = Theme_Theme::get_id_by_slug('issue-areas');
 	$mattersContext['issues_permalink'] = get_permalink($issueAreasId);
 	$mattersContext['spark_class'] = 'why-it-matters';
-	$mattersContext['header'] = get_field( 'wim_header', $issueAreasId );
-	$mattersContext['feed'] = get_field('wim_issues', $issueAreasId);
+	$mattersContext['header'] = get_field( 'heading', $issueAreasId );
+	$mattersContext['feed'] = get_field('issue_area', $issueAreasId );
 	$mattersContext['slide_template'] = '/views/content/wim_home_slide.html.twig';
  	$context['wim'] = Timber::compile('/views/components/gallery.html.twig', $mattersContext); 
 

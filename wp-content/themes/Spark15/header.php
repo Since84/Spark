@@ -23,17 +23,4 @@
 </head>
 <body <?php body_class('rights_app'); ?> >
 
-<?php
-
-	$context['nav'] = new TimberMenu('main-nav');
-	$context['header_image'] = get_header_image();
-	$context['action'] = array(
-							'template' 	=> Timber::compile('/views/components/social.html.twig')
-							,'twitter' 	=> get_option('twitter_link')
-							,'facebook'	=> get_option('facebook_link')
-							,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
-						);
-
-	Timber::render('/views/components/header.html.twig', $context);
-
 

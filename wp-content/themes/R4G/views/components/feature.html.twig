@@ -3,8 +3,13 @@
 		<hgroup>
 			<h3>{{ sub_heading }}</h3>
 			<h2>{{ heading }}</h2>
-		{% if link != "null" %}{{ link }}{% endif %}
-			<span class="link-peek"></span>
+		{% if link != "null" %}
+			<a href="{{ link }}">
+		{% endif %}
+				<span class="link-peek"></span>
+		{% if link != "null" %}
+			</a>
+		{% endif %}
 		</hgroup>
 	</div>	
 </section>

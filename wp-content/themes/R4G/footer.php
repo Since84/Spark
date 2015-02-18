@@ -21,12 +21,15 @@
 
 	$footerContext['petition'] = Timber::compile( 'views/content/petition_block.html.twig', $petitionContext );
 
-
 	/// Contact Area
 	$sitemapContext = array( 'nav' => new TimberMenu('contact menu') );
 	$footerContext['contact_menu'] = Timber::compile('views/components/nav.html.twig', $sitemapContext);
 
-	$footerContext['social_menu'] = Timber::get_widgets('social_links');
+	$socialContext = array(
+							 'twitter' 	=> get_option('twitter_link')
+							,'facebook'	=> get_option('facebook_link')
+					);
+	$footerContext['social_menu'] = Timber::compile('/views/components/social.html.twig', $socialContext);
 
 	Timber::render('views/content/footer.html.twig', $footerContext);
 

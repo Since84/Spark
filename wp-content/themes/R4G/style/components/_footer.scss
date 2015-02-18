@@ -1,5 +1,5 @@
 footer.spark_region{
-	background: $purple4;
+	background: $purple3;
 	padding: 80px 0 0; 
 	& > section, & > ul{
 		@include container;
@@ -18,61 +18,77 @@ footer.spark_region{
 		}
 	}
 	.footer-content{
-		background: $lightgray;
+		background: $stronggray;
 		padding: 0;
 		white-space: nowrap;
-		padding-bottom: 40px;
-		li{
-			display: inline-block;
-			vertical-align: top;
-			width: 33.1%;
-			white-space: normal;
-			padding: 0 20px;
-
-			h2{
-				@include h4;
-				color: $purple3;
-				margin: 1em 0 .5em;
-			}
-
-			&.twitter, &.newsletter {
-				border-top: 50px solid $purple4;
-			}
-			&.petition {
-				padding-top: 30px;
-				.text {
-					background: $purple1;
-					padding: 30px;
-					color: white;
-					text-align: center;
-					a{
-						display: block;
-						color: white;
-						margin: 5px;
-						background: $purple4;
-						text-decoration: none;
-						padding: 20px;
-						margin-top: 1em;
+		border-top: 50px solid $purple3;
+		& > ul {
+			
+			& > li{
+					display: inline-flex;
+					vertical-align: top;
+					width: 33.1%;
+					white-space: normal;
+					padding: 0 35px 40px;
+					background: $stronggray;
+					height: 420px;
+		
+					&:not(.petition){
+						margin-top: 20px;
 					}
-				}
-			}
-			&.twitter {
-				.widget_display-latest-tweets{
-					padding: 0;
-					@include h7;
-					font-size: 10px;
-					li {
-						width: 100%;
-						padding: 0;
+		
+					h2{
+						@include h4;
+						color: $purple3;
+						margin: 1em 0 .5em;
 					}
-				}
-			}
-		}
+		
+					&.petition {
+						background: $lightgray;
+						margin-top: -40px;
+						height: 480px;
+						box-shadow: 0px 2px 15px 0px #666666;
+						.text {
+							background: $purple1;
+							padding: 30px;
+							color: white;
+							text-align: center;
+							a{
+								display: block;
+								color: white;
+								margin: 5px;
+								background: $purple4;
+								text-decoration: none;
+								padding: 20px;
+								margin-top: 1em;
+							}
+						}
+					}
+					&.twitter {
+						.widget_display-latest-tweets{
+							@include short-body;
+							padding: 0;
+							line-height: 1.3em;
+							// font-size: 10px;
+							li {
+								width: 100%;
+								padding: 0;
+							}
+						}
+					}
+					a::before{ font-size: 20px; }
+					&.twitter a::before { content: $twitter; }
+					&.facebook a::before { content: $facebook; }
+					&.mail a::before { content: $mail; }
+				}}
 	}
 	.footer-contact {
 		padding-top: 1em;
+		color: white;
 		nav{
-			margin: 20px 0;
+			margin: 0px 0 20px;
+			display: inline-block;
+			vertical-align: bottom;
 			li {
 				display: inline-block;
 				vertical-align: middle;
@@ -83,12 +99,30 @@ footer.spark_region{
 					text-decoration: none;
 					@include h7;
 				}
+				a:before { 
+					font-family: "FontAwesome"; 
+					font-size: 25px;
+				}
+			
+				&.twitter a::before { content: $twitter; }
+				&.facebook a::before { content: $facebook; }
+				&.mail a::before { content: $mail; }
 				&:nth-child(odd){
 					border-right: 1px solid $teal;
 					padding-right: .5em;
 					margin-right: .5em;
 				}
 			}
+		}
+		.footer-social{
+			margin-left: 60%;
+			width: 200px;
+			display: inline-block;
+			text-align: right;
+			vertical-align: bottom;
+			h3 { @include h6; margin-bottom: 20px; }
+			li { border: none !important; }
+			a{ color: white; }
 		}
 	}
 	.footer-bottom {

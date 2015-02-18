@@ -1,18 +1,19 @@
-<li class="slide" style="background-image:url( '{{ slide.issue_image.url }}' );">
+{# {{ dump(slide) }} #}
+<li class="slide" style="background-image:url( '{{ slide.image.url }}' );">
 	<div class="content">
 		<div class="stat-highlight">
-		{% for stat in slide.issue_statistics %}
-			{% if stat.featured_statistic %}
-				<h2>{{ stat.issue_statistic }}</h2>
-				<h3>{{ stat.issue_caption }}</h3>
-				<p>{{ stat.issue_summary }}</p>
+		{% for stat in slide.stats %}
+			{% if stat.featured %}
+				<h2>{{ stat.statistics }}</h2>
+				<h3>{{ stat.statistic_label }}</h3>
+				<p>{{ stat.description }}</p>
 			{% endif %}
 		{% endfor %}	
 		</div>		
 
 		<a class="learn-more" href="{{ issues_permalink }}?issue={{ slide.issue_heading|url_encode }}">
 			<span class="action">Learn More About</span>
-			<h2>{{ slide.issue_heading }}</h2>
+			<h2>{{ slide.heading }}</h2>
 		</a>
 
 	</div>
