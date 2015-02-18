@@ -22,6 +22,7 @@ body.rights_app {
   font-weight: 400;
   font-size: 20px;
   font-size: 24px;
+  line-height: 1.5em;
 }
 /* line 68, style/_base.scss */
 body.rights_app * {
@@ -638,6 +639,324 @@ section.our_mission .container {
   margin-right: 50px;
 }
 
+/* line 2, style/components/_team.scss */
+.scrolling-tabs {
+  background: #c4c2c7;
+  padding: 60px 60px;
+}
+/* line 5, style/components/_team.scss */
+.scrolling-tabs > h2, .scrolling-tabs .tabs, .scrolling-tabs .tab-content ul {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 6, style/components/_team.scss */
+.scrolling-tabs > h2 {
+  margin: 60px auto;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  text-align: center;
+  color: #6b0269;
+}
+/* line 7, style/components/_team.scss */
+.scrolling-tabs .tabs {
+  padding: 60px 60px;
+}
+/* line 9, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member {
+  display: inline-block;
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin-right: 40px;
+  border: 5px solid #2f2f2f;
+}
+/* line 17, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member.active {
+  border: 5px solid #4a1249;
+}
+/* line 20, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member .front {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 26, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member:not(.active) .front {
+  display: none;
+}
+/* line 29, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member:not(.active) .front h2 {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 1em;
+  width: auto;
+  text-align: center;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+}
+/* line 45, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member:not(.active):hover .front {
+  display: block;
+}
+/* line 48, style/components/_team.scss */
+.scrolling-tabs .tabs .team-member:not(.active):hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #81026e;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 68, style/components/_team.scss */
+.tab-content {
+  background: #dedade;
+  padding: 60px 60px;
+}
+/* line 71, style/components/_team.scss */
+.tab-content > ul {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding: 75px 60px;
+}
+/* line 76, style/components/_team.scss */
+.tab-content .team-member-content h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  color: #6b0269;
+}
+/* line 80, style/components/_team.scss */
+.tab-content .team-member-content h3 {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/* line 84, style/components/_team.scss */
+.tab-content .team-member-content .links {
+  margin: 60px 0 45px;
+}
+/* line 86, style/components/_team.scss */
+.tab-content .team-member-content .links li {
+  display: inline-block;
+}
+/* line 89, style/components/_team.scss */
+.tab-content .team-member-content .links li a {
+  color: #ab01a7;
+  text-decoration: none;
+  margin-right: 30px;
+}
+/* line 93, style/components/_team.scss */
+.tab-content .team-member-content .links li a:before {
+  content: '';
+  font-family: "FontAwesome";
+  font-size: 14px;
+  margin-right: 10px;
+}
+/* line 100, style/components/_team.scss */
+.tab-content .team-member-content .links li.email a:before {
+  content: "";
+}
+/* line 103, style/components/_team.scss */
+.tab-content .team-member-content .links li.personal-link a:before {
+  content: "";
+}
+/* line 108, style/components/_team.scss */
+.tab-content .team-member-content .member-bio {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.5em;
+  max-width: 700px;
+}
+
+/* line 116, style/components/_team.scss */
+.board-of-directors {
+  background: #4a1249;
+  padding: 60px 0;
+  color: white;
+}
+/* line 120, style/components/_team.scss */
+.board-of-directors h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  margin: 60px 0;
+  text-align: center;
+}
+/* line 126, style/components/_team.scss */
+.board-of-directors .member-list li {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin-bottom: 20px;
+}
+/* line 131, style/components/_team.scss */
+.board-of-directors .member-list li:nth-child(odd) {
+  margin-right: 7%;
+}
+/* line 134, style/components/_team.scss */
+.board-of-directors .member-list li h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  font-size: 30px;
+}
+/* line 138, style/components/_team.scss */
+.board-of-directors .member-list li span {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  color: #c4c2c7;
+}
+
+/* line 147, style/components/_team.scss */
+.coalitions-partnerships {
+  background: #dedade;
+  padding: 60px 0;
+}
+/* line 150, style/components/_team.scss */
+.coalitions-partnerships > h2, .coalitions-partnerships > ul {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 153, style/components/_team.scss */
+.coalitions-partnerships h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  margin: 60px auto;
+  text-align: center;
+}
+/* line 159, style/components/_team.scss */
+.coalitions-partnerships ul li {
+  display: inline-block;
+  width: 45%;
+  margin-bottom: 20px;
+}
+/* line 163, style/components/_team.scss */
+.coalitions-partnerships ul li:nth-child(odd) {
+  margin-right: 7%;
+}
+/* line 166, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail {
+  display: inline-block;
+  vertical-align: top;
+  width: 116px;
+  background: #6b0269;
+}
+/* line 171, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail a {
+  color: #21e3db;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+}
+/* line 178, style/components/_team.scss */
+.coalitions-partnerships ul li img {
+  width: 116px;
+  height: 116px;
+  border-width: 3px solid #2f2f2f;
+  display: block;
+  position: relative;
+}
+/* line 186, style/components/_team.scss */
+.coalitions-partnerships ul li .content {
+  display: inline-block;
+  vertical-align: top;
+  width: 330px;
+  margin-left: 30px;
+}
+
+/* line 197, style/components/_team.scss */
+.partners {
+  background: #4a1249;
+  color: white;
+}
+/* line 200, style/components/_team.scss */
+.partners > h2, .partners > ul {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 203, style/components/_team.scss */
+.partners h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  padding: 60px 0;
+  text-align: center;
+}
+/* line 209, style/components/_team.scss */
+.partners > ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin-bottom: 20px;
+}
+/* line 214, style/components/_team.scss */
+.partners > ul li:nth-child(odd) {
+  margin-right: 7%;
+}
+/* line 217, style/components/_team.scss */
+.partners > ul li h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+/* line 222, style/components/_team.scss */
+.partners > ul li a {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  color: #21e3db;
+  text-decoration: none;
+}
+
 /* line 1, style/components/_footer.scss */
 footer.spark_region {
   background: #6b0269;
@@ -884,6 +1203,7 @@ footer.spark_region .footer-bottom .elefintlogo {
   font-weight: 400;
   font-size: 20px;
   font-size: 24px;
+  line-height: 1.5em;
   color: #c4c2c7;
   text-decoration: none;
   font-size: 14px;

@@ -1,0 +1,230 @@
+
+.scrolling-tabs{
+	background: $stronggray;
+	padding: #{$margin}px #{$margin}px;
+	& > h2, .tabs, .tab-content ul { @include container; }
+	& > h2{ margin: #{$margin}px auto; @include h2; text-align: center; color: $purple3; }
+	.tabs{
+		padding: #{$margin}px #{$margin}px; 
+		.team-member{
+			display: inline-block;
+			position: relative;
+			width: 210px;
+			height: 210px;
+			margin-right: 40px;
+			border: 5px solid $black;
+
+			&.active{
+				border: 5px solid $purple2;
+			}
+			.front {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			&:not(.active) .front{
+				display: none;
+
+				h2{
+					position: absolute;
+					display: block;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					height: 1em;
+					width: auto;
+					text-align: center;
+					@include h6;
+					color: white;
+				}
+			}
+			&:not(.active):hover {
+				.front{
+					display: block;
+				}
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right: 0;
+					background: $purple4;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			
+			
+
+		}
+	}
+}
+
+.tab-content{
+	background: $lightgray;
+	padding: #{$margin}px #{$margin}px;
+	& > ul { 
+		@include container; 
+		padding: 75px #{$margin}px;
+	}
+	.team-member-content{
+		h2{
+			@include h2;
+			color: $purple3;
+		}
+		h3 {
+			@include short-body;
+			text-transform: uppercase;
+		}
+		.links{
+			margin: #{$margin}px 0 45px;
+			li{
+				display: inline-block;
+
+				a { 
+					color: $purple5; 
+					text-decoration: none;
+					margin-right: 30px;
+					&:before {
+						content: '';
+						font-family: "FontAwesome";
+						font-size: 14px;
+						margin-right: 10px;
+					}
+				}
+				&.email a:before{
+					content: $mail;
+				}
+				&.personal-link a:before{
+					content: $comment;
+				}
+			}
+		}
+		.member-bio {
+			@include long-body; 
+			max-width: 700px;
+		}
+
+	}
+}
+
+.board-of-directors{
+	background: $purple2;
+	padding: #{$margin}px 0;
+	color: white;
+	h2 {
+		@include h2;
+		margin: #{$margin}px 0;
+		text-align: center;
+	}
+	.member-list {
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 45%;
+			margin-bottom: 20px;
+			&:nth-child(odd){
+				margin-right: 7%;
+			}
+			h4{
+				@include h6;
+				font-size: 30px;
+			}
+			span {
+				@include short-body;
+				color: $stronggray;
+			}
+
+		}
+	}
+}
+
+.coalitions-partnerships {
+	background: $lightgray;
+	padding: #{$margin}px 0;
+	& > h2, & > ul {
+		@include container;
+	}
+	h2 {
+		@include h2;
+		margin: #{$margin}px auto;
+		text-align: center;
+	}
+	ul {
+		li {
+			display: inline-block;
+			width: 45%;
+			margin-bottom: 20px;
+			&:nth-child(odd){
+				margin-right: 7%;
+			}
+			.thumbnail{
+				display: inline-block;
+				vertical-align: top;
+				width: 116px;
+				background: $purple3;
+				a {
+					color: $teal;
+					text-align: center;
+					display: block;
+					padding: 10px 0;
+				}
+			}
+			img {
+				width: 116px;
+				height: 116px;
+				border-width: 3px solid $black; 
+				display: block;
+				position: relative;
+
+			}
+			.content{
+				display: inline-block;
+				vertical-align: top;
+				width: 330px;
+				margin-left: 30px;
+			}
+		}
+	}
+
+}
+
+.partners {
+	background: $purple2;
+	color: white;
+	& > h2, & > ul {
+		@include container;
+	}
+	h2 {
+		@include h2;
+		padding: #{$margin}px 0;
+		text-align: center;
+	}
+	& > ul {
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 45%;
+			margin-bottom: 20px;
+			&:nth-child(odd){
+				margin-right: 7%;
+			}
+			h4{
+				@include h6;
+				text-transform: uppercase;
+				font-size: 30px;
+			}
+			a {
+				@include short-body;
+				color: $teal;
+				text-decoration: none;
+			}
+
+		}
+	}
+}

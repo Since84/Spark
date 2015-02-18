@@ -6,13 +6,21 @@
  *	Template: Spark15 
  */
 
+//Base Styles and Mixins
 @import "brand/brand";
 @import "base";
 @import "components/header"; 
 @import "components/mainnav";
+
+//Home Page
 @import "components/home_feature"; 
 @import "components/our_mission";  
 @import "components/why_it_matters";
-@import "components/call_to_action";
+@import "components/call_to_action"; 
 @import "components/featured_news";
+ 
+//Team Page
+@import "components/team";
+
+//Footer
 @import "components/footer";

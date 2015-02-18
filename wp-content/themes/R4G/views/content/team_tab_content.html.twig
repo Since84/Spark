@@ -1,3 +1,6 @@
+{% if loop.index%3 == 1 %}
+	<ul class="tab-content-group slide">
+{% endif %} 
 <li class="slide team-member-content" style="background-image:url( '{{ slide.photo.url }}' );">
 	<div class="front">
 		{# {{ dump(slide) }} #}
@@ -10,3 +13,6 @@
 		<div class="member-bio">{{ slide.member_bio }}</div>
 	</div>
 </li>
+{% if ( loop.index%3 == 3 ) or ( loop.last ) %}
+	</ul>
+{% endif %} 

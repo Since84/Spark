@@ -6,7 +6,9 @@
 		{% include tab_template %}
 	{% endfor %}
 	</ul>
-	<ul class="tab-content">
+</section>
+<section class="tab-content">
+	<ul>
 		{# {{ dump(post.get_field('team_members')) }} #}
 	{% for slide in post.get_field('team_members') %}
 		{% include content_template %}

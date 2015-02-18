@@ -1,0 +1,17 @@
+<section class="coalitions-partnerships">
+	<h2 class="section-heading"> {{ header }} </h2>
+	<ul>
+	{% for org in content.get_field('coalitions_partnerships') %}
+		<li class="organization">
+			<div class="thumbnail">
+				<img src="{{ org.org_logo }}"/>
+				<a href="{{ org.org_link }}">Visit Site</a>
+			</div>
+			<div class="content">
+				<h4>{{ org.org_name }}</h4>
+				<p>{{ org.org_description }}</p>
+			</div>
+		</li>
+	{% endfor %}
+	</ul>
+</section>
