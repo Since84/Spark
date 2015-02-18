@@ -1,0 +1,7 @@
+<section class="board-of-directors">
+	<h2 class="section-heading"> {{ heading }} </h2>
+	{% for member in content.get_field('board_of_directors') %}
+		<h4>{{ member.name }}</h4>
+		<h7>{{ member.title }}</h7>
+	{% endfor %}
+</section>

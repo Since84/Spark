@@ -25,70 +25,96 @@ footer.spark_region{
 		& > ul {
 			
 			& > li{
-					display: inline-flex;
-					vertical-align: top;
-					width: 33.1%;
-					white-space: normal;
-					padding: 0 35px 40px;
-					background: $stronggray;
-					height: 420px;
-		
-					&:not(.petition){
+				display: inline-block;
+				vertical-align: top;
+				width: 30%;
+				white-space: normal;
+				padding: 0 35px 40px;
+				background: $stronggray;
+				height: 420px;
+	
+				&:not(.petition){
+					margin-top: 20px;
+				}
+	
+				h2{
+					@include h4;
+					color: $purple3;
+					margin: 1em 0 .5em;
+				}
+
+				&.newsletter{
+					input[type="email"]{
 						margin-top: 20px;
+						width: 100%;
+						display: block;
 					}
-		
-					h2{
-						@include h4;
-						color: $purple3;
-						margin: 1em 0 .5em;
-					}
-		
-					&.petition {
-						background: $lightgray;
-						margin-top: -40px;
-						height: 480px;
-						box-shadow: 0px 2px 15px 0px #666666;
-						.text {
-							background: $purple1;
-							padding: 30px;
+				}
+	
+				&.petition {
+					background: $lightgray;
+					margin-top: -40px;
+					height: 480px;
+					box-shadow: 0px 2px 15px 0px #666666;
+					width: 39%;
+					.text {
+						background: $purple1;
+						padding: 30px;
+						color: white;
+						text-align: center;
+						a{
+							display: block;
 							color: white;
-							text-align: center;
-							a{
-								display: block;
-								color: white;
-								margin: 5px;
-								background: $purple4;
-								text-decoration: none;
-								padding: 20px;
-								margin-top: 1em;
-							}
+							margin: 5px;
+							background: $purple4;
+							text-decoration: none;
+							padding: 20px;
+							margin-top: 1em;
 						}
 					}
-					&.twitter {
-						.widget_display-latest-tweets{
-							@include short-body;
+				}
+				&.twitter {
+					.widget_display-latest-tweets{
+						@include short-body;
+						padding: 0;
+						line-height: 1.3em;
+						// font-size: 10px;
+						li {
+							width: 100%;
 							padding: 0;
-							line-height: 1.3em;
-							// font-size: 10px;
-							li {
-								width: 100%;
-								padding: 0;
-							}
 						}
 					}
-					a::before{ font-size: 20px; }
-					&.twitter a::before { content: $twitter; }
-					&.facebook a::before { content: $facebook; }
-					&.mail a::before { content: $mail; }
-				}}
+				}
+				a::before{ font-size: 20px; }
+				&.twitter a::before { content: $twitter; }
+				&.facebook a::before { content: $facebook; }
+				&.mail a::before { content: $mail; }
+			}
+		}
 	}
 	.footer-contact {
 		padding-top: 1em;
 		color: white;
+		.footer-action{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.logo {
+			background: $logo;
+			display: block;
+			vertical-align: baseline;
+			background-repeat: no-repeat;
+			width: 200px; 
+			height: 40px;
+			margin-bottom: 10px;
+			&:hover {
+				background-image: $logo_hover;
+			}
+		}
 		nav{
 			margin: 0px 0 20px;
 			display: inline-block;
-			vertical-align: bottom;
+			vertical-align: top; 
 			li {
 				display: inline-block;
 				vertical-align: middle;
@@ -119,20 +145,49 @@ footer.spark_region{
 			width: 200px;
 			display: inline-block;
 			text-align: right;
-			vertical-align: bottom;
+			vertical-align: top;
 			h3 { @include h6; margin-bottom: 20px; }
 			li { border: none !important; }
 			a{ color: white; }
 		}
+
 	}
 	.footer-bottom {
 		background: $black;
 		width: 100%;
+		padding: 5px;
+		color: $lightgray;
 
 		.designed.by {
 			width: 100px;
 			display: inline-block;
-			margin-left: 70%;
+			margin-left: 78%;
+		}
+		.elefintlogo {
+			float: right;
+			white-space: nowrap;
+			max-width: 30px;
+			overflow: hidden;
+			transition: 1s max-width;
+			@include long-body;
+			color: $stronggray;
+			text-decoration: none;
+			font-size: 14px;
+			&:hover {
+				max-width: 1000px;
+			}
+			svg{
+				width: 30px;
+				.logomark {
+					fill: $stronggray;
+				}
+			}
+		}
+		.copyright {
+			@include h6;
+			font-size: 18px;
+			display: inline-block;
+			vertical-align: baseline;
 		}
 	}
 }

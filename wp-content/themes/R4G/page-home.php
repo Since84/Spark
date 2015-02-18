@@ -4,17 +4,25 @@
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
 
-	$context['nav'] = new TimberMenu('main-nav');
-	$context['header_image'] = get_header_image();
-	$context['action'] = array(
-							'template' 	=> Timber::compile('/views/components/social.html.twig')
-							,'twitter' 	=> get_option('twitter_link')
-							,'facebook'	=> get_option('facebook_link')
-							,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
-						);
-
-	Timber::render('/views/components/header.html.twig', $context);
+	// $context['nav'] = new TimberMenu('main-nav');
+	// $context['header_image'] = get_header_image();
+ // 	$socialContext = array(
+	// 						'twitter' 	=> get_option('twitter_link')
+	// 						,'facebook'	=> get_option('facebook_link')
+	// 						,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
+	// 					);
+ // 	$context['action'] = Timber::compile('/views/components/social.html.twig', $socialContext);
+	// Timber::render('/views/components/header.html.twig', $context);
 	
+	$socialContext = array(
+							 'twitter' 	=> get_option('twitter_link')
+							,'facebook'	=> get_option('facebook_link')
+					);
+	$footerContext['social_menu'] = Timber::compile('/views/components/social.html.twig', $socialContext);
+
+
+
+
 	///Page Feature
 	$featureContext	= Timber::get_context();
 	$featureContext['heading'] = get_field( 'home_feature_heading', get_the_ID());

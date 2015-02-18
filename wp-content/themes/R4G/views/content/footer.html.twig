@@ -7,18 +7,27 @@
 		<ul class="container">
 			<li class="twitter">{{ twitter }}</li>
 			<li class="petition">{{ petition }}</li>
-			<li class="newsletter">{{ newsletter }}</li>
+			<li class="newsletter">
+				<h2>Stay Informed</h2>
+				<span>Get all the latest policy updates by signing up for our quarterly newsletter</span>
+				{{ newsletter }}
+			</li>
 		</ul>
 	</div>
 	<section class="footer-contact">
-		{{ contact_menu }}
+		<div class="footer-action">
+			<a class="logo" href="{{ site.url }}"></a>
+			{{ contact_menu }}
+		</div>
 		<div class="footer-social">
 			<h3>Stay Connected</h3>
 			{{ social_menu }}
 		</div>
 	</section>
 	<section class="footer-bottom">
-		<span class="copyright">&copy; {{site.name }} </span>
-		<span class="designed by">{% include '/views/plugs/elefint.html.twig' %}</span>
+		<div class="container">
+			<span class="copyright">&copy; {{site.name }} </span>
+			<span class="designed by">{% include '/views/plugs/elefint.html.twig' %}</span>
+		</div>
 	</section>
 </footer>

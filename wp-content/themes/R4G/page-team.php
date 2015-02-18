@@ -3,22 +3,22 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
+	$post 			= new TimberPost();
 
+	///team
+	// $teamContext['spark_class'] = 'our-team';
+	// $teamContext['header'] = 'Meet Our Team';
+	// $teamContext['post'] = $post;
+	// $teamContext['tab_template'] = '/views/content/team_tab.html.twig';
+	// $teamContext['content_template'] = '/views/content/team_tab_content.html.twig';
+	// $context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
 
-	///Me
-	$missionContext['spark_class'] = 'featured-news';
-	$missionContext['header'] = 'Featured News & Updates';
-	$missionContextArgs = 	array( 
-							'showposts'		=> '3',
-							'post_type'		=> 'team'
-						);
-	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $missionContext);
-
-	/// Mission Statement
-	$missionContext['spark_class'] = 'our-mission';
-	$missionContext['text'] = get_post_meta( get_the_ID(), 'mission_statement', true );
+	/// Board of Directors
+	// $boardContext['spark_class'] = 'board-of-director';
+	// $boardContext['header'] = 'Board of Directors';
+	// $boardContext['content'] = $post;
 	
-	$context['mission'] = Timber::compile('/views/components/text_block.html.twig', $missionContext);
+	// $context['board_of_directors'] = Timber::compile('/views/content/board_block.html.twig', $boardContext);
 
 	
 	/// Why It Matters
@@ -52,7 +52,7 @@
 	
 
 	//Display Page using home template 
-	Timber::render('/views/pages/home.html.twig', $context);
+	Timber::render('/views/pages/team.html.twig', $context);
 
 	get_footer();
 ?>

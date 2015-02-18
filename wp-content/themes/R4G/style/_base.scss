@@ -26,6 +26,38 @@ $column-width : ($container-width - ( $margin * 2 ))/$columns ;
 	margin-left:  #{$n * $column-width}px;// / $container-width ) * 100%;
 }
 
+
+@mixin form {
+	
+	input {
+		border: none;
+		padding: 10px;
+		color: $stronggray;
+		background: $lightgray;
+
+		&:focus {
+			color: black;
+		}	
+
+		.wpcf7-form :before{
+			content:$pencil;
+			color: $purple3;
+			font-family: "FontAwesome";
+		}
+		
+		&[type="submit"]{
+			color: $black;
+			border-bottom: 3px solid black;
+			background: none;
+			text-transform: uppercase;
+			@include call-to-action;
+			padding: 0;
+			margin-top: 25px;
+		}	
+	}
+
+}
+
 html {
 	overflow-x: hidden;
 }
@@ -41,3 +73,5 @@ body.rights_app{
 		@include container;
 	}
 }
+
+@include form;
