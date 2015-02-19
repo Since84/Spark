@@ -1,0 +1,20 @@
+<li>
+	<h2>{{ slide.heading }}</h2>
+	<ul class="tab-content-group slide">
+		<li class="slide team-member-content" style="background-image:url( '{{ slide.photo.url }}' );">
+			<div class="front">
+				
+				<ul class="statistics">
+					{% for stat in slide.stats %}
+						<li class="statistic">
+							<h4 class="stat">{{ stat.statistics }}</h4>
+							<h5 class="stat_label">{{ stat.statistic_label }}</h5>
+							<p class="description">{{ stat.description }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="statistic-content">{{ dump(slide.statistic-content) }}</div>
+			</div>
+		</li>
+	</ul>
+<li>

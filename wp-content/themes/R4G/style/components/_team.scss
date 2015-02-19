@@ -197,22 +197,24 @@
 .partners {
 	background: $purple2;
 	color: white;
+	padding-bottom: 70px;
+
 	& > h2, & > ul {
 		@include container;
 	}
 	h2 {
 		@include h2;
-		padding: #{$margin}px 0;
-		text-align: center;
+		padding: #{$margin}px;
+		text-align: left;
 	}
 	& > ul {
 		li{
 			display: inline-block;
 			vertical-align: top;
-			width: 45%;
+			width: 48%;
 			margin-bottom: 20px;
 			&:nth-child(odd){
-				margin-right: 7%;
+				margin-right: 3%;
 			}
 			h4{
 				@include h6;

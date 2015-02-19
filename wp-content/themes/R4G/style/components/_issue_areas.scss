@@ -1,0 +1,127 @@
+
+.issue-areas {
+	.tab{
+		@include issue_tab;
+		padding: 55px;
+		border-color: $black;
+		&.active{
+			border-color: $purple4;
+		}
+		&:after{
+			content:'';
+			background: rgba(0,0,0,.3);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			display: block;
+			transition: .25s all ease-in-out;
+		}
+		.slide-content{
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto 20px;
+			width: auto;
+			height: 70px;
+			text-align: center;
+			z-index: 10;
+			transition: .25s all ease-in-out;
+		}
+		h4{
+			@include h3; 
+			color: white;
+			
+		}
+		div {
+			opacity: 0;
+			transition: .25s opacity ease-in-out .25s;
+		}
+		&:hover {
+			h4{
+				@include h4;
+				text-align: center;
+				color: $teal;
+				padding-bottom: 14px;
+				margin-bottom: 14px;
+				border-bottom: 3px solid white; 
+				z-index: 10;
+				position: relative;
+			}
+			div {
+				@include short-body;
+				max-height: 10em;
+				line-height: 1.3em;
+				color: white;
+				z-index: 10;
+				position: relative;
+				opacity: 1;
+			}	
+			.slide-content{
+				height: 150px;
+			}	
+			&:after {
+				background: rgba(0,0,0,.6);
+			}
+		}
+	}
+}
+.tab-content{
+	padding: 0;
+	& > ul {
+		padding: 0;
+		width: 100%;
+
+	}
+	.tab-content-group {
+		@include container;
+	}
+	h2 {
+		text-align: center;
+		background: $purple3;
+		color: white;
+		@include h2;
+		padding: 70px;
+	}
+
+	.statistics {
+		white-space: nowrap;
+		border-bottom: 1px solid $black;
+		li {
+			white-space: normal;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			width: 30%;
+			padding: 70px 60px 40px;
+			&:not(:nth-child(3)){
+				margin-right: 5%;
+			}
+			h4{
+				@include h4;
+				color: $purple5;
+				text-align: center;
+				margin-bottom: .25em;
+			}
+			h5{
+				@include h5;
+				font-size: 22px;
+				line-height: 1em;
+				margin-bottom: .5em;
+				text-align: center;
+				color: $purple3;
+			}
+			.description{
+				@include short-body;
+				text-transform: uppercase;
+				line-height: 1.3em;
+				font-size: 14px;
+			}
+		}
+	}
+}

@@ -3,26 +3,42 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
+	$post 			= new TimberPost();
 
-	/// Issue Areas
-	$issueContextArgs 				= 	array( 
-										'showposts'			=> '3',
-										'category_name'		=> 'issue-areas'
-									);
-	$issueContext['feed'] 			= 	Timber::get_posts($issueContextArgs);
-	Theme_Theme::processPosts($issueContext['feed']); 
-	$issuescontext['spark_class'] 	= 'issues';
- 	$context['issue_areas'] 		= Timber::compile('/views/components/tabbed_feed.html.twig', $issueContext);	
+	///team
+	$teamContext['spark_class'] = 'issue-areas';
+	$teamContext['header'] = 'Issue Areas';
+	$teamContext['post'] = $post;
+	$teamContext['tab_template'] = '/views/content/issue_tab.html.twig';
+	$teamContext['content_template'] = '/views/content/issue_tab_content.html.twig';
+	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
+
+	/// Board of Directors
+	// $boardContext['spark_class'] = 'board-of-director';
+	// $boardContext['header'] = 'Board of Directors';
+	// $boardContext['content'] = $post;
 	
+	// $context['board_of_directors'] = Timber::compile('/views/content/board_block.html.twig', $boardContext);
 
-	/// Papers & Factsheets
-	$papersContext['feed'] 			= 	get_field('papers_factsheets');
-	$paperscontext['spark_class'] 	= 'papers-factsheets';
- 	$context['papers_factsheets'] 	= Timber::compile('/views/components/file_feed.html.twig', $papersContext);
+	
+	// /// Coalitons & Partnerships
+	// $coalitionContext['spark_class'] = 'coalitions-partnerships';
+	// $coalitionContext['header'] = 'Coalitons & Partnerships';
+	// $coalitionContext['content'] = $post;
+	
+	// $context['coalitions_partnerships'] = Timber::compile('/views/content/coalition_block.html.twig', $coalitionContext);
 
 
-	//Display Page using news template 
-	Timber::render('/views/pages/issue-areas.html.twig', $context);
+ // 	/// Partners
+	// $partnerContext['spark_class'] = 'partners';
+	// $partnerContext['header'] = 'Partners';
+	// $partnerContext['content'] = $post;
+	
+	// $context['partners'] = Timber::compile('/views/content/partner_block.html.twig', $partnerContext);
+
+
+	//Display Page using home template 
+	Timber::render('/views/pages/team.html.twig', $context);
 
 	get_footer();
 ?>

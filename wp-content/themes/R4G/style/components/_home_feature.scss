@@ -14,11 +14,12 @@ section.home-feature{
 		bottom: 60px;
 		left: 0px;
 		h2{
-			b, strong { @include h1; }
+			width: 580px;
+			b, strong { @include h1; margin-bottom: 20px; display: block; }
 			@include h2;
 			color: white; 
 			background: $purple3opaque;
-			padding: 1rem 1.25rem; 
+			padding: 2.2rem 1.25rem; 
 		}
 		h3 {
 			@include h7;
@@ -32,7 +33,7 @@ section.home-feature{
 		.link-peek {
 			position: absolute;
 			bottom: 0px;
-			height: 146px;
+			height: 162px;
 			width: 40px;
 			right: -40px;
 			padding: 10px;
@@ -54,6 +55,7 @@ section.home-feature{
 				width: 80px;
 				text-transform: uppercase;
 				opacity:0;
+				line-height: 1em;
 			}
 			&:after {
 				content: $rightarrow;

@@ -3,7 +3,6 @@
 	<ul>
 		{% for partner in content.get_field('partners') %}
 			<li>
-				<img src="{{ partner.partner_logo }}"/>
 				<h4>{{ partner.partner_name }}</h4>
 				<a href="{{ partner.partner_link }}" target="_blank">{{ partner.partner_link }}</a>
 			</li>
