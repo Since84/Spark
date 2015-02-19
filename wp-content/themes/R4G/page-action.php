@@ -53,7 +53,6 @@
 		);
 
  	$context['papers_factsheets'] 	= Timber::compile('/views/components/file_feed.html.twig', $fileContext);
- 	var_dump($context['papers_factsheets']);
 	//Display Page using home template 
 	Timber::render('/views/pages/action.html.twig', $context);
 
