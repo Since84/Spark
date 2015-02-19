@@ -73,6 +73,7 @@
 }
 .tab-content{
 	padding: 0;
+	display: none;
 	& > ul {
 		padding: 0;
 		width: 100%;
@@ -82,11 +83,8 @@
 		@include container;
 	}
 	h2 {
-		text-align: center;
-		background: $purple3;
-		color: white;
+		@include large_header;
 		@include h2;
-		padding: 70px;
 	}
 
 	.statistics {
@@ -123,5 +121,156 @@
 				font-size: 14px;
 			}
 		}
+	}
+	.statistic-content {
+		padding: 60px 0;
+		p {
+			margin-bottom: 20px;
+		}
+	}
+	.tab-pager{
+		@include container;
+		padding-bottom: 100px;
+		display: block;
+		white-space: nowrap;
+		color: $purple4;
+		li{
+			display: inline-block;
+			width: auto;
+			padding-bottom: 3px;
+			border-bottom: 1px solid $purple4;
+			text-align: center;
+			&.prev {
+				margin-right: 50%;
+			}
+			&.next {
+				float: right;
+			}
+		}
+	}
+}
+
+.papers-factsheets {
+	hgroup{
+		@include large_header;
+		background: $purple1;
+		h2{ 
+			@include h2; 
+			width: auto;
+			padding-bottom: 20px;
+			border-bottom: 2px solid $purple5;
+			margin-bottom: 10px; 
+			display: inline-block;
+		}
+		span{
+			display: block;
+			@include h7;
+		}
+	}
+	.filters {
+		@include large_header;
+		background: $lightgray;
+		@include h6;
+		font-size: 28px; 
+		padding: 40px;
+		position: relative;
+		z-index: 100;
+
+		li {
+			display: inline-block;
+			width: 200px;
+			&:not(:last-of-type){
+				padding-right: 20px;
+				border-right: 2px solid $stronggray;
+			}
+
+			&.paper {
+				color: $purple2;
+				a { color: $purple2; }
+				&:before{ content: $paper;}
+			}
+
+			&.factsheet {
+				color: $purple4;
+				text-align: right;
+				a { color: $purple4; }
+				&:before{ content: $factsheet;}
+			}
+
+			&:before {
+				display: inline-block;
+				font-size: 30px;	
+				font-family: "FontAwesome";
+				margin-right: 10px; 
+			} 
+
+		}
+		&:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: "";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(136, 183, 213, 0);
+			border-top-color: $lightgray;
+			border-width: 30px;
+			margin-left: -30px;
+		}
+	}
+	background: $stronggray;
+	.slides {
+		@include container; 
+		text-align: center;
+		padding: 90px 0 110px;
+
+	}
+	.file{
+		display: inline-block;
+		width: 255px; 
+		margin-bottom: 30px;
+		height: 255px;
+		vertical-align: top;
+
+		padding: 50px 30px;
+		text-align: center;
+		background: $lightgray;
+		box-shadow: 0 0 10px 0 #888; 
+
+		a {
+			@include h6;
+			font-size: 20px;
+			text-decoration: none;
+			margin-top: 20px;
+			line-height: 1em;
+			display: block;
+		}
+
+		&:not(:nth-child(3n)){
+			margin-right: 100px;
+		}
+
+		&.Paper {
+			border-top: 20px solid $purple2;
+			color: $purple2;
+			a { color: $purple2; }
+			&:before{ content: $paper;}
+		}
+
+		&.Fact.Sheet {
+			border-top: 20px solid $purple4;
+			color: $purple4;
+			a { color: $purple4; }
+			&:before{ content: $factsheet;}
+		}
+
+		&:before {
+			display: block;
+			font-size: 30px;	
+			font-family: "FontAwesome";
+			margin-bottom: 10px; 
+		} 
 	}
 }

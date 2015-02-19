@@ -1,9 +1,7 @@
-<section class="spark-gallery scrolling-tabs {{ spark_class }}">
-	{% if header %}<h2>{{ header }}</h2>{% endif %}
-	<ul class="tabs">
-		{# {{ dump(post.get_field('issue_area')) }} #}
-	{% for slide in post.get_field('issue_area') %}
-		{% include tab_template %}
+<section class="filters {{ spark_class }}">
+	<ul>
+	{% for f in filters %}
+		<li class="{{ f.class }}">{{ f.name }}</li>
 	{% endfor %}
 	</ul>
 </section>

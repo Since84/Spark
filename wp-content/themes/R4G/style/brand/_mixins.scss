@@ -81,6 +81,12 @@
 				.learn-more {
 					opacity: 1;
 				}
-			}
-		
+			}		
+}
+
+@mixin large_header {
+	text-align: center;
+	background: $purple3;
+	color: white;
+	padding: 70px;
 }

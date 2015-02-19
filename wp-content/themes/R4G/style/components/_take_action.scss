@@ -1,0 +1,93 @@
+
+.action-feature {
+	.container > div{
+		margin: auto;
+		position: absolute;
+		display: block;
+		width: 900px;
+		background: $purple4opaque;
+		bottom: 85px;
+		left: 0;
+		right: 0;
+		color: white;
+		.main-text, .feature-link {
+			padding: 35px;
+			display: block;
+		}
+	}
+	h2{
+		@include h4;
+		text-align: center;
+		font-size: 48px;
+		margin-bottom: 20px; 
+	}
+	.main-text > p {
+		text-align: center;
+		@include long-body;
+		font-size: 34px;
+	}
+	.feature-link {
+		background: $purple1;
+		a{
+			background: $purple3;
+			color: white;
+			text-decoration: none;
+			padding: 20px 25px;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 20px;
+			@include h6;
+		}
+		span {
+			display: inline-block;
+			vertical-align: top;
+			@include short-body;
+			width: 440px;
+		}
+	}
+}
+
+.featured-news.events {
+	width: 100%;
+	padding-top: 0;
+	h2{
+		max-width: 9000px;
+		width: 100%;
+		@include large-header;
+		background: none;
+		color: $purple3;
+		@include h2;
+		padding: 90px;
+	}
+	.slide{
+		padding: 0;
+		height: 415px;
+		.image-head{
+			display: block;
+			width: 100%;
+			height: 215px;  
+			text-align: center;
+			padding: 45px; 
+			background-size: auto 100%;
+			background-position: center;
+		}
+		h4 {
+			background: none;
+			@include h4;
+		}
+		h5{
+			@include h6;
+			color: white;
+		}
+		span{
+			background: $purple1;
+			@include short-body;
+			display: block;
+			height: 200px;
+			line-height: 1.5em;
+			padding: 20px 25px;
+			font-size: 18px;
+			color: white;
+		}
+	}
+}

@@ -3,6 +3,7 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
+	$post 			= new TimberPost();
 	
 	///Page Feature
 	$featureContext	= Timber::get_context();
@@ -13,14 +14,14 @@
 	$featureContext['link_label'] = get_field( 'feature_link_label', get_the_ID()); 
 	$featureContext['image'] = get_field( 'feature_image', get_the_ID()); 
 
-	$context['feature'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
+	$context['feature'] = Timber::compile('/views/components/action_feature.twig', $featureContext);
 
  	/// Events
-	$eventsContext['spark_class'] = 'featured-news';
-	$eventsContext['header'] = 'Featured News & Updates';
+	$eventsContext['spark_class'] = 'featured-news events';
+	$eventsContext['header'] = 'Join Rights4Girls at our next event';
 	$eventsContextArgs = 	array( 
 							'showposts'		=> '3',
-							'post_type'	=> 'page'
+							'category_name'	=> 'event',
 						);
 	$eventsContext['feed'] = Timber::get_posts($eventsContextArgs);
 	Theme_Theme::processPosts($eventsContext['feed']);
@@ -30,11 +31,29 @@
 
 
 	/// Papers & Factsheets
-	$papersContext['feed'] 			= 	get_field('download_files');
-	$paperscontext['spark_class'] 	= 'letters-briefs-petitions';
- 	$context['papers_factsheets'] 	= Timber::compile('/views/components/file_feed.html.twig', $papersContext);
+	$fileContext['spark_class'] = 'letters-briefs-petitions';
+	$fileContext['header'] = 'Act Now: Letters, Briefs, & Petitions';
+	$fileContext['header_caption'] = 'Let Your voice be heard alongside ours in demanding and end to child sex trafficking';
+	$fileContext['slide_template'] = '/views/content/file_download.html.twig';
+	$fileContext['content'] = $post;
 
+	$fileContext['filters'] = array(
+			array(
+				'class'	=> 'letter',
+				'name'	=> 'Letter'
+			),
+			array(
+				'class'	=> 'brief',
+				'name'	=> 'Brief',
+			),
+			array(
+				'class'	=> 'petition',
+				'name'	=> 'petition',
+			)
+		);
 
+ 	$context['papers_factsheets'] 	= Timber::compile('/views/components/file_feed.html.twig', $fileContext);
+ 	var_dump($context['papers_factsheets']);
 	//Display Page using home template 
 	Timber::render('/views/pages/action.html.twig', $context);
 

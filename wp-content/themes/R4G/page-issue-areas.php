@@ -11,16 +11,28 @@
 	$teamContext['post'] = $post;
 	$teamContext['tab_template'] = '/views/content/issue_tab.html.twig';
 	$teamContext['content_template'] = '/views/content/issue_tab_content.html.twig';
-	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
+	$context['issue'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
 
-	/// Board of Directors
-	// $boardContext['spark_class'] = 'board-of-director';
-	// $boardContext['header'] = 'Board of Directors';
-	// $boardContext['content'] = $post;
-	
-	// $context['board_of_directors'] = Timber::compile('/views/content/board_block.html.twig', $boardContext);
+	/// Learn More: Papers & Factsheets
+	$fileContext['spark_class'] = 'papers-factsheets';
+	$fileContext['header'] = 'Learn More: Papers & Factsheets';
+	$fileContext['header_caption'] = 'Explore these issues and Rights4Girls work surrounding them';
+	$fileContext['slide_template'] = '/views/content/file_download.html.twig';
+	$fileContext['content'] = $post;
 
+	$fileContext['filters'] = array(
+			array(
+				'class'	=> 'paper',
+				'name'	=> 'Papers'
+			),
+			array(
+				'class'	=> 'factsheet',
+				'name'	=> 'Factsheets'
+			)
+		);
 	
+	$context['learn_more'] = Timber::compile('/views/content/file_feed.html.twig', $fileContext);
+
 	// /// Coalitons & Partnerships
 	// $coalitionContext['spark_class'] = 'coalitions-partnerships';
 	// $coalitionContext['header'] = 'Coalitons & Partnerships';
@@ -38,7 +50,7 @@
 
 
 	//Display Page using home template 
-	Timber::render('/views/pages/team.html.twig', $context);
+	Timber::render('/views/pages/issue_areas.twig', $context);
 
 	get_footer();
 ?>
