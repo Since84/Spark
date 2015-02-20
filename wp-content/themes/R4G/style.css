@@ -175,20 +175,32 @@ nav.full-width-nav {
 /* line 7, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li {
   display: inline-block;
-  margin-right: 80px;
-  padding: 10px 0;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 24px;
 }
-/* line 13, style/components/_mainnav.scss */
+/* line 12, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li a {
+  display: block;
   text-decoration: none;
   color: white;
 }
-/* line 19, style/components/_mainnav.scss */
+/* line 18, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li > a {
+  padding: 19px 20px;
+}
+/* line 22, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li.current_page_item {
+  background: #380d36;
+  border-bottom: 5px solid #6b0269;
+}
+/* line 25, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li.current_page_item a {
+  color: #21e3db;
+}
+/* line 29, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop {
   position: absolute;
   background: #380d36;
@@ -202,12 +214,12 @@ nav.full-width-nav > ul > li .nav-drop {
   overflow: hidden;
   transition: .5s all ease-in-out;
 }
-/* line 32, style/components/_mainnav.scss */
+/* line 42, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop ul {
   position: absolute;
   bottom: 0;
 }
-/* line 36, style/components/_mainnav.scss */
+/* line 46, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop li {
   display: inline-block;
   font-family: "franklin-gothic-urw-comp";
@@ -220,7 +232,7 @@ nav.full-width-nav > ul > li .nav-drop li {
   margin-right: 1.5rem;
   line-height: 2rem;
 }
-/* line 43, style/components/_mainnav.scss */
+/* line 53, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li:hover .nav-drop {
   height: 32px;
   bottom: -32px;
@@ -1247,19 +1259,19 @@ section.our_mission .container {
 }
 
 /* line 153, style/components/_issue_areas.scss */
-.papers-factsheets {
+.file-feed {
   background: #c4c2c7;
 }
-/* line 154, style/components/_issue_areas.scss */
-.papers-factsheets hgroup {
+/* line 95, style/brand/_mixins.scss */
+.file-feed hgroup {
   text-align: center;
   background: #6b0269;
   color: white;
   padding: 70px;
   background: #380d36;
 }
-/* line 157, style/components/_issue_areas.scss */
-.papers-factsheets hgroup h2 {
+/* line 98, style/brand/_mixins.scss */
+.file-feed hgroup h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -1271,8 +1283,8 @@ section.our_mission .container {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 165, style/components/_issue_areas.scss */
-.papers-factsheets hgroup span {
+/* line 106, style/brand/_mixins.scss */
+.file-feed hgroup span {
   display: block;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1281,8 +1293,8 @@ section.our_mission .container {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 170, style/components/_issue_areas.scss */
-.papers-factsheets .filters {
+/* line 111, style/brand/_mixins.scss */
+.file-feed .filters {
   text-align: center;
   background: #6b0269;
   color: white;
@@ -1298,50 +1310,85 @@ section.our_mission .container {
   position: relative;
   z-index: 100;
 }
-/* line 179, style/components/_issue_areas.scss */
-.papers-factsheets .filters li {
+/* line 120, style/brand/_mixins.scss */
+.file-feed .filters li {
   display: inline-block;
   width: 200px;
 }
-/* line 182, style/components/_issue_areas.scss */
-.papers-factsheets .filters li:not(:last-of-type) {
+/* line 123, style/brand/_mixins.scss */
+.file-feed .filters li:not(:last-of-type) {
   padding-right: 20px;
   border-right: 2px solid #c4c2c7;
 }
-/* line 187, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.paper {
+/* line 128, style/brand/_mixins.scss */
+.file-feed .filters li.paper {
   color: #4a1249;
 }
-/* line 189, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.paper a {
+/* line 130, style/brand/_mixins.scss */
+.file-feed .filters li.paper a {
   color: #4a1249;
 }
-/* line 190, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.paper:before {
+/* line 131, style/brand/_mixins.scss */
+.file-feed .filters li.paper:before {
   content: "";
 }
-/* line 193, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.factsheet {
-  color: #81026e;
-  text-align: right;
-}
-/* line 196, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.factsheet a {
+/* line 134, style/brand/_mixins.scss */
+.file-feed .filters li.factsheet {
   color: #81026e;
 }
-/* line 197, style/components/_issue_areas.scss */
-.papers-factsheets .filters li.factsheet:before {
+/* line 136, style/brand/_mixins.scss */
+.file-feed .filters li.factsheet a {
+  color: #81026e;
+}
+/* line 137, style/brand/_mixins.scss */
+.file-feed .filters li.factsheet:before {
   content: "";
 }
-/* line 200, style/components/_issue_areas.scss */
-.papers-factsheets .filters li:before {
+/* line 139, style/brand/_mixins.scss */
+.file-feed .filters li.letter {
+  color: #380d36;
+}
+/* line 141, style/brand/_mixins.scss */
+.file-feed .filters li.letter a {
+  color: #380d36;
+}
+/* line 142, style/brand/_mixins.scss */
+.file-feed .filters li.letter:before {
+  content: "";
+}
+/* line 144, style/brand/_mixins.scss */
+.file-feed .filters li.brief {
+  color: #81026e;
+}
+/* line 146, style/brand/_mixins.scss */
+.file-feed .filters li.brief a {
+  color: #81026e;
+}
+/* line 147, style/brand/_mixins.scss */
+.file-feed .filters li.brief:before {
+  content: "";
+}
+/* line 149, style/brand/_mixins.scss */
+.file-feed .filters li.petition {
+  color: #ab01a7;
+}
+/* line 151, style/brand/_mixins.scss */
+.file-feed .filters li.petition a {
+  color: #ab01a7;
+}
+/* line 152, style/brand/_mixins.scss */
+.file-feed .filters li.petition:before {
+  content: "";
+}
+/* line 157, style/brand/_mixins.scss */
+.file-feed .filters li:before {
   display: inline-block;
   font-size: 30px;
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 208, style/components/_issue_areas.scss */
-.papers-factsheets .filters:after {
+/* line 165, style/brand/_mixins.scss */
+.file-feed .filters:after {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -1355,8 +1402,8 @@ section.our_mission .container {
   border-width: 30px;
   margin-left: -30px;
 }
-/* line 224, style/components/_issue_areas.scss */
-.papers-factsheets .slides {
+/* line 181, style/brand/_mixins.scss */
+.file-feed .slides {
   display: block;
   margin: auto;
   width: 1200px;
@@ -1365,8 +1412,8 @@ section.our_mission .container {
   text-align: center;
   padding: 90px 0 110px;
 }
-/* line 230, style/components/_issue_areas.scss */
-.papers-factsheets .file {
+/* line 187, style/brand/_mixins.scss */
+.file-feed .file {
   display: inline-block;
   width: 255px;
   margin-bottom: 30px;
@@ -1377,8 +1424,8 @@ section.our_mission .container {
   background: #dedade;
   box-shadow: 0 0 10px 0 #888;
 }
-/* line 242, style/components/_issue_areas.scss */
-.papers-factsheets .file a {
+/* line 199, style/brand/_mixins.scss */
+.file-feed .file a {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -1390,38 +1437,77 @@ section.our_mission .container {
   line-height: 1em;
   display: block;
 }
-/* line 251, style/components/_issue_areas.scss */
-.papers-factsheets .file:not(:nth-child(3n)) {
+/* line 208, style/brand/_mixins.scss */
+.file-feed .file:not(:nth-child(3n)) {
   margin-right: 100px;
 }
-/* line 255, style/components/_issue_areas.scss */
-.papers-factsheets .file.Paper {
+/* line 212, style/brand/_mixins.scss */
+.file-feed .file.Paper {
   border-top: 20px solid #4a1249;
   color: #4a1249;
 }
-/* line 258, style/components/_issue_areas.scss */
-.papers-factsheets .file.Paper a {
+/* line 215, style/brand/_mixins.scss */
+.file-feed .file.Paper a {
   color: #4a1249;
 }
-/* line 259, style/components/_issue_areas.scss */
-.papers-factsheets .file.Paper:before {
+/* line 216, style/brand/_mixins.scss */
+.file-feed .file.Paper:before {
   content: "";
 }
-/* line 262, style/components/_issue_areas.scss */
-.papers-factsheets .file.Fact.Sheet {
+/* line 219, style/brand/_mixins.scss */
+.file-feed .file.Fact.Sheet {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 265, style/components/_issue_areas.scss */
-.papers-factsheets .file.Fact.Sheet a {
+/* line 222, style/brand/_mixins.scss */
+.file-feed .file.Fact.Sheet a {
   color: #81026e;
 }
-/* line 266, style/components/_issue_areas.scss */
-.papers-factsheets .file.Fact.Sheet:before {
+/* line 223, style/brand/_mixins.scss */
+.file-feed .file.Fact.Sheet:before {
   content: "";
 }
-/* line 269, style/components/_issue_areas.scss */
-.papers-factsheets .file:before {
+/* line 225, style/brand/_mixins.scss */
+.file-feed .file.Letter {
+  border-top: 20px solid #380d36;
+  color: #380d36;
+}
+/* line 228, style/brand/_mixins.scss */
+.file-feed .file.Letter a {
+  color: #380d36;
+}
+/* line 229, style/brand/_mixins.scss */
+.file-feed .file.Letter:before {
+  content: "";
+}
+/* line 231, style/brand/_mixins.scss */
+.file-feed .file.Brief {
+  border-top: 20px solid #81026e;
+  color: #81026e;
+}
+/* line 234, style/brand/_mixins.scss */
+.file-feed .file.Brief a {
+  color: #81026e;
+}
+/* line 235, style/brand/_mixins.scss */
+.file-feed .file.Brief:before {
+  content: "";
+}
+/* line 237, style/brand/_mixins.scss */
+.file-feed .file.Petition {
+  border-top: 20px solid #ab01a7;
+  color: #ab01a7;
+}
+/* line 240, style/brand/_mixins.scss */
+.file-feed .file.Petition a {
+  color: #ab01a7;
+}
+/* line 241, style/brand/_mixins.scss */
+.file-feed .file.Petition:before {
+  content: "";
+}
+/* line 244, style/brand/_mixins.scss */
+.file-feed .file:before {
   display: block;
   font-size: 30px;
   font-family: "FontAwesome";
@@ -1562,6 +1648,226 @@ section.our_mission .container {
   padding: 20px 25px;
   font-size: 18px;
   color: white;
+}
+
+/* line 1, style/components/_news.scss */
+.news-heading {
+  text-align: center;
+  background: #6b0269;
+  color: white;
+  padding: 70px;
+  background: #dedade;
+  text-align: left;
+}
+/* line 5, style/components/_news.scss */
+.news-heading h1 {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+  color: #380d36;
+}
+
+/* line 12, style/components/_news.scss */
+.cat-list {
+  text-align: center;
+  background: #dedade;
+}
+/* line 16, style/components/_news.scss */
+.cat-list li {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 10px solid #c4c2c7;
+}
+/* line 21, style/components/_news.scss */
+.cat-list li a {
+  color: #c4c2c7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 30, style/components/_news.scss */
+.featured-post .slides {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  height: 625px;
+}
+/* line 33, style/components/_news.scss */
+.featured-post .slides .slide {
+  position: absolute;
+  display: block;
+  bottom: 75px;
+  left: 0;
+  width: 610px;
+}
+/* line 39, style/components/_news.scss */
+.featured-post .slides .slide a {
+  text-decoration: none;
+  color: white;
+}
+/* line 40, style/components/_news.scss */
+.featured-post .slides .slide hgroup {
+  background: rgba(74, 18, 73, 0.9);
+  padding: 25px;
+}
+/* line 43, style/components/_news.scss */
+.featured-post .slides .slide hgroup h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+}
+/* line 44, style/components/_news.scss */
+.featured-post .slides .slide hgroup h5 {
+  color: #21e3db;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+/* line 46, style/components/_news.scss */
+.featured-post .slides .slide p {
+  background: rgba(74, 18, 73, 0.7);
+  padding: 25px;
+}
+/* line 50, style/components/_news.scss */
+.featured-post .slides .slide .read-more {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  color: #21e3db;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+}
+/* line 58, style/components/_news.scss */
+.featured-post .slides .slide .read-more:before {
+  content: "";
+  font-family: "FontAwesome";
+  margin-right: 10px;
+}
+
+/* line 69, style/components/_news.scss */
+.news-feed {
+  background: #c4c2c7;
+  padding-top: 100px;
+  padding-bottom: 205px;
+}
+/* line 73, style/components/_news.scss */
+.news-feed .post-preview {
+  background: #dedade;
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding: 35px;
+  margin: 20px auto 40px;
+  box-shadow: 0px 0px 10px 0px #777;
+}
+/* line 80, style/components/_news.scss */
+.news-feed .post-preview a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+/* line 85, style/components/_news.scss */
+.news-feed .post-preview .thumbnail {
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 35px;
+}
+/* line 93, style/components/_news.scss */
+.news-feed .post-preview h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  color: #6b0269;
+  margin-bottom: 10px;
+}
+/* line 99, style/components/_news.scss */
+.news-feed .post-text {
+  display: inline-block;
+  width: 800px;
+}
+
+/* line 105, style/components/_news.scss */
+.in-the-media {
+  background: #4a1249;
+  padding: 90px 0;
+}
+/* line 108, style/components/_news.scss */
+.in-the-media h2 {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  padding: 0;
+  color: white;
+}
+/* line 114, style/components/_news.scss */
+.in-the-media .slides {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+}
+/* line 119, style/components/_news.scss */
+.in-the-media .slides li {
+  display: inline-block;
+  width: 355px;
+  text-align: left;
+}
+/* line 123, style/components/_news.scss */
+.in-the-media .slides li:not(:nth-child(3)) {
+  margin-right: 60px;
+}
+/* line 126, style/components/_news.scss */
+.in-the-media .slides li a {
+  color: white;
+  text-decoration: none;
+}
+/* line 132, style/components/_news.scss */
+.in-the-media .slides li .post-text h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  font-size: 32px;
+}
+/* line 138, style/components/_news.scss */
+.in-the-media .slides li .video {
+  width: 300px;
+  height: 190px;
+  display: block;
 }
 
 /* line 1, style/components/_footer.scss */

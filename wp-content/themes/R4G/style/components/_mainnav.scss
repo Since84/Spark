@@ -6,14 +6,24 @@ nav.full-width-nav{
 	
 	& > ul > li {
 		display: inline-block;
-		margin-right: 80px;
-		padding: 10px 0;
+		// margin-right: 80px;
 		@include h6;
 
 		a{
-			
+			display: block;
 			text-decoration: none;
 			color: white;
+		}
+
+		& > a {
+			padding: 19px 20px;
+		}
+
+		&.current_page_item{
+			background: $purple1;
+			border-bottom: 5px solid $purple3;
+			a { color: $teal; }
+
 		}
 
 		.nav-drop {

@@ -3,24 +3,25 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
-
  	/// Featured News and Updates 
 	$newsContext['spark_class'] = 	'featured-news';
-	$newsContext['header'] 		= 	'News & Updates';
+
 
 	/// Category List
+	$catContext['header'] 		= 	'News & Updates';
 	$catContext['categories']	=	Timber::get_terms('category');
-	$newsContext['categories'] 	= 	Timber::compile('/views/components/category_selector.html.twig', $catContext);
-	
+	$context['categories'] 	= 	Timber::compile('/views/components/category_selector.html.twig', $catContext);
+
 	/// Featured Post
 	$featureContextArgs 		= 	array( 
 									'showposts'		=> '1',
 									'category_name'	=> 'news-feature'
 								);
+	
+	/// Featured News and Updates 
+	$featureContext['spark_class'] = 	'featured-post';
 	$featureContext['feed'] 	= 	Timber::get_posts($featureContextArgs);
-	Theme_Theme::processPosts($featureContext['feed']);
-
-	$featureContext['slide_template'] = '/views/content/featured_news_slide.html.twig';
+	$featureContext['slide_template'] = '/views/components/featured_news_slide.html.twig';
  	$context['feature'] 		= Timber::compile('/views/components/static_feed.html.twig', $featureContext);
 
 
@@ -30,10 +31,11 @@
 									// ,'category__not_in'	=> ''//TODO: Add News Feature and In the Media ids
 								);
 	$newsContext['feed'] 		= 	Timber::get_posts($newsContextArgs);
+	$newsContext['spark_class']	= 	'news-feed';
 	Theme_Theme::processPosts($newsContext['feed']);
 
 	$newsContext['slide_template'] = '/views/content/news_post.html.twig';
- 	$context['feature'] 		= Timber::compile('/views/components/static_feed.html.twig', $newsContext);
+ 	$context['news'] 		= Timber::compile('/views/components/static_feed.html.twig', $newsContext);
 
 
  	/// In the Media Feed
@@ -44,8 +46,10 @@
 	$mediaContext['feed'] 		= 	Timber::get_posts($mediaContextArgs);
 	Theme_Theme::processPosts($mediaContext['feed']);	
 
-	$mediaContext['slide_template'] = '/views/content/news_post.html.twig';
- 	$context['feed'] 		= Timber::compile('/views/components/static_feed.html.twig', $mediaContext);
+	$mediaContext['spark_class']	= 'in-the-media';
+	$mediaContext['header']			= 'Rights4Girls in the Media';
+	$mediaContext['slide_template'] = '/views/content/media_post.html.twig';
+ 	$context['media'] 			= Timber::compile('/views/components/static_feed.html.twig', $mediaContext);
 
 
  	/// Malika Blog

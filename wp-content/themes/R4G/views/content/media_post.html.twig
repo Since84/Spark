@@ -1,11 +1,10 @@
 <li class="post-preview">
 	<a class="content" href="{{ slide.permalink }}">
-		<div class="thumbnail" style="background-image:url( '{{ slide.thumbnail.url }}' );">
-			{{slide.display_date}}
+		<div class="video" style="background-image:url( '{{ slide.thumbnail.url }}' );">
 		</div>
 		<div class="post-text">
 			<h4>{{ slide.post_title }}</h4>
-			<p>{{ slide.get_preview(25) }}</p>
+			<p>{{ slide.get_preview(8) }}</p>
 		</div>
 	</a> 
 </li>

@@ -8,9 +8,11 @@
 	///team
 	$teamContext['spark_class'] = 'our-team';
 	$teamContext['header'] = 'Meet Our Team';
+
 	$teamContext['post'] = $post;
 	$teamContext['tab_template'] = '/views/content/team_tab.html.twig';
 	$teamContext['content_template'] = '/views/content/team_tab_content.html.twig';
+	$teamContext['slide_field'] = 'team_members';
 	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
 
 	/// Board of Directors

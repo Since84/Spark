@@ -1,3 +1,9 @@
+{% if header %}
+	<div class="news-heading">
+		<h1>
+			{{ header }}
+		</h1>
+	</div>{% endif %}
 <ul class="cat-list">
     {% for cat in categories %}
         <li><a href="{{ cat.link }}">{{cat.name}}</a></li>

@@ -52,7 +52,7 @@
 			)
 		);
 
- 	$context['papers_factsheets'] 	= Timber::compile('/views/components/file_feed.html.twig', $fileContext);
+ 	$context['papers_factsheets'] 	= Timber::compile('/views/content/file_feed.html.twig', $fileContext);
 	//Display Page using home template 
 	Timber::render('/views/pages/action.html.twig', $context);
 
