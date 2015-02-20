@@ -1,6 +1,8 @@
 <li class="post-preview">
 	<a class="content" href="{{ slide.permalink }}">
 		<div class="video" style="background-image:url( '{{ slide.thumbnail.url }}' );">
+			<object data="http://www.youtube.com/embed/{{ slide.video_id }}"
+   width="355" height="220"></object>
 		</div>
 		<div class="post-text">
 			<h4>{{ slide.post_title }}</h4>

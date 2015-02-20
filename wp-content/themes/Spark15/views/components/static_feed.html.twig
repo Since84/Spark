@@ -1,4 +1,5 @@
 <section class="spark-gallery {{ spark_class }}">
+	{% if header %}<h2>{{ header }}</h2>{% endif %}
 	<ul class="slides">
 	{% for slide in feed %}
 		{% include slide_template %}

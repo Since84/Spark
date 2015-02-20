@@ -1,7 +1,21 @@
-<div>
-<p>{{moving_forward.title}}</p>
-<p>{{moving_forward.get_field('sub_headline')}}</p>
+<section class="moving_forward"  style="background-image: url({{moving_forward.get_field('background_img')}}) ">
+
+<div class="container">
+	<div class="circle">
+		<div class="circle-content">
+			<h1 class="brown-h1">{{moving_forward.title}}</h1>
+			<h2>{{moving_forward.sub_headline}}</h2>
+		</div>
+	</div>
+	
 </div>
+</section>
 
-{{moving_forward.content}}
+<section style="background-image: url({{moving_forward.get_field('sub_image')}})" >
 
+	<div class="container">
+		<div class="moving-forward">
+			{{moving_forward.content}}
+		</div>
+	</div>
+</section>

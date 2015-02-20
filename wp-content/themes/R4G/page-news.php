@@ -57,7 +57,9 @@
 									'showposts'			=> '1',
 									'category_name'		=> 'malikas-blog'
 								);
-	$malikaContext['feed'] 		= 	Timber::get_posts($malikaContextArgs);
+	$malikaContext['spark_class'] 	= 'malikas-blog';
+	$malikaContext['header'] 		= "Malika Saada Saar's Huffington Post Blog";
+	$malikaContext['feed'] 			= Timber::get_posts($malikaContextArgs);
 	Theme_Theme::processPosts($malikaContext['feed']);
 
 	$malikaContext['slide_template'] = '/views/content/malika_slide.html.twig';

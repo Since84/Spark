@@ -1,5 +1,4 @@
 <?php
-
 	function __autoload($class_name) 
 	{
 	    $filename = str_replace('_', DIRECTORY_SEPARATOR, 'components_'.strtolower($class_name)).'.spark.php';

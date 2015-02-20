@@ -37,6 +37,11 @@ body.rights_app .container {
   position: relative;
 }
 
+/* line 77, style/_base.scss */
+section {
+  display: block;
+}
+
 /* line 32, style/_base.scss */
 input {
   border: none;
@@ -1727,8 +1732,9 @@ section.our_mission .container {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 38px;
+  margin: 10px 0;
 }
-/* line 44, style/components/_news.scss */
+/* line 47, style/components/_news.scss */
 .featured-post .slides .slide hgroup h5 {
   color: #21e3db;
   font-family: "franklin-gothic-urw-cond";
@@ -1736,13 +1742,15 @@ section.our_mission .container {
   font-size: 20px;
   font-size: 24px;
   line-height: 1.5em;
+  margin: 0;
 }
-/* line 46, style/components/_news.scss */
+/* line 53, style/components/_news.scss */
 .featured-post .slides .slide p {
   background: rgba(74, 18, 73, 0.7);
   padding: 25px;
+  margin: 0;
 }
-/* line 50, style/components/_news.scss */
+/* line 58, style/components/_news.scss */
 .featured-post .slides .slide .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1755,20 +1763,20 @@ section.our_mission .container {
   display: block;
   padding-top: 20px;
 }
-/* line 58, style/components/_news.scss */
+/* line 66, style/components/_news.scss */
 .featured-post .slides .slide .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
 
-/* line 69, style/components/_news.scss */
+/* line 77, style/components/_news.scss */
 .news-feed {
   background: #c4c2c7;
   padding-top: 100px;
   padding-bottom: 205px;
 }
-/* line 73, style/components/_news.scss */
+/* line 81, style/components/_news.scss */
 .news-feed .post-preview {
   background: #dedade;
   display: block;
@@ -1780,12 +1788,12 @@ section.our_mission .container {
   margin: 20px auto 40px;
   box-shadow: 0px 0px 10px 0px #777;
 }
-/* line 80, style/components/_news.scss */
+/* line 88, style/components/_news.scss */
 .news-feed .post-preview a {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 85, style/components/_news.scss */
+/* line 93, style/components/_news.scss */
 .news-feed .post-preview .thumbnail {
   width: 180px;
   height: 180px;
@@ -1793,7 +1801,7 @@ section.our_mission .container {
   vertical-align: top;
   margin-right: 35px;
 }
-/* line 93, style/components/_news.scss */
+/* line 101, style/components/_news.scss */
 .news-feed .post-preview h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1803,18 +1811,18 @@ section.our_mission .container {
   color: #6b0269;
   margin-bottom: 10px;
 }
-/* line 99, style/components/_news.scss */
+/* line 107, style/components/_news.scss */
 .news-feed .post-text {
   display: inline-block;
   width: 800px;
 }
 
-/* line 105, style/components/_news.scss */
+/* line 113, style/components/_news.scss */
 .in-the-media {
   background: #4a1249;
   padding: 90px 0;
 }
-/* line 108, style/components/_news.scss */
+/* line 116, style/components/_news.scss */
 .in-the-media h2 {
   display: block;
   margin: auto;
@@ -1829,7 +1837,7 @@ section.our_mission .container {
   padding: 0;
   color: white;
 }
-/* line 114, style/components/_news.scss */
+/* line 122, style/components/_news.scss */
 .in-the-media .slides {
   display: block;
   margin: auto;
@@ -1839,22 +1847,22 @@ section.our_mission .container {
   padding: 40px 0;
   text-align: center;
 }
-/* line 119, style/components/_news.scss */
+/* line 127, style/components/_news.scss */
 .in-the-media .slides li {
   display: inline-block;
   width: 355px;
   text-align: left;
 }
-/* line 123, style/components/_news.scss */
+/* line 131, style/components/_news.scss */
 .in-the-media .slides li:not(:nth-child(3)) {
   margin-right: 60px;
 }
-/* line 126, style/components/_news.scss */
+/* line 134, style/components/_news.scss */
 .in-the-media .slides li a {
   color: white;
   text-decoration: none;
 }
-/* line 132, style/components/_news.scss */
+/* line 140, style/components/_news.scss */
 .in-the-media .slides li .post-text h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1862,12 +1870,136 @@ section.our_mission .container {
   font-weight: 700;
   font-size: 38px;
   font-size: 32px;
+  margin: 20px 0 0;
 }
-/* line 138, style/components/_news.scss */
+/* line 145, style/components/_news.scss */
+.in-the-media .slides li .post-text p {
+  margin-top: 10px;
+}
+/* line 150, style/components/_news.scss */
 .in-the-media .slides li .video {
   width: 300px;
-  height: 190px;
+  height: 220px;
   display: block;
+}
+/* line 154, style/components/_news.scss */
+.in-the-media .slides li .video object {
+  display: none;
+}
+
+/* line 163, style/components/_news.scss */
+.malikas-blog {
+  background: #dedade;
+  padding: 90px 0;
+}
+/* line 166, style/components/_news.scss */
+.malikas-blog .slides {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding: 0;
+}
+/* line 170, style/components/_news.scss */
+.malikas-blog a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+/* line 171, style/components/_news.scss */
+.malikas-blog li {
+  display: inline-block;
+}
+/* line 172, style/components/_news.scss */
+.malikas-blog .thumbnail {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  margin-right: 30px;
+}
+/* line 177, style/components/_news.scss */
+.malikas-blog .thumbnail:before {
+  content: "";
+  font-family: "FontAwesome";
+  position: absolute;
+  padding: 30px 20px;
+  font-size: 60px;
+  background-color: rgba(129, 2, 110, 0.5);
+  color: white;
+}
+/* line 186, style/components/_news.scss */
+.malikas-blog .thumbnail a {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* line 193, style/components/_news.scss */
+.malikas-blog .post-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 900px;
+}
+/* line 198, style/components/_news.scss */
+.malikas-blog h2 {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  padding: 0 0 60px;
+  color: #4a1249;
+}
+/* line 204, style/components/_news.scss */
+.malikas-blog h4 {
+  width: 100%;
+  display: block;
+  color: white;
+  background: #6b0269;
+  padding: 10px;
+  margin: 0;
+}
+/* line 212, style/components/_news.scss */
+.malikas-blog h5 {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.5em;
+  margin: 15px 0;
+}
+/* line 213, style/components/_news.scss */
+.malikas-blog p {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.5em;
+  margin: 0;
+}
+/* line 215, style/components/_news.scss */
+.malikas-blog .read-more {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ab01a7;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+}
+/* line 223, style/components/_news.scss */
+.malikas-blog .read-more:before {
+  content: "";
+  font-family: "FontAwesome";
+  margin-right: 10px;
 }
 
 /* line 1, style/components/_footer.scss */
