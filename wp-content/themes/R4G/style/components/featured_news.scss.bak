@@ -27,32 +27,29 @@
 
 	p {
 		@include short-body;
-		line-height: 1em;
 	}
 
-	.content { 
+	.content {
 		text-decoration: none;
 		color: black;
 	}
 
-	.read-more{
+	.readmore{
 		@include h5;
 		font-size: 16px;
-		color: $purple5;
+		color: $purple4;
 		position: absolute;
-		text-decoration: none;
 		bottom: 20px;
 		left: 20px;
 		&:before {
 			content: $circlerightarrow;
 			// display: inline-block;
-			font-family: "FontAwesome";
-			margin-right: 10px;
+			font-family: "Font Awesome";
 		}	
 	}
 
 	.slide {
-		width: 320px;
+		width: 300px;
 		height: 280px;
 		padding: 20px;
 		background: $lightgray;

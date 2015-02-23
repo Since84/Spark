@@ -356,11 +356,26 @@ section.home-feature hgroup:hover .link-peek:before {
 }
 
 /* line 2, style/components/_our_mission.scss */
-section.our_mission {
+section.our-mission {
   background: #dedade;
 }
-/* line 4, style/components/_our_mission.scss */
-section.our_mission .container {
+/* line 5, style/components/_our_mission.scss */
+section.our-mission h1 {
+  text-align: center;
+  background: #6b0269;
+  color: white;
+  padding: 70px;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+  color: #21e3db;
+  background-size: cover;
+  padding: 108px;
+}
+/* line 13, style/components/_our_mission.scss */
+section.our-mission .container {
   width: 930px;
   padding: 80px 0;
   line-height: 1.5em;
@@ -369,6 +384,245 @@ section.our_mission .container {
   font-size: 20px;
   color: #6b0269;
   font-size: 32px;
+  text-align: center;
+}
+
+/* line 21, style/components/_our_mission.scss */
+section.statistics {
+  background: #dedade;
+}
+/* line 23, style/components/_our_mission.scss */
+section.statistics ul {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding: 65px 0;
+  text-align: center;
+  border-top: 1px solid #c4c2c7;
+}
+/* line 28, style/components/_our_mission.scss */
+section.statistics ul li {
+  white-space: normal;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 200px;
+}
+/* line 34, style/components/_our_mission.scss */
+section.statistics ul li:not(:nth-child(3)) {
+  margin-right: 140px;
+}
+/* line 37, style/components/_our_mission.scss */
+section.statistics ul li h4 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+  color: #81026e;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* line 44, style/components/_our_mission.scss */
+section.statistics ul li h5 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  font-size: 30px;
+  line-height: 1em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #6b0269;
+}
+/* line 52, style/components/_our_mission.scss */
+section.statistics ul li .description {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  font-size: 16px;
+}
+/* line 60, style/components/_our_mission.scss */
+section.statistics .stat-caption {
+  display: block;
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  padding-bottom: 75px;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* line 68, style/components/_our_mission.scss */
+section.mission-content {
+  background: #4a1249;
+  padding: 75px 0;
+  color: white;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+}
+/* line 74, style/components/_our_mission.scss */
+section.mission-content hr {
+  margin: 65px 0;
+}
+/* line 78, style/components/_our_mission.scss */
+section.mission-content h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+}
+/* line 82, style/components/_our_mission.scss */
+section.mission-content h6 {
+  color: #21e3db;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 24px;
+  text-transform: none;
+  margin: 40px 0;
+}
+
+/* line 91, style/components/_our_mission.scss */
+section.resolution-doc {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2f2f2f;
+  text-align: center;
+}
+/* line 97, style/components/_our_mission.scss */
+section.resolution-doc h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  background: #6b0269;
+  color: white;
+  padding: 70px;
+  background: none;
+  padding: 140px 0 100px;
+}
+/* line 103, style/components/_our_mission.scss */
+section.resolution-doc .resolution-download {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 540px;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1em;
+  padding: 10px;
+  margin-bottom: 60px;
+  background: #4a1249;
+}
+/* line 113, style/components/_our_mission.scss */
+section.resolution-doc .resolution-download:nth-child(1) {
+  margin-right: 50px;
+}
+/* line 116, style/components/_our_mission.scss */
+section.resolution-doc .resolution-download a {
+  display: inline-block;
+  background: #ab01a7;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  padding: 25px;
+  text-transform: uppercase;
+  box-shadow: 0 0 .5em #333;
+  transition: .5s all ease-in;
+}
+/* line 127, style/components/_our_mission.scss */
+section.resolution-doc .resolution-download a:hover {
+  box-shadow: none;
+}
+/* line 131, style/components/_our_mission.scss */
+section.resolution-doc .resolution-download .description {
+  display: inline-block;
+  vertical-align: middle;
+  width: 235px;
+  margin-left: 25px;
+  font-size: 20px;
+  color: white;
+}
+
+/* line 142, style/components/_our_mission.scss */
+section.resolution-content {
+  padding-top: 65px;
+}
+/* line 145, style/components/_our_mission.scss */
+section.resolution-content > h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 38px;
+  color: #81026e;
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+  margin-bottom: 60px;
+}
+/* line 151, style/components/_our_mission.scss */
+section.resolution-content ol {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+  position: relative;
+}
+/* line 154, style/components/_our_mission.scss */
+section.resolution-content li {
+  counter-increment: step-counter;
+  padding-left: 100px;
+  margin-bottom: 40px;
+  position: relative;
+}
+/* line 159, style/components/_our_mission.scss */
+section.resolution-content li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 30px;
+  background-color: #380d36;
+  color: white;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-top: 10px solid #81026e;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 175, style/components/_our_mission.scss */
+section.resolution-content li h4 {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 179, style/components/_our_mission.scss */
+section.resolution-content li strong {
+  font-weight: 600;
 }
 
 /* line 1, style/components/_why_it_matters.scss */

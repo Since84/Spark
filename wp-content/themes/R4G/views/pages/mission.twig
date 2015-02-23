@@ -1,0 +1,33 @@
+<section class="our-mission">
+	<h1 style="background-image: url({{ post.thumbnail.src }})">{{ post.post_title }}</h1>
+	<div class="container">{{ post.mission_statement }}</div>
+</section>
+<section class="statistics">
+	<ul>
+	{% for stat in post.get_field('mission_stats') %}
+		<li class="statistic">
+			<h4 class="stat">{{ stat.mission_fact_stat }}</h4>
+			<h5 class="stat_label">{{ stat.mission_fact_subtext }}</h5>
+			<p class="description">{{ stat.mission_fact_summary }}</p>
+		</li>
+	{% endfor %}
+	</ul>
+	<p class="stat-caption">{{ post.mission_stats_caption }}</p>
+</section>
+<section class="mission-content">
+	<div class="container">
+		{{ post.content }}
+	</div>
+</section>
+<section class="resolution-doc" style="background-image: url({{ post.get_field('resolution_doc_image').url }})">
+	<div class="container">
+		<h2>{{ post.resolution_heading }}</h2>
+		<div class="resolution-download">
+			<a href="{{ post.get_field('resolution_doc').url }}">Read Resolution</a>
+			<span class="description">{{ post.resolution_doc_text }}</span>
+		</div>
+	</div>
+</section>
+<section class="resolution-content">
+	 {{ post.our_daughters_bullet_points }}
+</section>

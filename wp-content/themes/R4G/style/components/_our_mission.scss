@@ -1,10 +1,183 @@
 
-section.our_mission{
+section.our-mission{
 	background: $lightgray;
+	
+	h1 {
+		@include large-header;
+		@include h1;
+		color: $teal;
+		background-size: cover;
+		padding: 108px;
+	}
+
 	.container{
 		width: 930px;
 		padding: 80px 0;
 		line-height: 1.5em;
 		@include mission-statement;
+	}
+}
+
+section.statistics{
+	background: $lightgray;
+	ul{
+		@include container;
+		padding: 65px 0;
+		text-align: center;
+		border-top: 1px solid $stronggray;
+		li {
+			white-space: normal;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			width: 200px;
+			&:not(:nth-child(3)){
+				margin-right: 140px;
+			}
+			h4{
+				@include h1;
+				color: $purple4;
+				font-size: 60px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			h5{
+				@include h5;
+				font-size: 30px;
+				line-height: 1em;
+				margin-bottom: 10px;
+				text-align: center;
+				color: $purple3;
+			}
+			.description{
+				@include short-body;
+				text-transform: uppercase;
+				line-height: 1.3em;
+				font-size: 16px;
+			}
+		}
+	}
+	.stat-caption {
+		display: block;
+		@include container;
+		padding-bottom: 75px;
+		@include short-body;
+	}
+}
+
+section.mission-content{
+	background: $purple2;
+	padding: 75px 0;
+	color: white;
+	@include short-body;
+	
+	hr {
+		margin: 65px 0;
+	}
+
+	h2 {
+		@include h4;
+	}
+	
+	h6{
+		color: $teal;
+		@include h7;
+		font-size: 24px;
+		text-transform: none;
+		margin: 40px 0;
+	}
+}
+
+section.resolution-doc {
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: $black;
+	text-align: center;
+	h2 {
+		@include h1;
+		@include large-header;
+		background: none;
+		padding: 140px 0 100px;
+	}
+	.resolution-download {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		width: 540px;
+		@include call-to-action;
+		line-height: 1em;
+		padding: 10px;
+		margin-bottom: 60px;
+		background: $purple2;
+		&:nth-child(1){
+			margin-right: 50px;
+		}
+		a {
+			display: inline-block;
+			background: $purple5;
+			color: white;
+			text-decoration: none;
+			text-align: center;
+			width: 200px;
+			padding: 25px;
+			text-transform: uppercase;
+			box-shadow: 0 0 .5em #333;
+			transition: .5s all ease-in;
+			&:hover {
+				box-shadow: none;
+			}
+		}
+		.description{
+			display: inline-block;
+			vertical-align: middle;
+			width: 235px;
+			margin-left: 25px;
+			font-size: 20px;
+			color: white;
+		}
+	}
+}
+
+section.resolution-content{
+	padding-top: 65px;
+
+	& > h2 { 
+		@include h4;
+		color: $purple4;
+		@include container;
+		margin-bottom: 60px;
+	}
+	ol {
+		@include container;
+	}
+	li{
+		counter-increment: step-counter;
+		padding-left: 100px;
+		margin-bottom: 40px;
+		position: relative;
+		&::before {
+		    content: counter(step-counter);
+		    margin-right: 5px;
+		    font-size: 30px;
+		    background-color: $purple1;
+		    color: white;
+		    font-weight: bold;
+		    padding: 10px 25px;
+		    border-top: 10px solid $purple4;
+		    display: inline-block;
+		    vertical-align: top;
+		    margin-right: 30px;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		}
+		h4 {
+			display: inline-block;
+			vertical-align: top;
+		}		
+		strong {
+			font-weight: 600;
+		}
 	}
 }
