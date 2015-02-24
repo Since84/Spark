@@ -1,0 +1,45 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+Theme Name: Global Greengrants Fund 15
+Template: Spark15
+*/
+/* line 10, ../sass/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/_base.scss */
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+}
+
+/* line 25, ../sass/_base.scss */
+h2 {
+  font-family: "aleobolditalic";
+  font-size: 18px;
+  /* text-transform: capitalize; */
+}
+
+/* line 100, ../sass/_base.scss */
+section {
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-width: 1200px;
+}
+
+/* line 110, ../sass/_base.scss */
+.container {
+  width: 1200px;
+  margin: auto;
+  display: block;
+  position: relative;
+}

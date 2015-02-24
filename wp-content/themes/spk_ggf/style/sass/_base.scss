@@ -1,0 +1,235 @@
+//// Base Variables
+$containerwidth: 1200px;
+
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+
+}
+
+//// Typography
+h1{
+	font-size: 32px;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-family: "lato", sans-serif;
+	letter-spacing: 1px;
+}
+
+@mixin h1 {
+	font-size: 32px;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-family: "lato", sans-serif;
+	letter-spacing: 1px;
+}
+
+h2{
+	font-family: "aleobolditalic";
+	font-size: 18px;
+	/* text-transform: capitalize; */	
+}
+
+@mixin rectangle-button {
+	font-family: "lato", sans-serif;
+	font-weight: 900;
+	font-size: 21px;
+	text-transform: uppercase;
+	border-radius: 10px;
+}
+
+@mixin menu-item {
+	font-family: "lato", sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+}
+
+@mixin large-body {
+	font-family: "lato", sans-serif;
+	font-weight: 700;
+	font-size: 28px;
+}
+
+@mixin large-italic {
+	font-family: "aleobolditalic", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+@mixin medium-body {
+	font-family: "lato", sans-serif;
+	font-weight: 700;
+	font-size: 24px;	
+}
+
+@mixin photo-credit{
+	font-family: "lato", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: capitalize;
+	position: absolute;
+	
+}
+// End Typography
+
+//// Colors 
+
+$gold: #fbaf22;
+// Ex: “Case Studies” Title, Title Slide Circle Overlay, “Why women & Climate?” Background
+
+$orange: #ce6513;
+// Ex: Title Slide & Moving Forward Background Image Overlays, “5 Steps” section background
+
+$red: #bb2e02;
+$redopaque: rgba(187, 46, 2, .7);
+// Ex: “Why Women & Climate?” Title color, “Resources & In the Media” Footer Background, used in the sidebar menu to show active/hover states
+
+$darkred: #850c00;
+// Ex: “Resources & In the Media” footer icon/text color
+
+$teal: #448f9c;
+// Ex: “About This Report” section background color, used in the modal sidebar menus to indicate hover/active states
+
+$green: #2b585c;
+// Ex: Text/Icon background color for “Case Studies” icons, Copyright/Design Credit footer background
+
+$tan: #dad1ba;
+// Ex: used for all light-colored icons and light-colored text, athis is also the text color of copyright & design credit in footer
+
+$black: #111111;
+$blackopaque: rgba(1,1,1,.9);
+// Ex: Background color of the sidebar menus (used at various opacities), all dark text is this color (i.e. Title subhead “A Guide to Supporting Grassroots Women’s Action”)
+
+// End Colors
+
+//// Icons
+$heart: "\f08a";
+$unchecked: url('images/checkbox_unchecked.png');
+$checked: url('images/checkbox_checked.png');
+$close: "\f08a";
+
+
+
+//// Layout
+section{
+	width: 100%;
+	background-size: cover;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	min-width: $containerwidth;
+}
+
+.container{
+	width: $containerwidth;
+	margin: auto;
+	display: block;
+}
+
+.content {
+	text-align: center;
+	.content-text{
+		font-family: "lato";
+		font-size: 28px;
+		color: black;
+		width: 73%;
+		position: relative;
+		margin: auto;
+		margin-top: 50px;
+		line-height: 40px;
+		text-align: left;
+	}
+
+	.content-textwhite{
+		font-family: "lato";
+		font-size: 28px;
+		color: white;
+		width: 68%;
+		position: relative;
+		margin: auto;
+		margin-top: 50px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+}
+
+.download-report {
+	@include rectangle-button;
+	@include medium-body;
+	font-size: 18px;
+	text-decoration: none;
+	border: 2px solid $gold;
+	padding: 20px 10px;
+	display: block;
+	width: 360px;
+	color: $gold;
+	margin: auto;
+	margin-top: 60px;
+	transition: .25s background-color ease;
+
+	&:hover {
+		background-color: $redopaque;
+	}
+}
+
+// End Layout
+
+//// Components
+@mixin circle {
+	.circle {
+		border-radius: 50%;
+		display: block;
+		width: 480px;
+		height: 480px;
+		background-color: rgba(253, 184, 19, .8);
+		position: relative;
+		margin: 100px auto 75px;
+
+		.circle-content {
+			position: absolute;
+			display: block;
+			margin: auto;
+			height: 230px;
+			width: 325px;
+			text-align: center;
+			vertical-align: middle;
+			top: 0;
+			bottom: 0;
+			left:  0;
+			right: 0;	
+			
+			&:before, &:after {
+				content: "";
+				width: 150px;
+				border-bottom: 5px solid black;
+				background: black;
+				display: block;
+				margin: auto;			
+			}	
+
+			h1 {
+				color: $red;
+				margin: 40px 0 30px;
+			}
+
+			h2 {
+				margin-bottom: 40px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@mixin photo-credit-block{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	@include photo-credit;
+}
+

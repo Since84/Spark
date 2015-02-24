@@ -1,15 +1,29 @@
 <section class="womens-rights" style="background-image: url({{womens_rights.get_field('background_img')}}) ">
 
+<div class="download-icon">
+	<div class="circle">
+		{% include "views/svg/dl_icon.twig" %}
+	</div>
+</div>
+
 <div class="container">
+
+	<!-- yellow circle -->
 	<div class="circle">
 		<div class="circle-content">
 			<h1 class="brown-h1">{{womens_rights.title}}</h1>
 			<h2>{{womens_rights.sub_headline}}</h2>
 		</div>
 	</div>
+
+	<!-- funding credit -->
 	<div class="sub-text">
 		<p>{{womens_rights.sub_text}}</p>
 	</div>
-</div>
+<!-- photo credit -->
+ 
+	<div class="photo-credit">Photo Credit: {{womens_rights.get_field('photo_credit')}}</div>
+	</div> 
+
 </section>
 

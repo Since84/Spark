@@ -13,7 +13,7 @@
 	$teamContext['tab_template'] = '/views/content/team_tab.html.twig';
 	$teamContext['content_template'] = '/views/content/team_tab_content.html.twig';
 	$teamContext['slide_field'] = 'team_members';
-	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $teamContext);
+	$context['our_team'] = Timber::compile('/views/components/team_gallery.html.twig', $teamContext);
 
 	/// Board of Directors
 	$boardContext['spark_class'] = 'board-of-director';

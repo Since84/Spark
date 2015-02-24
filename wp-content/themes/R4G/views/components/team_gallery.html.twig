@@ -1,0 +1,29 @@
+<section 
+	class="spark-gallery scrolling-tabs {{ spark_class }}"
+>
+	{% if header %}<h2>{{ header }}</h2>{% endif %}
+	<ul class="tabs">
+	{% for slide in post.get_field( slide_field ) %}
+		{% include tab_template %}
+	{% endfor %}
+	</ul>
+</section>
+<section class="tab-content">
+	<div class="container">
+		<ul class="cycle-slideshow"
+				data-cycle-timeout 	= 	"0"
+				data-cycle-slides	= 	".slide"
+				data-cycle-next 	= 	".tab-pager .next"
+				data-cycle-prev 	= 	".tab-pager .prev"
+				data-cycle-fx		= 	"scrollHorz">
+		{% for slide in post.get_field('team_members') %}
+			{# {{ dump(slide) }} #}
+			{% include content_template %}
+		{% endfor %}
+		</ul>
+		<ul class="tab-pager">
+			<li class="prev">< Previous Issue</li>
+			<li class="next">Next Issue ></li>
+		</ul>
+	</div>
+</section>

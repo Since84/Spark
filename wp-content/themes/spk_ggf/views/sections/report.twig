@@ -1,7 +1,25 @@
-<section style="background-image: url({{report.get_field('background_img')}}) ">
-	<div class="content">
-		<div class="report-content">
-			{{report.content}}
+<section style="background-image: url({{report.get_field('background_img')}}) " >
+	
+	<div class="report-page">
+
+		<div class="report-circle" background="report.circle_image">
+			
 		</div>
+
+		<div class="report-block">
+
+			<div class="report-content">
+				{{report.content}}
+			</div>
+
+			<div class="button-wrapper">
+				<a href="/wp-content/uploads/2015/02/html5_tutorial.pdf" download="HTML5 Tutorial" class="download-report" >DOWNLOAD FULL REPORT</a>
+			</div>
+
+		</div>
+
 	</div>
+
+	
+
 </section>

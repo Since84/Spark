@@ -15,6 +15,19 @@
 
 		define( 'SITE_SLUG', 'r4g' );
 
+	} elseif ( strpos( $host, 'ggf.local' ) ){
+
+		/** The name of the database for WordPress */
+		define('DB_NAME', 'ggf');
+
+		/** MySQL database username */
+		define('DB_USER', 'root');
+
+		/** MySQL database password */
+		define('DB_PASSWORD', 'galaxy1');
+
+		define( 'SITE_SLUG', 'r4g' );
+
 	} elseif ( strpos( $host, 'tap.local' ) ){
 
 		/** The name of the database for WordPress */

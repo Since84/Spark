@@ -9,19 +9,46 @@
 		.team-member{
 			display: inline-block;
 			position: relative;
+			vertical-align: top;
 			width: 210px;
 			height: 210px;
 			margin-right: 40px;
 			border: 5px solid $black;
 
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right: 0;
+				background-color: rgba(0,0,0,.5);
+				width: 100%;
+				height: 100%;
+				transition: .25s all ease-in-out;
+			}
+
 			&.active{
 				border: 5px solid $purple2;
+				&:before{ content: none; }
+				&:after { 
+					content: ''; 
+					display: block;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 100px 100px 100px;
+					border-color: transparent transparent #007bff transparent;
+				}
 			}
 			.front {
 				position: relative;
 				display: block;
 				width: 100%;
 				height: 100%;
+				transition: .25s all ease-in-out;
+				display: none;
 			}
 			&:not(.active) .front{
 				display: none;
@@ -40,11 +67,6 @@
 					@include h6;
 					color: white;
 				}
-			}
-			&:not(.active):hover {
-				.front{
-					display: block;
-				}
 				&:before{
 					content: '';
 					display: block;
@@ -53,9 +75,19 @@
 					bottom:0;
 					left:0;
 					right: 0;
-					background: $purple4;
+					background-color: rgba(0,0,0,.2);
 					width: 100%;
 					height: 100%;
+					transition: .25s all ease-in-out;
+				}
+			}
+			&:not(.active):hover {
+				border-color: $purple4;
+				.front{
+					display: block;
+				}
+				&:before{
+					background-color: $purple4opaque;
 				}
 			}
 			
@@ -76,13 +108,16 @@
 		h2{
 			@include h2;
 			color: $purple3;
+			background: none;
+			text-align: left;
+			padding: 60px 0 10px;
 		}
 		h3 {
 			@include short-body;
 			text-transform: uppercase;
 		}
 		.links{
-			margin: #{$margin}px 0 45px;
+			margin: 35px 0 45px;
 			li{
 				display: inline-block;
 
@@ -93,7 +128,7 @@
 					&:before {
 						content: '';
 						font-family: "FontAwesome";
-						font-size: 14px;
+						font-size: 20px;
 						margin-right: 10px;
 					}
 				}
@@ -107,7 +142,7 @@
 		}
 		.member-bio {
 			@include long-body; 
-			max-width: 700px;
+			max-width: 750px;
 		}
 
 	}

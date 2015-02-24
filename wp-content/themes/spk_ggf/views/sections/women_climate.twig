@@ -1,23 +1,80 @@
 <section style="background-image: url({{women_climate.get_field('background_img')}}) ">
 
-<div class="centered-title">
-	<h1 class="brown-h1"> 
-		{{women_climate.title}}
-	</h1>
+    <div class="centered-title">
+     <h1 class="brown-h1"> 
+      {{women_climate.title}}
+  </h1>
 </div>
 
-<div class="cycle-slideshow" 
-    data-cycle-fx=scrollHorz
-    data-cycle-timeout=2000
+<div class="center" align="center" vertical-align="middle" height="267px">
+
+    <div class="controls" id="prev"> < </div>
+
+    <div class="cycle-slideshow" 
+    data-cycle-fx="scrollHorz"
+    data-cycle-timeout="2000"
+    data-cycle-pager=".women-cycle-pager"
+    data-cycle-prev="#prev"
+    data-cycle-next="#next"
+    data-cycle-slides="> span"
+    
     >
-    <!-- empty element for pager links -->
-    <div class="cycle-pager"></div>
+    
 
-    <img src="http://malsup.github.io/images/p1.jpg">
-    <img src="http://malsup.github.io/images/p2.jpg">
-    <img src="http://malsup.github.io/images/p3.jpg">
-    <img src="http://malsup.github.io/images/p4.jpg">
+    <!-- empty element for pager links -->
+
+    <div class="cycle-pager "></div>
+
+    <span>
+        <div class="slide-1 slides">
+            <div class="women-circle"></div>
+            <div class="slide-text">{{report.content}}</div>
+        </div>
+    </span>
+    <span>
+        <div class="slide-2 slides">
+            <div class="women-circle"></div>
+            <div class="slide-text">{{report.content}}</div>
+        </div>
+    </span>
+    <span>
+        <div class="slide-3 slides">
+            <div class="women-circle"></div>
+            <div class="slide-text">{{report.content}}</div>
+        </div>
+    </span>
+    <span>
+        <div class="slide-4 slides">
+            <div class="women-circle"></div>
+            <div class="slide-text">{{report.content}}</div>
+        </div>
+    </span>
+    <span>
+        <div class="slide-5 slides">
+            <div class="women-circle"></div>
+            <div class="slide-text">{{report.content}}</div>
+        </div>
+    </span>
+
+    <!-- <span><img src="http://malsup.github.io/images/></span>
+    <span><img src="http://malsup.github.io/images/></span>
+    <span><img src="http://malsup.github.io/images/></span>
+    <span><img src="http://malsup.github.io/images/></span> -->
+
+
 </div>
+
+<div class="controls" id="next"> > </div>
+
+</div>
+<section class="pager">
+    <div class="women-cycle-pager"></div>
+</section>
+
+
+
 
 </section>
+
+
 

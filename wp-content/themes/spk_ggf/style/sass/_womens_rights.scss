@@ -1,0 +1,100 @@
+
+.womens-rights{
+	background-size: cover;
+	background-color: #ce6513;
+	min-height: 100vh;
+
+	@include circle;
+
+	.sub-text{
+		@include large-body;
+		font-size: 12px;
+		text-align: center;
+		position: relative;
+		margin: auto;
+		margin-bottom: 60px;
+		width: 435px;
+		color: $tan;
+
+		&:before{
+			content: $heart;
+			font-family: "FontAwesome";
+			color: #fbaf22;
+			font-size: 24px;
+			margin-bottom: 10px;
+			display: block;
+		}
+	}
+
+	.photo-credit {
+		@include photo-credit-block;
+	}
+
+	.download-icon {
+		position: absolute;
+		display: block;
+		right: 100px;
+		top: 40px;
+		width: 105px;
+		height: 105px;
+		cursor: pointer;
+		@include circle;
+		.circle {
+			width: 100%;
+			height:100%;
+			margin: 0;
+			background: $blackopaque url('');
+			-webkit-perspective: 1000px;
+			perspective: 1000px;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.3s;
+			transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.1s;			
+		}
+		
+		.dl_icon{
+			width: 60%;
+			height: 60%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			
+			.stroke{
+				stroke: $tan
+			}
+		}
+
+
+		&:hover .circle{
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			background-color: $redopaque;
+			&:after{
+				content: "Download Full Report";
+				display: block;
+				color: $tan;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				-webkit-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				z-index: 10;
+				margin: auto;
+				height: 20px;
+				text-align: center;
+				@include medium-body;
+				font-size: 12px;
+			}
+
+			.dl_icon .stroke {
+				stroke: $red;
+			}
+		}
+	}
+
+}

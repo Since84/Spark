@@ -1,9 +1,23 @@
 <div class="footer-top">
+	<div class="top-logo-block">
 
+	</div>
 </div>
 
 <div class="footer-middle">
+	<div class="middle-logo-block">
+		{% for logo in footer.get_field("footer_logo")%}
+		
+		<img class="footer-logo" src="{{logo.default.url}}"/>
+
+		{% endfor %}
+
+	</div>
 </div>
 
 <div class="footer-bottom">
+	<div class="bottom-logo-block">
+	
+
+	</div>	
 </div>

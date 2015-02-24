@@ -1,0 +1,17 @@
+.about {
+	padding-bottom: 110px;
+	.about-title:before{
+		content: "";
+		width:150px;
+		background: #fbaf22;
+		border-top: 5px solid #fbaf22;
+		display: block;
+		margin: auto;
+		margin-bottom: 50px;
+	}
+	.about-img{
+		position: relative;
+		margin: auto;
+		margin-top: 115px;
+	}
+}
