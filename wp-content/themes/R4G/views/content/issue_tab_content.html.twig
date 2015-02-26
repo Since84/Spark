@@ -1,4 +1,7 @@
-<li class="slide">
+<li 
+	class="slide"
+	data-index="{{ loop.index }}"
+>
 	<h2>{{ slide.heading }}</h2>
 	<ul class="tab-content-group">
 		<li class="slide team-member-content" style="background-image:url( '{{ slide.photo.url }}' );">

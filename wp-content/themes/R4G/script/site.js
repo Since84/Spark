@@ -2,7 +2,7 @@
 
 	// Spark Application
 	var AppView = Backbone.View.extend({
-		el: $('body'),
+		el: 'body',
 
 	  		// Default Variables for Application
 	  		defaults: function() {
@@ -24,9 +24,12 @@
 	  			// this.initPanelNav();
 	  			// this.initCycle();
 	  			// this.initModal();
-	  			$('.team-member').on('click', function(){
-	  				self.goToTeamMember(this);
-	  			});
+	  			// $('.team-member').on('click', function(){
+	  			// 	self.goToTeamMember(this);
+	  			// });
+	  			// $('.issue-area').on('click', function(){
+	  			// 	self.goToTeamMember(this);
+	  			// });
 	  		},
 
 	  		initPanelNav: function(){ // Navigation
@@ -53,15 +56,7 @@
 
 	  		},
 	  		goToIssueArea: function(elem){ 
-	  			var index_id = $(elem).attr('tab-index') - 1;
-	  			
-	  			if( $(elem).not('.active') ){
-	  				$('.issue-area.active').removeClass('active');
-		  			$(elem).addClass('active');
-		  			$('.tab-content .cycle-slideshow').cycle( 'goto', index_id );	  				
-	  			}
-
-
+	  			$('.tab-content').cycle().addClass('cycle-slideshow');
 	  		}
 	  	});
 

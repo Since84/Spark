@@ -5,9 +5,8 @@
 	{% endfor %}
 	</ul>
 </section>
-<section class="tab-content">
+{# <section class="tab-content">
 	<ul>
-		{# {{ dump(post.get_field('issue_area')) }} #}
 	{% for slide in post.get_field('issue_area') %}
 		{% include content_template %}
 	{% endfor %}
@@ -16,4 +15,4 @@
 		<li class="prev">< Previous Issue</li>
 		<li class="next">Next Issue ></li>
 	</ul>
-</section>
+</section> #}

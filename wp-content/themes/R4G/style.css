@@ -683,11 +683,11 @@ section.resolution-content li strong {
   background-size: cover;
   border: 10px solid #dedade;
 }
-/* line 35, style/brand/_mixins.scss */
+/* line 44, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide:not(:nth-child(3n)) {
   margin-right: 70px;
 }
-/* line 39, style/brand/_mixins.scss */
+/* line 48, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .content, .why-it-matters .slides.container .slide .stat-highlight, .why-it-matters .slides.container .slide .learn-more {
   display: block;
   position: absolute;
@@ -703,7 +703,7 @@ section.resolution-content li strong {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 56, style/brand/_mixins.scss */
+/* line 65, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .content h2, .why-it-matters .slides.container .slide .stat-highlight h2, .why-it-matters .slides.container .slide .learn-more h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -715,7 +715,7 @@ section.resolution-content li strong {
   width: 100%;
   line-height: 50px;
 }
-/* line 63, style/brand/_mixins.scss */
+/* line 72, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .content h3, .why-it-matters .slides.container .slide .stat-highlight h3, .why-it-matters .slides.container .slide .learn-more h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -725,7 +725,7 @@ section.resolution-content li strong {
   font-size: 30px;
   margin-bottom: 1rem;
 }
-/* line 64, style/brand/_mixins.scss */
+/* line 73, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .content p, .why-it-matters .slides.container .slide .stat-highlight p, .why-it-matters .slides.container .slide .learn-more p {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -735,23 +735,23 @@ section.resolution-content li strong {
   font-size: 16px;
   line-height: 1.5em;
 }
-/* line 68, style/brand/_mixins.scss */
+/* line 77, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .learn-more {
   opacity: 0;
 }
-/* line 70, style/brand/_mixins.scss */
+/* line 79, style/brand/_mixins.scss */
 .why-it-matters .slides.container .slide .learn-more .action {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   display: block;
 }
-/* line 79, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide:hover .stat-highlight {
+/* line 88, style/brand/_mixins.scss */
+.why-it-matters .slides.container .slide:hover .stat-highlight, .why-it-matters .slides.container .slide.cycle-pager-active .stat-highlight {
   opacity: 0;
 }
-/* line 82, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide:hover .learn-more {
+/* line 91, style/brand/_mixins.scss */
+.why-it-matters .slides.container .slide:hover .learn-more, .why-it-matters .slides.container .slide.cycle-pager-active .learn-more {
   opacity: 1;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1317,11 +1317,11 @@ section.resolution-content li strong {
   padding: 55px;
   border-color: #2f2f2f;
 }
-/* line 35, style/brand/_mixins.scss */
+/* line 44, style/brand/_mixins.scss */
 .issue-areas .tab:not(:nth-child(3n)) {
   margin-right: 70px;
 }
-/* line 39, style/brand/_mixins.scss */
+/* line 48, style/brand/_mixins.scss */
 .issue-areas .tab .content, .issue-areas .tab .stat-highlight, .issue-areas .tab .learn-more {
   display: block;
   position: absolute;
@@ -1337,7 +1337,7 @@ section.resolution-content li strong {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 56, style/brand/_mixins.scss */
+/* line 65, style/brand/_mixins.scss */
 .issue-areas .tab .content h2, .issue-areas .tab .stat-highlight h2, .issue-areas .tab .learn-more h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1349,7 +1349,7 @@ section.resolution-content li strong {
   width: 100%;
   line-height: 50px;
 }
-/* line 63, style/brand/_mixins.scss */
+/* line 72, style/brand/_mixins.scss */
 .issue-areas .tab .content h3, .issue-areas .tab .stat-highlight h3, .issue-areas .tab .learn-more h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1359,7 +1359,7 @@ section.resolution-content li strong {
   font-size: 30px;
   margin-bottom: 1rem;
 }
-/* line 64, style/brand/_mixins.scss */
+/* line 73, style/brand/_mixins.scss */
 .issue-areas .tab .content p, .issue-areas .tab .stat-highlight p, .issue-areas .tab .learn-more p {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1369,23 +1369,23 @@ section.resolution-content li strong {
   font-size: 16px;
   line-height: 1.5em;
 }
-/* line 68, style/brand/_mixins.scss */
+/* line 77, style/brand/_mixins.scss */
 .issue-areas .tab .learn-more {
   opacity: 0;
 }
-/* line 70, style/brand/_mixins.scss */
+/* line 79, style/brand/_mixins.scss */
 .issue-areas .tab .learn-more .action {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   display: block;
 }
-/* line 79, style/brand/_mixins.scss */
-.issue-areas .tab:hover .stat-highlight {
+/* line 88, style/brand/_mixins.scss */
+.issue-areas .tab:hover .stat-highlight, .issue-areas .tab.cycle-pager-active .stat-highlight {
   opacity: 0;
 }
-/* line 82, style/brand/_mixins.scss */
-.issue-areas .tab:hover .learn-more {
+/* line 91, style/brand/_mixins.scss */
+.issue-areas .tab:hover .learn-more, .issue-areas .tab.cycle-pager-active .learn-more {
   opacity: 1;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1436,7 +1436,7 @@ section.resolution-content li strong {
   transition: .25s opacity ease-in-out .25s;
 }
 /* line 46, style/components/_issue_areas.scss */
-.issue-areas .tab:hover h4 {
+.issue-areas .tab:hover h4, .issue-areas .tab.cycle-pager-active h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -1451,7 +1451,7 @@ section.resolution-content li strong {
   position: relative;
 }
 /* line 56, style/components/_issue_areas.scss */
-.issue-areas .tab:hover div {
+.issue-areas .tab:hover div, .issue-areas .tab.cycle-pager-active div {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
@@ -1463,24 +1463,50 @@ section.resolution-content li strong {
   opacity: 1;
 }
 /* line 65, style/components/_issue_areas.scss */
-.issue-areas .tab:hover .slide-content {
+.issue-areas .tab:hover .slide-content, .issue-areas .tab.cycle-pager-active .slide-content {
   height: 150px;
 }
 /* line 68, style/components/_issue_areas.scss */
-.issue-areas .tab:hover:after {
+.issue-areas .tab:hover:after, .issue-areas .tab.cycle-pager-active:after {
   background: rgba(0, 0, 0, 0.6);
 }
+/* line 72, style/components/_issue_areas.scss */
+.issue-areas .tab:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent transparent #6b0269 transparent;
+  bottom: -130px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: .5s all ease-in-out;
+}
+/* line 82, style/components/_issue_areas.scss */
+.issue-areas .tab.cycle-pager-active:before {
+  border-width: 0 40px 50px 40px;
+}
 
-/* line 74, style/components/_issue_areas.scss */
+/* line 88, style/components/_issue_areas.scss */
 .tab-content {
   padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s max-height ease-in-out;
 }
-/* line 77, style/components/_issue_areas.scss */
+/* line 94, style/components/_issue_areas.scss */
+.tab-content.cycle-slideshow {
+  max-height: 2000px;
+}
+/* line 99, style/components/_issue_areas.scss */
 .tab-content > ul {
   padding: 0;
   width: 100%;
 }
-/* line 82, style/components/_issue_areas.scss */
+/* line 104, style/components/_issue_areas.scss */
 .tab-content .tab-content-group {
   display: block;
   margin: auto;
@@ -1488,7 +1514,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 85, style/components/_issue_areas.scss */
+/* line 107, style/components/_issue_areas.scss */
 .tab-content h2 {
   text-align: center;
   background: #6b0269;
@@ -1500,16 +1526,16 @@ section.resolution-content li strong {
   font-weight: 400;
   font-size: 54px;
 }
-/* line 90, style/components/_issue_areas.scss */
+/* line 112, style/components/_issue_areas.scss */
 .tab-content .slide {
   width: 100%;
 }
-/* line 94, style/components/_issue_areas.scss */
+/* line 116, style/components/_issue_areas.scss */
 .tab-content .statistics {
   white-space: nowrap;
   border-bottom: 1px solid #2f2f2f;
 }
-/* line 97, style/components/_issue_areas.scss */
+/* line 119, style/components/_issue_areas.scss */
 .tab-content .statistics li {
   white-space: normal;
   display: inline-block;
@@ -1518,11 +1544,11 @@ section.resolution-content li strong {
   width: 30%;
   padding: 70px 60px 40px;
 }
-/* line 104, style/components/_issue_areas.scss */
+/* line 126, style/components/_issue_areas.scss */
 .tab-content .statistics li:not(:nth-child(3)) {
   margin-right: 5%;
 }
-/* line 107, style/components/_issue_areas.scss */
+/* line 129, style/components/_issue_areas.scss */
 .tab-content .statistics li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1533,7 +1559,7 @@ section.resolution-content li strong {
   text-align: center;
   margin-bottom: .25em;
 }
-/* line 113, style/components/_issue_areas.scss */
+/* line 135, style/components/_issue_areas.scss */
 .tab-content .statistics li h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1546,7 +1572,7 @@ section.resolution-content li strong {
   text-align: center;
   color: #6b0269;
 }
-/* line 121, style/components/_issue_areas.scss */
+/* line 143, style/components/_issue_areas.scss */
 .tab-content .statistics li .description {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1555,15 +1581,15 @@ section.resolution-content li strong {
   line-height: 1.3em;
   font-size: 14px;
 }
-/* line 129, style/components/_issue_areas.scss */
+/* line 151, style/components/_issue_areas.scss */
 .tab-content .statistic-content {
   padding: 60px 0;
 }
-/* line 131, style/components/_issue_areas.scss */
+/* line 153, style/components/_issue_areas.scss */
 .tab-content .statistic-content p {
   margin-bottom: 20px;
 }
-/* line 135, style/components/_issue_areas.scss */
+/* line 157, style/components/_issue_areas.scss */
 .tab-content .tab-pager {
   display: block;
   margin: auto;
@@ -1576,7 +1602,7 @@ section.resolution-content li strong {
   white-space: nowrap;
   color: #81026e;
 }
-/* line 142, style/components/_issue_areas.scss */
+/* line 164, style/components/_issue_areas.scss */
 .tab-content .tab-pager li {
   display: inline-block;
   width: auto;
@@ -1585,20 +1611,20 @@ section.resolution-content li strong {
   text-align: center;
   cursor: pointer;
 }
-/* line 149, style/components/_issue_areas.scss */
+/* line 171, style/components/_issue_areas.scss */
 .tab-content .tab-pager li.prev {
   margin-right: 50%;
 }
-/* line 152, style/components/_issue_areas.scss */
+/* line 174, style/components/_issue_areas.scss */
 .tab-content .tab-pager li.next {
   float: right;
 }
 
-/* line 159, style/components/_issue_areas.scss */
+/* line 181, style/components/_issue_areas.scss */
 .file-feed {
   background: #c4c2c7;
 }
-/* line 97, style/brand/_mixins.scss */
+/* line 106, style/brand/_mixins.scss */
 .file-feed hgroup {
   text-align: center;
   background: #6b0269;
@@ -1606,7 +1632,7 @@ section.resolution-content li strong {
   padding: 70px;
   background: #380d36;
 }
-/* line 100, style/brand/_mixins.scss */
+/* line 109, style/brand/_mixins.scss */
 .file-feed hgroup h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1619,7 +1645,7 @@ section.resolution-content li strong {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 108, style/brand/_mixins.scss */
+/* line 117, style/brand/_mixins.scss */
 .file-feed hgroup span {
   display: block;
   font-family: "franklin-gothic-urw-comp";
@@ -1629,7 +1655,7 @@ section.resolution-content li strong {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 113, style/brand/_mixins.scss */
+/* line 122, style/brand/_mixins.scss */
 .file-feed .filters {
   text-align: center;
   background: #6b0269;
@@ -1646,84 +1672,84 @@ section.resolution-content li strong {
   position: relative;
   z-index: 100;
 }
-/* line 122, style/brand/_mixins.scss */
+/* line 131, style/brand/_mixins.scss */
 .file-feed .filters li {
   display: inline-block;
   width: 200px;
 }
-/* line 125, style/brand/_mixins.scss */
+/* line 134, style/brand/_mixins.scss */
 .file-feed .filters li:not(:last-of-type) {
   padding-right: 20px;
   border-right: 2px solid #c4c2c7;
 }
-/* line 130, style/brand/_mixins.scss */
+/* line 139, style/brand/_mixins.scss */
 .file-feed .filters li.paper {
   color: #4a1249;
 }
-/* line 132, style/brand/_mixins.scss */
+/* line 141, style/brand/_mixins.scss */
 .file-feed .filters li.paper a {
   color: #4a1249;
 }
-/* line 133, style/brand/_mixins.scss */
+/* line 142, style/brand/_mixins.scss */
 .file-feed .filters li.paper:before {
   content: "";
 }
-/* line 136, style/brand/_mixins.scss */
+/* line 145, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet {
   color: #81026e;
 }
-/* line 138, style/brand/_mixins.scss */
+/* line 147, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet a {
   color: #81026e;
 }
-/* line 139, style/brand/_mixins.scss */
+/* line 148, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet:before {
   content: "";
 }
-/* line 141, style/brand/_mixins.scss */
+/* line 150, style/brand/_mixins.scss */
 .file-feed .filters li.letter {
   color: #380d36;
 }
-/* line 143, style/brand/_mixins.scss */
+/* line 152, style/brand/_mixins.scss */
 .file-feed .filters li.letter a {
   color: #380d36;
 }
-/* line 144, style/brand/_mixins.scss */
+/* line 153, style/brand/_mixins.scss */
 .file-feed .filters li.letter:before {
   content: "";
 }
-/* line 146, style/brand/_mixins.scss */
+/* line 155, style/brand/_mixins.scss */
 .file-feed .filters li.brief {
   color: #81026e;
 }
-/* line 148, style/brand/_mixins.scss */
+/* line 157, style/brand/_mixins.scss */
 .file-feed .filters li.brief a {
   color: #81026e;
 }
-/* line 149, style/brand/_mixins.scss */
+/* line 158, style/brand/_mixins.scss */
 .file-feed .filters li.brief:before {
   content: "";
 }
-/* line 151, style/brand/_mixins.scss */
+/* line 160, style/brand/_mixins.scss */
 .file-feed .filters li.petition {
   color: #ab01a7;
 }
-/* line 153, style/brand/_mixins.scss */
+/* line 162, style/brand/_mixins.scss */
 .file-feed .filters li.petition a {
   color: #ab01a7;
 }
-/* line 154, style/brand/_mixins.scss */
+/* line 163, style/brand/_mixins.scss */
 .file-feed .filters li.petition:before {
   content: "";
 }
-/* line 159, style/brand/_mixins.scss */
+/* line 168, style/brand/_mixins.scss */
 .file-feed .filters li:before {
   display: inline-block;
   font-size: 30px;
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 167, style/brand/_mixins.scss */
+/* line 176, style/brand/_mixins.scss */
 .file-feed .filters:after {
   top: 100%;
   left: 50%;
@@ -1738,7 +1764,7 @@ section.resolution-content li strong {
   border-width: 30px;
   margin-left: -30px;
 }
-/* line 183, style/brand/_mixins.scss */
+/* line 192, style/brand/_mixins.scss */
 .file-feed .slides {
   display: block;
   margin: auto;
@@ -1748,7 +1774,7 @@ section.resolution-content li strong {
   text-align: center;
   padding: 90px 0 110px;
 }
-/* line 189, style/brand/_mixins.scss */
+/* line 198, style/brand/_mixins.scss */
 .file-feed .file {
   display: inline-block;
   width: 255px;
@@ -1760,7 +1786,7 @@ section.resolution-content li strong {
   background: #dedade;
   box-shadow: 0 0 10px 0 #888;
 }
-/* line 201, style/brand/_mixins.scss */
+/* line 210, style/brand/_mixins.scss */
 .file-feed .file a {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1773,76 +1799,76 @@ section.resolution-content li strong {
   line-height: 1em;
   display: block;
 }
-/* line 210, style/brand/_mixins.scss */
+/* line 219, style/brand/_mixins.scss */
 .file-feed .file:not(:nth-child(3n)) {
   margin-right: 100px;
 }
-/* line 214, style/brand/_mixins.scss */
+/* line 223, style/brand/_mixins.scss */
 .file-feed .file.Paper {
   border-top: 20px solid #4a1249;
   color: #4a1249;
 }
-/* line 217, style/brand/_mixins.scss */
+/* line 226, style/brand/_mixins.scss */
 .file-feed .file.Paper a {
   color: #4a1249;
 }
-/* line 218, style/brand/_mixins.scss */
+/* line 227, style/brand/_mixins.scss */
 .file-feed .file.Paper:before {
   content: "";
 }
-/* line 221, style/brand/_mixins.scss */
+/* line 230, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 224, style/brand/_mixins.scss */
+/* line 233, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet a {
   color: #81026e;
 }
-/* line 225, style/brand/_mixins.scss */
+/* line 234, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet:before {
   content: "";
 }
-/* line 227, style/brand/_mixins.scss */
+/* line 236, style/brand/_mixins.scss */
 .file-feed .file.Letter {
   border-top: 20px solid #380d36;
   color: #380d36;
 }
-/* line 230, style/brand/_mixins.scss */
+/* line 239, style/brand/_mixins.scss */
 .file-feed .file.Letter a {
   color: #380d36;
 }
-/* line 231, style/brand/_mixins.scss */
+/* line 240, style/brand/_mixins.scss */
 .file-feed .file.Letter:before {
   content: "";
 }
-/* line 233, style/brand/_mixins.scss */
+/* line 242, style/brand/_mixins.scss */
 .file-feed .file.Brief {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 236, style/brand/_mixins.scss */
+/* line 245, style/brand/_mixins.scss */
 .file-feed .file.Brief a {
   color: #81026e;
 }
-/* line 237, style/brand/_mixins.scss */
+/* line 246, style/brand/_mixins.scss */
 .file-feed .file.Brief:before {
   content: "";
 }
-/* line 239, style/brand/_mixins.scss */
+/* line 248, style/brand/_mixins.scss */
 .file-feed .file.Petition {
   border-top: 20px solid #ab01a7;
   color: #ab01a7;
 }
-/* line 242, style/brand/_mixins.scss */
+/* line 251, style/brand/_mixins.scss */
 .file-feed .file.Petition a {
   color: #ab01a7;
 }
-/* line 243, style/brand/_mixins.scss */
+/* line 252, style/brand/_mixins.scss */
 .file-feed .file.Petition:before {
   content: "";
 }
-/* line 246, style/brand/_mixins.scss */
+/* line 255, style/brand/_mixins.scss */
 .file-feed .file:before {
   display: block;
   font-size: 30px;

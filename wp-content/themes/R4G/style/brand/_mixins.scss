@@ -20,6 +20,15 @@
 
 // }
 
+@mixin triangledown {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0;
+	border-color: transparent transparent $purple3 transparent;
+}
+
 @mixin issue_tab {
  
 			display: inline-block;
@@ -75,7 +84,7 @@
 				}
 			}
 
-			&:hover {
+			&:hover, &.cycle-pager-active {
 				.stat-highlight {
 					opacity: 0;
 				}

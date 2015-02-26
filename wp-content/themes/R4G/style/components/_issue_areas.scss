@@ -42,7 +42,7 @@
 			opacity: 0;
 			transition: .25s opacity ease-in-out .25s;
 		}
-		&:hover {
+		&:hover, &.cycle-pager-active {
 			h4{
 				@include h4;
 				text-align: center;
@@ -69,10 +69,32 @@
 				background: rgba(0,0,0,.6);
 			}
 		}
+		&:before {
+			@include triangledown;
+			bottom: -130px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transition: .5s all ease-in-out;
+		}
+		&.cycle-pager-active{
+			&:before{
+				border-width: 0 40px 50px 40px;
+			}
+		}
 	}
 }
 .tab-content{
 	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: 1s max-height ease-in-out;
+
+	&.cycle-slideshow{
+		max-height: 2000px;
+	}
+
 	// display: none;
 	& > ul {
 		padding: 0;
