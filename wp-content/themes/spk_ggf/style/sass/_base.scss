@@ -7,16 +7,16 @@ $containerwidth: 1200px;
 }
 
 body {
-
+	overflow: scroll;
 }
 
 //// Typography
 h1{
-	font-size: 32px;
+	font-size: 31px;
 	font-weight: 900;
 	text-transform: uppercase;
 	font-family: "lato", sans-serif;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 @mixin h1 {
@@ -102,6 +102,7 @@ $tan: #dad1ba;
 
 $black: #111111;
 $blackopaque: rgba(1,1,1,.9);
+$blackopaquelight: rgba(1,1,1,.6);
 // Ex: Background color of the sidebar menus (used at various opacities), all dark text is this color (i.e. Title subhead “A Guide to Supporting Grassroots Women’s Action”)
 
 // End Colors
@@ -111,8 +112,14 @@ $heart: "\f08a";
 $unchecked: url('images/checkbox_unchecked.png');
 $checked: url('images/checkbox_checked.png');
 $close: "\f08a";
+$arrowright: url('images/Next-Default.png'); 
+$arrowrighthover: url('images/Next-Hover.png');
+$arrowleft: url('images/Back-Default.png');
+$arrowlefthover: url('images/Back-Hover.png');
+$backarrow: "\f190";
 
-
+$selectedone: url('images/selected-arrow-one.png');
+$selectedtwo: url('images/selected-arrow-two.png');
 
 //// Layout
 section{
@@ -133,6 +140,7 @@ section{
 
 .content {
 	text-align: center;
+}
 	.content-text{
 		font-family: "lato";
 		font-size: 28px;
@@ -157,6 +165,19 @@ section{
 		text-align: center;
 	}
 
+.centered-title{
+	text-align: center;
+	position: relative;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.center div{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	margin: 10px auto 0px;
+	height: 260px;
 }
 
 .download-report {
@@ -233,3 +254,203 @@ section{
 	@include photo-credit;
 }
 
+@mixin absolutecenter {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@mixin modal {
+	position: fixed;
+	overflow: scroll;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1200;
+	visibility: hidden;
+	-webkit-transform: translateY(-60%) scale(0);
+	transform: translateY(-60%) scale(0);
+	-webkit-transition: -webkit-transform 0.75s, visibility 0s 0.75s;
+	transition: transform 0.75s, visibility 0s 0.75s;
+
+	&.open{
+		visibility: visible;
+		-webkit-transform: translateY(0%) scale(1);
+		transform: translateY(0%) scale(1);
+		-webkit-transition: -webkit-transform 0.4s;
+		transition: transform 0.4s;
+	}
+
+	.modal-nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 100%;
+		z-index: 1100;
+		background: $blackopaquelight;
+		a {
+			padding: 10px;
+			text-align: center;
+			display: block;
+			border-bottom: 1px solid $black;
+			height: 80px;
+			position: relative;
+			display: block;
+
+			&:hover, &.cycle-pager-active {
+				background: $teal;
+				&:after{
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-top: 15px solid transparent;
+					border-bottom: 15px solid transparent;
+					border-left: 15px solid $teal;
+					right: 0;
+					margin: auto;
+					bottom: 0;
+					top: 0;
+					transition: right .25s ease-in-out;
+				}
+			}
+			&.cycle-pager-active:after {
+				right: -15px;
+			}
+		}
+		img{
+			max-height: 40px;
+			margin: auto;
+			@include absolutecenter;
+		}
+
+		.Deforestation img, .Climate-Migration img {
+			height: 22px;
+		}
+
+	}
+	.cycle-slideshow {
+		width: 100%;
+		.slide{
+			padding-left: 100px;
+		}
+	}
+
+}
+
+//Navigation
+	.main-nav {
+		position: fixed;
+		left: -80px;
+		top: 0;
+		width: 80px;
+		height: 100%;
+		z-index: 1100;
+		background: $blackopaquelight;
+		transition: .5s all ease-in-out;
+
+		&.open{ left: 0; }
+
+		li{
+			white-space: nowrap;
+			clear:both;
+			display: block;
+			border-bottom: 1px solid $black;
+		}
+		a {
+			padding: 20px 10px;
+			text-align: center;
+			display: block;
+			height: 80px;
+			position: relative;
+			display: block;
+
+			&:hover, &.cycle-pager-active {
+				background: $teal;
+				&:after{
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-top: 15px solid transparent;
+					border-bottom: 15px solid transparent;
+					border-left: 15px solid $teal;
+					right: 0;
+					margin: auto;
+					bottom: 0;
+					top: 0;
+					transition: right .25s ease-in-out;
+				}
+			}
+			&.cycle-pager-active:after {
+				right: -15px;
+			}
+		}
+
+		img{
+			max-height: 40px;
+			margin: auto;
+			@include absolutecenter;
+		}
+
+		.nav-main-item {
+			display: block;
+
+			a::before{
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 40px;
+				height: 40px;
+				background-size: auto 100%;
+				background-repeat: no-repeat;
+				margin-right: 50px;
+				float: left;
+			}
+			a{
+				padding-left: 20px;
+				width: 100%;
+				overflow: hidden;
+				transition: 1s width ease-in-out;
+				text-decoration: none;
+				color: $tan;
+				@include medium-body;
+				font-size: 14px;
+			}
+		}
+		#about a::before{
+			background-image: url('images/nav-icons/about.png');
+		}
+		#women-climate a::before{
+			background-image: url('images/nav-icons/women_climate.png');
+		}
+
+		#case-studies a::before{
+			background-image: url('images/nav-icons/case_studies.png');
+		}
+
+		#moving-forward a::before{
+			background-image: url('images/nav-icons/moving_forward.png');
+		}
+		#common-cause a::before{
+			background-image: url('images/nav-icons/common_cause.png');
+		}
+
+	}
+	.main-nav:hover {
+		a {
+			width: 400px;
+			background: $blackopaquelight;
+		}
+	}
+
+	.resources-media, .contact, .case-study-frame {
+		z-index: 1200;
+	}

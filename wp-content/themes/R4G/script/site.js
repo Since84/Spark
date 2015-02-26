@@ -13,7 +13,8 @@
 
 	  		//Delegated Events for user actions
 	  		events: {
-	  			"click .team-member": "goToTeamMember"
+	  			"click .team-member": "goToTeamMember",
+	  			"click .issue-area": "goToIssueArea"
 	  		},
 
 
@@ -45,6 +46,17 @@
 	  			
 	  			if( $(elem).not('.active') ){
 	  				$('.team-member.active').removeClass('active');
+		  			$(elem).addClass('active');
+		  			$('.tab-content .cycle-slideshow').cycle( 'goto', index_id );	  				
+	  			}
+
+
+	  		},
+	  		goToIssueArea: function(elem){ 
+	  			var index_id = $(elem).attr('tab-index') - 1;
+	  			
+	  			if( $(elem).not('.active') ){
+	  				$('.issue-area.active').removeClass('active');
 		  			$(elem).addClass('active');
 		  			$('.tab-content .cycle-slideshow').cycle( 'goto', index_id );	  				
 	  			}

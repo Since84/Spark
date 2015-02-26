@@ -10,7 +10,7 @@
 		@include call-to-action;
 		line-height: 1em;
 		padding: 10px;
-		background: $purple2;
+		background: $purple3;
 		&:nth-child(1){
 			margin-right: 50px;
 		}
@@ -23,7 +23,7 @@
 			width: 160px;
 			padding: 25px;
 			text-transform: uppercase;
-			box-shadow: 0 0 .5em #555;
+			box-shadow: 0 0 .5em #111;
 			transition: .5s all ease-in;
 			&:hover {
 				box-shadow: none;
@@ -36,6 +36,7 @@
 			margin-left: 25px;
 			font-size: 20px;
 			color: white;
+			font-weight: 500;
 		}
 	}
 }

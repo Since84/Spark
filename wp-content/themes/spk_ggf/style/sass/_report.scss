@@ -1,0 +1,54 @@
+.report-page{
+	/* margin-top: 191px; */
+	/* margin-left: 150px; */
+	height: 397px;
+	padding-left: 150px;
+	padding-top: 82px;
+	width: $containerwidth;
+	margin: auto;
+}
+
+.report-block{
+	display: inline-block;
+	height: 250px;
+	width: 700px;
+	vertical-align: middle; 
+}
+.report-content{
+	font-family: "lato";
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+	text-align: left;
+	width: 711px;
+	position: relative;
+	margin: 0px 0px 20px;
+	/* padding-top: 117px; */
+	height: 51px;
+}
+
+.report-circle{
+	border-radius: 50%;
+	background: url(wp-content/uploads/2015/02/indian-women.png);
+	background-position: cover;
+	background-size: cover;
+	height: 233px;
+	width: 233px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+	position: relative;
+
+	img{
+		@include absolutecenter;
+		width: 100px;
+		height: auto;
+	}
+
+}
+
+.download-report{
+	width: 370px;
+	text-align: center;
+	float: left;
+}

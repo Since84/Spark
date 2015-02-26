@@ -1,9 +1,8 @@
 <section style="background-image: url({{report.get_field('background_img')}}) " >
 	
 	<div class="report-page">
-
-		<div class="report-circle" background="report.circle_image">
-			
+		<div class="report-circle" style="background-image:url({{ report.get_field('sub_image') }});">
+			<img class="icon" src="{{ report.get_field('icon').url}}"/>
 		</div>
 
 		<div class="report-block">

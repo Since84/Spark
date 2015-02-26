@@ -8,13 +8,18 @@ Template: Spark15
   box-sizing: border-box;
 }
 
+/* line 9, style/sass/_base.scss */
+body {
+  overflow: scroll;
+}
+
 /* line 14, style/sass/_base.scss */
 h1 {
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 900;
   text-transform: uppercase;
   font-family: "lato", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* line 30, style/sass/_base.scss */
@@ -24,7 +29,7 @@ h2 {
   /* text-transform: capitalize; */
 }
 
-/* line 118, style/sass/_base.scss */
+/* line 125, style/sass/_base.scss */
 section {
   width: 100%;
   background-size: cover;
@@ -35,19 +40,20 @@ section {
   min-width: 1200px;
 }
 
-/* line 128, style/sass/_base.scss */
+/* line 135, style/sass/_base.scss */
 .container {
   width: 1200px;
   margin: auto;
   display: block;
 }
 
-/* line 134, style/sass/_base.scss */
+/* line 141, style/sass/_base.scss */
 .content {
   text-align: center;
 }
-/* line 136, style/sass/_base.scss */
-.content .content-text {
+
+/* line 144, style/sass/_base.scss */
+.content-text {
   font-family: "lato";
   font-size: 28px;
   color: black;
@@ -58,8 +64,9 @@ section {
   line-height: 40px;
   text-align: left;
 }
-/* line 148, style/sass/_base.scss */
-.content .content-textwhite {
+
+/* line 156, style/sass/_base.scss */
+.content-textwhite {
   font-family: "lato";
   font-size: 28px;
   color: white;
@@ -71,7 +78,24 @@ section {
   text-align: center;
 }
 
-/* line 162, style/sass/_base.scss */
+/* line 168, style/sass/_base.scss */
+.centered-title {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  padding-top: 50px;
+}
+
+/* line 175, style/sass/_base.scss */
+.center div {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 10px auto 0px;
+  height: 260px;
+}
+
+/* line 183, style/sass/_base.scss */
 .download-report {
   font-family: "lato", sans-serif;
   font-weight: 900;
@@ -92,9 +116,136 @@ section {
   margin-top: 60px;
   transition: .25s background-color ease;
 }
-/* line 176, style/sass/_base.scss */
+/* line 197, style/sass/_base.scss */
 .download-report:hover {
   background-color: rgba(187, 46, 2, 0.7);
+}
+
+/* line 348, style/sass/_base.scss */
+.main-nav {
+  position: fixed;
+  left: -80px;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 1100;
+  background: rgba(1, 1, 1, 0.6);
+  transition: .5s all ease-in-out;
+}
+/* line 358, style/sass/_base.scss */
+.main-nav.open {
+  left: 0;
+}
+/* line 360, style/sass/_base.scss */
+.main-nav li {
+  white-space: nowrap;
+  clear: both;
+  display: block;
+  border-bottom: 1px solid #111111;
+}
+/* line 366, style/sass/_base.scss */
+.main-nav a {
+  padding: 20px 10px;
+  text-align: center;
+  display: block;
+  height: 80px;
+  position: relative;
+  display: block;
+}
+/* line 374, style/sass/_base.scss */
+.main-nav a:hover, .main-nav a.cycle-pager-active {
+  background: #448f9c;
+}
+/* line 376, style/sass/_base.scss */
+.main-nav a:hover:after, .main-nav a.cycle-pager-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #448f9c;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  transition: right .25s ease-in-out;
+}
+/* line 392, style/sass/_base.scss */
+.main-nav a.cycle-pager-active:after {
+  right: -15px;
+}
+/* line 397, style/sass/_base.scss */
+.main-nav img {
+  max-height: 40px;
+  margin: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 403, style/sass/_base.scss */
+.main-nav .nav-main-item {
+  display: block;
+}
+/* line 406, style/sass/_base.scss */
+.main-nav .nav-main-item a::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  margin-right: 50px;
+  float: left;
+}
+/* line 417, style/sass/_base.scss */
+.main-nav .nav-main-item a {
+  padding-left: 20px;
+  width: 100%;
+  overflow: hidden;
+  transition: 1s width ease-in-out;
+  text-decoration: none;
+  color: #dad1ba;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 14px;
+}
+/* line 428, style/sass/_base.scss */
+.main-nav #about a::before {
+  background-image: url("images/nav-icons/about.png");
+}
+/* line 431, style/sass/_base.scss */
+.main-nav #women-climate a::before {
+  background-image: url("images/nav-icons/women_climate.png");
+}
+/* line 435, style/sass/_base.scss */
+.main-nav #case-studies a::before {
+  background-image: url("images/nav-icons/case_studies.png");
+}
+/* line 439, style/sass/_base.scss */
+.main-nav #moving-forward a::before {
+  background-image: url("images/nav-icons/moving_forward.png");
+}
+/* line 442, style/sass/_base.scss */
+.main-nav #common-cause a::before {
+  background-image: url("images/nav-icons/common_cause.png");
+}
+
+/* line 448, style/sass/_base.scss */
+.main-nav:hover a {
+  width: 400px;
+  background: rgba(1, 1, 1, 0.6);
+}
+
+/* line 454, style/sass/_base.scss */
+.resources-media, .contact, .case-study-frame {
+  z-index: 1200;
 }
 
 /* line 2, style/sass/_womens_rights.scss */
@@ -103,7 +254,7 @@ section {
   background-color: #ce6513;
   min-height: 100vh;
 }
-/* line 185, style/sass/_base.scss */
+/* line 206, style/sass/_base.scss */
 .womens-rights .circle {
   border-radius: 50%;
   display: block;
@@ -113,7 +264,7 @@ section {
   position: relative;
   margin: 100px auto 75px;
 }
-/* line 194, style/sass/_base.scss */
+/* line 215, style/sass/_base.scss */
 .womens-rights .circle .circle-content {
   position: absolute;
   display: block;
@@ -127,7 +278,7 @@ section {
   left: 0;
   right: 0;
 }
-/* line 207, style/sass/_base.scss */
+/* line 228, style/sass/_base.scss */
 .womens-rights .circle .circle-content:before, .womens-rights .circle .circle-content:after {
   content: "";
   width: 150px;
@@ -136,12 +287,12 @@ section {
   display: block;
   margin: auto;
 }
-/* line 216, style/sass/_base.scss */
+/* line 237, style/sass/_base.scss */
 .womens-rights .circle .circle-content h1 {
   color: #bb2e02;
   margin: 40px 0 30px;
 }
-/* line 221, style/sass/_base.scss */
+/* line 242, style/sass/_base.scss */
 .womens-rights .circle .circle-content h2 {
   margin-bottom: 40px;
   font-size: 20px;
@@ -190,7 +341,7 @@ section {
   height: 105px;
   cursor: pointer;
 }
-/* line 185, style/sass/_base.scss */
+/* line 206, style/sass/_base.scss */
 .womens-rights .download-icon .circle {
   border-radius: 50%;
   display: block;
@@ -200,7 +351,7 @@ section {
   position: relative;
   margin: 100px auto 75px;
 }
-/* line 194, style/sass/_base.scss */
+/* line 215, style/sass/_base.scss */
 .womens-rights .download-icon .circle .circle-content {
   position: absolute;
   display: block;
@@ -214,7 +365,7 @@ section {
   left: 0;
   right: 0;
 }
-/* line 207, style/sass/_base.scss */
+/* line 228, style/sass/_base.scss */
 .womens-rights .download-icon .circle .circle-content:before, .womens-rights .download-icon .circle .circle-content:after {
   content: "";
   width: 150px;
@@ -223,12 +374,12 @@ section {
   display: block;
   margin: auto;
 }
-/* line 216, style/sass/_base.scss */
+/* line 237, style/sass/_base.scss */
 .womens-rights .download-icon .circle .circle-content h1 {
   color: #bb2e02;
   margin: 40px 0 30px;
 }
-/* line 221, style/sass/_base.scss */
+/* line 242, style/sass/_base.scss */
 .womens-rights .download-icon .circle .circle-content h2 {
   margin-bottom: 40px;
   font-size: 20px;
@@ -540,11 +691,11 @@ section {
 }
 
 /* line 1, style/sass/_about.scss */
-.about {
+section.about {
   padding-bottom: 110px;
 }
 /* line 3, style/sass/_about.scss */
-.about .about-title:before {
+section.about .about-title:before {
   content: "";
   width: 150px;
   background: #fbaf22;
@@ -554,8 +705,1391 @@ section {
   margin-bottom: 50px;
 }
 /* line 12, style/sass/_about.scss */
-.about .about-img {
+section.about .about-img {
   position: relative;
   margin: auto;
   margin-top: 115px;
+}
+/* line 18, style/sass/_about.scss */
+section.about .content-text p {
+  margin-bottom: 40px;
+}
+/* line 22, style/sass/_about.scss */
+section.about .button-wrapper {
+  margin: auto;
+}
+/* line 25, style/sass/_about.scss */
+section.about .download-report {
+  margin: auto;
+  float: none;
+}
+
+/* line 1, style/sass/_women_climate.scss */
+.women_climate {
+  padding: 120px 0;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+/* line 5, style/sass/_women_climate.scss */
+.women_climate h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  color: #bb2e02;
+  margin-bottom: 80px;
+}
+/* line 11, style/sass/_women_climate.scss */
+.women_climate .cycle-slideshow {
+  width: 850px;
+  height: 250px;
+  margin: 10px auto;
+  padding: 0;
+  position: relative;
+}
+/* line 19, style/sass/_women_climate.scss */
+.women_climate .controls {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "arial";
+  padding: 0px 10px;
+  width: 65px;
+  height: 90px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+/* line 35, style/sass/_women_climate.scss */
+.women_climate .controls:before {
+  font-family: "FontAwesome";
+  display: inline-block;
+  font-size: 100px;
+}
+/* line 41, style/sass/_women_climate.scss */
+.women_climate .controls#prev {
+  left: 40px;
+}
+/* line 43, style/sass/_women_climate.scss */
+.women_climate .controls#prev:before {
+  content: url("images/Back-Default.png");
+}
+/* line 46, style/sass/_women_climate.scss */
+.women_climate .controls#prev:hover:before {
+  content: url("images/Back-Hover.png");
+}
+/* line 51, style/sass/_women_climate.scss */
+.women_climate .controls#next {
+  right: 40px;
+}
+/* line 53, style/sass/_women_climate.scss */
+.women_climate .controls#next:before {
+  content: url("images/Next-Default.png");
+}
+/* line 56, style/sass/_women_climate.scss */
+.women_climate .controls#next:hover:before {
+  content: url("images/Next-Hover.png");
+}
+/* line 63, style/sass/_women_climate.scss */
+.women_climate .slide {
+  width: 100%;
+}
+/* line 206, style/sass/_base.scss */
+.women_climate .slide .circle {
+  border-radius: 50%;
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(253, 184, 19, 0.8);
+  position: relative;
+  margin: 100px auto 75px;
+}
+/* line 215, style/sass/_base.scss */
+.women_climate .slide .circle .circle-content {
+  position: absolute;
+  display: block;
+  margin: auto;
+  height: 230px;
+  width: 325px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 228, style/sass/_base.scss */
+.women_climate .slide .circle .circle-content:before, .women_climate .slide .circle .circle-content:after {
+  content: "";
+  width: 150px;
+  border-bottom: 5px solid black;
+  background: black;
+  display: block;
+  margin: auto;
+}
+/* line 237, style/sass/_base.scss */
+.women_climate .slide .circle .circle-content h1 {
+  color: #bb2e02;
+  margin: 40px 0 30px;
+}
+/* line 242, style/sass/_base.scss */
+.women_climate .slide .circle .circle-content h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+/* line 66, style/sass/_women_climate.scss */
+.women_climate .slide .circle {
+  background-color: none;
+  height: 225px;
+  width: 225px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 30px 0 0;
+  background-size: cover;
+}
+/* line 75, style/sass/_women_climate.scss */
+.women_climate .slide .circle img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 79, style/sass/_women_climate.scss */
+.women_climate .slide .slide-text {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 25px;
+  line-height: 1.5em;
+  font-size: 24px;
+  height: 240px;
+  width: 570px;
+}
+/* line 89, style/sass/_women_climate.scss */
+.women_climate .slide .photo-cred {
+  display: block;
+  clear: both;
+  margin-top: 20px;
+  font-size: 10px;
+  font-style: italic;
+}
+/* line 99, style/sass/_women_climate.scss */
+.women_climate .pager {
+  text-align: center;
+  margin-top: 70px;
+}
+/* line 102, style/sass/_women_climate.scss */
+.women_climate .pager span {
+  text-indent: -30000px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  position: relative;
+}
+/* line 111, style/sass/_women_climate.scss */
+.women_climate .pager span:before {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #dad1ba;
+  border-radius: 20px;
+  transition: .25s all linear;
+}
+/* line 121, style/sass/_women_climate.scss */
+.women_climate .pager span.cycle-pager-active:before {
+  background: #bb2e02;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 2, style/sass/_common_cause.scss */
+.common-cause {
+  color: #dad1ba;
+}
+/* line 4, style/sass/_common_cause.scss */
+.common-cause h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 100px;
+}
+/* line 8, style/sass/_common_cause.scss */
+.common-cause .content-textwhite {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #dad1ba;
+}
+/* line 12, style/sass/_common_cause.scss */
+.common-cause .cycle-pager {
+  width: 700px;
+  height: 130px;
+  margin-bottom: 60px;
+}
+/* line 17, style/sass/_common_cause.scss */
+.common-cause .cycle-pager a {
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 80px;
+  background-size: auto;
+  background-position: center center;
+  transition: .25s all linear;
+  background-image: none;
+  background-color: black;
+  background-size: auto 100%;
+  background-position: center center;
+}
+/* line 31, style/sass/_common_cause.scss */
+.common-cause .cycle-pager a.cycle-pager-active {
+  width: 115px;
+  height: 115px;
+  border-radius: 115px;
+  background-image: auto !important;
+}
+/* line 40, style/sass/_common_cause.scss */
+.common-cause .cycle-slideshow {
+  height: 350px;
+}
+/* line 42, style/sass/_common_cause.scss */
+.common-cause .cycle-slideshow .cycle-slide {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  background: #bb2e02;
+  display: block;
+  padding: 40px 0;
+  background-size: cover;
+}
+/* line 51, style/sass/_common_cause.scss */
+.common-cause .cycle-slideshow .cycle-slide h3 {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  width: 900px;
+  margin: auto;
+  color: #fbaf22;
+  margin-bottom: 1em;
+}
+/* line 59, style/sass/_common_cause.scss */
+.common-cause .cycle-slideshow .cycle-slide .slide-text {
+  color: #dad1ba;
+  line-height: 40px;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  width: 900px;
+  margin: auto;
+  text-align: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 70, style/sass/_common_cause.scss */
+.common-cause .cycle-slideshow .cycle-slide .slide-text .photo-cred {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 1, style/sass/_case_studies.scss */
+section.case-studies {
+  padding: 120px 0;
+}
+/* line 3, style/sass/_case_studies.scss */
+section.case-studies .centered-title {
+  color: #fbaf22;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+/* line 10, style/sass/_case_studies.scss */
+section.case-studies .content p {
+  color: #dad1ba;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 80px;
+}
+/* line 19, style/sass/_case_studies.scss */
+section.case-studies .cases {
+  width: 825px;
+  margin: auto;
+  text-align: left;
+}
+/* line 23, style/sass/_case_studies.scss */
+section.case-studies .cases li {
+  display: inline-block;
+  vertical-align: top;
+  width: 24%;
+  height: 300px;
+  text-align: center;
+}
+/* line 206, style/sass/_base.scss */
+section.case-studies .cases li .circle {
+  border-radius: 50%;
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(253, 184, 19, 0.8);
+  position: relative;
+  margin: 100px auto 75px;
+}
+/* line 215, style/sass/_base.scss */
+section.case-studies .cases li .circle .circle-content {
+  position: absolute;
+  display: block;
+  margin: auto;
+  height: 230px;
+  width: 325px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 228, style/sass/_base.scss */
+section.case-studies .cases li .circle .circle-content:before, section.case-studies .cases li .circle .circle-content:after {
+  content: "";
+  width: 150px;
+  border-bottom: 5px solid black;
+  background: black;
+  display: block;
+  margin: auto;
+}
+/* line 237, style/sass/_base.scss */
+section.case-studies .cases li .circle .circle-content h1 {
+  color: #bb2e02;
+  margin: 40px 0 30px;
+}
+/* line 242, style/sass/_base.scss */
+section.case-studies .cases li .circle .circle-content h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+/* line 30, style/sass/_case_studies.scss */
+section.case-studies .cases li .circle {
+  background-color: #2b585c;
+  background-image: none !important;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+/* line 38, style/sass/_case_studies.scss */
+section.case-studies .cases li .circle .icon {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+/* line 42, style/sass/_case_studies.scss */
+section.case-studies .cases li .circle .feature-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: .5s opacity ease-in-out;
+}
+/* line 55, style/sass/_case_studies.scss */
+section.case-studies .cases li img {
+  display: block;
+  clear: both;
+  margin: auto;
+  margin-bottom: 20px;
+}
+/* line 61, style/sass/_case_studies.scss */
+section.case-studies .cases li img.thumb {
+  width: 124px;
+  height: auto;
+  display: none;
+}
+/* line 69, style/sass/_case_studies.scss */
+section.case-studies .cases li:hover .circle {
+  background-image: auto !important;
+}
+/* line 71, style/sass/_case_studies.scss */
+section.case-studies .cases li:hover .circle .feature-image {
+  opacity: 1;
+}
+/* line 75, style/sass/_case_studies.scss */
+section.case-studies .cases li:hover .case-title {
+  color: #fbaf22;
+  position: relative;
+  padding-top: 40px;
+}
+/* line 79, style/sass/_case_studies.scss */
+section.case-studies .cases li:hover .case-title:before {
+  content: "";
+  background-image: url("images/case-study-tail.png");
+  display: block;
+  width: 160px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+/* line 93, style/sass/_case_studies.scss */
+section.case-studies .cases li .case-title {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2b585c;
+  font-size: 18px;
+  display: block;
+}
+
+/* line 106, style/sass/_case_studies.scss */
+.case-study-frame {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  visibility: hidden;
+  -webkit-transform: translateY(-60%) scale(0);
+  transform: translateY(-60%) scale(0);
+  -webkit-transition: -webkit-transform 0.75s, visibility 0s 0.75s;
+  transition: transform 0.75s, visibility 0s 0.75s;
+}
+/* line 120, style/sass/_case_studies.scss */
+.case-study-frame.open {
+  visibility: visible;
+  -webkit-transform: translateY(0%) scale(1);
+  transform: translateY(0%) scale(1);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+/* line 128, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 1100;
+  background: rgba(1, 1, 1, 0.6);
+}
+/* line 136, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav a {
+  padding: 10px;
+  text-align: center;
+  display: block;
+  border-bottom: 1px solid #111111;
+  height: 80px;
+  position: relative;
+  display: block;
+}
+/* line 145, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav a:hover, .case-study-frame .case-study-nav a.cycle-pager-active {
+  background: #448f9c;
+}
+/* line 147, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav a:hover:after, .case-study-frame .case-study-nav a.cycle-pager-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #448f9c;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  transition: right .25s ease-in-out;
+}
+/* line 163, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav a.cycle-pager-active:after {
+  right: -15px;
+}
+/* line 167, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav img {
+  max-height: 40px;
+  margin: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 173, style/sass/_case_studies.scss */
+.case-study-frame .case-study-nav .Deforestation img, .case-study-frame .case-study-nav .Climate-Migration img {
+  height: 22px;
+}
+/* line 178, style/sass/_case_studies.scss */
+.case-study-frame .cycle-slideshow {
+  width: 100%;
+  padding-left: 50px;
+  background: #bb2e02;
+}
+/* line 184, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide {
+  white-space: nowrap;
+}
+/* line 186, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide > * {
+  white-space: normal;
+}
+/* line 189, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info {
+  display: inline-block;
+  height: 100vh;
+  width: 50%;
+  padding-left: 90px;
+  background-image: url("images/ggf-scroller-r2_03.png");
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 100px;
+  overflow: scroll;
+}
+/* line 200, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+/* line 205, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info p {
+  width: 370px;
+  margin: auto;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 40px;
+  line-height: 1.2em;
+}
+/* line 206, style/sass/_base.scss */
+.case-study-frame .case-study-slide .case-study-info .circle {
+  border-radius: 50%;
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(253, 184, 19, 0.8);
+  position: relative;
+  margin: 100px auto 75px;
+}
+/* line 215, style/sass/_base.scss */
+.case-study-frame .case-study-slide .case-study-info .circle .circle-content {
+  position: absolute;
+  display: block;
+  margin: auto;
+  height: 230px;
+  width: 325px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 228, style/sass/_base.scss */
+.case-study-frame .case-study-slide .case-study-info .circle .circle-content:before, .case-study-frame .case-study-slide .case-study-info .circle .circle-content:after {
+  content: "";
+  width: 150px;
+  border-bottom: 5px solid black;
+  background: black;
+  display: block;
+  margin: auto;
+}
+/* line 237, style/sass/_base.scss */
+.case-study-frame .case-study-slide .case-study-info .circle .circle-content h1 {
+  color: #bb2e02;
+  margin: 40px 0 30px;
+}
+/* line 242, style/sass/_base.scss */
+.case-study-frame .case-study-slide .case-study-info .circle .circle-content h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+/* line 217, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .header.circle {
+  background: rgba(187, 46, 2, 0.7);
+  width: 130px;
+  height: 130px;
+  margin: 40px auto;
+}
+/* line 222, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .header.circle img {
+  max-width: 60px;
+  max-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 229, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons {
+  width: 370px;
+  margin: auto;
+}
+/* line 232, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .lesson-pager {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 235, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .lesson-pager span {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 239, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .circle {
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  margin-bottom: 30px;
+  background: rgba(187, 46, 2, 0.7);
+  cursor: pointer;
+}
+/* line 246, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .circle span {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: 500;
+  color: #dad1ba;
+}
+/* line 255, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block {
+  display: inline-block;
+  width: 270px;
+  height: 200px;
+  margin-left: 20px;
+  text-align: left;
+  color: #bb2e02;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5em;
+  padding-left: 20px;
+  position: relative;
+}
+/* line 269, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block li:not(.selected) {
+  opacity: 0;
+}
+/* line 273, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block > li {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+}
+/* line 278, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block .selected {
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+/* line 282, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block .selected.first {
+  background-image: url("images/selected-arrow-one.png");
+}
+/* line 285, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-info .lessons .selected-block .selected.second {
+  background-image: url("images/selected-arrow-two.png");
+}
+/* line 293, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-feature {
+  display: inline-block;
+  vertical-align: top;
+  height: 100vh;
+  width: 50%;
+  background: #bb2e02;
+  padding: 20px;
+  padding-top: 290px;
+  padding-bottom: 150px;
+  margin-left: -4px;
+  color: #dad1ba;
+  background-size: cover;
+  overflow: scroll;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+/* line 307, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-feature .feature-name {
+  color: #fbaf22;
+  text-align: center;
+  font-size: 28px;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+/* line 314, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-feature .feature-title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+/* line 320, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-feature .feature-location {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+}
+/* line 326, style/sass/_case_studies.scss */
+.case-study-frame .case-study-slide .case-study-feature p {
+  width: 430px;
+  margin: auto;
+  margin-top: 65px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.75em;
+}
+/* line 338, style/sass/_case_studies.scss */
+.case-study-frame .case-study-footer {
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  padding: 30px 100px;
+  z-index: 1001;
+  width: 100%;
+  background: url("images/ggf-scroller-r2_06.png");
+  background-size: cover;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #448f9c;
+  text-transform: uppercase;
+}
+/* line 351, style/sass/_case_studies.scss */
+.case-study-frame .case-study-footer:before {
+  content: "";
+  font-family: "FontAwesome";
+  margin-right: 1em;
+  display: inline-block;
+}
+
+/* line 1, style/sass/_moving_forward.scss */
+.moving-forward {
+  background-size: contain;
+  background-position: center center;
+  height: 741px;
+  margin: auto;
+}
+/* line 206, style/sass/_base.scss */
+.moving-forward .circle {
+  border-radius: 50%;
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(253, 184, 19, 0.8);
+  position: relative;
+  margin: 100px auto 75px;
+}
+/* line 215, style/sass/_base.scss */
+.moving-forward .circle .circle-content {
+  position: absolute;
+  display: block;
+  margin: auto;
+  height: 230px;
+  width: 325px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 228, style/sass/_base.scss */
+.moving-forward .circle .circle-content:before, .moving-forward .circle .circle-content:after {
+  content: "";
+  width: 150px;
+  border-bottom: 5px solid black;
+  background: black;
+  display: block;
+  margin: auto;
+}
+/* line 237, style/sass/_base.scss */
+.moving-forward .circle .circle-content h1 {
+  color: #bb2e02;
+  margin: 40px 0 30px;
+}
+/* line 242, style/sass/_base.scss */
+.moving-forward .circle .circle-content h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+/* line 9, style/sass/_moving_forward.scss */
+section.moving-forward {
+  background-color: #ce6513;
+}
+
+/* line 15, style/sass/_moving_forward.scss */
+.moving-forward .circle-content {
+  width: 64%;
+}
+
+/* line 19, style/sass/_moving_forward.scss */
+div.moving-forward {
+  padding: 0 60px;
+}
+
+/* line 23, style/sass/_moving_forward.scss */
+.moving-forward p {
+  color: #ce6513;
+  font-family: "aleobolditalic";
+  font-size: 24px;
+  text-align: center;
+  width: 900px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+/* line 34, style/sass/_moving_forward.scss */
+.moving-forward ol {
+  margin-left: 0;
+  padding-right: 0;
+  list-style-type: none;
+  width: 900px;
+  padding-left: 15px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+/* line 43, style/sass/_moving_forward.scss */
+.moving-forward li {
+  counter-increment: step-counter;
+  padding-bottom: 48px;
+  font-family: "lato";
+  font-size: 24px;
+  /* width: 914px; */
+}
+
+/* line 51, style/sass/_moving_forward.scss */
+.moving-forward li::before {
+  content: counter(step-counter);
+  margin-right: 25px;
+  font-family: "lato";
+  font-size: 75%;
+  background-color: #bb2e02;
+  color: #fbaf22;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+/* line 1, style/sass/_report.scss */
+.report-page {
+  /* margin-top: 191px; */
+  /* margin-left: 150px; */
+  height: 397px;
+  padding-left: 150px;
+  padding-top: 82px;
+  width: 1200px;
+  margin: auto;
+}
+
+/* line 11, style/sass/_report.scss */
+.report-block {
+  display: inline-block;
+  height: 250px;
+  width: 700px;
+  vertical-align: middle;
+}
+
+/* line 17, style/sass/_report.scss */
+.report-content {
+  font-family: "lato";
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  width: 711px;
+  position: relative;
+  margin: 0px 0px 20px;
+  /* padding-top: 117px; */
+  height: 51px;
+}
+
+/* line 30, style/sass/_report.scss */
+.report-circle {
+  border-radius: 50%;
+  background: url(wp-content/uploads/2015/02/indian-women.png);
+  background-position: cover;
+  background-size: cover;
+  height: 233px;
+  width: 233px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px;
+  position: relative;
+}
+/* line 42, style/sass/_report.scss */
+.report-circle img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+}
+
+/* line 50, style/sass/_report.scss */
+.download-report {
+  width: 370px;
+  text-align: center;
+  float: left;
+}
+
+/* line 1, style/sass/_footer.scss */
+footer {
+  height: 320px;
+  width: 100vw;
+  background-size: 100%;
+}
+
+/* line 7, style/sass/_footer.scss */
+.footer-top {
+  background: url("/wp-content/uploads/2015/02/ggf-scroller-r2_10.png") no-repeat;
+  height: 82px;
+  background-size: cover;
+}
+/* line 11, style/sass/_footer.scss */
+.footer-top .top-logo-block {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+/* line 17, style/sass/_footer.scss */
+.footer-top span {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #850c00;
+  margin-right: 50px;
+}
+/* line 21, style/sass/_footer.scss */
+.footer-top span svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  width: auto;
+  margin-right: 10px;
+}
+/* line 28, style/sass/_footer.scss */
+.footer-top span svg path {
+  stroke: #850c00;
+}
+
+/* line 34, style/sass/_footer.scss */
+.footer-middle {
+  background: url("/wp-content/uploads/2015/02/ggf-scroller-r2_11.png") no-repeat;
+  height: 170px;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+/* line 40, style/sass/_footer.scss */
+.footer-bottom {
+  background: url("/wp-content/uploads/2015/02/ggf-scroller-r2_12.png") no-repeat;
+  height: 65px;
+  background-size: cover;
+  padding: 20px;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dad1ba;
+}
+/* line 50, style/sass/_footer.scss */
+.footer-bottom .designed.by {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 65%;
+  color: #dad1ba;
+}
+/* line 57, style/sass/_footer.scss */
+.footer-bottom .elefintlogo {
+  float: right;
+  white-space: nowrap;
+  max-width: 30px;
+  overflow: hidden;
+  transition: 1.5s max-width;
+  text-decoration: none;
+  font-size: 14px;
+  color: #dad1ba;
+}
+/* line 66, style/sass/_footer.scss */
+.footer-bottom .elefintlogo:hover {
+  max-width: 1000px;
+}
+/* line 69, style/sass/_footer.scss */
+.footer-bottom .elefintlogo svg {
+  width: 30px;
+}
+/* line 71, style/sass/_footer.scss */
+.footer-bottom .elefintlogo svg .logomark {
+  fill: #dad1ba;
+}
+
+/* line 78, style/sass/_footer.scss */
+.footer-logo {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 40px;
+  height: 100px;
+  width: 170px;
+  position: relative;
+}
+/* line 85, style/sass/_footer.scss */
+.footer-logo img {
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .25s ease-in-out;
+}
+/* line 90, style/sass/_footer.scss */
+.footer-logo img.hover {
+  opacity: 0;
+}
+/* line 92, style/sass/_footer.scss */
+.footer-logo:hover .hover {
+  opacity: 1;
+}
+/* line 93, style/sass/_footer.scss */
+.footer-logo:hover .default {
+  opacity: 0;
+}
+
+/* line 95, style/sass/_footer.scss */
+.middle-logo-block {
+  width: 1200px;
+  margin: auto;
+}
+
+/* line 100, style/sass/_footer.scss */
+section.resources-media {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1200;
+  visibility: hidden;
+  -webkit-transform: translateY(-60%) scale(0);
+  transform: translateY(-60%) scale(0);
+  -webkit-transition: -webkit-transform 0.75s, visibility 0s 0.75s;
+  transition: transform 0.75s, visibility 0s 0.75s;
+}
+/* line 280, style/sass/_base.scss */
+section.resources-media.open {
+  visibility: visible;
+  -webkit-transform: translateY(0%) scale(1);
+  transform: translateY(0%) scale(1);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+/* line 288, style/sass/_base.scss */
+section.resources-media .modal-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 1100;
+  background: rgba(1, 1, 1, 0.6);
+}
+/* line 296, style/sass/_base.scss */
+section.resources-media .modal-nav a {
+  padding: 10px;
+  text-align: center;
+  display: block;
+  border-bottom: 1px solid #111111;
+  height: 80px;
+  position: relative;
+  display: block;
+}
+/* line 305, style/sass/_base.scss */
+section.resources-media .modal-nav a:hover, section.resources-media .modal-nav a.cycle-pager-active {
+  background: #448f9c;
+}
+/* line 307, style/sass/_base.scss */
+section.resources-media .modal-nav a:hover:after, section.resources-media .modal-nav a.cycle-pager-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #448f9c;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  transition: right .25s ease-in-out;
+}
+/* line 323, style/sass/_base.scss */
+section.resources-media .modal-nav a.cycle-pager-active:after {
+  right: -15px;
+}
+/* line 327, style/sass/_base.scss */
+section.resources-media .modal-nav img {
+  max-height: 40px;
+  margin: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 333, style/sass/_base.scss */
+section.resources-media .modal-nav .Deforestation img, section.resources-media .modal-nav .Climate-Migration img {
+  height: 22px;
+}
+/* line 338, style/sass/_base.scss */
+section.resources-media .cycle-slideshow {
+  width: 100%;
+}
+/* line 340, style/sass/_base.scss */
+section.resources-media .cycle-slideshow .slide {
+  padding-left: 100px;
+}
+/* line 102, style/sass/_footer.scss */
+section.resources-media .slide {
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 1200px;
+  overflow: scroll;
+  background-size: cover;
+}
+/* line 108, style/sass/_footer.scss */
+section.resources-media .slide h2 {
+  width: 100%;
+  text-align: center;
+  padding: 110px 0 50px;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+}
+/* line 114, style/sass/_footer.scss */
+section.resources-media .slide li {
+  width: 1200px;
+  margin: auto;
+  display: block;
+}
+/* line 119, style/sass/_footer.scss */
+section.resources-media .slide li:not(.section-header) {
+  margin-bottom: 40px;
+}
+/* line 122, style/sass/_footer.scss */
+section.resources-media .slide li h2 {
+  width: 100%;
+  text-align: center;
+  padding: 110px 0 50px;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  color: white;
+}
+/* line 129, style/sass/_footer.scss */
+section.resources-media .slide li .title {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+/* line 134, style/sass/_footer.scss */
+section.resources-media .slide li .caption, section.resources-media .slide li .source {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-weight: 500;
+  font-size: 12px;
+}
+/* line 139, style/sass/_footer.scss */
+section.resources-media .slide li .source {
+  font-style: italic;
+}
+/* line 145, style/sass/_footer.scss */
+section.resources-media .resources {
+  background: url(images/ggf-scroller-r2_09.png);
+  background-size: cover;
+}
+/* line 149, style/sass/_footer.scss */
+section.resources-media .resources .section-header {
+  border-bottom: 2px solid #fbaf22;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #fbaf22;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+/* line 159, style/sass/_footer.scss */
+section.resources-media .media {
+  background: url(images/ggf-scroller-r2_03.png);
+  background-size: cover;
+}
+/* line 162, style/sass/_footer.scss */
+section.resources-media .media h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  letter-spacing: 1px;
+  color: #111111;
+}
+/* line 166, style/sass/_footer.scss */
+section.resources-media .media .date {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+/* line 206, style/sass/_base.scss */
+section.resources-media .media .date .circle {
+  border-radius: 50%;
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(253, 184, 19, 0.8);
+  position: relative;
+  margin: 100px auto 75px;
+}
+/* line 215, style/sass/_base.scss */
+section.resources-media .media .date .circle .circle-content {
+  position: absolute;
+  display: block;
+  margin: auto;
+  height: 230px;
+  width: 325px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 228, style/sass/_base.scss */
+section.resources-media .media .date .circle .circle-content:before, section.resources-media .media .date .circle .circle-content:after {
+  content: "";
+  width: 150px;
+  border-bottom: 5px solid black;
+  background: black;
+  display: block;
+  margin: auto;
+}
+/* line 237, style/sass/_base.scss */
+section.resources-media .media .date .circle .circle-content h1 {
+  color: #bb2e02;
+  margin: 40px 0 30px;
+}
+/* line 242, style/sass/_base.scss */
+section.resources-media .media .date .circle .circle-content h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+/* line 171, style/sass/_footer.scss */
+section.resources-media .media .date .circle {
+  width: 73px;
+  height: 73px;
+  background: #ce6513;
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 16px;
+}
+/* line 183, style/sass/_footer.scss */
+section.resources-media .media span.title, section.resources-media .media span.source {
+  display: inline-block;
+}
+/* line 186, style/sass/_footer.scss */
+section.resources-media .media .source {
+  font-weight: bold;
 }

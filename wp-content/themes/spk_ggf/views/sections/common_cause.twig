@@ -1,47 +1,47 @@
-<section style="background-image: url({{common_cause.get_field('background_img')}}) ">
+<section id="common-cause" class="common-cause" style="background-image: url({{common_cause.get_field('background_img')}}) ">
 	<div class="content">
 
 		<div class="centered-title">
-			<h1 class="white-h1">
+			<h2 class="white-h1">
 				{{common_cause.title}}
-			</h1>
+			</h2>
 		</div>
 		<div class="content-textwhite">
 			{{common_cause.content}}
 		</div>
 	</div>
-<div class="common-cause-controller">
+{# <div class="common-cause-controller">
 	<div class="controls" id="prev"> < </div>
     <div class="common-cause-pager"></div>
    	<div class="controls" id="next"> > </div>
-</div>
+</div> #}
 <div class="center" align="center" vertical-align="middle" height="267px">
 
     <!-- <div class="controls" id="prev"> < </div>
     <div class="common-cause-pager"></div>
    	<div class="controls" id="next"> > </div> -->
-
+    <div id="thumbnail-pager" class="cycle-pager external">
+    </div>
     <div class="cycle-slideshow" 
     data-cycle-fx="scrollHorz"
-    data-cycle-timeout="2000"
-    data-cycle-pager=".common-cause-pager"
+    data-cycle-timeout="0"
     data-cycle-prev="#prev"
     data-cycle-next="#next"
-    data-cycle-slides="> span"
-    
+    data-cycle-slides=".slide"
+    data-cycle-pager="#thumbnail-pager"
     >
-    
-
-    <!-- empty element for pager links -->
-
-    <div class="cycle-pager "></div>
-
-    <span><img src="http://lorempixel.com/1200/385"></span>
-    <span><img src="http://lorempixel.com/1200/385"></span>
-    <span><img src="http://lorempixel.com/1200/385"></span>
-    <span><img src="http://lorempixel.com/1200/385"></span>
-</div>
-
+        <!-- empty element for pager links -->
+        <!-- empty element for pager links -->
+        {% for slide in common_cause.get_field('gallery') %}
+            
+        <div class="slide" data-cycle-pager-template="<a href=# style='background-image: url( {{ slide.slide_image.url }} )'></a>" style="background-image:url({{ slide.slide_image.url }})">
+            <h3>{{ slide.slide_title }}</h3>  
+            <div class="slide-text">
+                {{ slide.slide_text }}
+                <span class="photo-cred">Photo Cred: {{slide.photo_cred}}</span>
+            </div>
+        {% endfor %}       
+    </div>
 
 
 </div>

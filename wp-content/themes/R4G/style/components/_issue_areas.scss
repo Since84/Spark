@@ -87,6 +87,10 @@
 		@include h2;
 	}
 
+	.slide {
+		width: 100%;
+	}
+
 	.statistics {
 		white-space: nowrap;
 		border-bottom: 1px solid $black;

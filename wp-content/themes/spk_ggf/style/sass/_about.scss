@@ -1,4 +1,4 @@
-.about {
+section.about {
 	padding-bottom: 110px;
 	.about-title:before{
 		content: "";
@@ -13,5 +13,17 @@
 		position: relative;
 		margin: auto;
 		margin-top: 115px;
+	}
+	.content-text{
+		p{
+			margin-bottom: 40px; 
+		}
+	}
+	.button-wrapper{
+		margin: auto;
+	}
+	.download-report{
+		margin: auto;
+		float: none;
 	}
 }

@@ -1,4 +1,4 @@
-<section style="background-image: url({{climate_leaders.get_field('background_img')}}) ">
+<section id="case-studies" class="case-studies" style="background-image: url({{climate_leaders.get_field('background_img')}}) ">
 	<div class="content">
 
 		<div class="centered-title">
@@ -9,6 +9,20 @@
 		<div class="content-climate-leaders">
 			{{climate_leaders.content}}
 		</div>
+		<ul class="cases">
+			{% for case in climate_leaders.get_field('case_study') %}
+				{# {{dump(case)}} #}
+				<li class="case" data-index="{{loop.index}}">
+					<span class="circle">
+						<img class="icon"  src="{{ case.icon.url }}"/>
+						<span class="feature-image" style="background-image:url({{ case.feature_thumb.url }});">
+							
+						</span>
+					</span>
+					<span class="case-title">{{ case.title }}</span>
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 </section>
 

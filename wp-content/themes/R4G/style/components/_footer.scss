@@ -9,11 +9,12 @@ footer.spark_region{
 			h2 {
 				@include h2;
 				color: $teal;
-				margin-bottom: .25em;
+				margin-bottom: .5em;
 			}
 			h4{
 				@include short-body; 
 				color: white;
+				font-size: 28px;
 			}
 		}
 	}
@@ -58,7 +59,7 @@ footer.spark_region{
 					box-shadow: 0px 2px 15px 0px #666666;
 					width: 39%;
 					.text {
-						background: $purple1;
+						background: $purple2;
 						padding: 30px;
 						color: white;
 						text-align: center;
@@ -66,10 +67,12 @@ footer.spark_region{
 							display: block;
 							color: white;
 							margin: 5px;
-							background: $purple4;
+							background: $purple5;
 							text-decoration: none;
 							padding: 20px;
 							margin-top: 1em;
+							@include call-to-action;
+							text-transform: uppercase;
 						}
 					}
 				}
@@ -162,6 +165,8 @@ footer.spark_region{
 			width: 100px;
 			display: inline-block;
 			margin-left: 78%;
+			margin-top: 5px;
+			vertical-align: middle;
 		}
 		.elefintlogo {
 			float: right;
@@ -187,7 +192,7 @@ footer.spark_region{
 			@include h6;
 			font-size: 18px;
 			display: inline-block;
-			vertical-align: baseline;
+			vertical-align: middle;
 		}
 	}
 }

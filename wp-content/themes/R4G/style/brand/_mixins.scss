@@ -58,6 +58,7 @@
 					font-size: 50px;
 					color: $teal;
 					width: 100%;
+					line-height: 50px;
 				}
 				h3{ @include h5; font-size: 30px; margin-bottom: 1rem; }
 				p { @include h7; line-height: 1.5em; }
@@ -80,6 +81,7 @@
 				}
 				.learn-more {
 					opacity: 1;
+					background: rgba(0,0,0,.1);
 				}
 			}		
 }

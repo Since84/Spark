@@ -1,23 +1,35 @@
 <div class="footer-top">
 	<div class="top-logo-block">
-
+		<span class="resources modal-trigger" data-section=".resources-media">
+			{{ include('/views/svg/resources_icon.svg')}}
+			Resources</span>
+		<span class="in-the-media modal-trigger" data-section=".resources-media" >
+			{{ include('/views/svg/media_icon.svg')}}
+			In The Media
+		</span>
 	</div>
 </div>
 
 <div class="footer-middle">
 	<div class="middle-logo-block">
-		{% for logo in footer.get_field("footer_logo")%}
-		
-		<img class="footer-logo" src="{{logo.default.url}}"/>
-
+		{% for logo in footer.get_field("footer_logo")%}	
+		<a class="footer-logo" href="{{logo.link}}">
+			<img class="default" src="{{logo.logo_default.url}}"/>
+			<img class="hover" src="{{logo.logo_hover.url}}"/>
 		{% endfor %}
-
+		</a>
 	</div>
 </div>
 
 <div class="footer-bottom">
-	<div class="bottom-logo-block">
-	
-
-	</div>	
+	<div class="container">
+		<span class="copyright">&copy; 
+		<script language="javascript" type="text/javascript">
+			var today = new Date()
+			var year = today.getFullYear()
+			document.write(year)
+		</script>
+		 {{site.name }} </span>
+		<span class="designed by">{% include '/views/plugs/elefint.html.twig' %}</span>
+	</div>
 </div>

@@ -14,6 +14,8 @@
 		define('DB_PASSWORD', 'galaxy1');
 
 		define( 'SITE_SLUG', 'r4g' );
+		
+		define( 'UPLOADS',  '../wp-content/uploads/' . SITE_SLUG );
 
 	} elseif ( strpos( $host, 'ggf.local' ) ){
 

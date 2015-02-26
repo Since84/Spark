@@ -34,13 +34,14 @@ header.spark-header{
 
 	.right-container {
 		@include column(4);
-		@include push(4);
+		@include push(5);
 	}
 	.social{ 
+		text-align: right;
 		li {
 			display: inline-block;
 			margin-right: 1em;
-			text-align: center;
+			text-align: right;
 			a{
 				color: $purple4;
 				text-decoration: none;

@@ -1,5 +1,5 @@
 .featured-news {
-	background: $lightgray;
+	background: $stronggray;
 	padding: 70px 0;
 
 	.slides, & > h2 {
@@ -15,8 +15,9 @@
 	h4 {
 		color: white;
 		background: $purple3;
-		padding: 5px;
+		padding: 5px 20px;
 		margin-bottom: 20px;
+		text-transform: uppercase;
 	}
 
 	h5 {
@@ -39,15 +40,17 @@
 		@include h5;
 		font-size: 16px;
 		color: $purple5;
-		position: absolute;
 		text-decoration: none;
-		bottom: 20px;
-		left: 20px;
+		display: block;
+		margin-top: 10px;
 		&:before {
 			content: $circlerightarrow;
 			// display: inline-block;
 			font-family: "FontAwesome";
 			margin-right: 10px;
+		}
+		&:hover, &:hover:before{
+			color: $purple6;
 		}	
 	}
 

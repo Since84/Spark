@@ -1,0 +1,129 @@
+.women_climate {
+	padding: 120px 0;
+	@include medium-body;
+
+	h2 {
+		@include h1;
+		color: $red;
+		margin-bottom: 80px;
+	}
+
+	.cycle-slideshow {
+		width: 850px;
+		height: 250px;
+		margin: 10px auto;
+		padding: 0;
+		position: relative;
+	}
+
+	.controls{
+		position: absolute;
+		// height: 250px; /* image's height */
+	    display: inline-block;
+	    vertical-align: middle;
+	    font-size: 40px;
+	    font-weight: 700;
+	    font-family: "arial";
+		padding: 0px 10px;
+		width: 65px;
+		height: 90px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		cursor: pointer;
+
+		&:before {
+			font-family: "FontAwesome";
+			display:inline-block;
+			font-size: 100px;
+		}
+
+		&#prev {
+			left: 40px;
+			&:before {
+				content: $arrowleft;
+			}
+			&:hover:before {
+				content: $arrowlefthover;
+			}
+		}
+
+		&#next {
+			right: 40px;
+			&:before {
+				content: $arrowright;
+			}
+			&:hover:before {
+				content: $arrowrighthover;
+			}
+		}
+
+	}
+
+	.slide{
+		width: 100%;
+		@include circle;
+		.circle{
+			background-color: none;
+			height: 225px;
+			width: 225px;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 30px 0 0;
+			background-size: cover;
+
+			img {
+				@include absolutecenter;
+			}
+		}
+		.slide-text{
+			display:inline-block;
+			vertical-align: middle;
+			text-align: left; 
+			padding-left: 25px;
+			line-height: 1.5em;
+			font-size: 24px;
+			height: 240px;
+			width: 570px;
+		}
+		.photo-cred{
+			display: block;
+			clear: both;
+			margin-top: 20px;
+			font-size: 10px;
+			font-style: italic;
+
+		}
+	}
+
+	.pager {
+		text-align: center;
+		margin-top: 70px;	
+		span{
+			text-indent: -30000px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+			margin: 10px;
+			position: relative;
+
+			&:before {
+				content: "";
+				@include absolutecenter;
+				width: 20px;
+				height: 20px;
+				border: 3px solid $tan;
+				border-radius: 20px;
+				transition: .25s all linear;
+			}
+
+			&.cycle-pager-active:before {
+				background: $red;
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+}

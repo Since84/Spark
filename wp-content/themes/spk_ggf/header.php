@@ -23,5 +23,6 @@
 
 	<script>(function(){document.documentElement.className='js'})();</script>
 	<?php wp_head(); ?>
+	<script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script>
 </head>
 <body>

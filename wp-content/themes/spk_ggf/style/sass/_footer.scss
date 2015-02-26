@@ -1,0 +1,188 @@
+footer{	
+	height: 320px;
+	width: 100vw;
+	background-size: 100%;
+}
+
+.footer-top{
+	background: url('/wp-content/uploads/2015/02/ggf-scroller-r2_10.png') no-repeat;
+	height: 82px;
+	background-size: cover;
+	.top-logo-block{
+		max-width: $containerwidth;
+		margin: auto;
+		padding: 25px;
+	}
+
+	span {
+		@include medium-body;
+		color: $darkred;
+		margin-right: 50px;
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			height: 35px;
+			width: auto;
+			margin-right: 10px;
+
+			path{
+				stroke: $darkred;
+			}
+		}
+	}
+}
+.footer-middle{
+	background:url('/wp-content/uploads/2015/02/ggf-scroller-r2_11.png') no-repeat;
+	height: 170px;
+	background-size: cover;
+	padding: 40px 0;
+}
+.footer-bottom{
+	background:url('/wp-content/uploads/2015/02/ggf-scroller-r2_12.png') no-repeat;
+	height: 65px;
+	background-size: cover;
+	padding: 20px;
+	@include medium-body;
+	font-size: 14px;
+	font-weight: 500;
+	color: $tan;
+
+	.designed.by {
+			width: 100px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 65%;
+			color: $tan;
+		}
+		.elefintlogo {
+			float: right;
+			white-space: nowrap;
+			max-width: 30px;
+			overflow: hidden;
+			transition: 1.5s max-width;
+			text-decoration: none;
+			font-size: 14px;
+			color: $tan;
+			&:hover {
+				max-width: 1000px;
+			}
+			svg{
+				width: 30px;
+				.logomark {
+					fill: $tan;
+				}
+			}
+		}
+
+}
+.footer-logo{
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 40px;
+	height: 100px;
+	width: 170px;
+	position: relative;
+	img {
+		height: auto;
+		max-width: 100%;
+		@include absolutecenter;
+		transition: all .25s ease-in-out;
+		&.hover{ opacity: 0; }
+	}
+	&:hover .hover{ opacity: 1; }
+	&:hover .default{ opacity: 0; }
+}
+.middle-logo-block{
+	width: $containerwidth;
+	margin: auto;
+}
+
+section.resources-media{
+	@include modal;
+	.slide {
+		min-height: 100vh;
+		width: 100vw;
+		min-width: $containerwidth;
+		overflow: scroll;
+		background-size: cover;
+		h2 {
+			width: 100%;
+			text-align: center;
+			padding: 110px 0 50px;
+			@include h1;
+		}
+		li {
+			width: 1200px;
+			margin: auto;
+			display: block;
+
+			&:not(.section-header){
+				margin-bottom: 40px;
+			}
+			h2 {
+				width: 100%;
+				text-align: center;
+				padding: 110px 0 50px;
+				@include h1;
+				color: white;
+			}
+			.title{
+				@include medium-body;
+				display: block;
+				margin-bottom: 10px;
+			}
+			.caption, .source{
+				@include medium-body;
+				font-weight: 500;
+				font-size: 12px;
+			}
+			.source {
+				font-style: italic;
+			}
+		}
+
+	}
+	.resources{
+		background: url(images/ggf-scroller-r2_09.png);
+		background-size: cover;
+
+		.section-header{
+			border-bottom: 2px solid $gold;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+			font-style: italic;
+			color: $gold;
+			@include medium-body;
+		}
+	}
+	.media{
+		background: url(images/ggf-scroller-r2_03.png);
+		background-size: cover;
+		h2{
+			@include h1;
+			color: $black;
+		}
+		.date {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			@include circle;
+			.circle{
+				width: 	73px;
+				height: 73px;
+				background: $orange;
+				margin: 0;
+				padding: 30px 0;
+				text-align: center;
+				color: white;
+				@include medium-body;
+				font-size: 16px;
+			}
+		}
+		span.title, span.source {
+			display: inline-block;
+		}
+		.source{ font-weight: bold;}
+	}
+}

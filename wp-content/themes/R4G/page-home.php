@@ -33,7 +33,7 @@
 	$context['feature'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
 
 	/// Mission Statement
-	$missionContext['spark_class'] = 'our_mission';
+	$missionContext['spark_class'] = 'our-mission';
 	$missionID = get_page_by_title('Mission');
 	$missionID = $missionID->ID;
 	$missionContext['text'] = new TimberPost($missionID);
