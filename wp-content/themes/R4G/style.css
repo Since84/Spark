@@ -214,7 +214,7 @@ nav.full-width-nav > ul > li a {
 }
 /* line 30, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li > a {
-  padding: 19px 40px 19px 0;
+  padding: 19px 40px;
 }
 /* line 34, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li.current_page_item {
@@ -962,7 +962,7 @@ section.resolution-content li strong {
 /* line 2, style/components/_team.scss */
 .scrolling-tabs {
   background: #c4c2c7;
-  padding: 60px 60px;
+  padding: 20px 60px;
 }
 /* line 5, style/components/_team.scss */
 .scrolling-tabs > h2, .scrolling-tabs .tabs, .scrolling-tabs .tab-content ul {
@@ -1012,37 +1012,38 @@ section.resolution-content li strong {
   transition: .25s all ease-in-out;
 }
 /* line 32, style/components/_team.scss */
-.scrolling-tabs .tabs .team-member.active {
-  border: 5px solid #4a1249;
+.scrolling-tabs .tabs .team-member.cycle-pager-active {
+  border: 5px solid #6b0269;
 }
 /* line 34, style/components/_team.scss */
-.scrolling-tabs .tabs .team-member.active:before {
+.scrolling-tabs .tabs .team-member.cycle-pager-active:before {
   content: none;
 }
 /* line 35, style/components/_team.scss */
-.scrolling-tabs .tabs .team-member.active:after {
+.scrolling-tabs .tabs .team-member.cycle-pager-active:after {
   content: '';
   display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 100px 100px 100px;
-  border-color: transparent transparent #007bff transparent;
+  width: 100%;
+  border-bottom: 10px solid #6b0269;
+  position: absolute;
+  bottom: -133px;
+  z-index: 100;
 }
 /* line 45, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member .front {
   position: relative;
   display: block;
-  width: 100%;
+  width: 1000;
   height: 100%;
   transition: .25s all ease-in-out;
   display: none;
+  margin: auto;
 }
-/* line 53, style/components/_team.scss */
+/* line 54, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active) .front {
   display: none;
 }
-/* line 56, style/components/_team.scss */
+/* line 57, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active) .front h2 {
   position: absolute;
   display: block;
@@ -1061,7 +1062,7 @@ section.resolution-content li strong {
   font-size: 24px;
   color: white;
 }
-/* line 70, style/components/_team.scss */
+/* line 71, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active) .front:before {
   content: '';
   display: block;
@@ -1075,17 +1076,22 @@ section.resolution-content li strong {
   height: 100%;
   transition: .25s all ease-in-out;
 }
-/* line 84, style/components/_team.scss */
+/* line 85, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active):hover {
   border-color: #81026e;
 }
-/* line 86, style/components/_team.scss */
+/* line 87, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active):hover .front {
   display: block;
 }
-/* line 89, style/components/_team.scss */
+/* line 90, style/components/_team.scss */
 .scrolling-tabs .tabs .team-member:not(.active):hover:before {
   background-color: rgba(129, 2, 110, 0.5);
+}
+
+/* line 97, style/components/_team.scss */
+.tab-pager {
+  z-index: 100;
 }
 
 /* line 100, style/components/_team.scss */
@@ -1103,6 +1109,11 @@ section.resolution-content li strong {
   padding: 75px 60px;
 }
 /* line 108, style/components/_team.scss */
+.tab-content .team-member-content .front {
+  width: 1100px;
+  margin: auto;
+}
+/* line 112, style/components/_team.scss */
 .tab-content .team-member-content h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1114,43 +1125,43 @@ section.resolution-content li strong {
   text-align: left;
   padding: 60px 0 10px;
 }
-/* line 115, style/components/_team.scss */
+/* line 119, style/components/_team.scss */
 .tab-content .team-member-content h3 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
 }
-/* line 119, style/components/_team.scss */
+/* line 123, style/components/_team.scss */
 .tab-content .team-member-content .links {
   margin: 35px 0 45px;
 }
-/* line 121, style/components/_team.scss */
+/* line 125, style/components/_team.scss */
 .tab-content .team-member-content .links li {
   display: inline-block;
 }
-/* line 124, style/components/_team.scss */
+/* line 128, style/components/_team.scss */
 .tab-content .team-member-content .links li a {
   color: #ab01a7;
   text-decoration: none;
   margin-right: 30px;
 }
-/* line 128, style/components/_team.scss */
+/* line 132, style/components/_team.scss */
 .tab-content .team-member-content .links li a:before {
   content: '';
   font-family: "FontAwesome";
   font-size: 20px;
   margin-right: 10px;
 }
-/* line 135, style/components/_team.scss */
+/* line 139, style/components/_team.scss */
 .tab-content .team-member-content .links li.email a:before {
   content: "";
 }
-/* line 138, style/components/_team.scss */
+/* line 142, style/components/_team.scss */
 .tab-content .team-member-content .links li.personal-link a:before {
   content: "";
 }
-/* line 143, style/components/_team.scss */
+/* line 147, style/components/_team.scss */
 .tab-content .team-member-content .member-bio {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1160,13 +1171,13 @@ section.resolution-content li strong {
   max-width: 750px;
 }
 
-/* line 151, style/components/_team.scss */
+/* line 155, style/components/_team.scss */
 .board-of-directors {
   background: #4a1249;
   padding: 60px 0;
   color: white;
 }
-/* line 155, style/components/_team.scss */
+/* line 159, style/components/_team.scss */
 .board-of-directors h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1176,18 +1187,18 @@ section.resolution-content li strong {
   margin: 60px 0;
   text-align: center;
 }
-/* line 161, style/components/_team.scss */
+/* line 165, style/components/_team.scss */
 .board-of-directors .member-list li {
   display: inline-block;
   vertical-align: top;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 166, style/components/_team.scss */
+/* line 170, style/components/_team.scss */
 .board-of-directors .member-list li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 169, style/components/_team.scss */
+/* line 173, style/components/_team.scss */
 .board-of-directors .member-list li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1196,7 +1207,7 @@ section.resolution-content li strong {
   font-size: 24px;
   font-size: 30px;
 }
-/* line 173, style/components/_team.scss */
+/* line 177, style/components/_team.scss */
 .board-of-directors .member-list li span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1204,12 +1215,12 @@ section.resolution-content li strong {
   color: #c4c2c7;
 }
 
-/* line 182, style/components/_team.scss */
+/* line 186, style/components/_team.scss */
 .coalitions-partnerships {
   background: #dedade;
   padding: 60px 0;
 }
-/* line 185, style/components/_team.scss */
+/* line 189, style/components/_team.scss */
 .coalitions-partnerships > h2, .coalitions-partnerships > ul {
   display: block;
   margin: auto;
@@ -1217,7 +1228,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 188, style/components/_team.scss */
+/* line 192, style/components/_team.scss */
 .coalitions-partnerships h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1227,31 +1238,31 @@ section.resolution-content li strong {
   margin: 60px auto;
   text-align: center;
 }
-/* line 194, style/components/_team.scss */
+/* line 198, style/components/_team.scss */
 .coalitions-partnerships ul li {
   display: inline-block;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 198, style/components/_team.scss */
+/* line 202, style/components/_team.scss */
 .coalitions-partnerships ul li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 201, style/components/_team.scss */
+/* line 205, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail {
   display: inline-block;
   vertical-align: top;
   width: 116px;
   background: #6b0269;
 }
-/* line 206, style/components/_team.scss */
+/* line 210, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail a {
   color: #21e3db;
   text-align: center;
   display: block;
   padding: 10px 0;
 }
-/* line 213, style/components/_team.scss */
+/* line 217, style/components/_team.scss */
 .coalitions-partnerships ul li img {
   width: 116px;
   height: 116px;
@@ -1259,7 +1270,7 @@ section.resolution-content li strong {
   display: block;
   position: relative;
 }
-/* line 221, style/components/_team.scss */
+/* line 225, style/components/_team.scss */
 .coalitions-partnerships ul li .content {
   display: inline-block;
   vertical-align: top;
@@ -1267,13 +1278,13 @@ section.resolution-content li strong {
   margin-left: 30px;
 }
 
-/* line 232, style/components/_team.scss */
+/* line 236, style/components/_team.scss */
 .partners {
   background: #4a1249;
   color: white;
   padding-bottom: 70px;
 }
-/* line 237, style/components/_team.scss */
+/* line 241, style/components/_team.scss */
 .partners > h2, .partners > ul {
   display: block;
   margin: auto;
@@ -1281,7 +1292,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 240, style/components/_team.scss */
+/* line 244, style/components/_team.scss */
 .partners h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1291,18 +1302,18 @@ section.resolution-content li strong {
   padding: 60px;
   text-align: left;
 }
-/* line 246, style/components/_team.scss */
+/* line 250, style/components/_team.scss */
 .partners > ul li {
   display: inline-block;
   vertical-align: top;
   width: 48%;
   margin-bottom: 20px;
 }
-/* line 251, style/components/_team.scss */
+/* line 255, style/components/_team.scss */
 .partners > ul li:nth-child(odd) {
   margin-right: 3%;
 }
-/* line 254, style/components/_team.scss */
+/* line 258, style/components/_team.scss */
 .partners > ul li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1312,7 +1323,7 @@ section.resolution-content li strong {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 259, style/components/_team.scss */
+/* line 263, style/components/_team.scss */
 .partners > ul li a {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1495,7 +1506,7 @@ section.resolution-content li strong {
   border-style: solid;
   border-width: 0;
   border-color: transparent transparent #6b0269 transparent;
-  bottom: -130px;
+  bottom: -100px;
   position: absolute;
   left: 0;
   right: 0;
@@ -2072,7 +2083,11 @@ section.resolution-content li strong {
   text-transform: uppercase;
 }
 
-/* line 30, style/components/_news.scss */
+/* line 29, style/components/_news.scss */
+.featured-post {
+  background: #2f2f2f;
+}
+/* line 31, style/components/_news.scss */
 .featured-post .slides {
   display: block;
   margin: auto;
@@ -2080,27 +2095,34 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
   height: 625px;
+  padding: 0;
 }
-/* line 33, style/components/_news.scss */
+/* line 35, style/components/_news.scss */
 .featured-post .slides .slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* line 39, style/components/_news.scss */
+.featured-post .slides .slide .content {
   position: absolute;
   display: block;
   bottom: 75px;
-  left: 0;
+  left: 20px;
   width: 610px;
 }
-/* line 39, style/components/_news.scss */
-.featured-post .slides .slide a {
+/* line 45, style/components/_news.scss */
+.featured-post .slides .slide .content a {
   text-decoration: none;
   color: white;
 }
-/* line 40, style/components/_news.scss */
-.featured-post .slides .slide hgroup {
+/* line 48, style/components/_news.scss */
+.featured-post .slides .slide .content hgroup {
   background: rgba(74, 18, 73, 0.9);
   padding: 25px;
 }
-/* line 43, style/components/_news.scss */
-.featured-post .slides .slide hgroup h4 {
+/* line 51, style/components/_news.scss */
+.featured-post .slides .slide .content hgroup h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -2108,8 +2130,8 @@ section.resolution-content li strong {
   font-size: 38px;
   margin: 10px 0;
 }
-/* line 47, style/components/_news.scss */
-.featured-post .slides .slide hgroup h5 {
+/* line 55, style/components/_news.scss */
+.featured-post .slides .slide .content hgroup h5 {
   color: #21e3db;
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2118,14 +2140,14 @@ section.resolution-content li strong {
   line-height: 1.5em;
   margin: 0;
 }
-/* line 53, style/components/_news.scss */
-.featured-post .slides .slide p {
+/* line 61, style/components/_news.scss */
+.featured-post .slides .slide .content p {
   background: rgba(74, 18, 73, 0.7);
   padding: 25px;
   margin: 0;
 }
-/* line 58, style/components/_news.scss */
-.featured-post .slides .slide .read-more {
+/* line 66, style/components/_news.scss */
+.featured-post .slides .slide .content .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -2137,20 +2159,20 @@ section.resolution-content li strong {
   display: block;
   padding-top: 20px;
 }
-/* line 66, style/components/_news.scss */
-.featured-post .slides .slide .read-more:before {
+/* line 74, style/components/_news.scss */
+.featured-post .slides .slide .content .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
 
-/* line 77, style/components/_news.scss */
+/* line 86, style/components/_news.scss */
 .news-feed {
   background: #c4c2c7;
   padding-top: 100px;
   padding-bottom: 205px;
 }
-/* line 81, style/components/_news.scss */
+/* line 90, style/components/_news.scss */
 .news-feed .post-preview {
   background: #dedade;
   display: block;
@@ -2162,20 +2184,27 @@ section.resolution-content li strong {
   margin: 20px auto 40px;
   box-shadow: 0px 0px 10px 0px #777;
 }
-/* line 88, style/components/_news.scss */
+/* line 97, style/components/_news.scss */
 .news-feed .post-preview a {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 93, style/components/_news.scss */
+/* line 102, style/components/_news.scss */
 .news-feed .post-preview .thumbnail {
   width: 180px;
   height: 180px;
   display: inline-block;
   vertical-align: top;
   margin-right: 35px;
+  background-size: auto 100%;
 }
-/* line 101, style/components/_news.scss */
+/* line 109, style/components/_news.scss */
+.news-feed .post-preview .thumbnail span {
+  padding: 5px;
+  background: rgba(129, 2, 110, 0.5);
+  color: white;
+}
+/* line 116, style/components/_news.scss */
 .news-feed .post-preview h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2185,18 +2214,18 @@ section.resolution-content li strong {
   color: #6b0269;
   margin-bottom: 10px;
 }
-/* line 107, style/components/_news.scss */
+/* line 122, style/components/_news.scss */
 .news-feed .post-text {
   display: inline-block;
   width: 800px;
 }
 
-/* line 113, style/components/_news.scss */
+/* line 128, style/components/_news.scss */
 .in-the-media {
   background: #4a1249;
   padding: 90px 0;
 }
-/* line 116, style/components/_news.scss */
+/* line 131, style/components/_news.scss */
 .in-the-media h2 {
   display: block;
   margin: auto;
@@ -2211,7 +2240,7 @@ section.resolution-content li strong {
   padding: 0;
   color: white;
 }
-/* line 122, style/components/_news.scss */
+/* line 137, style/components/_news.scss */
 .in-the-media .slides {
   display: block;
   margin: auto;
@@ -2221,22 +2250,22 @@ section.resolution-content li strong {
   padding: 40px 0;
   text-align: center;
 }
-/* line 127, style/components/_news.scss */
+/* line 142, style/components/_news.scss */
 .in-the-media .slides li {
   display: inline-block;
   width: 355px;
   text-align: left;
 }
-/* line 131, style/components/_news.scss */
+/* line 146, style/components/_news.scss */
 .in-the-media .slides li:not(:nth-child(3)) {
   margin-right: 60px;
 }
-/* line 134, style/components/_news.scss */
+/* line 149, style/components/_news.scss */
 .in-the-media .slides li a {
   color: white;
   text-decoration: none;
 }
-/* line 140, style/components/_news.scss */
+/* line 155, style/components/_news.scss */
 .in-the-media .slides li .post-text h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2246,27 +2275,27 @@ section.resolution-content li strong {
   font-size: 32px;
   margin: 20px 0 0;
 }
-/* line 145, style/components/_news.scss */
+/* line 160, style/components/_news.scss */
 .in-the-media .slides li .post-text p {
   margin-top: 10px;
 }
-/* line 150, style/components/_news.scss */
+/* line 165, style/components/_news.scss */
 .in-the-media .slides li .video {
   width: 300px;
   height: 220px;
   display: block;
 }
-/* line 154, style/components/_news.scss */
+/* line 169, style/components/_news.scss */
 .in-the-media .slides li .video object {
   display: none;
 }
 
-/* line 163, style/components/_news.scss */
+/* line 178, style/components/_news.scss */
 .malikas-blog {
   background: #dedade;
   padding: 90px 0;
 }
-/* line 166, style/components/_news.scss */
+/* line 181, style/components/_news.scss */
 .malikas-blog .slides {
   display: block;
   margin: auto;
@@ -2275,23 +2304,23 @@ section.resolution-content li strong {
   position: relative;
   padding: 0;
 }
-/* line 170, style/components/_news.scss */
+/* line 185, style/components/_news.scss */
 .malikas-blog a {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 171, style/components/_news.scss */
+/* line 186, style/components/_news.scss */
 .malikas-blog li {
   display: inline-block;
 }
-/* line 172, style/components/_news.scss */
+/* line 187, style/components/_news.scss */
 .malikas-blog .thumbnail {
   display: inline-block;
   vertical-align: top;
   width: 260px;
   margin-right: 30px;
 }
-/* line 177, style/components/_news.scss */
+/* line 192, style/components/_news.scss */
 .malikas-blog .thumbnail:before {
   content: "";
   font-family: "FontAwesome";
@@ -2301,20 +2330,20 @@ section.resolution-content li strong {
   background-color: rgba(129, 2, 110, 0.5);
   color: white;
 }
-/* line 186, style/components/_news.scss */
+/* line 201, style/components/_news.scss */
 .malikas-blog .thumbnail a {
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: bold;
   margin-top: 5px;
 }
-/* line 193, style/components/_news.scss */
+/* line 208, style/components/_news.scss */
 .malikas-blog .post-text {
   display: inline-block;
   vertical-align: top;
   width: 900px;
 }
-/* line 198, style/components/_news.scss */
+/* line 213, style/components/_news.scss */
 .malikas-blog h2 {
   display: block;
   margin: auto;
@@ -2329,7 +2358,7 @@ section.resolution-content li strong {
   padding: 0 0 60px;
   color: #4a1249;
 }
-/* line 204, style/components/_news.scss */
+/* line 219, style/components/_news.scss */
 .malikas-blog h4 {
   width: 100%;
   display: block;
@@ -2339,7 +2368,7 @@ section.resolution-content li strong {
   padding: 10px;
   margin: 0;
 }
-/* line 213, style/components/_news.scss */
+/* line 228, style/components/_news.scss */
 .malikas-blog h5 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2348,7 +2377,7 @@ section.resolution-content li strong {
   line-height: 1.5em;
   margin: 15px 0;
 }
-/* line 214, style/components/_news.scss */
+/* line 229, style/components/_news.scss */
 .malikas-blog p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2357,7 +2386,7 @@ section.resolution-content li strong {
   line-height: 1.5em;
   margin: 0;
 }
-/* line 216, style/components/_news.scss */
+/* line 231, style/components/_news.scss */
 .malikas-blog .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2370,7 +2399,7 @@ section.resolution-content li strong {
   display: block;
   padding-top: 20px;
 }
-/* line 224, style/components/_news.scss */
+/* line 239, style/components/_news.scss */
 .malikas-blog .read-more:before {
   content: "";
   font-family: "FontAwesome";
@@ -2525,6 +2554,77 @@ section.resolution-content li strong {
   display: inline-block;
   vertical-align: top;
   width: 850px;
+}
+
+/* line 1, style/components/_contact.scss */
+section.contact {
+  background: #c4c2c7;
+}
+/* line 4, style/components/_contact.scss */
+section.contact.our-mission {
+  background: #dedade;
+}
+/* line 8, style/components/_contact.scss */
+section.contact .container {
+  width: 1000px;
+}
+/* line 12, style/components/_contact.scss */
+section.contact h2 {
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  margin-bottom: 40px;
+  width: 1000px;
+}
+/* line 17, style/components/_contact.scss */
+section.contact ul.info {
+  text-align: center;
+  padding: 20px 0;
+  width: 1000px;
+  margin: auto;
+}
+/* line 22, style/components/_contact.scss */
+section.contact ul.info li {
+  display: inline-block;
+  width: 323px;
+}
+/* line 25, style/components/_contact.scss */
+section.contact ul.info li input {
+  width: 100%;
+}
+/* line 28, style/components/_contact.scss */
+section.contact ul.info li:not(:last-child) {
+  margin-right: 10px;
+}
+/* line 33, style/components/_contact.scss */
+section.contact p {
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+}
+/* line 38, style/components/_contact.scss */
+section.contact input, section.contact textarea {
+  background: white;
+  padding: 20px;
+}
+/* line 42, style/components/_contact.scss */
+section.contact textarea {
+  width: 1000px;
+  border: none;
+}
+/* line 46, style/components/_contact.scss */
+section.contact input[type="submit"] {
+  float: right;
+  display: block;
+}
+/* line 50, style/components/_contact.scss */
+section.contact:after {
+  content: '';
+  display: block;
+  clear: both;
+  padding-bottom: 20px;
 }
 
 /* line 1, style/components/_footer.scss */

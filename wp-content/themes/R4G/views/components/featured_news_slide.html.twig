@@ -1,9 +1,11 @@
-<li class="slide" style="background-image:url( '{{ slide.thumbnail.url }}' );">
-	<a class="content" href="{{ slide.permalink }}">
-		<hgroup>
-			<h4>{{ slide.post_title }}</h4>
-			<h5>{{ slide.display_date }}</h5>
-		</hgroup>
-		<p>{{ slide.get_preview(25) }}</p>
-	</a> 
+<li class="slide" style="background-image:url( '{{ slide.thumbnail.src }}' );">
+	<div class="content">
+		<a href="{{ slide.permalink }}">
+			<hgroup>
+				<h4>{{ slide.post_title }}</h4>
+				<h5>{{ slide.display_date }}</h5>
+			</hgroup>
+			<p>{{ slide.get_preview(25) }}</p>
+		</a> 
+	</div>
 </li>

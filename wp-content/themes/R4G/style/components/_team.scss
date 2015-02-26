@@ -1,7 +1,7 @@
 
 .scrolling-tabs{
 	background: $stronggray;
-	padding: #{$margin}px #{$margin}px;
+	padding: 20px #{$margin}px;
 	& > h2, .tabs, .tab-content ul { @include container; }
 	& > h2{ margin: #{$margin}px auto; @include h2; text-align: center; color: $purple3; }
 	.tabs{
@@ -29,26 +29,27 @@
 				transition: .25s all ease-in-out;
 			}
 
-			&.active{
-				border: 5px solid $purple2;
+			&.cycle-pager-active{
+				border: 5px solid $purple3;
 				&:before{ content: none; }
 				&:after { 
 					content: ''; 
 					display: block;
-					width: 0;
-					height: 0;
-					border-style: solid;
-					border-width: 0 100px 100px 100px;
-					border-color: transparent transparent #007bff transparent;
+					width: 100%;
+					border-bottom: 10px solid $purple3;
+					position: absolute;
+					bottom: -133px;
+					z-index: 100;
 				}
 			}
 			.front {
 				position: relative;
 				display: block;
-				width: 100%;
+				width: 1000;
 				height: 100%;
 				transition: .25s all ease-in-out;
 				display: none;
+				margin: auto;
 			}
 			&:not(.active) .front{
 				display: none;
@@ -89,14 +90,13 @@
 				&:before{
 					background-color: $purple4opaque;
 				}
-			}
-			
-			
-
+			}			
 		}
 	}
 }
-
+.tab-pager{
+	z-index: 100;
+}
 .tab-content{
 	background: $lightgray;
 	padding: #{$margin}px #{$margin}px;
@@ -105,6 +105,10 @@
 		padding: 75px #{$margin}px;
 	}
 	.team-member-content{
+		.front{
+			width: 1100px;
+			margin: auto;
+		}
 		h2{
 			@include h2;
 			color: $purple3;

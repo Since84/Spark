@@ -27,48 +27,57 @@
 }
 
 .featured-post {
+	background: $black;
 	.slides{
 		@include container;
 		height: 625px;
-		.slide { 
-			position: absolute; 
-			display: block;
-			bottom: 75px;
-			left: 0;
-			width: 610px;
-			a{ text-decoration: none; color: white; }
-			hgroup {
-				background: $purple2opaque;
-				padding: 25px;
-				h4 { 
-					@include h4; 
-					margin: 10px 0;
+		padding: 0;
+		.slide {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			.content{ 
+				position: absolute; 
+				display: block;
+				bottom: 75px;
+				left: 20px;
+				width: 610px;
+				a{ 
+					text-decoration: none; color: white; 
 				}
-				h5 { 
-					color: $teal; 
-					@include long-body; 
+				hgroup {
+					background: $purple2opaque;
+					padding: 25px;
+					h4 { 
+						@include h4; 
+						margin: 10px 0;
+					}
+					h5 { 
+						color: $teal; 
+						@include long-body; 
+						margin: 0;
+					}
+				}
+				p{
+					background: $purple2opaquelight;
+					padding: 25px;
 					margin: 0;
 				}
-			}
-			p{
-				background: $purple2opaquelight;
-				padding: 25px;
-				margin: 0;
-			}
-			.read-more{
-				@include h6;
-				// font-size: 16px;
-				color: $teal;
-				position: relative;
-				text-decoration: none;
-				display: block;
-				padding-top: 20px;	
-				&:before {
-					content: $searchplus;
-					// display: inline-block;
-					font-family: "FontAwesome";
-					margin-right: 10px;
-				}	
+				.read-more{
+					@include h6;
+					// font-size: 16px;
+					color: $teal;
+					position: relative;
+					text-decoration: none;
+					display: block;
+					padding-top: 20px;	
+					&:before {
+						content: $searchplus;
+						// display: inline-block;
+						font-family: "FontAwesome";
+						margin-right: 10px;
+					}	
+				}
 			}
 		}
 	}
@@ -96,6 +105,12 @@
 			display: inline-block;
 			vertical-align: top;
 			margin-right: 35px;
+			background-size: auto 100%;
+			span{
+				padding: 5px;
+				background: $purple4opaque;
+				color: white;
+			}
 		}
 
 		h4{

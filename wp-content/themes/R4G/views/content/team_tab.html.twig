@@ -1,12 +1,12 @@
-{% if loop.index%3 == 1 %}
+{# {% if loop.index%3 == 1 %}
 	<ul class="tab-group slide">
-{% endif %} 
+{% endif %}  #}
 	<li class="tab team-member" style="background-image:url( '{{ slide.photo.url }}' );" tab-index="{{ loop.index%3 }}">
 		<div class="front">
 			{# {{ dump(slide.photo) }} #}
 			<h2>{{ slide.member_name }}</h2>
 		</div>
 	</li>
-{% if ( loop.index%3 == 3 ) or ( loop.last ) %}
+{# {% if ( loop.index%3 == 3 ) or ( loop.last ) %}
 	</ul>
-{% endif %} 
+{% endif %}  #}

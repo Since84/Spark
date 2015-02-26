@@ -45,15 +45,7 @@
 
 	  		// Team Functions
 	  		goToTeamMember: function(elem){ 
-	  			var index_id = $(elem).attr('tab-index') - 1;
-	  			
-	  			if( $(elem).not('.active') ){
-	  				$('.team-member.active').removeClass('active');
-		  			$(elem).addClass('active');
-		  			$('.tab-content .cycle-slideshow').cycle( 'goto', index_id );	  				
-	  			}
-
-
+	  			$('.tab-content').cycle().addClass('cycle-slideshow');
 	  		},
 	  		goToIssueArea: function(elem){ 
 	  			$('.tab-content').cycle().addClass('cycle-slideshow');
