@@ -5,7 +5,7 @@
 	$context 		= Timber::get_context();
 	$post 			= new TimberPost();
 
-	///team
+	///Issue Areas
 	$teamContext['spark_class'] = 'issue-areas';
 	$teamContext['header'] = 'Issue Areas';
 	$teamContext['post'] = $post;

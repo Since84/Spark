@@ -1,0 +1,69 @@
+
+.highlight-gallery{
+	background: $lightgray;
+	h1{
+		@include large-header;
+		background: none;
+		@include h2;
+		color: $purple2;
+	}
+
+	& > .cycle-slideshow{
+		margin: auto;
+		text-align: center;
+		width: 1000px;
+		margin-top: 40px;
+		.cycle-slide{
+			width: 100%;
+		}
+		.cycle-slide img{
+			width: 100%;
+			height: auto;
+			border: 10px solid $black;
+		}
+		.text {
+			position: absolute;
+			bottom: 10px;
+			left: 4px;
+			width: 990px;
+			background: $purple2opaque;
+			color: white;
+			text-align: left;
+			padding: 20px 40px;
+			.count{ float: right; }
+
+		}
+	}
+	#thumbnail-pager{
+		width: 1000px;
+		margin: 40px auto;
+		.cycle-slide{
+			display: inline-block;
+			margin-right: 1em;
+			position: relative;
+			text-align: left;
+			&:before{
+				@include triangledown;
+				transition: .5s all ease-in-out;
+				left: 0;
+				right: 0;
+				top: 0;
+				position: absolute;
+				margin: auto;
+			}
+		}
+		.cycle-slide img{
+			border: 10px solid $black;
+		}
+		.cycle-pager-active{
+			&:before{
+				border-width: 0 30px 40px 30px;
+				top: -30px;
+			}
+			
+			img{
+				border-color: $purple3;		
+			}
+		}
+	}
+}

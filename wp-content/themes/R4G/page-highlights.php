@@ -4,7 +4,9 @@
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
 	
+	$galleryContext['header'] = 'Highlight Snapshots';
 	$galleryContext['feed'] = get_field('highlight_gallery');
+	$galleryContext['spark_class'] = "highlight-gallery";
 	$galleryContext['slide_template'] = '/views/content/news_slide.html.twig';
 	$context['gallery'] 				= Timber::compile('/views/components/thumbnail_carousel_gallery.html.twig', $galleryContext);
 

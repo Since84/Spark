@@ -406,12 +406,28 @@ section.our-mission .container {
   font-size: 32px;
   text-align: center;
 }
+/* line 18, style/components/_our_mission.scss */
+section.our-mission .container:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent transparent #6b0269 transparent;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-width: 80px 80px 90px 80px;
+  border-color: transparent transparent #dedade transparent;
+  position: absolute;
+}
 
-/* line 20, style/components/_our_mission.scss */
+/* line 32, style/components/_our_mission.scss */
 section.statistics {
   background: #dedade;
 }
-/* line 22, style/components/_our_mission.scss */
+/* line 34, style/components/_our_mission.scss */
 section.statistics ul {
   display: block;
   margin: auto;
@@ -422,7 +438,7 @@ section.statistics ul {
   text-align: center;
   border-top: 1px solid #c4c2c7;
 }
-/* line 27, style/components/_our_mission.scss */
+/* line 39, style/components/_our_mission.scss */
 section.statistics ul li {
   white-space: normal;
   display: inline-block;
@@ -430,11 +446,11 @@ section.statistics ul li {
   vertical-align: top;
   width: 200px;
 }
-/* line 33, style/components/_our_mission.scss */
+/* line 45, style/components/_our_mission.scss */
 section.statistics ul li:not(:nth-child(3)) {
   margin-right: 140px;
 }
-/* line 36, style/components/_our_mission.scss */
+/* line 48, style/components/_our_mission.scss */
 section.statistics ul li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -446,7 +462,7 @@ section.statistics ul li h4 {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 43, style/components/_our_mission.scss */
+/* line 55, style/components/_our_mission.scss */
 section.statistics ul li h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -459,7 +475,7 @@ section.statistics ul li h5 {
   text-align: center;
   color: #6b0269;
 }
-/* line 51, style/components/_our_mission.scss */
+/* line 63, style/components/_our_mission.scss */
 section.statistics ul li .description {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -468,7 +484,7 @@ section.statistics ul li .description {
   line-height: 1.3em;
   font-size: 16px;
 }
-/* line 59, style/components/_our_mission.scss */
+/* line 71, style/components/_our_mission.scss */
 section.statistics .stat-caption {
   display: block;
   display: block;
@@ -482,7 +498,7 @@ section.statistics .stat-caption {
   font-size: 20px;
 }
 
-/* line 67, style/components/_our_mission.scss */
+/* line 79, style/components/_our_mission.scss */
 section.mission-content {
   background: #4a1249;
   padding: 75px 0;
@@ -491,11 +507,11 @@ section.mission-content {
   font-weight: 400;
   font-size: 20px;
 }
-/* line 73, style/components/_our_mission.scss */
+/* line 85, style/components/_our_mission.scss */
 section.mission-content hr {
   margin: 65px 0;
 }
-/* line 77, style/components/_our_mission.scss */
+/* line 89, style/components/_our_mission.scss */
 section.mission-content h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -503,7 +519,7 @@ section.mission-content h2 {
   font-weight: 700;
   font-size: 38px;
 }
-/* line 81, style/components/_our_mission.scss */
+/* line 93, style/components/_our_mission.scss */
 section.mission-content h6 {
   color: #21e3db;
   font-family: "franklin-gothic-urw-comp";
@@ -517,7 +533,7 @@ section.mission-content h6 {
   margin: 40px 0;
 }
 
-/* line 90, style/components/_our_mission.scss */
+/* line 102, style/components/_our_mission.scss */
 section.resolution-doc {
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -525,7 +541,7 @@ section.resolution-doc {
   background-color: #2f2f2f;
   text-align: center;
 }
-/* line 96, style/components/_our_mission.scss */
+/* line 108, style/components/_our_mission.scss */
 section.resolution-doc h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -537,9 +553,9 @@ section.resolution-doc h2 {
   color: white;
   padding: 70px;
   background: none;
-  padding: 140px 0 100px;
+  padding: 100px 0 60px;
 }
-/* line 102, style/components/_our_mission.scss */
+/* line 114, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download {
   display: inline-block;
   vertical-align: middle;
@@ -553,11 +569,11 @@ section.resolution-doc .resolution-download {
   margin-bottom: 60px;
   background: #4a1249;
 }
-/* line 112, style/components/_our_mission.scss */
+/* line 124, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download:nth-child(1) {
   margin-right: 50px;
 }
-/* line 115, style/components/_our_mission.scss */
+/* line 127, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download a {
   display: inline-block;
   background: #ab01a7;
@@ -570,11 +586,11 @@ section.resolution-doc .resolution-download a {
   box-shadow: 0 0 .5em #333;
   transition: .5s all ease-in;
 }
-/* line 126, style/components/_our_mission.scss */
+/* line 138, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download a:hover {
   box-shadow: none;
 }
-/* line 130, style/components/_our_mission.scss */
+/* line 142, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download .description {
   display: inline-block;
   vertical-align: middle;
@@ -584,11 +600,12 @@ section.resolution-doc .resolution-download .description {
   color: white;
 }
 
-/* line 141, style/components/_our_mission.scss */
+/* line 153, style/components/_our_mission.scss */
 section.resolution-content {
   padding-top: 65px;
+  background: #dedade;
 }
-/* line 144, style/components/_our_mission.scss */
+/* line 157, style/components/_our_mission.scss */
 section.resolution-content > h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -603,7 +620,7 @@ section.resolution-content > h2 {
   position: relative;
   margin-bottom: 60px;
 }
-/* line 150, style/components/_our_mission.scss */
+/* line 163, style/components/_our_mission.scss */
 section.resolution-content ol {
   display: block;
   margin: auto;
@@ -611,19 +628,19 @@ section.resolution-content ol {
   padding: 0 60px;
   position: relative;
 }
-/* line 153, style/components/_our_mission.scss */
+/* line 166, style/components/_our_mission.scss */
 section.resolution-content li {
   counter-increment: step-counter;
   padding-left: 100px;
   margin-bottom: 40px;
   position: relative;
 }
-/* line 158, style/components/_our_mission.scss */
+/* line 171, style/components/_our_mission.scss */
 section.resolution-content li::before {
   content: counter(step-counter);
   margin-right: 5px;
   font-size: 30px;
-  background-color: #380d36;
+  background-color: #4a1249;
   color: white;
   font-weight: bold;
   padding: 10px 25px;
@@ -635,12 +652,12 @@ section.resolution-content li::before {
   left: 0;
   top: 0;
 }
-/* line 174, style/components/_our_mission.scss */
+/* line 187, style/components/_our_mission.scss */
 section.resolution-content li h4 {
   display: inline-block;
   vertical-align: top;
 }
-/* line 178, style/components/_our_mission.scss */
+/* line 191, style/components/_our_mission.scss */
 section.resolution-content li strong {
   font-weight: 600;
 }
@@ -2358,6 +2375,97 @@ section.resolution-content li strong {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
+}
+
+/* line 2, style/components/_highlight_gallery.scss */
+.highlight-gallery {
+  background: #dedade;
+}
+/* line 4, style/components/_highlight_gallery.scss */
+.highlight-gallery h1 {
+  text-align: center;
+  background: #6b0269;
+  color: white;
+  padding: 70px;
+  background: none;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 54px;
+  color: #4a1249;
+}
+/* line 11, style/components/_highlight_gallery.scss */
+.highlight-gallery > .cycle-slideshow {
+  margin: auto;
+  text-align: center;
+  width: 1000px;
+  margin-top: 40px;
+}
+/* line 16, style/components/_highlight_gallery.scss */
+.highlight-gallery > .cycle-slideshow .cycle-slide {
+  width: 100%;
+}
+/* line 19, style/components/_highlight_gallery.scss */
+.highlight-gallery > .cycle-slideshow .cycle-slide img {
+  width: 100%;
+  height: auto;
+  border: 10px solid #2f2f2f;
+}
+/* line 24, style/components/_highlight_gallery.scss */
+.highlight-gallery > .cycle-slideshow .text {
+  position: absolute;
+  bottom: 10px;
+  left: 4px;
+  width: 990px;
+  background: rgba(74, 18, 73, 0.9);
+  color: white;
+  text-align: left;
+  padding: 20px 40px;
+}
+/* line 33, style/components/_highlight_gallery.scss */
+.highlight-gallery > .cycle-slideshow .text .count {
+  float: right;
+}
+/* line 37, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager {
+  width: 1000px;
+  margin: 40px auto;
+}
+/* line 40, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide {
+  display: inline-block;
+  margin-right: 1em;
+  position: relative;
+  text-align: left;
+}
+/* line 45, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent transparent #6b0269 transparent;
+  transition: .5s all ease-in-out;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin: auto;
+}
+/* line 55, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide img {
+  border: 10px solid #2f2f2f;
+}
+/* line 59, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-pager-active:before {
+  border-width: 0 30px 40px 30px;
+  top: -30px;
+}
+/* line 64, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-pager-active img {
+  border-color: #6b0269;
 }
 
 /* line 1, style/components/_accomplishments.scss */

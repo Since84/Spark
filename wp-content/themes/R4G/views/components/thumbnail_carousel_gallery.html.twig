@@ -1,23 +1,36 @@
+
+
 <div id="slideshow-1" class="{{ spark_class }}">
+    {% if header %}
+        <h1>
+            {{ header }}
+        </h1>
+    {% endif %}
     <div 	id="cycle-1" 
     		class="cycle-slideshow" 
     		data-cycle-slides="> div" 
-    		data-cycle-timeout="0" 
+    		data-cycle-timeout="0"
+            data-cycle-fx="scrollHorz" 
     		data-cycle-prev="#slideshow-1 .cycle-prev" 
-    		data-cycle-next="#slideshow-1 .cycle-next"  
+    		data-cycle-next="#slideshow-1 .cycle-next" 
+            data-cycle-pager="#thumbnail-pager > div" 
+            data-cycle-pager-template=""
     		style="position: relative;">
 
     	{% for slide in feed %}
     	<div class="cycle-slide">
-    		<img src="{{ slide.thumbnail.url }}"/>
+            <div class="text">
+                <span class="caption">{{ slide.caption }}</span>
+                <span class="count">{{ loop.index }}/{{ loop.length }}</span>
+            </div>
+    		<img src="{{ slide.image.url }}"/>
     	</div>
     	{% endfor %}    
 </div>
 
-<div id="slideshow-2" class="{{ spark_class }}">
+<div id="thumbnail-pager">
     <div 	id="cycle-2" 
     		class="cycle-slideshow" 
-    		data-cycle-slides="> div" 
     		data-cycle-timeout="0" 
     		data-cycle-prev="#slideshow-2 .cycle-prev" 
     		data-cycle-next="#slideshow-2 .cycle-next" 
@@ -26,12 +39,15 @@
     		data-cycle-carousel-visible="5" 
     		data-cycle-carousel-fluid="true" 
     		data-allow-wrap="false" 
-    		style="position: relative; overflow: hidden;">
+    		>
 
 
-    	<div class="cycle-slide">
-    		<img src="{{ slide.thumbnail.url }}"/>
-    	</div> 
+        {% for slide in feed %}
+        <div class="cycle-slide">
+            <img src="{{ slide.image.sizes.thumbnail }}"/>
+            
+        </div>
+        {% endfor %}  
         
     </div>
 </div>
