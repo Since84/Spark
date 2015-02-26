@@ -241,7 +241,6 @@ nav.full-width-nav > ul > li .nav-drop {
 }
 /* line 54, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop ul {
-  position: absolute;
   bottom: 0;
 }
 /* line 58, style/components/_mainnav.scss */
