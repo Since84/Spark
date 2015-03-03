@@ -13,7 +13,7 @@
 
 	  		//Delegated Events for user actions
 	  		events: {
-	  			"click .team-member": "goToTeamMember",
+	  			// "click .team-member": "goToTeamMember",
 	  			"click .issue-area": "goToIssueArea"
 	  		},
 

@@ -27,6 +27,8 @@
 		h4{
 			@include h6;
 			font-weight: bold;
+			line-height: .8em;
+			margin-bottom: 5px;
 		}
 		.content {
 			display: inline-block;

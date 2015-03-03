@@ -201,6 +201,7 @@
 		margin-bottom: 30px;
 		height: 255px;
 		vertical-align: top;
+		position: relative;
 
 		padding: 50px 30px;
 		text-align: center;
@@ -214,6 +215,7 @@
 			margin-top: 20px;
 			line-height: 1em;
 			display: block;
+			
 		}
 
 		&:not(:nth-child(3n)){
@@ -258,5 +260,19 @@
 			font-family: "FontAwesome";
 			margin-bottom: 10px; 
 		} 
+
+		&:hover{
+			// a::after{
+			// 	content: "";
+			// 	border-bottom: 1px solid $black;
+			// 	display: block;
+			// 	width: 90%;
+			// 	bottom: 40px;
+			// 	position: absolute;
+			// 	left: 0;
+			// 	right: 0;
+			// 	margin: auto;
+			// }
+		}
 	}
 }

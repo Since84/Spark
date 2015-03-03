@@ -1,5 +1,10 @@
 section.about {
 	padding-bottom: 110px;
+
+	u:hover{
+		color: $gold;
+	}
+
 	.about-title:before{
 		content: "";
 		width:150px;

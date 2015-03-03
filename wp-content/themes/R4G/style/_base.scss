@@ -64,6 +64,7 @@ html {
 
 body.rights_app{
 	@include long-body; 
+	color: $black2;
 
 	& * {
 		box-sizing: border-box;

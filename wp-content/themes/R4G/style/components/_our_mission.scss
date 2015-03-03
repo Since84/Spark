@@ -97,6 +97,10 @@ section.mission-content{
 		text-transform: none;
 		margin: 40px 0;
 	}
+
+	p{
+		margin-bottom: 1em;
+	}
 }
 
 section.resolution-doc {
@@ -190,6 +194,9 @@ section.resolution-content{
 		}		
 		strong {
 			font-weight: 600;
+			line-height: .8em;
+			display: block;
+			margin-bottom: 5px;
 		}
 	}
 }

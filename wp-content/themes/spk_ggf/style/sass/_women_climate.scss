@@ -123,6 +123,10 @@
 				width: 30px;
 				height: 30px;
 			}
+
+			&:not(.cycle-pager-active):hover::before{
+				border-color: $red;
+			}
 		}
 	}
 

@@ -14,6 +14,7 @@
 	  		//Delegated Events for user actions
 	  		events: {
 	  			'click .download-icon': 'openDownloadForm',
+	  			'click .download-report': 'openDownloadForm',
 	  			'click .close': 'closeDownloadForm',
 	  			'click input[type="checkbox"]': 'toggleChecked',
 	  			'click .case': 'openCase',

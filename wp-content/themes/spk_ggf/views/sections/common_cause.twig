@@ -34,7 +34,7 @@
         <!-- empty element for pager links -->
         {% for slide in common_cause.get_field('gallery') %}
             
-        <div class="slide" data-cycle-pager-template="<a href=# style='background-image: url( {{ slide.slide_image.url }} )'></a>" style="background-image:url({{ slide.slide_image.url }})">
+        <div class="slide" data-cycle-pager-template="<a href=# style='background-image: url( {{ slide.slide_image.url }} )'><span class='index'>{{ loop.index }}</span></a>" style="background-image:url({{ slide.slide_image.url }})">
             <h3>{{ slide.slide_title }}</h3>  
             <div class="slide-text">
                 {{ slide.slide_text }}

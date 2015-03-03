@@ -40,7 +40,8 @@
 		}
 		div {
 			opacity: 0;
-			transition: .25s opacity ease-in-out .25s;
+			transition: .25s opacity ease-in-out, .25s color ease-in-out;
+			transition-delay: 0s, 0s;
 		}
 		&:hover, &.cycle-pager-active {
 			h4{
@@ -61,6 +62,7 @@
 				z-index: 10;
 				position: relative;
 				opacity: 1;
+				transition-delay: .25s;
 			}	
 			.slide-content{
 				height: 150px;
@@ -92,7 +94,7 @@
 	transition: 1s max-height ease-in-out;
 
 	&.cycle-slideshow{
-		max-height: 2000px;
+		max-height: 5000px;
 	}
 
 	// display: none;

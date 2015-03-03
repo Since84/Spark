@@ -54,6 +54,10 @@
 		}
 		.cycle-slide img{
 			border: 10px solid $black;
+			transition: .25s all ease-in-out;
+		}
+		.cycle-slide:hover img{
+			border-color: $purple3;
 		}
 		.cycle-pager-active{
 			&:before{

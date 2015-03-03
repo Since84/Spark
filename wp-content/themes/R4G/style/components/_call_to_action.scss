@@ -6,6 +6,7 @@
 	li {
 		display: inline-block;
 		vertical-align: middle;
+		text-align: left;
 		width: 470px;
 		@include call-to-action;
 		line-height: 1em;
@@ -32,8 +33,9 @@
 		.description{
 			display: inline-block;
 			vertical-align: middle;
+			text-align: left;
 			width: 235px;
-			margin-left: 25px;
+			margin-left: 10px;
 			font-size: 20px;
 			color: white;
 			font-weight: 500;

@@ -111,12 +111,12 @@ $blackopaquelight: rgba(1,1,1,.6);
 $heart: "\f08a";
 $unchecked: url('images/checkbox_unchecked.png');
 $checked: url('images/checkbox_checked.png');
-$close: "\f08a";
+$close: url('images/X.png');
 $arrowright: url('images/Next-Default.png'); 
 $arrowrighthover: url('images/Next-Hover.png');
 $arrowleft: url('images/Back-Default.png');
 $arrowlefthover: url('images/Back-Hover.png');
-$backarrow: "\f190";
+$backarrow: "\f137";
 
 $selectedone: url('images/selected-arrow-one.png');
 $selectedtwo: url('images/selected-arrow-two.png');
@@ -347,9 +347,9 @@ section{
 //Navigation
 	.main-nav {
 		position: fixed;
-		left: -80px;
+		left: -65px;
 		top: 0;
-		width: 80px;
+		width: 65px;
 		height: 100%;
 		z-index: 1100;
 		background: $blackopaquelight;
@@ -361,15 +361,17 @@ section{
 			white-space: nowrap;
 			clear:both;
 			display: block;
-			border-bottom: 1px solid $black;
+			height: 65px;
+			margin-bottom: 1px;
 		}
 		a {
-			padding: 20px 10px;
+			padding: 0px;
 			text-align: center;
 			display: block;
-			height: 80px;
+			height: 65px;
 			position: relative;
 			display: block;
+
 
 			&:hover, &.cycle-pager-active {
 				background: $teal;
@@ -402,52 +404,132 @@ section{
 
 		.nav-main-item {
 			display: block;
+			position: relative;
 
-			a::before{
-				content: "";
-				display: inline-block;
-				vertical-align: middle;
-				width: 40px;
-				height: 40px;
-				background-size: auto 100%;
-				background-repeat: no-repeat;
-				margin-right: 50px;
-				float: left;
-			}
 			a{
-				padding-left: 20px;
 				width: 100%;
 				overflow: hidden;
-				transition: 1s width ease-in-out;
+				transition: .5s width ease-in-out;
 				text-decoration: none;
 				color: $tan;
 				@include medium-body;
 				font-size: 14px;
+				text-align: left;
+
+				span{
+					display: inline-block;
+					vertical-align: middle;
+					height: 1em;
+					opacity: 0;
+					transition: .25s opacity 0s;
+				}
+
+				&::before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 65px;
+					height: 65px;
+					background-size: auto 30px;
+					background-repeat: no-repeat;
+					background-position: center;
+					margin-right: 25px;
+				}
+				&::after{
+					content: none;
+				}
+			}
+
+			&.active, &:hover{
+				&::after{
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 10px 0 10px 10px;
+					border-color: transparent transparent transparent $red;
+					left: 65px;	
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+				a{
+					&::before{
+						background-color: $red;
+					}
+				}
+			}
+
+		}
+		#about {
+			a::before{
+				background-image: url('images/nav-icons/about_tan.png');
+			}
+			&:hover a::before{
+				background-image: url('images/nav-icons/about_black.png');	
+			}
+			&.active a::before{
+				background-image: url('images/nav-icons/about_tan.png');
 			}
 		}
-		#about a::before{
-			background-image: url('images/nav-icons/about.png');
-		}
-		#women-climate a::before{
-			background-image: url('images/nav-icons/women_climate.png');
+		#women-climate {
+			a::before{
+				background-image: url('images/nav-icons/women_climate_tan.png');
+			}
+			&:hover a::before{
+				background-image: url('images/nav-icons/women_climate_black.png');	
+			}
+			&.active a::before{
+				background-image: url('images/nav-icons/women_climate_tan.png');
+			}
 		}
 
-		#case-studies a::before{
-			background-image: url('images/nav-icons/case_studies.png');
+		#case-studies {
+			a::before{
+				background-image: url('images/nav-icons/case_studies_tan.png');
+			}
+			&:hover a::before{
+				background-image: url('images/nav-icons/case_studies_black.png');	
+			}
+			&.active a::before{
+				background-image: url('images/nav-icons/case_studies_black.png');
+			}
 		}
 
-		#moving-forward a::before{
-			background-image: url('images/nav-icons/moving_forward.png');
+		#moving-forward {
+			a::before{
+				background-image: url('images/nav-icons/moving_forward_tan.png');
+			}
+			&:hover a::before{
+				background-image: url('images/nav-icons/moving_forward_black.png');	
+			}
+			&.active a::before{
+				background-image: url('images/nav-icons/moving_forward_tan.png');
+			}
 		}
-		#common-cause a::before{
-			background-image: url('images/nav-icons/common_cause.png');
+
+		#common-cause {
+			a::before{
+				background-image: url('images/nav-icons/5_steps_tan.png');
+			}
+			&:hover a::before{
+				background-image: url('images/nav-icons/5_steps_black.png');	
+			}
+			&.active a::before{
+				background-image: url('images/nav-icons/5_steps_tan.png');
+			}
 		}
 
 	}
 	.main-nav:hover {
 		a {
-			width: 400px;
+			width: 375px;
 			background: $blackopaquelight;
+			span{
+				opacity: 1;
+				transition-delay: .5s;
+			}
 		}
 	}
 

@@ -27,6 +27,10 @@ nav.full-width-nav{
 			color: white;
 		}
 
+		&:hover > a {
+			color: $teal; 
+		}
+
 		& > a {
 			padding: 19px 40px;
 		}
@@ -60,12 +64,18 @@ nav.full-width-nav{
 				@include sub-nav;
 				margin-right: 1.5rem;
 				line-height: 2rem;
+
+				&:hover a {
+					color: $teal;
+				}
 			}
 		}
-		&:hover .nav-drop{
-			height: 32px;
-			bottom: -32px
-
+		&:hover {
+			.nav-drop{
+				height: 52px;
+				bottom: -52px;
+				padding: 10px #{$margin}px;
+			}
 		}
 	}
 }

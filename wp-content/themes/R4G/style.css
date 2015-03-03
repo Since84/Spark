@@ -23,12 +23,13 @@ body.rights_app {
   font-size: 20px;
   font-size: 24px;
   line-height: 1.5em;
+  color: #404040;
 }
-/* line 68, style/_base.scss */
+/* line 69, style/_base.scss */
 body.rights_app * {
   box-sizing: border-box;
 }
-/* line 72, style/_base.scss */
+/* line 73, style/_base.scss */
 body.rights_app .container {
   display: block;
   margin: auto;
@@ -37,7 +38,7 @@ body.rights_app .container {
   position: relative;
 }
 
-/* line 77, style/_base.scss */
+/* line 78, style/_base.scss */
 section {
   display: block;
 }
@@ -93,15 +94,6 @@ header.spark-header .site-logo {
   background-size: contain;
   margin-left: 2rem;
   vertical-align: middle;
-}
-/* line 19, style/components/_header.scss */
-header.spark-header .site-logo::before {
-  content: "";
-  display: inline-block;
-  margin-left: -2rem;
-  vertical-align: middle;
-  font-family: "FontAwesome";
-  color: #81026e;
 }
 /* line 27, style/components/_header.scss */
 header.spark-header .site-logo:hover {
@@ -213,19 +205,23 @@ nav.full-width-nav > ul > li a {
   color: white;
 }
 /* line 30, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li:hover > a {
+  color: #21e3db;
+}
+/* line 34, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li > a {
   padding: 19px 40px;
 }
-/* line 34, style/components/_mainnav.scss */
+/* line 38, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li.current_page_item {
   background: #380d36;
   border-bottom: 5px solid #6b0269;
 }
-/* line 37, style/components/_mainnav.scss */
+/* line 41, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li.current_page_item a {
   color: #21e3db;
 }
-/* line 41, style/components/_mainnav.scss */
+/* line 45, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop {
   position: absolute;
   background: #380d36;
@@ -239,11 +235,11 @@ nav.full-width-nav > ul > li .nav-drop {
   overflow: hidden;
   transition: .5s all ease-in-out;
 }
-/* line 54, style/components/_mainnav.scss */
+/* line 58, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop ul {
   bottom: 0;
 }
-/* line 58, style/components/_mainnav.scss */
+/* line 62, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop li {
   display: inline-block;
   font-family: "franklin-gothic-urw-comp";
@@ -256,10 +252,15 @@ nav.full-width-nav > ul > li .nav-drop li {
   margin-right: 1.5rem;
   line-height: 2rem;
 }
-/* line 65, style/components/_mainnav.scss */
+/* line 68, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop li:hover a {
+  color: #21e3db;
+}
+/* line 74, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li:hover .nav-drop {
-  height: 32px;
-  bottom: -32px;
+  height: 52px;
+  bottom: -52px;
+  padding: 10px 60px;
 }
 
 /* line 2, style/components/_home_feature.scss */
@@ -267,11 +268,11 @@ section.home-feature {
   position: relative;
   height: 560px;
   background-color: #2f2f2f;
+  background-size: cover;
 }
-/* line 7, style/components/_home_feature.scss */
+/* line 8, style/components/_home_feature.scss */
 section.home-feature .container {
   height: 100%;
-  background-size: cover;
 }
 /* line 11, style/components/_home_feature.scss */
 section.home-feature hgroup {
@@ -531,8 +532,12 @@ section.mission-content h6 {
   text-transform: none;
   margin: 40px 0;
 }
+/* line 101, style/components/_our_mission.scss */
+section.mission-content p {
+  margin-bottom: 1em;
+}
 
-/* line 102, style/components/_our_mission.scss */
+/* line 106, style/components/_our_mission.scss */
 section.resolution-doc {
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -540,7 +545,7 @@ section.resolution-doc {
   background-color: #2f2f2f;
   text-align: center;
 }
-/* line 108, style/components/_our_mission.scss */
+/* line 112, style/components/_our_mission.scss */
 section.resolution-doc h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -554,7 +559,7 @@ section.resolution-doc h2 {
   background: none;
   padding: 100px 0 60px;
 }
-/* line 114, style/components/_our_mission.scss */
+/* line 118, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download {
   display: inline-block;
   vertical-align: middle;
@@ -568,11 +573,11 @@ section.resolution-doc .resolution-download {
   margin-bottom: 60px;
   background: #4a1249;
 }
-/* line 124, style/components/_our_mission.scss */
+/* line 128, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download:nth-child(1) {
   margin-right: 50px;
 }
-/* line 127, style/components/_our_mission.scss */
+/* line 131, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download a {
   display: inline-block;
   background: #ab01a7;
@@ -585,11 +590,11 @@ section.resolution-doc .resolution-download a {
   box-shadow: 0 0 .5em #333;
   transition: .5s all ease-in;
 }
-/* line 138, style/components/_our_mission.scss */
+/* line 142, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download a:hover {
   box-shadow: none;
 }
-/* line 142, style/components/_our_mission.scss */
+/* line 146, style/components/_our_mission.scss */
 section.resolution-doc .resolution-download .description {
   display: inline-block;
   vertical-align: middle;
@@ -599,12 +604,12 @@ section.resolution-doc .resolution-download .description {
   color: white;
 }
 
-/* line 153, style/components/_our_mission.scss */
+/* line 157, style/components/_our_mission.scss */
 section.resolution-content {
   padding-top: 65px;
   background: #dedade;
 }
-/* line 157, style/components/_our_mission.scss */
+/* line 161, style/components/_our_mission.scss */
 section.resolution-content > h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -619,7 +624,7 @@ section.resolution-content > h2 {
   position: relative;
   margin-bottom: 60px;
 }
-/* line 163, style/components/_our_mission.scss */
+/* line 167, style/components/_our_mission.scss */
 section.resolution-content ol {
   display: block;
   margin: auto;
@@ -627,14 +632,14 @@ section.resolution-content ol {
   padding: 0 60px;
   position: relative;
 }
-/* line 166, style/components/_our_mission.scss */
+/* line 170, style/components/_our_mission.scss */
 section.resolution-content li {
   counter-increment: step-counter;
   padding-left: 100px;
   margin-bottom: 40px;
   position: relative;
 }
-/* line 171, style/components/_our_mission.scss */
+/* line 175, style/components/_our_mission.scss */
 section.resolution-content li::before {
   content: counter(step-counter);
   margin-right: 5px;
@@ -651,14 +656,17 @@ section.resolution-content li::before {
   left: 0;
   top: 0;
 }
-/* line 187, style/components/_our_mission.scss */
+/* line 191, style/components/_our_mission.scss */
 section.resolution-content li h4 {
   display: inline-block;
   vertical-align: top;
 }
-/* line 191, style/components/_our_mission.scss */
+/* line 195, style/components/_our_mission.scss */
 section.resolution-content li strong {
   font-weight: 600;
+  line-height: .8em;
+  display: block;
+  margin-bottom: 5px;
 }
 
 /* line 1, style/components/_why_it_matters.scss */
@@ -826,6 +834,7 @@ section.resolution-content li strong {
 .call-to-action li {
   display: inline-block;
   vertical-align: middle;
+  text-align: left;
   width: 470px;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -834,11 +843,11 @@ section.resolution-content li strong {
   padding: 10px;
   background: #6b0269;
 }
-/* line 14, style/components/_call_to_action.scss */
+/* line 15, style/components/_call_to_action.scss */
 .call-to-action li:nth-child(1) {
   margin-right: 50px;
 }
-/* line 17, style/components/_call_to_action.scss */
+/* line 18, style/components/_call_to_action.scss */
 .call-to-action li a {
   display: inline-block;
   background: #ab01a7;
@@ -851,16 +860,17 @@ section.resolution-content li strong {
   box-shadow: 0 0 .5em #111;
   transition: .5s all ease-in;
 }
-/* line 28, style/components/_call_to_action.scss */
+/* line 29, style/components/_call_to_action.scss */
 .call-to-action li a:hover {
   box-shadow: none;
 }
-/* line 32, style/components/_call_to_action.scss */
+/* line 33, style/components/_call_to_action.scss */
 .call-to-action li .description {
   display: inline-block;
   vertical-align: middle;
+  text-align: left;
   width: 235px;
-  margin-left: 25px;
+  margin-left: 10px;
   font-size: 20px;
   color: white;
   font-weight: 500;
@@ -894,10 +904,11 @@ section.resolution-content li strong {
   color: white;
   background: #6b0269;
   padding: 5px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  display: inline-block;
 }
-/* line 23, style/components/_featured_news.scss */
+/* line 24, style/components/_featured_news.scss */
 .featured-news h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -908,19 +919,19 @@ section.resolution-content li strong {
   font-style: italic;
   margin-bottom: .5em;
 }
-/* line 29, style/components/_featured_news.scss */
+/* line 30, style/components/_featured_news.scss */
 .featured-news p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   line-height: 1em;
 }
-/* line 34, style/components/_featured_news.scss */
+/* line 35, style/components/_featured_news.scss */
 .featured-news .content {
   text-decoration: none;
   color: black;
 }
-/* line 39, style/components/_featured_news.scss */
+/* line 40, style/components/_featured_news.scss */
 .featured-news .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -933,17 +944,17 @@ section.resolution-content li strong {
   display: block;
   margin-top: 10px;
 }
-/* line 46, style/components/_featured_news.scss */
+/* line 47, style/components/_featured_news.scss */
 .featured-news .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 52, style/components/_featured_news.scss */
+/* line 53, style/components/_featured_news.scss */
 .featured-news .read-more:hover, .featured-news .read-more:hover:before {
   color: #ff00ff;
 }
-/* line 57, style/components/_featured_news.scss */
+/* line 58, style/components/_featured_news.scss */
 .featured-news .slide {
   width: 320px;
   height: 280px;
@@ -953,7 +964,7 @@ section.resolution-content li strong {
   display: inline-block;
   position: relative;
 }
-/* line 65, style/components/_featured_news.scss */
+/* line 66, style/components/_featured_news.scss */
 .featured-news .slide:not(:nth-child(3n)) {
   margin-right: 50px;
 }
@@ -1025,7 +1036,7 @@ section.resolution-content li strong {
   width: 100%;
   border-bottom: 10px solid #6b0269;
   position: absolute;
-  bottom: -133px;
+  bottom: -95px;
   z-index: 100;
 }
 /* line 45, style/components/_team.scss */
@@ -1152,31 +1163,39 @@ section.resolution-content li strong {
   font-size: 20px;
   margin-right: 10px;
 }
-/* line 139, style/components/_team.scss */
+/* line 138, style/components/_team.scss */
+.tab-content .team-member-content .links li a:hover {
+  color: #ff00ff;
+}
+/* line 140, style/components/_team.scss */
+.tab-content .team-member-content .links li a:hover:before {
+  color: #ff00ff;
+}
+/* line 143, style/components/_team.scss */
 .tab-content .team-member-content .links li.email a:before {
   content: "";
 }
-/* line 142, style/components/_team.scss */
+/* line 146, style/components/_team.scss */
 .tab-content .team-member-content .links li.personal-link a:before {
   content: "";
 }
-/* line 147, style/components/_team.scss */
+/* line 151, style/components/_team.scss */
 .tab-content .team-member-content .member-bio {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   font-size: 24px;
   line-height: 1.5em;
-  max-width: 750px;
+  margin: auto;
 }
 
-/* line 155, style/components/_team.scss */
+/* line 160, style/components/_team.scss */
 .board-of-directors {
   background: #4a1249;
   padding: 60px 0;
   color: white;
 }
-/* line 159, style/components/_team.scss */
+/* line 164, style/components/_team.scss */
 .board-of-directors h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1186,18 +1205,18 @@ section.resolution-content li strong {
   margin: 60px 0;
   text-align: center;
 }
-/* line 165, style/components/_team.scss */
+/* line 170, style/components/_team.scss */
 .board-of-directors .member-list li {
   display: inline-block;
   vertical-align: top;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 170, style/components/_team.scss */
+/* line 175, style/components/_team.scss */
 .board-of-directors .member-list li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 173, style/components/_team.scss */
+/* line 178, style/components/_team.scss */
 .board-of-directors .member-list li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1206,7 +1225,7 @@ section.resolution-content li strong {
   font-size: 24px;
   font-size: 30px;
 }
-/* line 177, style/components/_team.scss */
+/* line 182, style/components/_team.scss */
 .board-of-directors .member-list li span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1214,12 +1233,12 @@ section.resolution-content li strong {
   color: #c4c2c7;
 }
 
-/* line 186, style/components/_team.scss */
+/* line 191, style/components/_team.scss */
 .coalitions-partnerships {
   background: #dedade;
   padding: 60px 0;
 }
-/* line 189, style/components/_team.scss */
+/* line 194, style/components/_team.scss */
 .coalitions-partnerships > h2, .coalitions-partnerships > ul {
   display: block;
   margin: auto;
@@ -1227,7 +1246,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 192, style/components/_team.scss */
+/* line 197, style/components/_team.scss */
 .coalitions-partnerships h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1237,31 +1256,45 @@ section.resolution-content li strong {
   margin: 60px auto;
   text-align: center;
 }
-/* line 198, style/components/_team.scss */
+/* line 203, style/components/_team.scss */
 .coalitions-partnerships ul li {
   display: inline-block;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 202, style/components/_team.scss */
+/* line 207, style/components/_team.scss */
 .coalitions-partnerships ul li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 205, style/components/_team.scss */
+/* line 210, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail {
   display: inline-block;
   vertical-align: top;
   width: 116px;
   background: #6b0269;
 }
-/* line 210, style/components/_team.scss */
+/* line 215, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail a {
   color: #21e3db;
   text-align: center;
   display: block;
   padding: 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
 }
-/* line 217, style/components/_team.scss */
+/* line 223, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail a:before {
+  content: "";
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  margin-right: 5px;
+}
+/* line 229, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail a:hover {
+  background: #ab01a7;
+}
+/* line 234, style/components/_team.scss */
 .coalitions-partnerships ul li img {
   width: 116px;
   height: 116px;
@@ -1269,21 +1302,25 @@ section.resolution-content li strong {
   display: block;
   position: relative;
 }
-/* line 225, style/components/_team.scss */
+/* line 242, style/components/_team.scss */
 .coalitions-partnerships ul li .content {
   display: inline-block;
   vertical-align: top;
   width: 330px;
   margin-left: 30px;
 }
+/* line 247, style/components/_team.scss */
+.coalitions-partnerships ul li .content h4 {
+  font-weight: bold;
+}
 
-/* line 236, style/components/_team.scss */
+/* line 256, style/components/_team.scss */
 .partners {
   background: #4a1249;
   color: white;
   padding-bottom: 70px;
 }
-/* line 241, style/components/_team.scss */
+/* line 261, style/components/_team.scss */
 .partners > h2, .partners > ul {
   display: block;
   margin: auto;
@@ -1291,7 +1328,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 244, style/components/_team.scss */
+/* line 264, style/components/_team.scss */
 .partners h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1301,18 +1338,18 @@ section.resolution-content li strong {
   padding: 60px;
   text-align: left;
 }
-/* line 250, style/components/_team.scss */
+/* line 270, style/components/_team.scss */
 .partners > ul li {
   display: inline-block;
   vertical-align: top;
   width: 48%;
   margin-bottom: 20px;
 }
-/* line 255, style/components/_team.scss */
+/* line 275, style/components/_team.scss */
 .partners > ul li:nth-child(odd) {
   margin-right: 3%;
 }
-/* line 258, style/components/_team.scss */
+/* line 278, style/components/_team.scss */
 .partners > ul li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1322,7 +1359,7 @@ section.resolution-content li strong {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 263, style/components/_team.scss */
+/* line 283, style/components/_team.scss */
 .partners > ul li a {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1460,9 +1497,10 @@ section.resolution-content li strong {
 /* line 41, style/components/_issue_areas.scss */
 .issue-areas .tab div {
   opacity: 0;
-  transition: .25s opacity ease-in-out .25s;
+  transition: .25s opacity ease-in-out, .25s color ease-in-out;
+  transition-delay: 0s, 0s;
 }
-/* line 46, style/components/_issue_areas.scss */
+/* line 47, style/components/_issue_areas.scss */
 .issue-areas .tab:hover h4, .issue-areas .tab.cycle-pager-active h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1477,7 +1515,7 @@ section.resolution-content li strong {
   z-index: 10;
   position: relative;
 }
-/* line 56, style/components/_issue_areas.scss */
+/* line 57, style/components/_issue_areas.scss */
 .issue-areas .tab:hover div, .issue-areas .tab.cycle-pager-active div {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1488,16 +1526,17 @@ section.resolution-content li strong {
   z-index: 10;
   position: relative;
   opacity: 1;
+  transition-delay: .25s;
 }
-/* line 65, style/components/_issue_areas.scss */
+/* line 67, style/components/_issue_areas.scss */
 .issue-areas .tab:hover .slide-content, .issue-areas .tab.cycle-pager-active .slide-content {
   height: 150px;
 }
-/* line 68, style/components/_issue_areas.scss */
+/* line 70, style/components/_issue_areas.scss */
 .issue-areas .tab:hover:after, .issue-areas .tab.cycle-pager-active:after {
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 72, style/components/_issue_areas.scss */
+/* line 74, style/components/_issue_areas.scss */
 .issue-areas .tab:before {
   content: '';
   width: 0;
@@ -1512,28 +1551,28 @@ section.resolution-content li strong {
   margin: auto;
   transition: .5s all ease-in-out;
 }
-/* line 82, style/components/_issue_areas.scss */
+/* line 84, style/components/_issue_areas.scss */
 .issue-areas .tab.cycle-pager-active:before {
   border-width: 0 40px 50px 40px;
 }
 
-/* line 88, style/components/_issue_areas.scss */
+/* line 90, style/components/_issue_areas.scss */
 .tab-content {
   padding: 0;
   max-height: 0;
   overflow: hidden;
   transition: 1s max-height ease-in-out;
 }
-/* line 94, style/components/_issue_areas.scss */
+/* line 96, style/components/_issue_areas.scss */
 .tab-content.cycle-slideshow {
-  max-height: 2000px;
+  max-height: 5000px;
 }
-/* line 99, style/components/_issue_areas.scss */
+/* line 101, style/components/_issue_areas.scss */
 .tab-content > ul {
   padding: 0;
   width: 100%;
 }
-/* line 104, style/components/_issue_areas.scss */
+/* line 106, style/components/_issue_areas.scss */
 .tab-content .tab-content-group {
   display: block;
   margin: auto;
@@ -1541,7 +1580,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 107, style/components/_issue_areas.scss */
+/* line 109, style/components/_issue_areas.scss */
 .tab-content h2 {
   text-align: center;
   background: #6b0269;
@@ -1553,16 +1592,16 @@ section.resolution-content li strong {
   font-weight: 400;
   font-size: 54px;
 }
-/* line 112, style/components/_issue_areas.scss */
+/* line 114, style/components/_issue_areas.scss */
 .tab-content .slide {
   width: 100%;
 }
-/* line 116, style/components/_issue_areas.scss */
+/* line 118, style/components/_issue_areas.scss */
 .tab-content .statistics {
   white-space: nowrap;
   border-bottom: 1px solid #2f2f2f;
 }
-/* line 119, style/components/_issue_areas.scss */
+/* line 121, style/components/_issue_areas.scss */
 .tab-content .statistics li {
   white-space: normal;
   display: inline-block;
@@ -1571,11 +1610,11 @@ section.resolution-content li strong {
   width: 30%;
   padding: 70px 60px 40px;
 }
-/* line 126, style/components/_issue_areas.scss */
+/* line 128, style/components/_issue_areas.scss */
 .tab-content .statistics li:not(:nth-child(3)) {
   margin-right: 5%;
 }
-/* line 129, style/components/_issue_areas.scss */
+/* line 131, style/components/_issue_areas.scss */
 .tab-content .statistics li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1586,7 +1625,7 @@ section.resolution-content li strong {
   text-align: center;
   margin-bottom: .25em;
 }
-/* line 135, style/components/_issue_areas.scss */
+/* line 137, style/components/_issue_areas.scss */
 .tab-content .statistics li h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1599,7 +1638,7 @@ section.resolution-content li strong {
   text-align: center;
   color: #6b0269;
 }
-/* line 143, style/components/_issue_areas.scss */
+/* line 145, style/components/_issue_areas.scss */
 .tab-content .statistics li .description {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1608,15 +1647,15 @@ section.resolution-content li strong {
   line-height: 1.3em;
   font-size: 14px;
 }
-/* line 151, style/components/_issue_areas.scss */
+/* line 153, style/components/_issue_areas.scss */
 .tab-content .statistic-content {
   padding: 60px 0;
 }
-/* line 153, style/components/_issue_areas.scss */
+/* line 155, style/components/_issue_areas.scss */
 .tab-content .statistic-content p {
   margin-bottom: 20px;
 }
-/* line 157, style/components/_issue_areas.scss */
+/* line 159, style/components/_issue_areas.scss */
 .tab-content .tab-pager {
   display: block;
   margin: auto;
@@ -1629,7 +1668,7 @@ section.resolution-content li strong {
   white-space: nowrap;
   color: #81026e;
 }
-/* line 164, style/components/_issue_areas.scss */
+/* line 166, style/components/_issue_areas.scss */
 .tab-content .tab-pager li {
   display: inline-block;
   width: auto;
@@ -1638,16 +1677,16 @@ section.resolution-content li strong {
   text-align: center;
   cursor: pointer;
 }
-/* line 171, style/components/_issue_areas.scss */
+/* line 173, style/components/_issue_areas.scss */
 .tab-content .tab-pager li.prev {
   margin-right: 50%;
 }
-/* line 174, style/components/_issue_areas.scss */
+/* line 176, style/components/_issue_areas.scss */
 .tab-content .tab-pager li.next {
   float: right;
 }
 
-/* line 181, style/components/_issue_areas.scss */
+/* line 183, style/components/_issue_areas.scss */
 .file-feed {
   background: #c4c2c7;
 }
@@ -1808,12 +1847,13 @@ section.resolution-content li strong {
   margin-bottom: 30px;
   height: 255px;
   vertical-align: top;
+  position: relative;
   padding: 50px 30px;
   text-align: center;
   background: #dedade;
   box-shadow: 0 0 10px 0 #888;
 }
-/* line 210, style/brand/_mixins.scss */
+/* line 211, style/brand/_mixins.scss */
 .file-feed .file a {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1826,76 +1866,76 @@ section.resolution-content li strong {
   line-height: 1em;
   display: block;
 }
-/* line 219, style/brand/_mixins.scss */
+/* line 221, style/brand/_mixins.scss */
 .file-feed .file:not(:nth-child(3n)) {
   margin-right: 100px;
 }
-/* line 223, style/brand/_mixins.scss */
+/* line 225, style/brand/_mixins.scss */
 .file-feed .file.Paper {
   border-top: 20px solid #4a1249;
   color: #4a1249;
 }
-/* line 226, style/brand/_mixins.scss */
+/* line 228, style/brand/_mixins.scss */
 .file-feed .file.Paper a {
   color: #4a1249;
 }
-/* line 227, style/brand/_mixins.scss */
+/* line 229, style/brand/_mixins.scss */
 .file-feed .file.Paper:before {
   content: "";
 }
-/* line 230, style/brand/_mixins.scss */
+/* line 232, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 233, style/brand/_mixins.scss */
+/* line 235, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet a {
   color: #81026e;
 }
-/* line 234, style/brand/_mixins.scss */
+/* line 236, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet:before {
   content: "";
 }
-/* line 236, style/brand/_mixins.scss */
+/* line 238, style/brand/_mixins.scss */
 .file-feed .file.Letter {
   border-top: 20px solid #380d36;
   color: #380d36;
 }
-/* line 239, style/brand/_mixins.scss */
+/* line 241, style/brand/_mixins.scss */
 .file-feed .file.Letter a {
   color: #380d36;
 }
-/* line 240, style/brand/_mixins.scss */
+/* line 242, style/brand/_mixins.scss */
 .file-feed .file.Letter:before {
   content: "";
 }
-/* line 242, style/brand/_mixins.scss */
+/* line 244, style/brand/_mixins.scss */
 .file-feed .file.Brief {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 245, style/brand/_mixins.scss */
+/* line 247, style/brand/_mixins.scss */
 .file-feed .file.Brief a {
   color: #81026e;
 }
-/* line 246, style/brand/_mixins.scss */
+/* line 248, style/brand/_mixins.scss */
 .file-feed .file.Brief:before {
   content: "";
 }
-/* line 248, style/brand/_mixins.scss */
+/* line 250, style/brand/_mixins.scss */
 .file-feed .file.Petition {
   border-top: 20px solid #ab01a7;
   color: #ab01a7;
 }
-/* line 251, style/brand/_mixins.scss */
+/* line 253, style/brand/_mixins.scss */
 .file-feed .file.Petition a {
   color: #ab01a7;
 }
-/* line 252, style/brand/_mixins.scss */
+/* line 254, style/brand/_mixins.scss */
 .file-feed .file.Petition:before {
   content: "";
 }
-/* line 255, style/brand/_mixins.scss */
+/* line 257, style/brand/_mixins.scss */
 .file-feed .file:before {
   display: block;
   font-size: 30px;
@@ -2485,13 +2525,18 @@ section.resolution-content li strong {
 /* line 55, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .cycle-slide img {
   border: 10px solid #2f2f2f;
+  transition: .25s all ease-in-out;
 }
 /* line 59, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide:hover img {
+  border-color: #6b0269;
+}
+/* line 63, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .cycle-pager-active:before {
   border-width: 0 30px 40px 30px;
   top: -30px;
 }
-/* line 64, style/components/_highlight_gallery.scss */
+/* line 68, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .cycle-pager-active img {
   border-color: #6b0269;
 }
@@ -2547,8 +2592,10 @@ section.resolution-content li strong {
   font-weight: 500;
   font-size: 24px;
   font-weight: bold;
+  line-height: .8em;
+  margin-bottom: 5px;
 }
-/* line 31, style/components/_accomplishments.scss */
+/* line 33, style/components/_accomplishments.scss */
 .accomplishments .slide .content {
   display: inline-block;
   vertical-align: top;

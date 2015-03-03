@@ -1,6 +1,6 @@
 <ul class="main-nav">
  {% for item in nav.get_items %}
-    <li id="{{ item.attr_title }}" class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="#{{ item.attr_title }}">{{item.title}}</a>
+    <li id="{{ item.attr_title }}" class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="#{{ item.attr_title }}"><span class="title">{{item.title}}</span></a>
     </li>
 {% endfor %}
 </ul>

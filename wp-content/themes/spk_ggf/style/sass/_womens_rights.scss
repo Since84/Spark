@@ -2,9 +2,24 @@
 .womens-rights{
 	background-size: cover;
 	background-color: #ce6513;
+	height: 770px;
 	min-height: 100vh;
 
 	@include circle;
+	.circle{
+		margin: 80px auto;
+		width: 480px;
+		height: 480px;
+	}
+	.container {
+		min-height: 100vh;
+	}
+	.centered-content{
+		@include absolutecenter;
+		width: 480px;
+		height: 780px;
+		top: 100px;
+	}
 
 	.sub-text{
 		@include large-body;
@@ -38,6 +53,7 @@
 		width: 105px;
 		height: 105px;
 		cursor: pointer;
+		z-index: 100;
 		@include circle;
 		.circle {
 			width: 100%;

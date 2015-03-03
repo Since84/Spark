@@ -16,14 +16,14 @@ header.spark-header{
 		background-size: contain;
 		margin-left: 2rem;
 		vertical-align: middle;
-		&::before{
-			content: $home;
-			display: inline-block;
-			margin-left: -2rem;
-			vertical-align: middle;
-			font-family: "FontAwesome";
-			color: $purple4;
-		}
+		// &::before{
+		// 	content: $home;
+		// 	display: inline-block;
+		// 	margin-left: -2rem;
+		// 	vertical-align: middle;
+		// 	font-family: "FontAwesome";
+		// 	color: $purple4;
+		// } 
 		&:hover {
 			background-image: $logo_hover;
 			&::before{

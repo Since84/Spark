@@ -38,7 +38,7 @@
 					width: 100%;
 					border-bottom: 10px solid $purple3;
 					position: absolute;
-					bottom: -133px;
+					bottom: -95px;
 					z-index: 100;
 				}
 			}
@@ -135,6 +135,10 @@
 						font-size: 20px;
 						margin-right: 10px;
 					}
+					&:hover{
+						color: $purple6;
+						&:before{ color: $purple6; }
+					}
 				}
 				&.email a:before{
 					content: $mail;
@@ -146,7 +150,8 @@
 		}
 		.member-bio {
 			@include long-body; 
-			max-width: 750px;
+			margin: auto;
+
 		}
 
 	}
@@ -212,6 +217,18 @@
 					text-align: center;
 					display: block;
 					padding: 10px 0;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 20px;
+					&:before{
+						content: $circlerightarrow;
+						font-family: 'FontAwesome';
+						font-size: 18px;
+						margin-right: 5px;
+					}
+					&:hover {
+						background: $purple5;
+					}
 				}
 			}
 			img {
@@ -227,6 +244,9 @@
 				vertical-align: top;
 				width: 330px;
 				margin-left: 30px;
+				h4{
+					font-weight: bold;
+				}
 			}
 		}
 	}

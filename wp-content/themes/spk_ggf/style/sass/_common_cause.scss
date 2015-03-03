@@ -25,14 +25,29 @@
 			background-position: center center;
 			transition: .25s all linear;
 			background-image: none;
-			background-color: black;
+			background-color: $orange;
 			background-size: auto 100%;
 			background-position: center center;
+			position: relative;
+			text-decoration: none;
+			&:hover{
+				background-color: $red;
+			}
 			&.cycle-pager-active {
 				width: 115px;
 				height: 115px;
 				border-radius: 115px;
 				background-image: auto !important;
+			}
+			span{
+				@include absolutecenter;
+				color: $tan;
+				width: 1em;
+				height: 1em;
+				text-align: center;
+				@include medium-body;
+				font-size: 36px;
+				font-weight: normal;
 			}
 		}
 	}
