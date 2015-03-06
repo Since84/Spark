@@ -1,11 +1,13 @@
 <div class="case-study-frame">
 	<ul class="case-study-nav">
 	</ul>
+	<div class="controls" id="prev"></div>
+	<div class="controls" id="next"></div>
     <div 	class="cycle-slideshow" 
 		    data-cycle-fx="scrollHorz"
 		    data-cycle-timeout="0"
-		    data-cycle-prev="#prev"
-		    data-cycle-next="#next"
+		    data-cycle-prev=".case-study-frame #prev"
+		    data-cycle-next=".case-study-frame #next"
 		    data-cycle-slides="> section"
 		    data-cycle-pager=".case-study-nav"
     >
@@ -14,7 +16,7 @@
     	{% endfor %}
 	</div>
 	<div class="case-study-footer">
-		<a class="close">Back To Main Page</a>
+		<span class="close">Back To Main Page</span>
 		<div class="download-icon">
 			<div class="circle">
 				{% include "views/svg/dl_icon.twig" %}

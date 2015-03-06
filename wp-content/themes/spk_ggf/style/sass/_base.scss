@@ -4,6 +4,7 @@ $containerwidth: 1200px;
 //// Colors 
 
 $gold: #fbaf22;
+$goldopaque: rgba(251, 175, 34, .7);
 // Ex: “Case Studies” Title, Title Slide Circle Overlay, “Why women & Climate?” Background
 
 $orange: #ce6513;
@@ -273,6 +274,37 @@ section{
 	right: 0;
 }
 
+@mixin button {
+	@include rectangle-button;
+	@include medium-body;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	color: $red;
+	border: 4px solid $red;
+	padding: 20px 10px;
+	display: block;
+	width: 360px;
+	color: $gold;
+	margin: auto;
+	margin-top: 60px;
+	transition: .25s background-color ease;
+	cursor: pointer; 
+
+	a{
+		text-decoration: none;
+		color: $red;
+	}
+
+	&:hover {
+		background-color: $redopaque;
+		border-color: $darkred;
+		a{
+			color: $darkred;
+		}
+	}
+}
+
 @mixin download-icon{
 	.download-icon {
 		position: absolute;
@@ -346,7 +378,6 @@ section{
 
 @mixin modal {
 	position: fixed;
-	overflow: scroll;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -384,7 +415,7 @@ section{
 			display: block;
 
 			&:hover, &.cycle-pager-active {
-				background: $teal;
+				// background: $teal;
 				&:after{
 					content: "";
 					display: block;

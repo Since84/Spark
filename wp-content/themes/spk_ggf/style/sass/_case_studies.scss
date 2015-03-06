@@ -106,7 +106,6 @@ section.case-studies {
 //Frame
 .case-study-frame{
 	position: fixed;
-	overflow: scroll;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -177,6 +176,52 @@ section.case-studies {
 		}
 
 	}
+
+	.controls{
+		position: absolute;
+		// height: 250px; /* image's height */
+	    display: inline-block;
+	    vertical-align: middle;
+	    font-size: 40px;
+	    font-weight: 700;
+	    font-family: "arial";
+		padding: 0px 10px;
+		width: 65px;
+		height: 90px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		cursor: pointer;
+		z-index: 2000;
+
+		&:before {
+			font-family: "FontAwesome";
+			display:inline-block;
+			font-size: 100px;
+		}
+
+		&#prev {
+			left: 80px;
+			&:before {
+				content: $arrowleft;
+			}
+			&:hover:before {
+				content: $arrowlefthover;
+			}
+		}
+
+		&#next {
+			right: 80px;
+			&:before {
+				content: $arrowright;
+			}
+			&:hover:before {
+				content: $arrowrighthover;
+			}
+		}
+
+	}
+
 	.cycle-slideshow {
 		width: 100%;
 		padding-left: 50px;
@@ -208,14 +253,14 @@ section.case-studies {
 
 			h2{
 				@include h1;
-				width: 600px;
+				width: 550px;
 				margin: auto;
 				margin-bottom: 40px;
 
 			}
 
 			p {
-				width: 600px;
+				width: 550px;
 				margin: auto;
 				@include medium-body;
 				display: block;
@@ -239,13 +284,16 @@ section.case-studies {
 			}
 
 			.lessons {
-				width: 370px;
+				width: 550px;
 				margin: auto;
 				.lesson-pager{
 					display: inline-block;
 					vertical-align: top;
 					span{
 						@include absolutecenter;
+					}
+					.selected{
+						background: $redopaque;
 					}
 				}
 				.circle{
@@ -269,7 +317,7 @@ section.case-studies {
 				}
 				.selected-block {
 					display: inline-block;
-					width: 270px;
+					width: 450px;
 					height: 200px;
 					margin-left: 20px;
 					text-align: left;
@@ -354,7 +402,7 @@ section.case-studies {
 		position: absolute;
 		bottom: -3px;
 		width: 100%;
-		padding: 30px 50px 30px 100px;
+		padding: 40px 50px 40px 100px;
 		z-index: 1001;
 		width: 100%;
 		background: url('images/FooterBG.png');
@@ -363,18 +411,14 @@ section.case-studies {
 		@include medium-body;
 		color: $green;
 		text-transform: uppercase;
-		&:before{
-			content: $backarrow;
-			font-family: "FontAwesome";
-			margin-right: .5em;
-			display: inline-block;
-		}
 
 		@include download-icon;
 		.download-icon{
 			width: 70px;
 			height: 70px;
-			top: 10px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
 			.circle:after{
 				font-size: 8px !important;
 				font-weight: normal;
@@ -382,5 +426,19 @@ section.case-studies {
 				display: block;
 			}
 		}
+
+		.close{
+			&:before{
+				content: $backarrow;
+				font-family: "FontAwesome";
+				margin-right: .5em;
+				display: inline-block;
+			}
+			&:hover, &:hover:before{
+				color: $black; 
+			}
+		}
 	}
+
 }
+

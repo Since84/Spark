@@ -1,5 +1,14 @@
 <li>
 	<div class="date"><span class="circle">{{ media.date }}</span></div>
-	<span class="title">{{ media.title }}</span>
-	<span class="source">/{{ media.source }}</span>
+	<div class="content">
+		<a href="{{ media.url }}">
+			<span class="title">{{ media.title }}</span>
+			<span class="source">/{{ media.source }}</span>
+		</a>
+	</div>
 </li>
+{% if ( loop.last ) and ( loop.length > 5 ) %}
+<li class="see-all">
+	<a href="http://www.greengrants.org/news-and-resources/resources/" target="_blank">See All Articles</a>
+</li>
+{% endif %}

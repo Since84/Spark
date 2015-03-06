@@ -1,32 +1,30 @@
 <section class="resources-media">
 	<ul class="modal-nav">
+		<a href='#media-slide' data-index='2' class='media'><span>In the Media</span></a>
+		<a href='#resources-slide' data-index='1' class='resources'><span>Resources</span></a>
 	</ul>
-    <div 	class="cycle-slideshow" 
-		    data-cycle-fx="scrollVert"
-		    data-cycle-timeout="0"
-		    data-cycle-prev="#prev"
-		    data-cycle-next="#next"
-		    data-cycle-slides=".slide"
-		    data-cycle-pager=".resources-media .modal-nav"
-    >
-    	<li class="slide resources" data-cycle-pager-template="<a href='#' data-index='1' class='resources'></a>" >
-    		<h2>Resources</h2>
-    		<ol>
-		      	{% for resource in footer.get_field('resources') %}
-		    		{% include 'views/sections/resources_slide.twig' %}
-		    	{% endfor %}
-    		</ol>
-    	</li>
-    	<li class="slide media" data-cycle-pager-template="<a href='#' data-index='2' class='media'></a>">
-    		<h2>Media</h2>
+	<ul class="slides">
+    	<li id="media-slide" class="slide media">
+			<div class="download-icon">
+				<div class="circle">
+					{% include "views/svg/dl_icon.twig" %}
+				</div>
+			</div>
+    		<h2>In the Media</h2>
     		<ol>
 		      	{% for media in footer.get_field('media') %}
 		    		{% include 'views/sections/media_slide.twig' %}
 		    	{% endfor %}
     		</ol>
     	</li>
-	</div>
-	<div class="case-study-footer">
+    	<li id="resources-slide" class="slide resources" >
+    		<h2>Resources</h2>
+		      	{% for resource in footer.get_field('resources') %}
+		    		{% include 'views/sections/resources_slide.twig' %}
+		    	{% endfor %}
+    	</li>
+	</ul>
+	<div class="modal-footer">
 		<a class="close">Back To Main Page</a>
 	</div>
 </section>

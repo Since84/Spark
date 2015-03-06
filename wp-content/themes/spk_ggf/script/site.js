@@ -21,7 +21,8 @@
 	  			'click .case-study-footer .close': 'closeCaseStudies',
 	  			'click .lesson-pager li': 'toggleSelection',
 	  			'click .modal-trigger': 'openModal',
-	  			'click .modal-close': 'closeModal'
+	  			'click .modal-footer .close': 'closeModal',
+	  			'click .modal-nav a': 'scrollModal'
 	  		},
 
 
@@ -31,7 +32,7 @@
 	  			// this.initPanelNav();
 	  			// this.initCycle();
 	  			// this.initModal();
-	  			smoothScroll.init();
+	  			$('.main-nav a').smoothScroll();
 	  			$(window).scroll(function(){
 	  				self.showNav();
 	  			})
@@ -67,16 +68,23 @@
 	  		toggleSelection: function(e){
 	  			var selected = $(e.target).data('index');
 	  			$(e.target).addClass('selected').siblings().removeClass('selected');
-	  			$(e.target).parents('.lessons').find(' li.selected').removeClass('selected');
-	  			$(e.target).parents('.lessons').find(" li."+ selected).addClass('selected');
+	  			$(e.target).parents('.lessons').find('.selected-block li.selected').removeClass('selected');
+	  			$(e.target).parents('.lessons').find(".selected-block li."+ selected).addClass('selected');
 	  		},
 	  		openModal: function(e){ 
 	  			var modal = $(e.target).data('section');
 	  			$(modal).addClass('open');
 	  		},
 	  		closeModal: function(e){ 
-	  			var modal = '.'+$(e.target).parents('section');
-	  			$(modal).addClass('close');
+	  			var modal = $(e.target).parents('section');
+	  			$(modal).removeClass('open');
+	  		},
+	  		scrollModal: function(e){
+				$.smoothScroll({
+		            scrollElement: $('section.resources-media .slides'),
+		            scrollTarget: $(e.target).attr('href')
+		        });
+		        return false;
 	  		},
 	  		// smoothScroll: function(e){
 			  //   event.preventDefault();
@@ -115,7 +123,6 @@
 				$(document).scroll(function(e) {
 				    var scrollTop = $(this).scrollTop();
 				    var checkIndex = getCurrent( scrollTop );
-				    console.log(checkIndex);
 				    if( checkIndex !== currentIndex ) {
 				        currentIndex = checkIndex;
 				        $navs.eq( currentIndex ).addClass("active").siblings(".active").removeClass("active");

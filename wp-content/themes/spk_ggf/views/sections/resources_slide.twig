@@ -1,10 +1,15 @@
 {% if resource.type == "section title" %}
-	<li>
-		<h3 class="section-header">{{ resource.name }}</h3>
-	</li>
+	{% if loop.first == false %}
+	</ol>
+	{% endif %}
+	<h3 class="section-header">{{ resource.name }}</h3>
+	<ol>
 {% else %}
 	<li>
 		<span class="title">{{ resource.name }}</span>
 		<span class="caption">{{ resource.caption }}</span>
 	</li>
+{% endif %}
+{% if loop.last %}
+</ol>
 {% endif %}
