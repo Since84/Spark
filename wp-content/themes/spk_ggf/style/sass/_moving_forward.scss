@@ -1,13 +1,15 @@
 .moving-forward{
 	background-size: cover;
 	background-position: center center;
-	height: 741px;
 	margin: auto;
 	@include circle;
-
+	.circle {
+		@include absolutecenter;
+	}
 }
 section.moving-forward{ 
 	background-color: $orange;
+	height: 100vh;
 }
 // .moving_forward .circle{
 // 	margin: 110px auto 75px;
@@ -17,11 +19,11 @@ section.moving-forward{
 }
 
 div.moving-forward{
-	padding: 0 60px;
+	padding: 60px;
 } 
 
 .moving-forward p{
-	color:#ce6513;
+	color:$red;
 	font-family: "aleobolditalic";
 	font-size: 24px;
 	text-align: center;

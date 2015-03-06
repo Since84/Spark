@@ -34,6 +34,7 @@ section.case-studies {
 				height: 150px;
 				margin-bottom: 40px;
 				margin-top: 0;
+				cursor: pointer;
 
 				.icon{
 					@include absolutecenter;
@@ -166,6 +167,7 @@ section.case-studies {
 		}
 		img{
 			max-height: 40px;
+			max-width: 40px;
 			margin: auto;
 			@include absolutecenter;
 		}
@@ -186,24 +188,34 @@ section.case-studies {
 		& > * {
 			white-space: normal;
 		}
+
+		.case-study-content{
+			@include absolutecenter;
+			height: 850px;
+		}
+
 		.case-study-info{
 			display:inline-block;
 			height: 100vh;
 			width: 50%;
 			padding-left: 90px;
-			background-image: url('images/ggf-scroller-r2_03.png');
+			background-image: url('images/case_studies_background.png');
 			background-size: cover;
 			text-align: center;
 			padding-bottom: 100px;
 			overflow: scroll;
+			position: relative;
 
 			h2{
 				@include h1;
+				width: 600px;
+				margin: auto;
 				margin-bottom: 40px;
+
 			}
 
 			p {
-				width: 370px;
+				width: 600px;
 				margin: auto;
 				@include medium-body;
 				display: block;
@@ -241,7 +253,7 @@ section.case-studies {
 					height: 75px;
 					margin: 0;
 					margin-bottom: 30px;
-					background: $redopaque;
+					background: $orange;
 					cursor: pointer;
 					span{
 						@include medium-body;
@@ -250,6 +262,9 @@ section.case-studies {
 						@include absolutecenter;
 						font-weight: 500;
 						color: $tan;
+					}
+					.selected{
+						background: $red;
 					}
 				}
 				.selected-block {
@@ -342,17 +357,30 @@ section.case-studies {
 		padding: 30px 50px 30px 100px;
 		z-index: 1001;
 		width: 100%;
-		background: url('images/ggf-scroller-r2_06.png');
+		background: url('images/FooterBG.png');
 		background-size: cover;
 		// font-size: 28px;
 		@include medium-body;
-		color: $teal;
+		color: $green;
 		text-transform: uppercase;
 		&:before{
 			content: $backarrow;
 			font-family: "FontAwesome";
 			margin-right: .5em;
 			display: inline-block;
+		}
+
+		@include download-icon;
+		.download-icon{
+			width: 70px;
+			height: 70px;
+			top: 10px;
+			.circle:after{
+				font-size: 8px !important;
+				font-weight: normal;
+				z-index: 2000;
+				display: block;
+			}
 		}
 	}
 }

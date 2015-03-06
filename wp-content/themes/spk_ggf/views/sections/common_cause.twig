@@ -20,32 +20,33 @@
     <!-- <div class="controls" id="prev"> < </div>
     <div class="common-cause-pager"></div>
    	<div class="controls" id="next"> > </div> -->
-    <div id="thumbnail-pager" class="cycle-pager external">
+    <div class="pager">
+        <div class="controls" id="prev"></div>
+        <div id="thumbnail-pager" class="cycle-pager external"></div>
+        <div class="controls" id="next"></div>
     </div>
     <div class="cycle-slideshow" 
     data-cycle-fx="scrollHorz"
     data-cycle-timeout="0"
-    data-cycle-prev="#prev"
-    data-cycle-next="#next"
+    data-cycle-prev=".common-cause #prev"
+    data-cycle-next=".common-cause #next"
     data-cycle-slides=".slide"
     data-cycle-pager="#thumbnail-pager"
     >
         <!-- empty element for pager links -->
         <!-- empty element for pager links -->
         {% for slide in common_cause.get_field('gallery') %}
-            
-        <div class="slide" data-cycle-pager-template="<a href=# style='background-image: url( {{ slide.slide_image.url }} )'><span class='index'>{{ loop.index }}</span></a>" style="background-image:url({{ slide.slide_image.url }})">
+                
+        <div class="slide" data-cycle-pager-template="<a href=#><span class='index' style='background-image: url( {{ slide.slide_image.url }} )'><em>{{ loop.index }}</em></span></a>" style="background-image:url({{ slide.slide_image.url }})">
             <h3>{{ slide.slide_title }}</h3>  
             <div class="slide-text">
                 {{ slide.slide_text }}
-                <span class="photo-cred">Photo Cred: {{slide.photo_cred}}</span>
+
             </div>
+            <span class="photo-cred">Photo Credit: {{slide.photo_cred}}</span>
         {% endfor %}       
+        </div>
+
     </div>
-
-
-</div>
-
-
 
 </section>

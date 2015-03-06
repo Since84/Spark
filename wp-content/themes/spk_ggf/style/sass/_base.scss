@@ -1,14 +1,67 @@
 //// Base Variables
 $containerwidth: 1200px;
 
+//// Colors 
+
+$gold: #fbaf22;
+// Ex: “Case Studies” Title, Title Slide Circle Overlay, “Why women & Climate?” Background
+
+$orange: #ce6513;
+// Ex: Title Slide & Moving Forward Background Image Overlays, “5 Steps” section background
+
+$red: #bb2e02;
+$redopaque: rgba(187, 46, 2, .7);
+// Ex: “Why Women & Climate?” Title color, “Resources & In the Media” Footer Background, used in the sidebar menu to show active/hover states
+
+$darkred: #850c00;
+// Ex: “Resources & In the Media” footer icon/text color
+
+$teal: #448f9c;
+// Ex: “About This Report” section background color, used in the modal sidebar menus to indicate hover/active states
+
+$green: #2b585c;
+// Ex: Text/Icon background color for “Case Studies” icons, Copyright/Design Credit footer background
+
+$tan: #dad1ba;
+// Ex: used for all light-colored icons and light-colored text, athis is also the text color of copyright & design credit in footer
+
+$black: #111111;
+$blackopaque: rgba(1,1,1,.9);
+$blackopaquelight: rgba(1,1,1,.6);
+// Ex: Background color of the sidebar menus (used at various opacities), all dark text is this color (i.e. Title subhead “A Guide to Supporting Grassroots Women’s Action”)
+
+// End Colors
+
+//// Icons
+$heart: "\f08a";
+$unchecked: url('images/checkbox_unchecked.png');
+$checked: url('images/checkbox_checked.png');
+$close: url('images/X.png');
+$closewhite: url('images/X_white.png');
+$arrowright: url('images/Next-Default.png'); 
+$arrowrighthover: url('images/Next-Hover.png');
+$arrowleft: url('images/Back-Default.png');
+$arrowlefthover: url('images/Back-Hover.png');
+$backarrow: "\f137";
+
+$selectedone: url('images/selected-arrow-one.png');
+$selectedtwo: url('images/selected-arrow-two.png');
+
 
 *{
 	box-sizing: border-box;
 }
 
 body {
-	overflow: scroll;
+	// overflow: scroll;
 }
+
+a {
+	color: $black;
+	&:hover { color: $gold; }
+}
+
+textarea, input { outline: none; }
 
 //// Typography
 h1{
@@ -76,50 +129,6 @@ h2{
 }
 // End Typography
 
-//// Colors 
-
-$gold: #fbaf22;
-// Ex: “Case Studies” Title, Title Slide Circle Overlay, “Why women & Climate?” Background
-
-$orange: #ce6513;
-// Ex: Title Slide & Moving Forward Background Image Overlays, “5 Steps” section background
-
-$red: #bb2e02;
-$redopaque: rgba(187, 46, 2, .7);
-// Ex: “Why Women & Climate?” Title color, “Resources & In the Media” Footer Background, used in the sidebar menu to show active/hover states
-
-$darkred: #850c00;
-// Ex: “Resources & In the Media” footer icon/text color
-
-$teal: #448f9c;
-// Ex: “About This Report” section background color, used in the modal sidebar menus to indicate hover/active states
-
-$green: #2b585c;
-// Ex: Text/Icon background color for “Case Studies” icons, Copyright/Design Credit footer background
-
-$tan: #dad1ba;
-// Ex: used for all light-colored icons and light-colored text, athis is also the text color of copyright & design credit in footer
-
-$black: #111111;
-$blackopaque: rgba(1,1,1,.9);
-$blackopaquelight: rgba(1,1,1,.6);
-// Ex: Background color of the sidebar menus (used at various opacities), all dark text is this color (i.e. Title subhead “A Guide to Supporting Grassroots Women’s Action”)
-
-// End Colors
-
-//// Icons
-$heart: "\f08a";
-$unchecked: url('images/checkbox_unchecked.png');
-$checked: url('images/checkbox_checked.png');
-$close: url('images/X.png');
-$arrowright: url('images/Next-Default.png'); 
-$arrowrighthover: url('images/Next-Hover.png');
-$arrowleft: url('images/Back-Default.png');
-$arrowlefthover: url('images/Back-Hover.png');
-$backarrow: "\f137";
-
-$selectedone: url('images/selected-arrow-one.png');
-$selectedtwo: url('images/selected-arrow-two.png');
 
 //// Layout
 section{
@@ -193,6 +202,7 @@ section{
 	margin: auto;
 	margin-top: 60px;
 	transition: .25s background-color ease;
+	cursor: pointer;
 
 	&:hover {
 		background-color: $redopaque;
@@ -261,6 +271,77 @@ section{
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+@mixin download-icon{
+	.download-icon {
+		position: absolute;
+		display: block;
+		right: 100px;
+		top: 40px;
+		width: 105px;
+		height: 105px;
+		cursor: pointer;
+		z-index: 100;
+		@include circle;
+		.circle {
+			width: 100%;
+			height:100%;
+			margin: 0;
+			background: $blackopaque url('');
+			-webkit-perspective: 1000px;
+			perspective: 1000px;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.3s;
+			transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.1s;			
+		}
+		
+		.dl_icon{
+			width: 60%;
+			height: 60%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			
+			.stroke{
+				stroke: $tan
+			}
+		}
+
+		 
+		&:hover .circle{
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			background-color: $redopaque;
+			&:after{
+				content: "Download Full Report"; 
+				display: block;
+				color: $tan;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				-webkit-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				z-index: 10;
+				margin: auto;
+				height: 20px;
+				padding: 0 10px;
+				text-align: center;
+				@include medium-body;
+				font-size: 14px;
+			}
+
+			.dl_icon .stroke {
+				stroke: $red;
+			}
+		}
+	}
 }
 
 @mixin modal {
@@ -405,6 +486,7 @@ section{
 		.nav-main-item {
 			display: block;
 			position: relative;
+			transition: all linear .1s;
 
 			a{
 				width: 100%;
@@ -437,10 +519,12 @@ section{
 				}
 				&::after{
 					content: none;
+					transition: all linear .1s;
 				}
 			}
 
 			&.active, &:hover{
+				transition-delay: 0s;
 				&::after{
 					content: '';
 					position: absolute;
@@ -453,6 +537,7 @@ section{
 					top: 0;
 					bottom: 0;
 					margin: auto;
+					transition-delay: 0s;
 				}
 				a{
 					&::before{

@@ -9,7 +9,7 @@
 	}
 
 	.cycle-slideshow {
-		width: 850px;
+		width: 1000px;
 		height: 250px;
 		margin: 10px auto;
 		padding: 0;
@@ -39,7 +39,7 @@
 		}
 
 		&#prev {
-			left: 40px;
+			left: 120px;
 			&:before {
 				content: $arrowleft;
 			}
@@ -49,7 +49,7 @@
 		}
 
 		&#next {
-			right: 40px;
+			right: 120px;
 			&:before {
 				content: $arrowright;
 			}
@@ -84,7 +84,7 @@
 			line-height: 1.5em;
 			font-size: 24px;
 			height: 240px;
-			width: 570px;
+			width: 740px;
 		}
 		.photo-cred{
 			display: block;
@@ -107,6 +107,7 @@
 			height: 30px;
 			margin: 10px;
 			position: relative;
+			cursor: pointer;
 
 			&:before {
 				content: "";

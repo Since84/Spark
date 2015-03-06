@@ -1,21 +1,23 @@
 <section class="case-study-slide" data-cycle-pager-template="<a href='#' data-index='{{ loop.index }}' class='{{ case.title|replace({" ":"-"}) }}'><img src='{{ case.icon.url }}'/></a>" data-index="{{ loop.index }}">
 	<div class="case-study-info">
-		<span class="header circle">
-			<img class="icon"  src="{{ case.icon.url }}"/>
-		</span>
-		<h2>
-			{{ case.title }}
-		</h2>
-		<p>{{ case.description }}</p>
-		<div class="lessons">
-			<ul class="lesson-pager">
-				<li class="circle" data-index="first"><span>1</span></li>
-				<li class="circle" data-index="second"><span>2</span></li>
-			</ul>
-			<ul class="selected-block">
-				<li class="first selected">{{ case.selected_lessons_1 }}</li>
-				<li class="second">{{ case.selected_lessons_2 }}</li>
-			</ul>
+		<div class="case-study-content">
+			<span class="header circle">
+				<img class="icon"  src="{{ case.icon.url }}"/>
+			</span>
+			<h2>
+				{{ case.title }}
+			</h2>
+			<p>{{ case.description }}</p>
+			<div class="lessons">
+				<ul class="lesson-pager">
+					<li class="circle" data-index="first"><span>1</span></li>
+					<li class="circle" data-index="second"><span>2</span></li>
+				</ul>
+				<ul class="selected-block">
+					<li class="first selected">{{ case.selected_lessons_1 }}</li>
+					<li class="second">{{ case.selected_lessons_2 }}</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="case-study-feature" style="background-image:url({{ case.feature_image.url }});">

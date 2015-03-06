@@ -7,7 +7,7 @@
 	height: 100%;
 	line-height: 60px;
 	background: $blackopaque;
-	z-index: 2000;
+	z-index: 2001;
 	text-align: center;
 	overflow: scroll;
 	visibility: hidden;
@@ -18,6 +18,16 @@
 
 	.wpcf7 {
 		padding-top: 75px;
+	}
+
+	.wpcf7-not-valid-tip{
+		display: none;
+	}
+	div.wpcf7-validation-errors{
+		border: none;
+		color: $red;
+		@include medium-body;
+		margin-top: 0;
 	}
 
 	hgroup {
@@ -141,6 +151,7 @@
 			color: $tan;
 			border: 2px solid $tan;
 			border-radius: 10px;
+			margin-top: 60px;
 			margin-bottom: 80px;
 			transition: background-color .25s ease;
 			cursor: pointer;
@@ -188,18 +199,24 @@
 		height: 90px;
 		position: absolute;
 		z-index: 1000;
-		color: $gold;
+		color: $tan;
 		@include medium-body;
 		font-size: 18px;
 		line-height: 2.4em;
 		&:before{
 			content:"";
-			background: $close no-repeat;
+			background: $closewhite no-repeat;
 			width: 50px;
 			height: 50px;
 			font-size: 40px;
 			display: block;
 			margin: auto;
+		}
+		&:hover{
+			color: $gold;
+			&:before{
+				background-image: $close;
+			}
 		}
 	}
 }

@@ -14,6 +14,10 @@ footer{
 		padding: 25px;
 	}
 
+	.modal-trigger{
+		cursor: pointer;
+	}
+
 	span {
 		@include medium-body;
 		color: $darkred;
@@ -48,31 +52,33 @@ footer{
 	color: $tan;
 
 	.designed.by {
-			width: 100px;
+		width: 100px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 65%;
+		color: $tan;
+	}
+	.elefintlogo {
+		float: right;
+		white-space: nowrap;
+		max-width: 30px;
+		overflow: hidden;
+		transition: 1.5s max-width;
+		text-decoration: none;
+		font-size: 14px;
+		color: $tan;
+		&:hover {
+			max-width: 1000px;
+		}
+		svg{
+			width: 30px;
 			display: inline-block;
 			vertical-align: middle;
-			margin-left: 65%;
-			color: $tan;
-		}
-		.elefintlogo {
-			float: right;
-			white-space: nowrap;
-			max-width: 30px;
-			overflow: hidden;
-			transition: 1.5s max-width;
-			text-decoration: none;
-			font-size: 14px;
-			color: $tan;
-			&:hover {
-				max-width: 1000px;
-			}
-			svg{
-				width: 30px;
-				.logomark {
-					fill: $tan;
-				}
+			.logomark {
+				fill: $tan;
 			}
 		}
+	}
 
 }
 .footer-logo{
@@ -106,11 +112,18 @@ section.resources-media{
 		overflow: scroll;
 		background-size: cover;
 		h2 {
-			width: 100%;
+			width: 1200px;
+			margin: auto;
 			text-align: center;
 			padding: 110px 0 50px;
 			@include h1;
 		}
+
+		ol{
+			width: 1200px;
+			margin: auto;
+		}
+
 		li {
 			width: 1200px;
 			margin: auto;
@@ -142,8 +155,8 @@ section.resources-media{
 		}
 
 	}
-	.resources{
-		background: url(images/ggf-scroller-r2_09.png);
+	.slide.resources{
+		background: url(images/resource_bg.png);
 		background-size: cover;
 
 		.section-header{
@@ -156,8 +169,8 @@ section.resources-media{
 			@include medium-body;
 		}
 	}
-	.media{
-		background: url(images/ggf-scroller-r2_03.png);
+	.slide.media{
+		background: url(images/media_bg.png);
 		background-size: cover;
 		h2{
 			@include h1;
@@ -184,5 +197,42 @@ section.resources-media{
 			display: inline-block;
 		}
 		.source{ font-weight: bold;}
+	}
+
+	.modal-nav{
+		a, a.cycle-pager-active{
+			
+		}
+
+		a.resources{
+			background-image: url('images/resources_tan.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			&.cycle-pager-active {
+				background-image: url('images/resources_black.png');
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+		a.media{
+			background-image: url('images/media_tan.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			&.cycle-pager-active {
+				background-image: url('images/media_black.png');
+			}
+
+		}
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			height: 35px;
+			width: auto;
+			margin-right: 10px;
+
+			path{
+				// stroke: $darkred;
+			}
+		}
 	}
 }

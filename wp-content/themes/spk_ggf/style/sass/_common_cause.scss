@@ -9,64 +9,122 @@
 		@include medium-body;
 		color: $tan;
 	}
+	.pager{
+		width: 900px;
+		.controls{
+			position: absolute;
+			// height: 250px; /* image's height */
+		    display: inline-block;
+		    vertical-align: middle;
+		    font-size: 40px;
+		    font-weight: 700;
+		    font-family: "arial";
+			padding: 0px 10px;
+			width: 65px;
+			height: 160px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			cursor: pointer;
+
+			&:before {
+				font-family: "FontAwesome";
+				display:inline-block;
+				font-size: 100px;
+			}
+
+			&#prev {
+				left: 0px;
+				&:before {
+					content: $arrowleft;
+				}
+				&:hover:before {
+					content: $arrowlefthover;
+				}
+			}
+
+			&#next {
+				right: 0px;
+				&:before {
+					content: $arrowright;
+				}
+				&:hover:before {
+					content: $arrowrighthover;
+				}
+			}
+
+		}
+	}
 	.cycle-pager{ 
-		width: 700px;
+		width: 800px;
 		height: 130px;
 		margin-bottom: 60px;
 
 		a {
-			margin: 20px;
-			width: 80px;
-			height: 80px;
+			margin: 20px 10px;
+			width: 115px;
+			height: 115px;
 			display: inline-block;
 			vertical-align: middle;
-			border-radius: 80px;
 			background-size: auto;
-			background-position: center center;
-			transition: .25s all linear;
-			background-image: none;
-			background-color: $orange;
-			background-size: auto 100%;
 			background-position: center center;
 			position: relative;
 			text-decoration: none;
-			&:hover{
-				background-color: $red;
+
+			span{
+				@include absolutecenter;
+				color: $tan;
+				width: 80px;
+				height: 80px;
+				text-align: center;
+				@include medium-body;
+				font-size: 36px;
+				font-weight: normal;
+				background-image: none;
+				background-color: $orange;
+				background-size: auto 100%;
+				background-position: center center;
+				border-radius: 115px;
+				padding: 20px;
+				transition: .25s all linear;
+				&:hover{
+					background-color: $red;
+				}
 			}
-			&.cycle-pager-active {
+			em{
+				position: absolute;
+				margin: auto;
+				width: 1em;
+				height: 1em;
+				@include absolutecenter;
+			}
+			&.cycle-pager-active span{
 				width: 115px;
 				height: 115px;
 				border-radius: 115px;
 				background-image: auto !important;
 			}
-			span{
-				@include absolutecenter;
-				color: $tan;
-				width: 1em;
-				height: 1em;
-				text-align: center;
-				@include medium-body;
-				font-size: 36px;
-				font-weight: normal;
+			&:not(.cycle-pager-active) span{
+				background-image: none !important;
 			}
 		}
 	}
 
 	.cycle-slideshow {
-		height: 350px;
+		height: 610px;
 		.cycle-slide {
 		    position:relative;
-		    height:350px;
+		    height:600px;
 		    width:100%;
 		    background: $red;
 		    display: block;
-		    padding: 40px 0;
+		    padding: 150px 0;
 		    background-size: cover;
 
 		    h3{
 		    	@include medium-body;
 		    	text-align: left;
-		    	width: 900px;
+		    	width: 990px;
 		    	margin: auto;
 		    	color: $gold;
 		    	margin-bottom: 1em;
@@ -75,22 +133,21 @@
 		    	color: $tan;
 		    	line-height: 40px;
 		    	@include medium-body;
-		    	width: 900px;
+		    	width: 990px;
 		    	margin: auto;
 		    	text-align: left;
 		    	background-size: cover;
 		    	background-position: center center;
 		    	background-repeat: no-repeat;
-
-		    	.photo-cred{
-		    		position: absolute;
-		    		bottom: 20px; 
-		    		right: 20px;
-		    		font-size: 16px;
-		    		font-weight: normal;
-		    		font-style: italic;
-		    	}
 		    }
+	    	.photo-cred{
+	    		position: absolute;
+	    		bottom: 40px; 
+	    		right: 40px;
+	    		font-size: 16px;
+	    		font-weight: normal;
+	    		font-style: italic;
+	    	}		
 		}
 	}
 }

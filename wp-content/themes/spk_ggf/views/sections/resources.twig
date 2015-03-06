@@ -9,7 +9,7 @@
 		    data-cycle-slides=".slide"
 		    data-cycle-pager=".resources-media .modal-nav"
     >
-    	<li class="slide resources" data-cycle-pager-template="<a href='#' data-index='1' class='resources'>R</a>" >
+    	<li class="slide resources" data-cycle-pager-template="<a href='#' data-index='1' class='resources'></a>" >
     		<h2>Resources</h2>
     		<ol>
 		      	{% for resource in footer.get_field('resources') %}
@@ -17,8 +17,8 @@
 		    	{% endfor %}
     		</ol>
     	</li>
-    	<li class="slide media" data-cycle-pager-template="<a href='#' data-index='2' class='media'>M</a>">
-    		<h2>Resources</h2>
+    	<li class="slide media" data-cycle-pager-template="<a href='#' data-index='2' class='media'></a>">
+    		<h2>Media</h2>
     		<ol>
 		      	{% for media in footer.get_field('media') %}
 		    		{% include 'views/sections/media_slide.twig' %}

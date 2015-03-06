@@ -21,8 +21,7 @@
 	  			'click .case-study-footer .close': 'closeCaseStudies',
 	  			'click .lesson-pager li': 'toggleSelection',
 	  			'click .modal-trigger': 'openModal',
-	  			'click .modal-close': 'closeModal',
-	  			'click a.nav-main-item': 'smoothScroll',
+	  			'click .modal-close': 'closeModal'
 	  		},
 
 
@@ -32,14 +31,17 @@
 	  			// this.initPanelNav();
 	  			// this.initCycle();
 	  			// this.initModal();
+	  			smoothScroll.init();
 	  			$(window).scroll(function(){
 	  				self.showNav();
 	  			})
+				self.setNav();
 	  		},
 
 	  		initPanelNav: function(){ // Navigation
 	  			// console.log('Function to initialize Panel Navigation');
 	  		},
+
 
 	  		initCycle: function(){ // Women & Climate, Common Cause
 	  			// console.log('Function to initialize slideshows')
@@ -64,6 +66,7 @@
 	  		},
 	  		toggleSelection: function(e){
 	  			var selected = $(e.target).data('index');
+	  			$(e.target).addClass('selected').siblings().removeClass('selected');
 	  			$(e.target).parents('.lessons').find(' li.selected').removeClass('selected');
 	  			$(e.target).parents('.lessons').find(" li."+ selected).addClass('selected');
 	  		},
@@ -75,19 +78,76 @@
 	  			var modal = '.'+$(e.target).parents('section');
 	  			$(modal).addClass('close');
 	  		},
-	  		smoothScroll: function(e){
-			    event.preventDefault();
-			    $('body').animate({
-			        scrollTop:$(this.hash).offset().top
-			    }, 550);
-	  		},
+	  		// smoothScroll: function(e){
+			  //   event.preventDefault();
+			  //   $('body').animate({
+			  //       scrollTop:$(this.hash).offset().top
+			  //   }, 550);
+	  		// },
 	  		showNav: function(){
 	  			var scrollTop = $(window).scrollTop();
+
 	  			if (scrollTop >= 770 ){
 	  				$('.main-nav').addClass('open');
 	  			}else{
 	  				$('.main-nav').removeClass('open');
 	  			}
+	  		},
+	  		setNav: function(){
+	  			var scrollTop = $(window).scrollTop();
+	  			var $sections = $('body > section[id]');
+	  			var $navs = $('.main-nav li');
+
+	  			var topsArray= $sections.map(function(){
+	  				return $(this).position().top - 300;
+	  			}).get();
+
+	  			var len = topsArray.length;
+	  			var currentIndex = 0;
+	  			var getCurrent = function( top ) {
+				    for( var i = 0; i < len; i++ ) {   // index should be displayed
+				        if( top > topsArray[i] && topsArray[i+1] && top < topsArray[i+1] ) {
+				            return i;
+				        }
+				    }
+	  			};
+
+				$(document).scroll(function(e) {
+				    var scrollTop = $(this).scrollTop();
+				    var checkIndex = getCurrent( scrollTop );
+				    console.log(checkIndex);
+				    if( checkIndex !== currentIndex ) {
+				        currentIndex = checkIndex;
+				        $navs.eq( currentIndex ).addClass("active").siblings(".active").removeClass("active");
+				    }
+				});
+
+
+	  			// $('section').each(function(){
+	  			// 	var id 				=  	$(this).attr('id');
+	  			// 	var position 		= 	$(this).offset().top;
+	  			// 	var height			=	$(this).outerHeight();
+	  			// 	var elemPosition	=	scrollTop - position;
+	  			// 	var navElem 		=	$('.main-nav #' + id );
+	  			// 	var isActive		=	navElem.hasClass('active');
+
+
+
+	  			// 	console.log("Elem Position: " + Math.abs(elemPosition), " Height:" + (elemPosition - height))
+	  			// 	if ( id 
+	  			// 		&& !isActive
+	  			// 		&& Math.abs(elemPosition) >= 0 
+	  			// 		&& elemPosition - height < 0 
+	  			// 	)
+	  			// 	{
+	  			// 		// $('.active').removeClass('active');
+	  			// 		$( navElem ).addClass('active');
+	  			// 	}else
+	  			// 	{
+	  			// 		$( navElem ).removeClass('active');
+	  			// 	}
+	  			// })
+
 	  			
 	  		}
 	  	});
