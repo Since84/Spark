@@ -1,0 +1,14 @@
+
+// Variable
+$containerwidth: 1200px;
+
+$red: #f00;
+
+@mixin button( $height ) {
+	display: inline-block;
+	height: $height;
+	width: 2 * $height;
+	background: white;
+	text-align: center;
+	padding: 10px;
+}

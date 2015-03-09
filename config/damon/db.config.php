@@ -43,6 +43,21 @@
 
 		define( 'SITE_SLUG', 'tap' );
 
+	} elseif ( strpos( $host, 'newspark.local' ) ){
+
+		/** The name of the database for WordPress */
+		define('DB_NAME', 'newspark');
+
+		/** MySQL database username */
+		define('DB_USER', 'root');
+
+		/** MySQL database password */
+		define('DB_PASSWORD', 'galaxy1');
+
+		define( 'SITE_SLUG', 'newspark' );
+
+		define( 'UPLOADS',  '../wp-content/uploads/' . SITE_SLUG );
+
 	}
 
 	
