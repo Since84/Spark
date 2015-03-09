@@ -8,9 +8,11 @@
 	.content-textwhite {
 		@include medium-body;
 		color: $tan;
+		font-weight: normal;
+		width: 780px;
 	}
 	.pager{
-		width: 900px;
+		width: 1200px;
 		.controls{
 			position: absolute;
 			// height: 250px; /* image's height */
@@ -56,12 +58,12 @@
 		}
 	}
 	.cycle-pager{ 
-		width: 800px;
+		width: 850px;
 		height: 130px;
 		margin-bottom: 60px;
 
 		a {
-			margin: 20px 10px;
+			margin: 20px;
 			width: 115px;
 			height: 115px;
 			display: inline-block;
@@ -112,13 +114,15 @@
 
 	.cycle-slideshow {
 		height: 610px;
+		float: left;
+		position: relative;
 		.cycle-slide {
 		    position:relative;
 		    height:600px;
 		    width:100%;
 		    background: $red;
 		    display: block;
-		    padding: 150px 0;
+		    padding: 320px 0;
 		    background-size: cover;
 
 		    h3{
@@ -140,14 +144,12 @@
 		    	background-position: center center;
 		    	background-repeat: no-repeat;
 		    }
-	    	.photo-cred{
-	    		position: absolute;
-	    		bottom: 40px; 
-	    		right: 40px;
-	    		font-size: 16px;
-	    		font-weight: normal;
-	    		font-style: italic;
-	    	}		
 		}
+		.control-container{
+			width: $containerwidth;
+			@include absolutecenter;
+			z-index: 300;
+		}
+		@include controls;
 	}
 }

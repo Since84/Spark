@@ -43,10 +43,13 @@
                 {{ slide.slide_text }}
 
             </div>
-            <span class="photo-cred">Photo Credit: {{slide.photo_cred}}</span>
-        {% endfor %}       
+            <span class="photo-credit">Photo Credit: {{slide.photo_cred}}</span>
         </div>
-
+        {% endfor %}       
+        <div class="control-container">
+            <div class="controls" id="prev"></div>
+            <div class="controls" id="next"></div>
+        </div>
     </div>
 
 </section>

@@ -1,8 +1,10 @@
 <div class="case-study-frame">
 	<ul class="case-study-nav">
 	</ul>
-	<div class="controls" id="prev"></div>
-	<div class="controls" id="next"></div>
+	<div class="control-container">
+		<div class="controls" id="prev"></div>
+		<div class="controls" id="next"></div>
+    </div>
     <div 	class="cycle-slideshow" 
 		    data-cycle-fx="scrollHorz"
 		    data-cycle-timeout="0"
@@ -19,7 +21,7 @@
 		<span class="close">Back To Main Page</span>
 		<div class="download-icon">
 			<div class="circle">
-				{% include "views/svg/dl_icon.twig" %}
+				{# {% include "views/svg/dl_icon.twig" %} #}
 			</div>
 		</div>
 	</div>

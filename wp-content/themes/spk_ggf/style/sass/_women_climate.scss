@@ -8,6 +8,12 @@
 		margin-bottom: 80px;
 	}
 
+	.center{
+		width: $containerwidth;
+		margin: auto;
+		position: relative;
+	}
+
 	.cycle-slideshow {
 		width: 1000px;
 		height: 250px;
@@ -39,7 +45,7 @@
 		}
 
 		&#prev {
-			left: 120px;
+			left: 0;
 			&:before {
 				content: $arrowleft;
 			}
@@ -49,7 +55,7 @@
 		}
 
 		&#next {
-			right: 120px;
+			right: 0;
 			&:before {
 				content: $arrowright;
 			}

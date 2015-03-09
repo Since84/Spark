@@ -133,37 +133,91 @@ section.case-studies {
 		height: 100%;
 		z-index: 1100;
 		background: $blackopaquelight;
+
 		a {
-			padding: 10px;
+			padding: 0px;
 			text-align: center;
 			display: block;
 			border-bottom: 1px solid $black;
 			height: 80px;
 			position: relative;
 			display: block;
+			transition: .5s all ease-in-out;
+
+			span:not(.icon){
+				opacity: 0;
+				transition: .5s width linear .5s;
+			}
+			.icon{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				max-width: 80px;
+				position: relative;
+				float: left;
+			}
 
 			&:hover, &.cycle-pager-active {
-				background: $teal;
+				.icon{
+					display: block;
+					background-color: $teal;
+					padding: 20px;
+				}
+				// background: $teal;
 				&:after{
 					content: "";
-					display: block;
+					display: inline-block;
 					position: absolute;
 					width: 0;
 					height: 0;
 					border-top: 15px solid transparent;
 					border-bottom: 15px solid transparent;
 					border-left: 15px solid $teal;
-					right: 0;
+					left: 80px;
 					margin: auto;
 					bottom: 0;
 					top: 0;
 					transition: right .25s ease-in-out;
 				}
 			}
+			&:hover {
+				background-color: $blackopaque;
+				a{
+					text-decoration: none;
+					&:hover{
+						background-color: $blackopaque;
+					}
+				}
+				span{
+				}
+			}
 			&.cycle-pager-active:after {
-				right: -14px;
+				// right: -14px;
 			}
 		}
+		&:hover {
+			span:not(.icon){
+				opacity: 1 !important;
+				transition-delay: 0;
+				color: $teal;	
+				float: left;
+				padding: 30px 0 0 30px;	 
+				width: 250px;
+				text-align: left;
+
+			}
+			a{
+				width: 350px;
+				background: $blackopaquelight;
+				text-decoration: none;
+				@include medium-body;
+				font-size: 16px;
+				&:hover{
+					background: $blackopaque;
+				}
+			}			
+		}
+
 		img{
 			max-height: 40px;
 			max-width: 40px;
@@ -224,6 +278,7 @@ section.case-studies {
 
 	.cycle-slideshow {
 		width: 100%;
+		min-width: $containerwidth;
 		padding-left: 50px;
 		background: $red;
 	}
@@ -253,21 +308,21 @@ section.case-studies {
 
 			h2{
 				@include h1;
-				width: 550px;
+				width: 500px;
 				margin: auto;
 				margin-bottom: 40px;
 
 			}
 
 			p {
-				width: 550px;
+				width: 500px;
 				margin: auto;
 				@include medium-body;
 				display: block;
 				font-weight: 500;
 				text-align: left;
 				margin-bottom: 40px;
-				line-height: 1.2em;
+				line-height: 1.5em;
 			}
 
 			@include circle;
@@ -276,6 +331,7 @@ section.case-studies {
 				width: 130px;
 				height: 130px;
 				margin: 40px auto;
+				background-size: 40% auto;
 				img{
 					max-width: 60px;
 					max-height: 60px;
@@ -284,8 +340,15 @@ section.case-studies {
 			}
 
 			.lessons {
-				width: 550px;
+				width: 500px;
 				margin: auto;
+				text-align: left;
+				h3{
+					@include medium-body;
+					text-transform: uppercase;
+					font-size: 20px;
+					margin-bottom: 20px;
+				}
 				.lesson-pager{
 					display: inline-block;
 					vertical-align: top;
@@ -303,6 +366,8 @@ section.case-studies {
 					margin-bottom: 30px;
 					background: $orange;
 					cursor: pointer;
+					text-align: center;
+
 					span{
 						@include medium-body;
 						width: 1em;
@@ -311,13 +376,13 @@ section.case-studies {
 						font-weight: 500;
 						color: $tan;
 					}
-					.selected{
+					.selected, &:hover{
 						background: $red;
 					}
 				}
 				.selected-block {
 					display: inline-block;
-					width: 450px;
+					width: 300px;
 					height: 200px;
 					margin-left: 20px;
 					text-align: left;
@@ -342,6 +407,7 @@ section.case-studies {
 						background-position: top left;
 						background-repeat: no-repeat; 
 						padding-left: 50px;
+						padding-top: 30px;
 						&.first {
 							background-image: $selectedone;
 						}
@@ -394,6 +460,12 @@ section.case-studies {
 				font-weight: 500;
 				line-height: 1.75em;
 			}
+
+			.photo-credit{
+				bottom: 120px;
+				right: 30px;
+			}
+
 		}
 	}
 
@@ -419,11 +491,20 @@ section.case-studies {
 			top: 0;
 			bottom: 0;
 			margin: auto;
-			.circle:after{
-				font-size: 8px !important;
-				font-weight: normal;
-				z-index: 2000;
-				display: block;
+						
+			.circle {
+				background-size: 40% auto;	
+				&:after{
+					font-size: 8px !important;
+					font-weight: normal;
+					z-index: 2200;
+					display: block;
+				}
+			}
+			&:hover{
+				.circle{
+					background-size: 40% auto;
+				}
 			}
 		}
 
@@ -437,7 +518,10 @@ section.case-studies {
 			&:hover, &:hover:before{
 				color: $black; 
 			}
+			.download-icon{
+			}
 		}
+
 	}
 
 }

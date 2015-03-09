@@ -2,7 +2,7 @@
 
 	// Spark Application
 	var AppView = Backbone.View.extend({
-		el: 'body',
+			el: 'body',
 
 	  		// Default Variables for Application
 	  		defaults: function() {
@@ -37,6 +37,7 @@
 	  				self.showNav();
 	  			})
 				self.setNav();
+				$('input[type="checkbox"]').parent().addClass('checked');
 	  		},
 
 	  		initPanelNav: function(){ // Navigation
@@ -55,6 +56,12 @@
 	  		},
 	  		toggleChecked: function(elem){
 	  			$(elem.target).parent().toggleClass('checked');
+	  			if ( $('input[type="checkbox"]').attr('checked') )
+	  			{
+	  				$('input[type="checkbox"]').attr('checked',false);
+	  			}else{
+	  				$('input[type="checkbox"]').attr('checked',true);
+	  			}
 	  		},
 	  		openCase: function(e){
 	  			var index = $(e.target).parents('.case').data('index');
@@ -156,6 +163,10 @@
 	  			// })
 
 	  			
+	  		},
+	  		downloadReport: function(){
+	  			e.preventDefault();  //stop the browser from following
+    			window.location.href = '/wp-content/uploads/2015/03/Climate-Justice-and-Womens-Rights2.pdf';
 	  		}
 	  	});
 

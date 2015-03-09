@@ -11,13 +11,38 @@
 </div>
 
 <div class="footer-middle">
-	<div class="middle-logo-block">
-		{% for logo in footer.get_field("footer_logo")%}	
-		<a class="footer-logo" href="{{logo.link}}">
-			<img class="default" src="{{logo.logo_default.url}}"/>
-			<img class="hover" src="{{logo.logo_hover.url}}"/>
-		{% endfor %}
-		</a>
+	<div class="container">
+		<div class="middle-logo-block">
+			{% for logo in footer.get_field("footer_logo")%}	
+			<a class="footer-logo" href="{{logo.link}}" target="_blank">
+				<img class="default" src="{{logo.logo_default.url}}"/>
+				<img class="hover" src="{{logo.logo_hover.url}}"/>
+			{% endfor %}
+			</a>
+		</div>
+		<div class="social-links">
+			<a href="{{ footer.blog }}" target="_blank" class="blog">
+				<div class="social-icon">
+					<div class="circle">
+						
+					</div>
+				</div>
+			</a>
+			<a href="{{ footer.facebook }}" target="_blank" class="facebook">
+				<div class="social-icon">
+					<div class="circle">
+				
+					</div>
+				</div>
+			</a>
+			<a href="{{ footer.twitter }}" target="_blank" class="twitter">
+				<div class="social-icon">
+					<div class="circle">
+						
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
 </div>
 

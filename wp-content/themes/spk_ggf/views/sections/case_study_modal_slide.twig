@@ -1,4 +1,4 @@
-<section class="case-study-slide" data-cycle-pager-template="<a href='#' data-index='{{ loop.index }}' class='{{ case.title|replace({" ":"-"}) }}'><img src='{{ case.icon.url }}'/></a>" data-index="{{ loop.index }}">
+<section class="case-study-slide" data-cycle-pager-template="<a href='#' data-index='{{ loop.index }}' class='{{ case.title|replace({" ":"-"}) }}'><span class='icon'><img src='{{ case.icon.url }}'/></span><span>{{ case.title }}</span></a>" data-index="{{ loop.index }}">
 	<div class="case-study-info">
 		<div class="case-study-content">
 			<span class="header circle">
@@ -9,8 +9,9 @@
 			</h2>
 			<p>{{ case.description }}</p>
 			<div class="lessons">
+				<h3>Selected Lessons</h3>
 				<ul class="lesson-pager">
-					<li class="circle" data-index="first"><span>1</span></li>
+					<li class="circle selected" data-index="first"><span>1</span></li>
 					<li class="circle" data-index="second"><span>2</span></li>
 				</ul>
 				<ul class="selected-block">

@@ -10,7 +10,9 @@
 		margin: 80px auto;
 		width: 480px;
 		height: 480px;
+		z-index: 1000;
 	}
+
 	.container {
 		min-height: 100vh;
 	}
@@ -41,10 +43,9 @@
 		}
 	}
 
-	.photo-credit {
-		@include photo-credit-block;
-	}
-
 	@include download_icon;
-
+	.download-icon {
+		z-index: 1000;
+		position: fixed;
+	}
 }

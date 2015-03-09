@@ -40,6 +40,80 @@ footer{
 	height: 170px;
 	background-size: cover;
 	padding: 40px 0;
+	width: 100%;
+	min-width: $containerwidth;
+
+	.container{
+		width: $containerwidth;
+		margin: auto;  
+	}
+
+	.middle-logo-block{
+		width: 550px;
+		float: left;
+	}
+	@include social-icon;
+	.social-links{
+		width: 500px;
+		float: right;
+		.social-icon{
+			position: relative;
+			top: 0;
+			right: 0;
+			.circle{
+				background-color: $green;
+			}
+		}
+		a {
+			display: inline-block;
+			margin-right: 40px;
+			.circle:before{
+				content: '';
+				display: block;
+				position: absolute;
+				width:2em;
+				height: 2em;
+				background-repeat: no-repeat;
+				background-position: center;
+				@include absolutecenter;
+				z-index: 100;
+				transition: .25s background-color ease-in-out;
+			}
+			&.twitter .circle:before{
+				background-image: $twitter;
+			}
+			&.facebook .circle:before{
+				background-image: $facebook;
+			}
+			&.blog .circle:before{
+				background-image: $blog;
+			}
+			&:hover .circle{
+				background-color: $black;
+				&:before{
+					background-image: $socialarrow;
+					-webkit-transform:rotate(180deg);
+    				-moz-transform:rotate(180deg);
+					background-position: top center;
+					margin-top: 10px;
+				}
+				&:after{
+					color: $teal;
+					margin-top: 50px;
+				}
+			}
+			&.twitter:hover .circle:after{
+				content: "Twitter";
+			}
+			&.facebook:hover .circle:after{
+				content: "Facebook";
+			}
+			&.blog:hover .circle:after{
+				content: "Blog";
+			}
+		}
+	}
+
 }
 .footer-bottom{
 	background:url('/wp-content/uploads/2015/02/ggf-scroller-r2_12.png') no-repeat;
@@ -97,10 +171,6 @@ footer{
 	}
 	&:hover .hover{ opacity: 1; }
 	&:hover .default{ opacity: 0; }
-}
-.middle-logo-block{
-	width: $containerwidth;
-	margin: auto;
 }
 
 section.resources-media{
@@ -163,7 +233,7 @@ section.resources-media{
 	}
 	.slide.resources{
 		background: url(images/resource_bg.png);
-		background-size: cover;
+		background-size: 100% auto;
 
 		.section-header{
 			border-bottom: 2px solid $gold;
@@ -201,7 +271,7 @@ section.resources-media{
 		    background-color: $goldopaque;
 		    color: white;
 		    font-weight: 500;
-		    padding: 10px 15px;
+		    padding: 20px 24px;
 		    border-radius: 50px;
 		    float: left;
 		}
