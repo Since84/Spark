@@ -13,6 +13,7 @@
 	}
 	.pager{
 		width: 1200px;
+		height: 200px;
 		.controls{
 			position: absolute;
 			// height: 250px; /* image's height */
@@ -113,16 +114,16 @@
 	}
 
 	.cycle-slideshow {
-		height: 610px;
+		height: 510px;
 		float: left;
 		position: relative;
 		.cycle-slide {
 		    position:relative;
-		    height:600px;
+		    height:510px;
 		    width:100%;
 		    background: $red;
 		    display: block;
-		    padding: 320px 0;
+		    padding: 200px 0;
 		    background-size: cover;
 
 		    h3{

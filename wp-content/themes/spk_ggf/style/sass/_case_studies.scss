@@ -12,6 +12,8 @@ section.case-studies {
 			@include medium-body;
 			font-weight: 500;
 			line-height: 40px;
+			max-width: 80%;
+			margin: auto;
 			margin-bottom: 80px;
 		}
 	}
@@ -125,6 +127,8 @@ section.case-studies {
 		transition: transform 0.4s;
 	}
 
+	@include close-button(".case-studies-close");
+
 	.case-study-nav {
 		position: fixed;
 		left: 0;
@@ -133,13 +137,16 @@ section.case-studies {
 		height: 100%;
 		z-index: 1100;
 		background: $blackopaquelight;
-
+		@include top-fa-button(".back", $fa-arrow-circle-o-left);
 		a {
 			padding: 0px;
 			text-align: center;
 			display: block;
 			border-bottom: 1px solid $black;
+			color: white;
 			height: 80px;
+			overflow: hidden;
+			width: 80px; 
 			position: relative;
 			display: block;
 			transition: .5s all ease-in-out;
@@ -198,8 +205,7 @@ section.case-studies {
 		&:hover {
 			span:not(.icon){
 				opacity: 1 !important;
-				transition-delay: 0;
-				color: $teal;	
+				transition-delay: 0;	
 				float: left;
 				padding: 30px 0 0 30px;	 
 				width: 250px;
@@ -211,11 +217,21 @@ section.case-studies {
 				background: $blackopaquelight;
 				text-decoration: none;
 				@include medium-body;
-				font-size: 16px;
+				font-size: 15px;
+				line-height: 1.3em;
 				&:hover{
 					background: $blackopaque;
+					color: $teal;
 				}
 			}			
+		}
+
+		.back{
+			display: block;
+			width: 80px !important;
+			a {
+				width: 80px !important;
+			}
 		}
 
 		img{
@@ -279,32 +295,40 @@ section.case-studies {
 	.cycle-slideshow {
 		width: 100%;
 		min-width: $containerwidth;
+		height: 100vh;
 		padding-left: 50px;
 		background: $red;
+		overflow-y: scroll;
 	}
 
 	.case-study-slide{
 		white-space: nowrap;
+		display: block;
+		height: 100%;
 		& > * {
 			white-space: normal;
 		}
 
 		.case-study-content{
-			@include absolutecenter;
-			height: 850px;
+			// @include absolutecenter;
+			height: 100%;
 		}
 
 		.case-study-info{
 			display:inline-block;
-			height: 100vh;
+			min-height: 100%;
 			width: 50%;
-			padding-left: 90px;
+			padding-left: 100px;
 			background-image: url('images/case_studies_background.png');
 			background-size: cover;
 			text-align: center;
 			padding-bottom: 100px;
-			overflow: scroll;
 			position: relative;
+
+			.case-study-content{
+				@include absolutecenter;
+				height: 900px;
+			}
 
 			h2{
 				@include h1;
@@ -420,19 +444,24 @@ section.case-studies {
 			}
 		}
 		.case-study-feature {
+			position: absolute;
 			display: inline-block;
 			vertical-align: top;
-			height: 100vh;
+			height: 100%;
 			width: 50%;
 			background: $red;
 			padding: 20px;
 			padding-top: 290px;
 			padding-bottom: 150px;
 			margin-left: -4px;
+			right: 0;
 			color: $tan;
 			background-size: cover;
-			overflow: scroll;	
 			@include medium-body;
+			.case-study-feature-content{
+				@include absolutecenter;
+				height: 400px;
+			}
 			.feature-name{
 				color: $gold;
 				text-align: center;

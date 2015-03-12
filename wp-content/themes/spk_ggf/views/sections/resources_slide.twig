@@ -6,10 +6,12 @@
 	<ol>
 {% else %}
 	<li>
-		<span class="title">{{ resource.name }}</span>
-		<span class="caption">{{ resource.caption }}</span>
+		<div>
+			<span class="title">{{ resource.name }}</span>
+			<span class="caption">{{ resource.caption }}</span>
+		</div>
 	</li>
 {% endif %}
 {% if loop.last %}
-</ol>
+	</ol>
 {% endif %}

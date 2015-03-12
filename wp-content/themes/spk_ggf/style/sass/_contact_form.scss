@@ -191,32 +191,5 @@
 		label.checked:before { letter-spacing: 5px; } /* allow space for check mark */
 	}
 	
-	.close{
-		display: block;
-		top: 40px;
-		right: 10px;
-		width: 90px;
-		height: 90px;
-		position: absolute;
-		z-index: 1000;
-		color: $tan;
-		@include medium-body;
-		font-size: 18px;
-		line-height: 2.4em;
-		&:before{
-			content:"";
-			background: $closewhite no-repeat;
-			width: 50px;
-			height: 50px;
-			font-size: 40px;
-			display: block;
-			margin: auto;
-		}
-		&:hover{
-			color: $gold;
-			&:before{
-				background-image: $close;
-			}
-		}
-	}
+	@include close-button(".close");
 }
