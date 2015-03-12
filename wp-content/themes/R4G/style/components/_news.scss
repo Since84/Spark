@@ -30,12 +30,16 @@
 	background: $black;
 	.slides{
 		@include container;
+		width: 100%;
 		height: 625px;
 		padding: 0;
 		.slide {
 			width: 100%;
 			height: 100%;
 			background-size: cover;
+			.container{
+				height: 100%;
+			}
 			.content{ 
 				position: absolute; 
 				display: block;
@@ -44,6 +48,9 @@
 				width: 610px;
 				a{ 
 					text-decoration: none; color: white; 
+				}
+				a:hover{
+					color:white;
 				}
 				hgroup {
 					background: $purple2opaque;
@@ -107,10 +114,15 @@
 			margin-right: 35px;
 			background-size: auto 100%;
 			span{
-				padding: 5px;
-				background: $purple4opaque;
+				padding: 0px;
+				// background: $purple4opaque;
+				background: rgba(75,1,73,0.7);
 				color: white;
+				position: absolute;
+				width: 97px;
+				text-align: center;
 			}
+
 		}
 
 		h4{
@@ -183,6 +195,10 @@
 		padding: 0;
 	}
 	a { text-decoration: none; color: $black; }
+	a:hover {
+		color: #ca02c5;
+		font-weight: 100;
+	}
 	li { display: inline-block; }
 	.thumbnail {
 		display: inline-block;
@@ -217,8 +233,8 @@
 		color: $purple2;
 	}
 	h4 {
-		width: 100%;
-		display: block;
+		
+		display: inline-block;
 		color: white;
 		background: $purple3;
 		text-transform: uppercase;

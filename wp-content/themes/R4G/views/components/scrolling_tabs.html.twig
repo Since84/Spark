@@ -14,14 +14,16 @@
     data-cycle-next=".tab-pager .next"
     data-cycle-slides="> ul > .slide"
     data-cycle-pager="#thumbnail-pager"
+    data-cycle-auto-height="container"
     data-cycle-pager-template="">
+
 	<ul>
 	{% for slide in post.get_field('issue_area') %}
 		{% include content_template %}
 	{% endfor %}
 	</ul>
 	<ul class="tab-pager">
-		<li class="prev">< Previous Issue</li>
+		<li class="prev">Previous Issue</li>
 		<li class="next">Next Issue ></li>
 	</ul>
 </section>

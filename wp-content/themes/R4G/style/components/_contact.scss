@@ -1,6 +1,6 @@
 section.contact{
 	background: $stronggray;
-
+	
 	&.our-mission{
 		background: $lightgray;
 	}
@@ -16,7 +16,7 @@ section.contact{
 	}
 	ul.info {
 		text-align: center;
-		padding: 20px 0;
+		padding: 30px 0 20px 0;
 		width: 1000px;
 		margin: auto;
 		li {
@@ -34,9 +34,22 @@ section.contact{
 		text-align: center;
 		width: 1000px;
 		margin: auto;
+		color: $black2;
 	}
+	// p.send-message{
+	// 	color: $purple4;
+	// 	text-transform: uppercase;
+	// 	color: #81026e;
+	// 	text-transform: uppercase;
+	// 	text-align: left;
+	// 	vertical-align: center;
+	// 	/* vertical-align: middle; */
+	// 	padding-top: 30px;
+	// 	font-weight: bold;
+	// }
 	input, textarea{
-		background: white;
+		background: $lightgray;
+		font-style: italic;
 		padding: 20px;
 	}
 	textarea{

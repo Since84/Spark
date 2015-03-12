@@ -15,13 +15,14 @@
     data-cycle-slides="> ul > .slide"
     data-cycle-pager="#thumbnail-pager"
     data-cycle-pager-template="">
+
 	<ul>
 	{% for slide in post.get_field(slide_field) %}
 		{% include content_template %}
 	{% endfor %}
 	</ul>
 	<ul class="tab-pager">
-		<li class="prev">< Previous Issue</li>
-		<li class="next">Next Issue ></li>
+		<li class="prev">Previous Team Memeber</li>
+		<li class="next">Next Team Member</li>
 	</ul>
 </section>

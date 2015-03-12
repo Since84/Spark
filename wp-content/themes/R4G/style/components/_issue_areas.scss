@@ -92,6 +92,7 @@
 	max-height: 0;
 	overflow: hidden;
 	transition: 1s max-height ease-in-out;
+	position: relative;
 
 	&.cycle-slideshow{
 		max-height: 5000px;
@@ -105,6 +106,7 @@
 	}
 	.tab-content-group {
 		@include container;
+		
 	}
 	h2 {
 		@include large_header;
@@ -153,13 +155,18 @@
 	.statistic-content {
 		padding: 60px 0;
 		p {
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 		}
 	}
 	.tab-pager{
 		@include container;
-		padding: 0;
-		padding-bottom: 100px;
+		width: 1230px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding-bottom:40px;
 		display: block;
 		white-space: nowrap;
 		color: $purple4;
@@ -183,4 +190,6 @@
 .file-feed {
 	@include file_downloader; 
 }
-
+// .view-pdf{
+// 			color: red;
+// 		}

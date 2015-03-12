@@ -20,14 +20,16 @@
 		text-transform: uppercase;
 		display: inline-block;
 	}
+	h4:hover{
+		color: #21e3db;
+	}
 
 	h5 {
 		@include h7;
 		font-style: italic;
 		margin-bottom: .5em;
 	}
-
-	p {
+		p {
 		@include short-body;
 		line-height: 1em;
 	}
@@ -42,8 +44,11 @@
 		font-size: 16px;
 		color: $purple5;
 		text-decoration: none;
-		display: block;
-		margin-top: 10px;
+		// display: block;
+		// margin-top: 10px;
+		position: absolute;
+		bottom: 5px;
+		left: 27px;
 		&:before {
 			content: $circlerightarrow;
 			// display: inline-block;
@@ -51,7 +56,7 @@
 			margin-right: 10px;
 		}
 		&:hover, &:hover:before{
-			color: $purple6;
+			color: #21e3db;
 		}	
 	}
 

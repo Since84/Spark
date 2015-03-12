@@ -207,7 +207,20 @@
 		text-align: center;
 		background: $lightgray;
 		box-shadow: 0 0 10px 0 #888; 
-
+		// div{
+			
+		// 	color:$purple3;
+		// 	border-top:2px solid $purple4;
+		// 	position: absolute;
+		// 	width: 75%;
+		// 	bottom: 0;
+		// 	padding: 5px;
+		// 	text-transform: uppercase;
+		// 	font-size: 18px;
+		// 	font-weight: bold;
+		// 	font-family: 'franklin-gothic-urw-comp';
+		// }
+		
 		a {
 			@include h6;
 			font-size: 20px;
@@ -215,9 +228,20 @@
 			margin-top: 20px;
 			line-height: 1em;
 			display: block;
+		}
+		.view-pdf{
+			bottom: 0;
+			border-top: 2px solid $purple3;
+			color: $purple3;
+			font-family: "franklin-gothic-urw-comp";
+			font-size: 18px;
+			margin: auto;
+			position: absolute;
+			text-transform: uppercase;
+			visibility: hidden;
+			width: 75%;
 			
 		}
-
 		&:not(:nth-child(3n)){
 			margin-right: 100px;
 		}
@@ -260,7 +284,6 @@
 			font-family: "FontAwesome";
 			margin-bottom: 10px; 
 		} 
-
 		&:hover{
 			// a::after{
 			// 	content: "";
@@ -273,6 +296,10 @@
 			// 	right: 0;
 			// 	margin: auto;
 			// }
+				
 		}
+	}	
+	.file:hover .view-pdf{
+			visibility: visible;
 	}
 }

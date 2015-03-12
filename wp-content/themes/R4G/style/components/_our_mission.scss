@@ -7,6 +7,7 @@ section.our-mission{
 		color: $teal;
 		background-size: cover;
 		padding: 108px;
+		line-height: 240px;
 	}
 
 	.container{
@@ -104,7 +105,7 @@ section.mission-content{
 }
 
 section.resolution-doc {
-	background-size: auto 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: $black;
@@ -135,12 +136,13 @@ section.resolution-doc {
 			text-decoration: none;
 			text-align: center;
 			width: 200px;
-			padding: 25px;
+			padding: 20px;
 			text-transform: uppercase;
 			box-shadow: 0 0 .5em #333;
 			transition: .5s all ease-in;
 			&:hover {
 				box-shadow: none;
+				background: $purple6;
 			}
 		}
 		.description{
@@ -194,7 +196,7 @@ section.resolution-content{
 		}		
 		strong {
 			font-weight: 600;
-			line-height: .8em;
+			line-height: 1.1em;
 			display: block;
 			margin-bottom: 5px;
 		}

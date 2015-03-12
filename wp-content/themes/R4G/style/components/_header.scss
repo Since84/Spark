@@ -34,7 +34,7 @@ header.spark-header{
 
 	.right-container {
 		@include column(4);
-		@include push(5);
+		@include push(3.5);
 	}
 	.social{ 
 		text-align: right;
@@ -62,7 +62,8 @@ header.spark-header{
 			&.facebook a::before { content: $facebook; }
 			&.mail a::before { content: $mail; }
 			&.donate a { 
-				background: $stronggray;
+				background: #404040;
+				color: #a6048e;
 				padding: 25px 40px;
 				display: inline-block;
 				&::hover{
@@ -72,7 +73,7 @@ header.spark-header{
 					content: $heart;
 					display: inline-block;
 					font-family: "FontAwesome";
-					color: $purple4;
+					color: #a6048e;
 				}
 			}
 		}

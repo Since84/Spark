@@ -10,8 +10,11 @@
 <nav class="full-width-nav spark-region">
 	<ul class="container">
         {% for item in nav.get_items %}
-                <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
-                    {% if item.get_children %}
+                <li class="nav-main-item {{item.classes | join(' ')}}">
+
+                {% if item.get_children %}
+                <span class="nav-main-link">{{item.title}}</span>
+                   
                         <div class="nav-drop">
                           <ul>
                           {% for child in item.get_children %}
@@ -19,6 +22,8 @@
                           {% endfor %}
                           </ul>
                         </div>
+                        {% else %}
+                        <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
                      {% endif %}
                 </li>
         {% endfor %}
