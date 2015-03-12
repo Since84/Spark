@@ -1,11 +1,13 @@
 
 .scrolling-tabs{
 	background: $stronggray;
-	padding: 20px #{$margin}px;
+	padding: 0px #{$margin}px;
 	& > h2, .tabs, .tab-content ul { @include container; }
-	& > h2{ margin: #{$margin}px auto; @include h2; text-align: center; color: $purple3; }
+	& > h2{ margin: 0px auto; @include h2; text-align: center; color: $purple3; padding:60px;}
 	.tabs{
-		padding: #{$margin}px #{$margin}px; 
+		// padding: #{$margin}px #{$margin}px; #{$margin}px
+		padding: 0px 0px 60px 0px;
+		text-align: center;
 		.team-member{
 			display: inline-block;
 			position: relative;
@@ -244,8 +246,10 @@
 				vertical-align: top;
 				width: 330px;
 				margin-left: 30px;
+				margin-bottom: 50px;
 				h4{
-					font-weight: bold;
+					color: $purple5;
+					// font-weight: bold;
 				}
 			}
 		}

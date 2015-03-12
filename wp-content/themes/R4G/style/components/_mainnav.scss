@@ -21,24 +21,24 @@ nav.full-width-nav{
 		// margin-right: 80px;
 		@include h6;
 
-		a{
+		a, span{
 			display: block;
 			text-decoration: none;
 			color: white;
 		}
 
-		&:hover > a {
+		&:hover > a, &:hover > span{
 			color: $teal; 
 		}
 
-		& > a {
-			padding: 19px 40px;
+		& > a, span {
+			padding: 19px 28px;
 		}
 
 		&.current_page_item{
 			background: $purple1;
 			border-bottom: 5px solid $purple3;
-			a { color: $teal; }
+			a, span { color: $teal; }
 
 		}
 
@@ -58,6 +58,7 @@ nav.full-width-nav{
 			ul { 
 				// position: absolute;
 				bottom: 0;
+				padding: 0 88px;
 			}
 			li{
 				display: inline-block;

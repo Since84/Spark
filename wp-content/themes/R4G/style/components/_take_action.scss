@@ -38,6 +38,10 @@
 			margin-right: 20px;
 			@include h6;
 		}
+		a:hover{
+			background: #ab01a7;
+			font-weight: 100;
+		}
 		span {
 			display: inline-block;
 			vertical-align: top;
@@ -62,6 +66,7 @@
 	.slide{
 		padding: 0;
 		height: 415px;
+		vertical-align: top;
 		.image-head{
 			display: block;
 			width: 100%;
@@ -79,6 +84,9 @@
 			@include h6;
 			color: white;
 		}
+		h5:hover{
+			font-weight: 900;
+		}
 		span{
 			background: $purple1;
 			@include short-body;
@@ -88,6 +96,9 @@
 			padding: 20px 25px;
 			font-size: 18px;
 			color: white;
+		}
+		span:hover{
+			background: #6b0269;
 		}
 	}
 }

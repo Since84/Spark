@@ -1,4 +1,12 @@
+.view-full-image{
+	p{
+		color: #ff00ff;
+		width: 1000px;
+		text-align: right;
+		margin:auto;
 
+	}
+}
 .highlight-gallery{
 	background: $lightgray;
 	h1{
@@ -12,7 +20,7 @@
 		margin: auto;
 		text-align: center;
 		width: 1000px;
-		margin-top: 40px;
+		margin-top: 4px;
 		.cycle-slide{
 			width: 100%;
 		}
@@ -20,6 +28,9 @@
 			width: 100%;
 			height: auto;
 			border: 10px solid $black;
+		}
+		.tab-pager{
+			display: inline-block;
 		}
 		.text {
 			position: absolute;

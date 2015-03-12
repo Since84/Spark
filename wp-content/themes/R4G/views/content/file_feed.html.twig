@@ -2,15 +2,15 @@
 	{% if header %}
 	<hgroup>
 		<h2>{{ header }}</h2>
-	{% if header_caption %}<span>{{ header_caption }}</span>{% endif %}
+		{% if header_caption %}<span>{{ header_caption }}</span>{% endif %}
 	</hgroup>
 	{% endif %}
 	{% if filters %}
-		{% include '/views/components/filters.twig' %}
+	{% include '/views/components/filters.twig' %}
 	{% endif %}
 	<ul class="slides">
-	{% for file in content.get_field('download_files') %}
+		{% for file in content.get_field('download_files') %}
 		{% include slide_template %}
-	{% endfor %}
+		{% endfor %}
 	</ul>
 </section>

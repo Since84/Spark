@@ -151,9 +151,10 @@ footer.spark_region{
 			vertical-align: top;
 			h3 { @include h6; margin-bottom: 20px; }
 			li { border: none !important; }
-			a{ color: white; }
+			a{ color: #21e3db; }
+			a:hover{color:white;}
 		}
-
+		
 	}
 	.footer-bottom {
 		background: $black;

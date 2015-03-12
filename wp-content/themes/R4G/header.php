@@ -33,6 +33,7 @@
  	$socialContext = array(
 							'twitter' 	=> get_option('twitter_link')
 							,'facebook'	=> get_option('facebook_link')
+							,'email'	=> get_option('email_link')
 							,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
 						);
  	$context['action'] = Timber::compile('/views/components/social.html.twig', $socialContext);

@@ -6,6 +6,7 @@
             {{ header }}
         </h1>
     {% endif %}
+    
     <div 	id="cycle-1" 
     		class="cycle-slideshow" 
     		data-cycle-slides="> div" 
@@ -18,6 +19,7 @@
     		style="position: relative;">
 
     	{% for slide in feed %}
+
     	<div class="cycle-slide">
             <div class="text">
                 <span class="caption">{{ slide.caption }}</span>
@@ -25,33 +27,39 @@
             </div>
     		<img src="{{ slide.image.url }}"/>
     	</div>
-    	{% endfor %}    
+    	{% endfor %} 
+         <ul class="tab-pager" id="slideshow-2">
+        <li class="cycle-prev">Previous Issue</li>
+        <li class="cycle-next">Next Issue </li>
+    </ul>    
 </div>
-
+<ul class="tab-pager" id="slideshow-2">
+        <li class="cycle-prev">Previous Issue</li>
+</ul> 
 <div id="thumbnail-pager">
     <div 	id="cycle-2" 
     		class="cycle-slideshow" 
     		data-cycle-timeout="0" 
     		data-cycle-prev="#slideshow-2 .cycle-prev" 
     		data-cycle-next="#slideshow-2 .cycle-next" 
+            data-cycle-pager=""
     		data-cycle-caption="#slideshow-2 .custom-caption" 
     		data-cycle-fx="carousel" 
     		data-cycle-carousel-visible="5" 
     		data-cycle-carousel-fluid="true" 
     		data-allow-wrap="false" 
     		>
-
-
         {% for slide in feed %}
         <div class="cycle-slide">
             <img src="{{ slide.image.sizes.thumbnail }}"/>
             
         </div>
         {% endfor %}  
-        
     </div>
 </div>
-
+<ul class="tab-pager" id="slideshow-2">
+            <li class="cycle-next">Next Issue </li>
+</ul> 
 <script>
 
 	jQuery(document).ready(function($){
