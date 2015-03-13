@@ -9,13 +9,14 @@
 }
 section.moving-forward{ 
 	background-color: $orange;
-	height: 100vh;
+	height: 920px;
 }
 // .moving_forward .circle{
 // 	margin: 110px auto 75px;
 // }
-.moving-forward .circle-content{
+.moving-forward .circle .circle-content{
 	width: 64%;
+	width: 360px;
 }
 
 div.moving-forward{
@@ -55,10 +56,15 @@ div.moving-forward{
     content: counter(step-counter);
     margin-right: 25px;
    	font-family: "lato";
-    font-size: 75%;
+    font-size: 24px;
     background-color: $red;
     color: #fbaf22;
     font-weight: bold;
-    padding: 10px 15px;
+	padding: 20px;
+  	border-radius: 50px;
+  	width: 20px;
+  	height: 20px;
+  	display: inline-block;
     border-radius: 50px;
+    text-align: center;
 }

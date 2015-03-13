@@ -1,15 +1,11 @@
 <section class="resources-media">
+	<span class="close-modal"></span>
 	<ul class="modal-nav">
 		<a href='#media-slide' data-index='2' class='media'><span>In the Media</span></a>
 		<a href='#resources-slide' data-index='1' class='resources'><span>Resources</span></a>
 	</ul>
 	<ul class="slides">
     	<li id="media-slide" class="slide media">
-			<div class="download-icon">
-				<div class="circle">
-					{% include "views/svg/dl_icon.twig" %}
-				</div>
-			</div>
     		<h2>In the Media</h2>
     		<ol>
 		      	{% for media in footer.get_field('media') %}
@@ -22,9 +18,15 @@
 		      	{% for resource in footer.get_field('resources') %}
 		    		{% include 'views/sections/resources_slide.twig' %}
 		    	{% endfor %}
+		    	<a class="load-more" href="#">Load More</a>
     	</li>
 	</ul>
 	<div class="modal-footer">
 		<a class="close">Back To Main Page</a>
+		<div class="download-icon">
+			<div class="circle">
+				{% include "views/svg/dl_icon.twig" %}
+			</div>
+		</div>
 	</div>
 </section>

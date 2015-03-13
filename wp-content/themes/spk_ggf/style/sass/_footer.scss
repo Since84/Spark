@@ -9,10 +9,10 @@ footer{
 	height: 82px;
 	background-size: cover;
 	.top-logo-block{
-		max-width: $containerwidth;
+		width: 900px;
 		margin: auto;
 		padding: 25px;
-	}
+	} 
 
 	.modal-trigger{
 		cursor: pointer;
@@ -44,7 +44,7 @@ footer{
 	min-width: $containerwidth;
 
 	.container{
-		width: $containerwidth;
+		width: 980px;
 		margin: auto;  
 	}
 
@@ -54,19 +54,22 @@ footer{
 	}
 	@include social-icon;
 	.social-links{
-		width: 500px;
+		width: 340px;
 		float: right;
 		.social-icon{
 			position: relative;
 			top: 0;
 			right: 0;
+			width: 80px;
+			height: 80px;
+			vertical-align: middle;
 			.circle{
 				background-color: $green;
 			}
 		}
 		a {
 			display: inline-block;
-			margin-right: 40px;
+			margin-right: 30px;
 			.circle:before{
 				content: '';
 				display: block;
@@ -175,6 +178,7 @@ footer{
 
 section.resources-media{
 	@include modal;
+	@include close-button(".close-modal");
 	.slides{
 		overflow: scroll;
 		height: 100%;
@@ -245,6 +249,7 @@ section.resources-media{
 			color: $gold;
 			width: 900px;
 			@include medium-body;
+			transition: 1s height ease-in-out, 1s margin-bottom ease-in-out, 1s padding-bottom ease-in-out;
 		}
 		ol{
 			margin-left: 0;
@@ -254,12 +259,20 @@ section.resources-media{
 			padding-left: 15px;
 			padding-bottom: 50px;
 			margin: auto;
+			transition: 1s height ease-in-out, 1s margin-bottom ease-in-out, 1s padding-bottom ease-in-out;
 		}
 		li{
 			counter-increment: step-counter;
 			font-family: "lato";
 			font-size: 24px;
+			margin-bottom: 60px;
 			/* width: 914px; */
+
+			& > div{
+				display: inline-block;
+				width: 800px
+			}
+			
 		}
 
 		li::before{
@@ -271,15 +284,53 @@ section.resources-media{
 		    background-color: $goldopaque;
 		    color: white;
 		    font-weight: 500;
-		    padding: 20px 24px;
+		    width: 20px;
+		    height: 20px;
+		    padding: 25px;
 		    border-radius: 50px;
+		    text-align: center;
 		    float: left;
 		}
+
+		.load-more{
+			@include button;
+			margin-top: 0;
+			margin-bottom: 100px;
+			border-color: $gold;
+			opacity: 0;
+			transition: .5s opacity ease-in-out 1s;
+			&:hover{
+				border-color: $gold;
+			}
+		}
+		&:not(.loaded){
+			.section-header{
+				&:nth-of-type(n+3){
+					height: 0;
+					padding: 0;
+					overflow: hidden;
+					border: none;
+					margin: 0;
+				}
+			}
+			ol{
+				&:nth-of-type(n+3){
+					height: 0;
+					padding: 0;
+					overflow: hidden;
+				}
+			}
+			.load-more{
+				opacity: 1;
+			}
+		}
 	}
+
 	.slide.media{
 		background: url(images/media_bg.png);
 		background-size: cover;
 		padding-bottom: 150px;
+		position: relative;
 
 		@include download-icon;
 
@@ -287,27 +338,76 @@ section.resources-media{
 			@include h1;
 			color: $black;
 		}
+		li{
+			position: relative;
+		}
 		.date {
-			display: inline-block;
+			
 			vertical-align: middle;
 			margin-right: 25px;
-			@include circle;
+			@include date-circle;
 			.circle{
-				width: 	73px;
-				height: 73px;
-				background: $redopaque;
+				width: 	90px;
+				height: 90px;
+				background: $red;
 				margin: 0;
-				padding: 30px 0;
+				padding: 15px 0;
 				text-align: center;
 				color: $gold;
 				@include medium-body;
 				font-size: 14px;
 				font-weight: normal;
+				em{
+					@include absolutecenter;
+					height: 1em;
+				}
+			}
+			&:hover  
+			.circle{
+				background: $blackopaque;
+				em{ display:none; }
+				&:before{
+					content: $fa-arrow-circle-o-right;
+					font-family: "FontAwesome";
+					font-size: 16px;
+					display: block;
+					color: $gold;
+					margin: 5px auto;
+					text-align: center;
+					/* Safari */
+					-webkit-transform: rotate(180deg);
+					/* Firefox */
+					-moz-transform: rotate(180deg);
+					/* IE */
+					-ms-transform: rotate(180deg);
+					/* Opera */
+					-o-transform: rotate(180deg);
+					/* Internet Explorer */
+					filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+				}
+				&:after{
+					content: "Read Article";
+					position: relative;
+					width: 70px;
+					display: block;
+					margin: auto;
+					color: $gold;
+				}
+			}
+			position:relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			left: 0;
+			top: 0;
+			a{
+				text-decoration: none;
 			}
 		}
 		.content{
 			display: inline-block;
-			width: 780px;
+			width: 770px;
 			text-align: left;
 			vertical-align: middle;
 			a:hover{
@@ -435,12 +535,22 @@ section.resources-media{
 			top: 0;
 			bottom: 0;
 			margin: auto;
+			.circle{
+				background-size: 35%;
+			}
+			&:hover .circle{
+				background-size: 35%;	
+			}
 			.circle:after{
 				font-size: 8px !important;
 				font-weight: normal;
 				z-index: 2000;
 				display: block;
 			}
+			.dl_icon{
+				display: none;
+			}
+
 		}
 
 		.close{

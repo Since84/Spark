@@ -59,8 +59,18 @@ $downloadgold: url('images/download-report-gold.png');
 $topdefault: url('images/top_default.png');
 $tophover: url('images/top_hover.png');
 
+$fa-arrow-circle-o-left: "\f0a8";
+$fa-arrow-circle-o-right: "\f0a9";
+
 *{
 	box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 body {
@@ -95,6 +105,7 @@ h1{
 h2{
 	font-family: "aleobolditalic";
 	font-size: 18px;
+	max-width: 80%;
 	/* text-transform: capitalize; */	
 }
 
@@ -198,6 +209,10 @@ section{
 	background-repeat: no-repeat;
 	position: relative;
 	min-width: $containerwidth;
+
+	h2{
+		margin: auto;
+	}
 }
 
 .container{
@@ -364,6 +379,88 @@ section{
 	}
 }
 
+
+
+@mixin top-button($class){
+	#{$class}{
+		position: relative;
+		height: 70px;
+		a{
+			@include absolutecenter;
+			height: 70px;
+			@include medium-body;
+			font-size: 14px;
+			color: $red;
+			padding: 15px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:before{
+				content:'';
+				background: $topdefault no-repeat;
+				display: block;
+				margin: auto;
+				height: 20px;
+				width: 20px;
+				margin-bottom: 10px;
+			}
+			&:after{
+				content: none;
+			}
+
+			&:hover{
+				color: $gold;
+				background: $blackopaque;
+				&:before{
+					background-image: $tophover;
+				}
+			}
+
+		}
+	}
+}
+
+@mixin top-fa-button($class, $icon){
+	#{$class}{
+		position: relative;
+		height: 70px;
+		a{
+			@include absolutecenter;
+			height: 70px;
+			@include medium-body;
+			font-size: 14px;
+			color: $red;
+			padding: 15px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+
+			&:before{
+				content: $icon;
+				font-family: "FontAwesome";
+				font-size: 22px;
+				display: block;
+				margin: auto;
+				height: 20px;
+				width: 20px;
+				margin-bottom: 10px;
+			}
+			&:after{
+				content: none;
+			}
+
+			&:hover{
+				color: $gold;
+				background: $blackopaque;
+				&:before{
+					content: $icon;
+				}
+			}
+
+		}
+	}
+}
+
 @mixin download-icon{
 	.download-icon {
 		position: absolute;
@@ -509,6 +606,60 @@ section{
 	}
 }
 
+@mixin date-circle{
+	position: absolute;
+	display: block;
+	right: 100px;
+	top: 40px;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	z-index: 100;
+	@include circle;
+	.circle {
+		width: 100%;
+		height:100%;
+		margin: 0;
+		background: $blackopaque url('');
+		-webkit-perspective: 1000px;
+		perspective: 1000px;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.3s;
+		transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease 0.1s;			
+	}
+
+	 
+	&:hover .circle{
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		background-color: $redopaque;
+		&:after{
+			content: "Download Full Report"; 
+			display: block;
+			color: $tan;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			z-index: 10;
+			margin: auto;
+			height: 20px;
+			padding: 0 10px;
+			text-align: center;
+			@include medium-body;
+			font-size: 14px;
+		}
+
+		.dl_icon .stroke {
+			stroke: $red;
+		}
+	}
+}
+
 @mixin modal {
 	position: fixed;
 	top: 0;
@@ -579,6 +730,8 @@ section{
 			height: 22px;
 		}
 
+		@include top-button(".back-button");
+
 	}
 	.cycle-slideshow {
 		width: 100%;
@@ -640,6 +793,8 @@ section{
 		}
 	}
 
+	@include top-button(".top");
+
 	img{
 		max-height: 40px;
 		margin: auto;
@@ -683,6 +838,9 @@ section{
 			&::after{
 				content: none;
 				transition: all linear .1s;
+			}
+			&:hover{
+				color: $red;
 			}
 		}
 
@@ -772,42 +930,7 @@ section{
 		}
 	}
 
-	#top{
-		position: relative;
-		height: 70px;
-		a{
-			@include absolutecenter;
-			height: 70px;
-			@include medium-body;
-			font-size: 14px;
-			color: $red;
-			padding: 15px 0;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:before{
-				content:'';
-				background: $topdefault no-repeat;
-				display: block;
-				margin: auto;
-				height: 20px;
-				width: 20px;
-				margin-bottom: 10px;
-			}
-			&:after{
-				content: none;
-			}
-
-			&:hover{
-				color: $gold;
-				background: $blackopaque;
-				&:before{
-					background-image: $tophover;
-				}
-			}
-
-		}
-	}
+	@include top-button(".back-button");
 
 }
 
@@ -836,4 +959,36 @@ section{
 	@include photo-credit-block;
 	bottom: 10px;
 	right : 10px;
+}
+
+@mixin close-button($class){
+	#{$class}{
+		display: block;
+		top: 40px;
+		right: 10px;
+		width: 90px;
+		height: 90px;
+		position: absolute;
+		z-index: 1000;
+		color: $tan;
+		@include medium-body;
+		font-size: 18px;
+		line-height: 2.4em;
+		cursor: pointer;
+		&:before{
+			content:"";
+			background: $closewhite no-repeat;
+			width: 50px;
+			height: 50px;
+			font-size: 40px;
+			display: block;
+			margin: auto;
+		}
+		&:hover{
+			color: $gold;
+			&:before{
+				background-image: $close;
+			}
+		}
+	}	
 }

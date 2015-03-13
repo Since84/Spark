@@ -19,10 +19,14 @@
 	  			'click input[type="checkbox"]': 'toggleChecked',
 	  			'click .case': 'openCase',
 	  			'click .case-study-footer .close': 'closeCaseStudies',
+	  			'click .case-study-frame .case-studies-close': 'closeCaseStudies',
+	  			'click .case-study-nav .back': 'closeCaseStudies',
+	  			'click .resources-media .close-modal': 'closeResources',
 	  			'click .lesson-pager li': 'toggleSelection',
 	  			'click .modal-trigger': 'openModal',
 	  			'click .modal-footer .close': 'closeModal',
-	  			'click .modal-nav a': 'scrollModal'
+	  			'click .modal-nav a': 'scrollModal',
+	  			'click .load-more': 'resourcesLoaded'
 	  		},
 
 
@@ -79,17 +83,23 @@
 	  			$(e.target).parents('.lessons').find(".selected-block li."+ selected).addClass('selected');
 	  		},
 	  		openModal: function(e){ 
-	  			var modal = $(e.target).data('section');
+	  			var self = this;
+	  			var modal = $(e.currentTarget).data('section');
+	  			var target = $(e.currentTarget).data('slide');
 	  			$(modal).addClass('open');
+	  			
+	  			setTimeout(function(){
+	  				self.scrollModal(e, target);
+	  			}, 500);
 	  		},
 	  		closeModal: function(e){ 
 	  			var modal = $(e.target).parents('section');
 	  			$(modal).removeClass('open');
 	  		},
-	  		scrollModal: function(e){
+	  		scrollModal: function(e, target){
 				$.smoothScroll({
 		            scrollElement: $('section.resources-media .slides'),
-		            scrollTarget: $(e.target).attr('href')
+		            scrollTarget: target ? target : $(e.target).attr('href')
 		        });
 		        return false;
 	  		},
@@ -167,6 +177,12 @@
 	  		downloadReport: function(){
 	  			e.preventDefault();  //stop the browser from following
     			window.location.href = '/wp-content/uploads/2015/03/Climate-Justice-and-Womens-Rights2.pdf';
+	  		},
+	  		resourcesLoaded: function(){
+	  			$('.resources.slide').addClass('loaded');
+	  		},
+	  		closeResources: function(){
+	  			$('.resources-media').removeClass('open');
 	  		}
 	  	});
 

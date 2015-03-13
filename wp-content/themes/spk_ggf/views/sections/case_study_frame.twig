@@ -1,6 +1,9 @@
 <div class="case-study-frame">
-	<ul class="case-study-nav">
-	</ul>
+	<span class="case-studies-close"></span>
+	<div class="case-study-nav">
+		<ul></ul>
+		<span class="back"><a href="#">Back</a></span>
+	</div>
 	<div class="control-container">
 		<div class="controls" id="prev"></div>
 		<div class="controls" id="next"></div>
@@ -11,7 +14,8 @@
 		    data-cycle-prev=".case-study-frame #prev"
 		    data-cycle-next=".case-study-frame #next"
 		    data-cycle-slides="> section"
-		    data-cycle-pager=".case-study-nav"
+		    data-cycle-pager=".case-study-nav > ul"
+		    {# data-cycle-auto-height=container #}
     >
     	{% for case in climate_leaders.get_field('case_study') %}
     		{% include 'views/sections/case_study_modal_slide.twig' %}

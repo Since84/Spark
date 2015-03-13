@@ -1,4 +1,6 @@
-<section class="case-study-slide" data-cycle-pager-template="<a href='#' data-index='{{ loop.index }}' class='{{ case.title|replace({" ":"-"}) }}'><span class='icon'><img src='{{ case.icon.url }}'/></span><span>{{ case.title }}</span></a>" data-index="{{ loop.index }}">
+<section class="case-study-slide" 
+	data-cycle-pager-template="<a href='#' data-index='{{ loop.index }}' class='{{ case.title|replace({" ":"-"}) }}'><span class='icon'><img src='{{ case.icon.url }}'/></span><span>{{ case.title }}</span></a>" 
+	data-index="{{ loop.index }}">
 	<div class="case-study-info">
 		<div class="case-study-content">
 			<span class="header circle">
@@ -22,10 +24,12 @@
 		</div>
 	</div>
 	<div class="case-study-feature" style="background-image:url({{ case.feature_image.url }});">
-		<h2 class="feature-name">{{ case.feature_name }}</h2>
-		<h3 class="feature-title">{{ case.feature_title }}</h3>
-		<h4 class="feature-location">{{ case.feature_location }}</h4>
-		<p>{{ case.feature_text }}</p>
-		<span class="photo-credit">{{ case.feature_photo_credit }}</span>
+		<div class="case-study-feature-content">
+			<h2 class="feature-name">{{ case.feature_name }}</h2>
+			<h3 class="feature-title">{{ case.feature_title }}</h3>
+			<h4 class="feature-location">{{ case.feature_location }}</h4>
+			<p>{{ case.feature_text }}</p>
+			<span class="photo-credit">{{ case.feature_photo_credit }}</span>
+		</div>
 	</div>
 </section>

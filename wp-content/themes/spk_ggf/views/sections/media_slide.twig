@@ -1,7 +1,14 @@
 <li>
-	<div class="date"><span class="circle">{{ media.date }}</span></div>
+
+	<div class="date">
+		<a href="{{ media.url }}" target="_blank">
+			<span class="circle">
+				<em>{{ media.date }}</em>
+			</span>
+		</a>
+	</div>
 	<div class="content">
-		<a href="{{ media.url }}">
+		<a href="{{ media.url }}" target="_blank">
 			<span class="title">{{ media.title }}</span>
 			<span class="source">/{{ media.source }}</span>
 		</a>
