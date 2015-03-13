@@ -1381,6 +1381,10 @@ section.resolution-content li strong {
   color: #21e3db;
   text-decoration: none;
 }
+/* line 292, style/components/_team.scss */
+.partners > ul li a:hover {
+  color: #ff00ff;
+}
 
 /* line 3, style/components/_issue_areas.scss */
 .issue-areas .tab {
@@ -1706,7 +1710,7 @@ section.resolution-content li strong {
   float: right;
 }
 
-/* line 190, style/components/_issue_areas.scss */
+/* line 191, style/components/_issue_areas.scss */
 .file-feed {
   background: #c4c2c7;
 }
@@ -1978,6 +1982,20 @@ section.resolution-content li strong {
 /* line 302, style/brand/_mixins.scss */
 .file-feed .file:hover .view-pdf {
   visibility: visible;
+  color: #ff00ff;
+}
+/* line 306, style/brand/_mixins.scss */
+.file-feed .view-pdf:before {
+  content: "";
+  font-family: "FontAwesome";
+  margin-right: 10px;
+}
+
+/* line 194, style/components/_issue_areas.scss */
+.close-tab {
+  position: absolute;
+  right: 140px;
+  margin-top: 275px;
 }
 
 /* line 3, style/components/_take_action.scss */
@@ -2322,12 +2340,23 @@ section.resolution-content li strong {
   width: 800px;
 }
 
-/* line 140, style/components/_news.scss */
+/* line 139, style/components/_news.scss */
+.post-content {
+  background: #6b0269;
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+  max-height: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+/* line 152, style/components/_news.scss */
 .in-the-media {
   background: #4a1249;
   padding: 90px 0;
 }
-/* line 143, style/components/_news.scss */
+/* line 155, style/components/_news.scss */
 .in-the-media h2 {
   display: block;
   margin: auto;
@@ -2342,7 +2371,7 @@ section.resolution-content li strong {
   padding: 0;
   color: white;
 }
-/* line 149, style/components/_news.scss */
+/* line 161, style/components/_news.scss */
 .in-the-media .slides {
   display: block;
   margin: auto;
@@ -2352,22 +2381,22 @@ section.resolution-content li strong {
   padding: 40px 0;
   text-align: center;
 }
-/* line 154, style/components/_news.scss */
+/* line 166, style/components/_news.scss */
 .in-the-media .slides li {
   display: inline-block;
   width: 355px;
   text-align: left;
 }
-/* line 158, style/components/_news.scss */
+/* line 170, style/components/_news.scss */
 .in-the-media .slides li:not(:nth-child(3)) {
   margin-right: 60px;
 }
-/* line 161, style/components/_news.scss */
+/* line 173, style/components/_news.scss */
 .in-the-media .slides li a {
   color: white;
   text-decoration: none;
 }
-/* line 167, style/components/_news.scss */
+/* line 179, style/components/_news.scss */
 .in-the-media .slides li .post-text h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2377,27 +2406,27 @@ section.resolution-content li strong {
   font-size: 32px;
   margin: 20px 0 0;
 }
-/* line 172, style/components/_news.scss */
+/* line 184, style/components/_news.scss */
 .in-the-media .slides li .post-text p {
   margin-top: 10px;
 }
-/* line 177, style/components/_news.scss */
+/* line 189, style/components/_news.scss */
 .in-the-media .slides li .video {
   width: 300px;
   height: 220px;
   display: block;
 }
-/* line 181, style/components/_news.scss */
+/* line 193, style/components/_news.scss */
 .in-the-media .slides li .video object {
   display: none;
 }
 
-/* line 190, style/components/_news.scss */
+/* line 202, style/components/_news.scss */
 .malikas-blog {
   background: #dedade;
   padding: 90px 0;
 }
-/* line 193, style/components/_news.scss */
+/* line 205, style/components/_news.scss */
 .malikas-blog .slides {
   display: block;
   margin: auto;
@@ -2406,28 +2435,28 @@ section.resolution-content li strong {
   position: relative;
   padding: 0;
 }
-/* line 197, style/components/_news.scss */
+/* line 209, style/components/_news.scss */
 .malikas-blog a {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 198, style/components/_news.scss */
+/* line 210, style/components/_news.scss */
 .malikas-blog a:hover {
   color: #ca02c5;
   font-weight: 100;
 }
-/* line 202, style/components/_news.scss */
+/* line 214, style/components/_news.scss */
 .malikas-blog li {
   display: inline-block;
 }
-/* line 203, style/components/_news.scss */
+/* line 215, style/components/_news.scss */
 .malikas-blog .thumbnail {
   display: inline-block;
   vertical-align: top;
   width: 260px;
   margin-right: 30px;
 }
-/* line 208, style/components/_news.scss */
+/* line 220, style/components/_news.scss */
 .malikas-blog .thumbnail:before {
   content: "";
   font-family: "FontAwesome";
@@ -2437,20 +2466,20 @@ section.resolution-content li strong {
   background-color: rgba(129, 2, 110, 0.5);
   color: white;
 }
-/* line 217, style/components/_news.scss */
+/* line 229, style/components/_news.scss */
 .malikas-blog .thumbnail a {
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: bold;
   margin-top: 5px;
 }
-/* line 224, style/components/_news.scss */
+/* line 236, style/components/_news.scss */
 .malikas-blog .post-text {
   display: inline-block;
   vertical-align: top;
   width: 900px;
 }
-/* line 229, style/components/_news.scss */
+/* line 241, style/components/_news.scss */
 .malikas-blog h2 {
   display: block;
   margin: auto;
@@ -2465,7 +2494,7 @@ section.resolution-content li strong {
   padding: 0 0 60px;
   color: #4a1249;
 }
-/* line 235, style/components/_news.scss */
+/* line 247, style/components/_news.scss */
 .malikas-blog h4 {
   display: inline-block;
   color: white;
@@ -2474,7 +2503,7 @@ section.resolution-content li strong {
   padding: 10px;
   margin: 0;
 }
-/* line 244, style/components/_news.scss */
+/* line 256, style/components/_news.scss */
 .malikas-blog h5 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2483,7 +2512,7 @@ section.resolution-content li strong {
   line-height: 1.5em;
   margin: 15px 0;
 }
-/* line 245, style/components/_news.scss */
+/* line 257, style/components/_news.scss */
 .malikas-blog p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2492,7 +2521,7 @@ section.resolution-content li strong {
   line-height: 1.5em;
   margin: 0;
 }
-/* line 247, style/components/_news.scss */
+/* line 259, style/components/_news.scss */
 .malikas-blog .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2505,7 +2534,7 @@ section.resolution-content li strong {
   display: block;
   padding-top: 20px;
 }
-/* line 255, style/components/_news.scss */
+/* line 267, style/components/_news.scss */
 .malikas-blog .read-more:before {
   content: "";
   font-family: "FontAwesome";
@@ -2703,51 +2732,53 @@ section.contact h2 {
   font-size: 54px;
   margin-bottom: 40px;
   width: 1000px;
+  font-size: 24px;
+  color: #380d36;
 }
-/* line 17, style/components/_contact.scss */
+/* line 19, style/components/_contact.scss */
 section.contact ul.info {
   text-align: center;
   padding: 30px 0 20px 0;
   width: 1000px;
   margin: auto;
 }
-/* line 22, style/components/_contact.scss */
+/* line 24, style/components/_contact.scss */
 section.contact ul.info li {
   display: inline-block;
   width: 323px;
 }
-/* line 25, style/components/_contact.scss */
+/* line 27, style/components/_contact.scss */
 section.contact ul.info li input {
   width: 100%;
 }
-/* line 28, style/components/_contact.scss */
+/* line 30, style/components/_contact.scss */
 section.contact ul.info li:not(:last-child) {
   margin-right: 10px;
 }
-/* line 33, style/components/_contact.scss */
+/* line 35, style/components/_contact.scss */
 section.contact p {
   text-align: center;
   width: 1000px;
   margin: auto;
   color: #404040;
 }
-/* line 50, style/components/_contact.scss */
+/* line 52, style/components/_contact.scss */
 section.contact input, section.contact textarea {
   background: #dedade;
   font-style: italic;
   padding: 20px;
 }
-/* line 55, style/components/_contact.scss */
+/* line 57, style/components/_contact.scss */
 section.contact textarea {
   width: 1000px;
   border: none;
 }
-/* line 59, style/components/_contact.scss */
+/* line 61, style/components/_contact.scss */
 section.contact input[type="submit"] {
   float: right;
   display: block;
 }
-/* line 63, style/components/_contact.scss */
+/* line 65, style/components/_contact.scss */
 section.contact:after {
   content: '';
   display: block;
@@ -2842,8 +2873,9 @@ footer.spark_region .footer-content > ul > li.petition .text {
   padding: 30px;
   color: white;
   text-align: center;
+  line-height: 25px;
 }
-/* line 66, style/components/_footer.scss */
+/* line 67, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a {
   display: block;
   color: white;
@@ -2857,7 +2889,11 @@ footer.spark_region .footer-content > ul > li.petition .text a {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 80, style/components/_footer.scss */
+/* line 78, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.petition .text a:hover {
+  background: #ff00ff;
+}
+/* line 84, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2865,38 +2901,38 @@ footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-twe
   padding: 0;
   line-height: 1.3em;
 }
-/* line 85, style/components/_footer.scss */
+/* line 89, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
 }
-/* line 91, style/components/_footer.scss */
+/* line 95, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li a::before {
   font-size: 20px;
 }
-/* line 92, style/components/_footer.scss */
+/* line 96, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter a::before {
   content: "";
 }
-/* line 93, style/components/_footer.scss */
+/* line 97, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.facebook a::before {
   content: "";
 }
-/* line 94, style/components/_footer.scss */
+/* line 98, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.mail a::before {
   content: "";
 }
-/* line 98, style/components/_footer.scss */
+/* line 102, style/components/_footer.scss */
 footer.spark_region .footer-contact {
   padding-top: 1em;
   color: white;
 }
-/* line 101, style/components/_footer.scss */
+/* line 105, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-action {
   display: inline-block;
   vertical-align: top;
 }
-/* line 105, style/components/_footer.scss */
+/* line 109, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo {
   background: url("style/images/logo.png");
   display: block;
@@ -2906,24 +2942,27 @@ footer.spark_region .footer-contact .logo {
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 113, style/components/_footer.scss */
+/* line 117, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo:hover {
   background-image: url("style/images/logo_hover.png");
 }
-/* line 117, style/components/_footer.scss */
+/* line 121, style/components/_footer.scss */
 footer.spark_region .footer-contact nav {
   margin: 0px 0 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 121, style/components/_footer.scss */
+/* line 125, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li {
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
   color: #21e3db;
+  border-right: 1px solid #21e3db;
+  padding-right: .5em;
+  margin-right: .5em;
 }
-/* line 126, style/components/_footer.scss */
+/* line 130, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a {
   color: #21e3db;
   text-decoration: none;
@@ -2934,30 +2973,24 @@ footer.spark_region .footer-contact nav li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 131, style/components/_footer.scss */
+/* line 135, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:before {
   font-family: "FontAwesome";
   font-size: 25px;
 }
-/* line 136, style/components/_footer.scss */
+/* line 140, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.twitter a::before {
   content: "";
 }
-/* line 137, style/components/_footer.scss */
+/* line 141, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.facebook a::before {
   content: "";
 }
-/* line 138, style/components/_footer.scss */
+/* line 142, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.mail a::before {
   content: "";
 }
-/* line 139, style/components/_footer.scss */
-footer.spark_region .footer-contact nav li:nth-child(odd) {
-  border-right: 1px solid #21e3db;
-  padding-right: .5em;
-  margin-right: .5em;
-}
-/* line 146, style/components/_footer.scss */
+/* line 150, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social {
   margin-left: 60%;
   width: 200px;
@@ -2965,7 +2998,7 @@ footer.spark_region .footer-contact .footer-social {
   text-align: right;
   vertical-align: top;
 }
-/* line 152, style/components/_footer.scss */
+/* line 156, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2974,26 +3007,26 @@ footer.spark_region .footer-contact .footer-social h3 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-/* line 153, style/components/_footer.scss */
+/* line 157, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social li {
   border: none !important;
 }
-/* line 154, style/components/_footer.scss */
+/* line 158, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a {
   color: #21e3db;
 }
-/* line 155, style/components/_footer.scss */
+/* line 159, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a:hover {
   color: white;
 }
-/* line 159, style/components/_footer.scss */
+/* line 163, style/components/_footer.scss */
 footer.spark_region .footer-bottom {
   background: #2f2f2f;
   width: 100%;
   padding: 5px;
   color: #dedade;
 }
-/* line 165, style/components/_footer.scss */
+/* line 169, style/components/_footer.scss */
 footer.spark_region .footer-bottom .designed.by {
   width: 100px;
   display: inline-block;
@@ -3001,7 +3034,7 @@ footer.spark_region .footer-bottom .designed.by {
   margin-top: 5px;
   vertical-align: middle;
 }
-/* line 172, style/components/_footer.scss */
+/* line 176, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo {
   float: right;
   white-space: nowrap;
@@ -3017,19 +3050,19 @@ footer.spark_region .footer-bottom .elefintlogo {
   text-decoration: none;
   font-size: 14px;
 }
-/* line 182, style/components/_footer.scss */
+/* line 186, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo:hover {
   max-width: 1000px;
 }
-/* line 185, style/components/_footer.scss */
+/* line 189, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg {
   width: 30px;
 }
-/* line 187, style/components/_footer.scss */
+/* line 191, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg .logomark {
   fill: #c4c2c7;
 }
-/* line 192, style/components/_footer.scss */
+/* line 196, style/components/_footer.scss */
 footer.spark_region .footer-bottom .copyright {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;

@@ -183,10 +183,16 @@
 			&.next {
 				float: right;
 			}
+			
 		}
 	}
 }
 
 .file-feed {
 	@include file_downloader; 
+}
+.close-tab{
+	position: absolute;
+	right: 140px;
+	margin-top: 275px;
 }

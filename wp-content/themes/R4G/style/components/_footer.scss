@@ -63,6 +63,7 @@ footer.spark_region{
 						padding: 30px;
 						color: white;
 						text-align: center;
+						line-height: 25px;
 						a{
 							display: block;
 							color: white;
@@ -74,6 +75,9 @@ footer.spark_region{
 							@include call-to-action;
 							text-transform: uppercase;
 						}
+							a:hover{
+							background: $purple6;
+							}
 					}
 				}
 				&.twitter {
@@ -136,11 +140,11 @@ footer.spark_region{
 				&.twitter a::before { content: $twitter; }
 				&.facebook a::before { content: $facebook; }
 				&.mail a::before { content: $mail; }
-				&:nth-child(odd){
+				// &:nth-child(odd){
 					border-right: 1px solid $teal;
 					padding-right: .5em;
 					margin-right: .5em;
-				}
+				// }
 			}
 		}
 		.footer-social{

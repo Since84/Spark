@@ -301,5 +301,12 @@
 	}	
 	.file:hover .view-pdf{
 			visibility: visible;
-	}
+			color: $purple6;
+			}
+			.view-pdf:before{
+				content:$circlerightarrow;
+				font-family: "FontAwesome";
+				// font-size: 20px;
+			 	margin-right: 10px;
+			}
 }

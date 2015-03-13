@@ -31,6 +31,7 @@
 	$socialContext = array(
 						 'twitter' 	=> get_option('twitter_link')
 						,'facebook'	=> get_option('facebook_link')
+						,'email'	=> get_option('email_link')
 					);
 	$footerContext['social_menu'] = Timber::compile('/views/components/social.html.twig', $socialContext);
 

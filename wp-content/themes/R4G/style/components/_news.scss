@@ -136,7 +136,19 @@
 		width: 800px;
 	}
 }
-
+.post-content{ 
+		background: $purple3;
+		color: #fff;
+		font-size: 18px;
+		margin: 20px 0;
+        max-height:0px;
+       	overflow: hidden;
+       	padding:0px;
+        
+}
+        //  &.open{ 
+        //  	max-height: 600px 
+       	// }
 .in-the-media {
 	background: $purple2;
 	padding: 90px 0;
