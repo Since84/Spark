@@ -1,6 +1,12 @@
 <li class="post-preview">
 	<div class="thumbnail">
-		<img src="{{ slide.thumbnail.url }}" width=260 height=260 />
+		<img 
+			src="{% if slide.thumbnail %}{{ slide.thumbnail.url }}{% 
+					else %}{{ bloginfo('stylesheet_directory')}}/style/images/malika.png{%
+					endif 
+				%}" 
+			width=260 
+			height=260 />
 		<a class="content" href="{{ slide.permalink }}">Go To Complete Blog</a> 
 	</div>
 
