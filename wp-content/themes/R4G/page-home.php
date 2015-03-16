@@ -48,7 +48,7 @@
 	$mattersContext['header'] = get_field( 'heading', $issueAreasId );
 	$mattersContext['feed'] = get_field('issue_area', $issueAreasId );
 	$mattersContext['slide_template'] = '/views/content/wim_home_slide.html.twig';
- 	$context['wim'] = Timber::compile('/views/components/gallery.html.twig', $mattersContext); 
+ 	$context['wim'] = Timber::compile('/views/components/cycle-feed.twig', $mattersContext); 
 
 
  	/// Call To Action

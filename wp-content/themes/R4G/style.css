@@ -771,12 +771,12 @@ section.resolution-content li strong {
   width: 100%;
 }
 /* line 16, style/components/_why_it_matters.scss */
-.why-it-matters .slides.container {
+.why-it-matters .slides {
   padding: 0 70px;
   white-space: nowrap;
 }
 /* line 20, style/components/_why_it_matters.scss */
-.why-it-matters .slides.container .slide {
+.why-it-matters .slides .slide {
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -787,11 +787,11 @@ section.resolution-content li strong {
   border: 10px solid #dedade;
 }
 /* line 44, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide:not(:nth-child(3n)) {
+.why-it-matters .slides .slide:not(:nth-child(3n)) {
   margin-right: 70px;
 }
 /* line 48, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .content, .why-it-matters .slides.container .slide .stat-highlight, .why-it-matters .slides.container .slide .learn-more {
+.why-it-matters .slides .slide .content, .why-it-matters .slides .slide .stat-highlight, .why-it-matters .slides .slide .learn-more {
   display: block;
   position: absolute;
   left: 0;
@@ -807,7 +807,7 @@ section.resolution-content li strong {
   text-decoration: none;
 }
 /* line 65, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .content h2, .why-it-matters .slides.container .slide .stat-highlight h2, .why-it-matters .slides.container .slide .learn-more h2 {
+.why-it-matters .slides .slide .content h2, .why-it-matters .slides .slide .stat-highlight h2, .why-it-matters .slides .slide .learn-more h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -819,7 +819,7 @@ section.resolution-content li strong {
   line-height: 50px;
 }
 /* line 72, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .content h3, .why-it-matters .slides.container .slide .stat-highlight h3, .why-it-matters .slides.container .slide .learn-more h3 {
+.why-it-matters .slides .slide .content h3, .why-it-matters .slides .slide .stat-highlight h3, .why-it-matters .slides .slide .learn-more h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -829,7 +829,7 @@ section.resolution-content li strong {
   margin-bottom: 1rem;
 }
 /* line 73, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .content p, .why-it-matters .slides.container .slide .stat-highlight p, .why-it-matters .slides.container .slide .learn-more p {
+.why-it-matters .slides .slide .content p, .why-it-matters .slides .slide .stat-highlight p, .why-it-matters .slides .slide .learn-more p {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -839,26 +839,67 @@ section.resolution-content li strong {
   line-height: 1.5em;
 }
 /* line 77, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .learn-more {
+.why-it-matters .slides .slide .learn-more {
   opacity: 0;
 }
 /* line 79, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide .learn-more .action {
+.why-it-matters .slides .slide .learn-more .action {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   display: block;
 }
 /* line 88, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide:hover .stat-highlight, .why-it-matters .slides.container .slide.cycle-pager-active .stat-highlight {
+.why-it-matters .slides .slide:hover .stat-highlight, .why-it-matters .slides .slide.cycle-pager-active .stat-highlight {
   opacity: 0;
 }
 /* line 91, style/brand/_mixins.scss */
-.why-it-matters .slides.container .slide:hover .learn-more, .why-it-matters .slides.container .slide.cycle-pager-active .learn-more {
+.why-it-matters .slides .slide:hover .learn-more, .why-it-matters .slides .slide.cycle-pager-active .learn-more {
   opacity: 1;
   background: rgba(0, 0, 0, 0.1);
 }
-/* line 26, style/components/_why_it_matters.scss */
+/* line 316, style/brand/_mixins.scss */
+.why-it-matters .feed-pager {
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 324, style/brand/_mixins.scss */
+.why-it-matters .feed-pager.next {
+  right: 0;
+  background: url(style/images/pager-left-inactive.png) no-repeat;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* line 332, style/brand/_mixins.scss */
+.why-it-matters .feed-pager.next:hover {
+  background: url(style/images/pager-left-active.png) no-repeat;
+}
+/* line 336, style/brand/_mixins.scss */
+.why-it-matters .feed-pager.prev {
+  left: 0;
+  background: url(style/images/pager-left-inactive.png) no-repeat;
+}
+/* line 339, style/brand/_mixins.scss */
+.why-it-matters .feed-pager.prev:hover {
+  background: url(style/images/pager-left-active.png) no-repeat;
+}
+/* line 25, style/components/_why_it_matters.scss */
+.why-it-matters .feed-pager {
+  opacity: .5;
+}
+/* line 27, style/components/_why_it_matters.scss */
+.why-it-matters .feed-pager:hover {
+  opacity: 1;
+}
+/* line 32, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span {
   display: block;
   position: absolute;
@@ -869,7 +910,7 @@ section.resolution-content li strong {
   height: 66px;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 35, style/components/_why_it_matters.scss */
+/* line 41, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span::before {
   content: '';
   font-family: "FontAwesome";
@@ -885,19 +926,19 @@ section.resolution-content li strong {
   height: 1em;
   font-size: 2em;
 }
-/* line 52, style/components/_why_it_matters.scss */
+/* line 58, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next {
   right: 0;
 }
-/* line 54, style/components/_why_it_matters.scss */
+/* line 60, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next::before {
   content: "";
 }
-/* line 58, style/components/_why_it_matters.scss */
+/* line 64, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev {
   left: 0;
 }
-/* line 60, style/components/_why_it_matters.scss */
+/* line 66, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev::before {
   content: "";
 }
@@ -960,8 +1001,9 @@ section.resolution-content li strong {
   background: #c4c2c7;
   padding: 70px 0;
   position: relative;
+  line-height: 1.3em;
 }
-/* line 6, style/components/_featured_news.scss */
+/* line 7, style/components/_featured_news.scss */
 .featured-news .slides, .featured-news > h2 {
   display: block;
   margin: auto;
@@ -969,7 +1011,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 10, style/components/_featured_news.scss */
+/* line 11, style/components/_featured_news.scss */
 .featured-news h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -979,20 +1021,24 @@ section.resolution-content li strong {
   color: #6b0269;
   margin-bottom: 1em;
 }
-/* line 16, style/components/_featured_news.scss */
+/* line 17, style/components/_featured_news.scss */
 .featured-news h4 {
   color: white;
   background: #6b0269;
-  padding: 5px 20px;
-  margin-bottom: 15px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
-/* line 24, style/components/_featured_news.scss */
+/* line 29, style/components/_featured_news.scss */
 .featured-news h4:hover {
   color: #21e3db;
 }
-/* line 28, style/components/_featured_news.scss */
+/* line 33, style/components/_featured_news.scss */
 .featured-news h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1003,19 +1049,20 @@ section.resolution-content li strong {
   font-style: italic;
   margin-bottom: .5em;
 }
-/* line 33, style/components/_featured_news.scss */
+/* line 38, style/components/_featured_news.scss */
 .featured-news p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   line-height: 1em;
 }
-/* line 38, style/components/_featured_news.scss */
+/* line 43, style/components/_featured_news.scss */
 .featured-news .content {
   text-decoration: none;
   color: black;
+  line-height: 1.2em;
 }
-/* line 43, style/components/_featured_news.scss */
+/* line 49, style/components/_featured_news.scss */
 .featured-news .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1023,23 +1070,23 @@ section.resolution-content li strong {
   font-weight: 700;
   font-size: 38px;
   font-size: 16px;
-  color: #ab01a7;
+  color: #ff00ff;
   text-decoration: none;
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   left: 27px;
 }
-/* line 53, style/components/_featured_news.scss */
+/* line 59, style/components/_featured_news.scss */
 .featured-news .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 59, style/components/_featured_news.scss */
+/* line 65, style/components/_featured_news.scss */
 .featured-news .read-more:hover, .featured-news .read-more:hover:before {
   color: #21e3db;
 }
-/* line 64, style/components/_featured_news.scss */
+/* line 70, style/components/_featured_news.scss */
 .featured-news .slide {
   width: 320px;
   height: 280px;
@@ -1049,7 +1096,7 @@ section.resolution-content li strong {
   display: inline-block;
   position: relative;
 }
-/* line 72, style/components/_featured_news.scss */
+/* line 78, style/components/_featured_news.scss */
 .featured-news .slide:not(:nth-child(3n)) {
   margin-right: 50px;
 }
