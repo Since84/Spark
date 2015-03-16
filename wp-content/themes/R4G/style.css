@@ -11,12 +11,12 @@
 /* graphics */
 /* Rights For Girls Typography Variables and Mixins */
 /** Base Styles for Rights for Girls **/
-/* line 61, style/_base.scss */
+/* line 64, style/_base.scss */
 html {
   overflow-x: hidden;
 }
 
-/* line 65, style/_base.scss */
+/* line 68, style/_base.scss */
 body.rights_app {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -25,11 +25,11 @@ body.rights_app {
   line-height: 1.5em;
   color: #404040;
 }
-/* line 69, style/_base.scss */
+/* line 72, style/_base.scss */
 body.rights_app * {
   box-sizing: border-box;
 }
-/* line 73, style/_base.scss */
+/* line 76, style/_base.scss */
 body.rights_app .container {
   display: block;
   margin: auto;
@@ -38,7 +38,7 @@ body.rights_app .container {
   position: relative;
 }
 
-/* line 78, style/_base.scss */
+/* line 81, style/_base.scss */
 section {
   display: block;
 }
@@ -71,6 +71,10 @@ input[type="submit"] {
   font-size: 24px;
   padding: 0;
   margin-top: 25px;
+}
+/* line 56, style/_base.scss */
+input[type="submit"]:hover {
+  color: #404040;
 }
 
 /** Header Styles **/
@@ -2995,18 +2999,71 @@ section.action-feature .feature-link span {
 }
 
 /* line 1, style/components/_contact.scss */
+div.wpcf7 {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+/* line 6, style/components/_contact.scss */
+div.wpcf7 .wpcf7-validation-errors, div.wpcf7 .wpcf7-mail-sent-ng, div.wpcf7 div.wpcf7-mail-sent-ok {
+  position: absolute;
+  display: block;
+  bottom: -25px;
+  right: 0;
+  border: none;
+  font-size: 14px;
+  font-style: italic;
+  padding: 0;
+  padding-right: 20px;
+  margin-right: 180px;
+  color: white;
+  background: #6b0269;
+  border: none;
+}
+/* line 20, style/components/_contact.scss */
+div.wpcf7 .wpcf7-validation-errors:before, div.wpcf7 .wpcf7-mail-sent-ng:before, div.wpcf7 div.wpcf7-mail-sent-ok:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background: #4a1249;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.2em;
+}
+/* line 42, style/components/_contact.scss */
+div.wpcf7 div.wpcf7-mail-sent-ok:before {
+  content: "";
+}
+/* line 46, style/components/_contact.scss */
+div.wpcf7 .wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+/* line 52, style/components/_contact.scss */
 section.contact {
   background: #c4c2c7;
+  padding: 60px 0;
 }
-/* line 4, style/components/_contact.scss */
+/* line 56, style/components/_contact.scss */
 section.contact.our-mission {
   background: #dedade;
 }
-/* line 8, style/components/_contact.scss */
+/* line 60, style/components/_contact.scss */
 section.contact .container {
   width: 1000px;
 }
-/* line 12, style/components/_contact.scss */
+/* line 64, style/components/_contact.scss */
 section.contact h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3017,66 +3074,66 @@ section.contact h2 {
   width: 1000px;
   color: #6b0269;
 }
-/* line 19, style/components/_contact.scss */
+/* line 71, style/components/_contact.scss */
 section.contact ul.info {
   text-align: center;
   padding: 30px 0 20px 0;
   width: 1000px;
   margin: auto;
 }
-/* line 24, style/components/_contact.scss */
+/* line 76, style/components/_contact.scss */
 section.contact ul.info li {
   display: inline-block;
   width: 323px;
 }
-/* line 27, style/components/_contact.scss */
+/* line 79, style/components/_contact.scss */
 section.contact ul.info li input {
   width: 100%;
 }
-/* line 30, style/components/_contact.scss */
+/* line 82, style/components/_contact.scss */
 section.contact ul.info li:not(:last-child) {
   margin-right: 10px;
 }
-/* line 35, style/components/_contact.scss */
+/* line 87, style/components/_contact.scss */
 section.contact p {
   text-align: center;
   width: 1000px;
   margin: auto;
   color: #404040;
 }
-/* line 52, style/components/_contact.scss */
+/* line 104, style/components/_contact.scss */
 section.contact input, section.contact textarea {
   background: #dedade;
   font-style: italic;
   padding: 20px;
 }
-/* line 57, style/components/_contact.scss */
+/* line 109, style/components/_contact.scss */
 section.contact textarea {
   width: 1000px;
   border: none;
 }
-/* line 61, style/components/_contact.scss */
+/* line 113, style/components/_contact.scss */
 section.contact input[type="submit"] {
   float: right;
   display: block;
 }
-/* line 65, style/components/_contact.scss */
+/* line 117, style/components/_contact.scss */
 section.contact:after {
   content: '';
   display: block;
   clear: both;
   padding-bottom: 20px;
 }
-/* line 73, style/components/_contact.scss */
+/* line 125, style/components/_contact.scss */
 section.contact:not(.our-mission) h2 {
   width: 1200;
   display: block;
   margin: auto;
   font-weight: 600;
-  padding: 20px 0 0;
+  padding-bottom: 60p;
   font-size: 32px;
 }
-/* line 81, style/components/_contact.scss */
+/* line 133, style/components/_contact.scss */
 section.contact:not(.our-mission) input[type="submit"] {
   display: block;
   background: none;
@@ -3088,55 +3145,20 @@ section.contact:not(.our-mission) input[type="submit"] {
   color: #6b0269;
   cursor: pointer;
 }
-/* line 91, style/components/_contact.scss */
+/* line 143, style/components/_contact.scss */
 section.contact:not(.our-mission) input[type="submit"]:hover {
   color: #81026e;
 }
-/* line 94, style/components/_contact.scss */
+/* line 146, style/components/_contact.scss */
 section.contact:not(.our-mission) input[type="submit"]:before {
   content: "";
-}
-/* line 98, style/components/_contact.scss */
-section.contact:not(.our-mission) .wpcf7 {
-  position: relative;
-}
-/* line 101, style/components/_contact.scss */
-section.contact:not(.our-mission) .wpcf7-validation-errors {
-  position: absolute;
-  bottom: -25px;
-  right: 0;
-  border: none;
-  font-size: 14px;
-  font-style: italic;
-  padding: 10px 20px;
-  margin-right: 22px;
-  color: white;
-  background: #6b0269;
-}
-/* line 113, style/components/_contact.scss */
-section.contact:not(.our-mission) .wpcf7-not-valid-tip {
-  display: none !important;
-}
-/* line 116, style/components/_contact.scss */
-section.contact:not(.our-mission) div.wpcf7-mail-sent-ok {
-  position: absolute;
-  bottom: -25px;
-  right: 0;
-  border: none;
-  font-size: 14px;
-  font-style: italic;
-  padding: 10px 20px;
-  margin-right: 22px;
-  color: white;
-  background: #6b0269;
 }
 
 /* line 1, style/components/_footer.scss */
 footer.spark_region {
-  background: #6b0269;
-  padding: 80px 0 0;
+  background: #4a1249;
 }
-/* line 4, style/components/_footer.scss */
+/* line 3, style/components/_footer.scss */
 footer.spark_region > section, footer.spark_region > ul {
   display: block;
   margin: auto;
@@ -3144,12 +3166,14 @@ footer.spark_region > section, footer.spark_region > ul {
   padding: 0 60px;
   position: relative;
 }
-/* line 6, style/components/_footer.scss */
+/* line 5, style/components/_footer.scss */
 footer.spark_region > section.footer-heading, footer.spark_region > ul.footer-heading {
   text-align: center;
-  margin-bottom: 3em;
+  padding: 80px 0 3em;
+  background: #6b0269;
+  width: 100%;
 }
-/* line 9, style/components/_footer.scss */
+/* line 10, style/components/_footer.scss */
 footer.spark_region > section.footer-heading h2, footer.spark_region > ul.footer-heading h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3159,7 +3183,7 @@ footer.spark_region > section.footer-heading h2, footer.spark_region > ul.footer
   color: #21e3db;
   margin-bottom: .5em;
 }
-/* line 14, style/components/_footer.scss */
+/* line 15, style/components/_footer.scss */
 footer.spark_region > section.footer-heading h4, footer.spark_region > ul.footer-heading h4 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3167,14 +3191,14 @@ footer.spark_region > section.footer-heading h4, footer.spark_region > ul.footer
   color: white;
   font-size: 28px;
 }
-/* line 21, style/components/_footer.scss */
+/* line 22, style/components/_footer.scss */
 footer.spark_region .footer-content {
   background: #c4c2c7;
   padding: 0;
   white-space: nowrap;
   border-top: 50px solid #6b0269;
 }
-/* line 28, style/components/_footer.scss */
+/* line 29, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li {
   display: inline-block;
   vertical-align: top;
@@ -3184,11 +3208,11 @@ footer.spark_region .footer-content > ul > li {
   background: #c4c2c7;
   height: 420px;
 }
-/* line 37, style/components/_footer.scss */
+/* line 38, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li:not(.petition) {
   margin-top: 20px;
 }
-/* line 41, style/components/_footer.scss */
+/* line 42, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3197,41 +3221,50 @@ footer.spark_region .footer-content > ul > li h2 {
   font-size: 38px;
   color: #6b0269;
   margin: 1em 0 .5em;
+  line-height: 1em;
 }
-/* line 47, style/components/_footer.scss */
+/* line 49, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter {
   position: relative;
 }
-/* line 49, style/components/_footer.scss */
+/* line 51, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter input[type="email"] {
   margin-top: 20px;
   width: 100%;
   display: block;
 }
-/* line 54, style/components/_footer.scss */
+/* line 56, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter input[type="submit"]:hover {
   color: #6b0269;
   border-bottom-color: #6b0269;
   cursor: pointer;
 }
-/* line 59, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-validation-errors {
-  position: absolute;
-  bottom: 90px;
-  left: 28px;
-  border: none;
-  font-size: 14px;
-  font-style: italic;
-  padding: 0px 20px;
-  margin-right: 25px;
-  color: white;
-  background: #6b0269;
+/* line 61, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok {
+  width: auto;
+  margin: 0;
+  bottom: -50px;
+  left: 0;
+  padding: 0 0 0;
 }
-/* line 71, style/components/_footer.scss */
+/* line 67, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors:before, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng:before, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok:before {
+  padding: 5px;
+  margin-right: 10px;
+}
+/* line 72, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter span.wpcf7-not-valid-tip {
   display: none;
 }
 /* line 76, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
+  content: "";
+  font-family: "FontAwesome";
+  color: #81026e;
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 86, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition {
   background: #dedade;
   margin-top: -40px;
@@ -3239,7 +3272,7 @@ footer.spark_region .footer-content > ul > li.petition {
   box-shadow: 0px 2px 15px 0px #666666;
   width: 39%;
 }
-/* line 82, style/components/_footer.scss */
+/* line 92, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text {
   background: #4a1249;
   padding: 30px;
@@ -3247,7 +3280,7 @@ footer.spark_region .footer-content > ul > li.petition .text {
   text-align: center;
   line-height: 25px;
 }
-/* line 88, style/components/_footer.scss */
+/* line 98, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a {
   display: block;
   color: white;
@@ -3261,11 +3294,11 @@ footer.spark_region .footer-content > ul > li.petition .text a {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 99, style/components/_footer.scss */
+/* line 109, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a:hover {
   background: #ff00ff;
 }
-/* line 105, style/components/_footer.scss */
+/* line 115, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3273,38 +3306,97 @@ footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-twe
   padding: 0;
   line-height: 1.3em;
 }
-/* line 110, style/components/_footer.scss */
+/* line 120, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+/* line 124, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
 }
-/* line 116, style/components/_footer.scss */
+/* line 129, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer {
+  float: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* line 136, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer div.post {
+  padding: 0px 0px 0px 2px;
+}
+/* line 141, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3 {
+  margin: 0px;
+  padding: 0px 0px 15px 0px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #434343;
+}
+/* line 152, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer a {
+  color: #434343;
+  text-decoration: none;
+}
+/* line 158, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer p {
+  padding: 0px 0px 24px 0px;
+}
+/* line 163, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul {
+  margin: 0px;
+  padding: 0px 0px 29px 2px;
+  list-style: none;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+/* line 173, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li {
+  padding: 0px 12px 0px 0px;
+  float: left;
+}
+/* line 179, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a {
+  display: block;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 186, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a:hover {
+  color: #9a0197;
+  text-decoration: none;
+}
+/* line 192, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a span {
+  display: none;
+}
+/* line 197, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li a::before {
   font-size: 20px;
 }
-/* line 117, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.twitter a::before {
-  content: "";
-}
-/* line 118, style/components/_footer.scss */
+/* line 199, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.facebook a::before {
   content: "";
 }
-/* line 119, style/components/_footer.scss */
+/* line 200, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.mail a::before {
   content: "";
 }
-/* line 123, style/components/_footer.scss */
+/* line 204, style/components/_footer.scss */
 footer.spark_region .footer-contact {
   padding-top: 1em;
   color: white;
 }
-/* line 126, style/components/_footer.scss */
+/* line 207, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-action {
   display: inline-block;
   vertical-align: top;
 }
-/* line 130, style/components/_footer.scss */
+/* line 211, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo {
   background: url("style/images/logo.png");
   display: block;
@@ -3314,29 +3406,26 @@ footer.spark_region .footer-contact .logo {
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 138, style/components/_footer.scss */
+/* line 219, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo:hover {
   background-image: url("style/images/logo_hover.png");
 }
-/* line 142, style/components/_footer.scss */
+/* line 223, style/components/_footer.scss */
 footer.spark_region .footer-contact nav {
   margin: 0px 0 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 146, style/components/_footer.scss */
+/* line 227, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li {
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
-  color: #21e3db;
-  border-right: 1px solid #21e3db;
-  padding-right: .5em;
-  margin-right: .5em;
+  color: #ab01a7;
 }
-/* line 151, style/components/_footer.scss */
+/* line 232, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a {
-  color: #21e3db;
+  color: #ab01a7;
   text-decoration: none;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3345,24 +3434,34 @@ footer.spark_region .footer-contact nav li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 156, style/components/_footer.scss */
+/* line 236, style/components/_footer.scss */
+footer.spark_region .footer-contact nav li a:hover {
+  color: #21e3db;
+}
+/* line 238, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:before {
   font-family: "FontAwesome";
   font-size: 25px;
 }
-/* line 161, style/components/_footer.scss */
+/* line 243, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.twitter a::before {
   content: "";
 }
-/* line 162, style/components/_footer.scss */
+/* line 244, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.facebook a::before {
   content: "";
 }
-/* line 163, style/components/_footer.scss */
+/* line 245, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.mail a::before {
   content: "";
 }
-/* line 171, style/components/_footer.scss */
+/* line 246, style/components/_footer.scss */
+footer.spark_region .footer-contact nav li:not(:last-of-type) {
+  border-right: 1px solid #ab01a7;
+  padding-right: .5em;
+  margin-right: .5em;
+}
+/* line 253, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social {
   margin-left: 60%;
   width: 200px;
@@ -3370,35 +3469,37 @@ footer.spark_region .footer-contact .footer-social {
   text-align: right;
   vertical-align: top;
 }
-/* line 177, style/components/_footer.scss */
+/* line 259, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social h3 {
-  font-family: "franklin-gothic-urw-comp";
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 24px;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
-/* line 178, style/components/_footer.scss */
+/* line 260, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social li {
   border: none !important;
 }
-/* line 179, style/components/_footer.scss */
+/* line 261, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a {
+  color: #ab01a7;
+}
+/* line 262, style/components/_footer.scss */
+footer.spark_region .footer-contact .footer-social a:hover {
   color: #21e3db;
 }
-/* line 180, style/components/_footer.scss */
-footer.spark_region .footer-contact .footer-social a:hover {
-  color: white;
-}
-/* line 184, style/components/_footer.scss */
+/* line 266, style/components/_footer.scss */
 footer.spark_region .footer-bottom {
   background: #2f2f2f;
   width: 100%;
   padding: 5px;
   color: #dedade;
 }
-/* line 190, style/components/_footer.scss */
+/* line 272, style/components/_footer.scss */
 footer.spark_region .footer-bottom .designed.by {
   width: 100px;
   display: inline-block;
@@ -3406,7 +3507,7 @@ footer.spark_region .footer-bottom .designed.by {
   margin-top: 5px;
   vertical-align: middle;
 }
-/* line 197, style/components/_footer.scss */
+/* line 279, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo {
   float: right;
   white-space: nowrap;
@@ -3422,19 +3523,19 @@ footer.spark_region .footer-bottom .elefintlogo {
   text-decoration: none;
   font-size: 14px;
 }
-/* line 207, style/components/_footer.scss */
+/* line 289, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo:hover {
   max-width: 1000px;
 }
-/* line 210, style/components/_footer.scss */
+/* line 292, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg {
   width: 30px;
 }
-/* line 212, style/components/_footer.scss */
+/* line 294, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg .logomark {
   fill: #c4c2c7;
 }
-/* line 217, style/components/_footer.scss */
+/* line 299, style/components/_footer.scss */
 footer.spark_region .footer-bottom .copyright {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;

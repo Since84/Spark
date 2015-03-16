@@ -1,5 +1,57 @@
+div.wpcf7 {
+	position: relative;
+	max-width: #{$container-width}px;
+	margin: auto;
+
+	.wpcf7-validation-errors, .wpcf7-mail-sent-ng, div.wpcf7-mail-sent-ok{
+		position: absolute;
+		display: block;
+		bottom: -25px;
+		right: 0;
+		border: none;
+		font-size: 14px;
+		font-style: italic;
+		padding: 0;
+		padding-right: 20px;
+		margin-right: 180px;
+		color: white;
+		background: $purple3;
+		border: none;
+		&:before{
+			content: $circlex;
+			font-family: "FontAwesome";
+			font-style: normal;
+			display: inline-block;
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+			background: $purple2;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			margin-right: 20px;
+			padding: 10px;
+			text-align: center;
+			font-size: 28px;
+			line-height: 1.2em;
+		}
+	}
+	div.wpcf7-mail-sent-ok{
+		&:before{
+			content: $circlecheck;
+		}
+	}
+	.wpcf7-not-valid-tip{
+		display: none!important;
+	}
+
+}
+
 section.contact{
 	background: $stronggray;
+	padding: 60px 0;
 	
 	&.our-mission{
 		background: $lightgray;
@@ -75,7 +127,7 @@ section.contact{
 			display: block;
 			margin: auto;
 			font-weight: 600;
-			padding: 20px 0 0;
+			padding-bottom: 60p;
 			font-size: 32px;
 		}
 		input[type="submit"]{
@@ -94,36 +146,6 @@ section.contact{
 			&:before{
 				content: $rightarrow;
 			}
-		}
-		.wpcf7 {
-			position: relative;
-		}
-		.wpcf7-validation-errors{
-			position: absolute;
-			bottom: -25px;
-			right: 0;
-			border: none;
-			font-size: 14px;
-			font-style: italic;
-			padding: 10px 20px;
-			margin-right: 22px;
-			color: white;
-			background: $purple3;
-		}
-		.wpcf7-not-valid-tip{
-			display: none!important;
-		}
-		div.wpcf7-mail-sent-ok {
-			position: absolute;
-			bottom: -25px;
-			right: 0;
-			border: none;
-			font-size: 14px;
-			font-style: italic;
-			padding: 10px 20px;
-			margin-right: 22px;
-			color: white;
-			background: $purple3;			
 		}
 	}
 }

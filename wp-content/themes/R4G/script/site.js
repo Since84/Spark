@@ -24,15 +24,7 @@
 	  		initialize: function(){
 	  			var self = this;
 	  			var issue = this.getParameterByName("issue");
-	  			// this.initPanelNav();
-	  			// this.initCycle();
-	  			// this.initModal();
-	  			// $('.team-member').on('click', function(){
-	  			// 	self.goToTeamMember(this);
-	  			// });
-	  			// $('.issue-area').on('click', function(){
-	  			// 	self.goToTeamMember(this);
-	  			// });
+	  			$('<h3>@Rights4Girls</h3>').insertAfter('.footer-content .twitter .widget_display-latest-tweets .widgettitle')
 	  		},
 
 	  		initPanelNav: function(){ // Navigation

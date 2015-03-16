@@ -7,9 +7,10 @@
 		,'sub_heading' => get_option( 'footer_sub_heading' )
 	);
 
+	$twitter = new TweetFeed;
 	$twitterContext = array(
 		'link' 		=>	get_option('twitter_link')
-		,'widget'	=>	Timber::get_widgets('social')
+		,'widget'	=>	$twitter->display()
 	);
 	$footerContext['twitter'] = Timber::compile('views/components/twitter_block.html.twig', $twitterContext);
 

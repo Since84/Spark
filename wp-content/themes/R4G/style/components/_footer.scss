@@ -1,11 +1,12 @@
 footer.spark_region{
-	background: $purple3;
-	padding: 80px 0 0; 
+	background: $purple2;
 	& > section, & > ul{
 		@include container;
 		&.footer-heading{
 			text-align: center;
-			margin-bottom: 3em;
+			padding: 80px 0 3em; 
+			background: $purple3;
+			width: 100%;
 			h2 {
 				@include h2;
 				color: $teal;
@@ -42,6 +43,7 @@ footer.spark_region{
 					@include h4;
 					color: $purple3;
 					margin: 1em 0 .5em;
+					line-height: 1em;
 				}
 
 				&.newsletter{
@@ -56,20 +58,28 @@ footer.spark_region{
 						border-bottom-color: $purple3;
 						cursor: pointer;
 					}
-					div.wpcf7-validation-errors{
-						position: absolute;
-						bottom: 90px;
-						left: 28px;
-						border: none;
-						font-size: 14px;
-						font-style: italic;
-						padding: 0px 20px;
-						margin-right: 25px;
-						color: white;
-						background: $purple3;
+					.wpcf7-validation-errors, .wpcf7-mail-sent-ng, div.wpcf7-mail-sent-ok{
+						width: auto;
+						margin: 0;
+						bottom: -50px; 
+						left: 0;
+						padding:  0 0 0; 
+						&:before{
+							padding: 5px;
+							margin-right: 10px;
+						}
 					}
 					span.wpcf7-not-valid-tip{
 						display: none;
+					}
+					.wpcf7-form p {
+						&:before{
+							content: $pencil;
+							font-family: "FontAwesome";
+							color: $purple4;
+							display: inline-block;
+							margin-right: 10px;
+						}
 					}
 				}
 	
@@ -107,14 +117,85 @@ footer.spark_region{
 						padding: 0;
 						line-height: 1.3em;
 						// font-size: 10px;
+						h3{
+							font-size: 26px;
+							margin-bottom: 10px;
+						}
 						li {
 							width: 100%;
 							padding: 0;
 						}
 					}
+					div.widget-tweet-footer
+					{
+						float: left;
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					div.widget-tweet-footer div.post
+					{
+					  padding:0px 0px 0px 2px;
+					}
+
+					div.widget-tweet-footer h3
+					{
+					  margin:0px;
+						padding:0px 0px 15px 0px;
+						font-size:24px;
+						font-weight:400;
+						line-height:24px;
+						text-transform:uppercase;
+						color:#434343;
+					}
+
+					div.widget-tweet-footer a
+					{
+					  color:#434343;
+						text-decoration:none;
+					}
+
+					div.widget-tweet-footer p
+					{
+					  padding:0px 0px 24px 0px;
+					}
+
+					div.widget-tweet-footer ul
+					{
+					  	margin:0px;
+						padding:0px 0px 29px 2px;
+						list-style:none;
+						font-size:20px;
+						line-height:20px;
+						margin-bottom: 20px;
+					}
+
+					div.widget-tweet-footer ul li
+					{
+					  padding:0px 12px 0px 0px;
+						float:left;
+					}
+
+					div.widget-tweet-footer ul li a
+					{
+					  display:block;
+						color:#4d4d4d;
+						text-decoration:none;
+					}
+
+					div.widget-tweet-footer ul li a:hover
+					{
+						color:#9a0197;
+						text-decoration:none;
+					}
+
+					div.widget-tweet-footer ul li a span
+					{
+					  display:none;
+					}
 				}
 				a::before{ font-size: 20px; }
-				&.twitter a::before { content: $twitter; }
+				// &.twitter a::before { content: $twitter; }
 				&.facebook a::before { content: $facebook; }
 				&.mail a::before { content: $mail; }
 			}
@@ -147,11 +228,12 @@ footer.spark_region{
 				display: inline-block;
 				vertical-align: middle;
 				line-height: 1em;
-				color: $teal;
+				color: $purple5;
 				a{ 
-					color: $teal; 
+					color: $purple5; 
 					text-decoration: none;
 					@include h7;
+					&:hover{ color: $teal; }
 				}
 				a:before { 
 					font-family: "FontAwesome"; 
@@ -161,11 +243,11 @@ footer.spark_region{
 				&.twitter a::before { content: $twitter; }
 				&.facebook a::before { content: $facebook; }
 				&.mail a::before { content: $mail; }
-				// &:nth-child(odd){
-					border-right: 1px solid $teal;
+				&:not(:last-of-type){
+					border-right: 1px solid $purple5;
 					padding-right: .5em;
 					margin-right: .5em;
-				// }
+				}
 			}
 		}
 		.footer-social{
@@ -174,10 +256,10 @@ footer.spark_region{
 			display: inline-block;
 			text-align: right;
 			vertical-align: top;
-			h3 { @include h6; margin-bottom: 20px; }
+			h3 { @include short-body; font-size: 24px; font-weight: 700; text-transform:uppercase; letter-spacing: 1px;margin-bottom: 20px; }
 			li { border: none !important; }
-			a{ color: #21e3db; }
-			a:hover{color:white;}
+			a{ color: $purple5; }
+			a:hover{color:$teal;}
 		}
 		
 	}
