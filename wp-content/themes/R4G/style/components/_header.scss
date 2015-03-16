@@ -79,3 +79,61 @@ header.spark-header{
 		}
 	} 
 }
+
+
+.donate.spark-modal{
+	background: white;
+	height: 600px;
+	width: 945px;
+	padding: 10px;
+	.modal-content{
+		background: $lightgray;
+		padding: 20px;
+		height: 100%;
+		white-space: normal;
+		& > * {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.text {
+			width: 400px;
+			margin-left: 30px;
+
+			h2{
+				@include h1;
+				font-size: 38px;
+				margin-bottom: 25px;
+				color: $purple3;
+			}
+			p{
+				margin-bottom: 5px;
+			}
+			.button {
+				display: inline-block;
+				color: white;
+				margin: 5px;
+				background: $purple5;
+				text-decoration: none;
+				padding: 20px 60px;
+				margin-top: 1em;
+				font-family: "franklin-gothic-urw-comp";
+				font-weight: 700;
+				font-size: 24px;
+				text-transform: uppercase;
+				transition: .25s background ease-in-out;
+				&:hover{
+					background: $purple4;
+				}
+			}
+			.close{
+				background: $close no-repeat;
+				width: 50px;
+				height: 50px;
+				top: 10px;
+				right: 10px;
+				position: absolute;
+			}
+		}
+	}
+}
+

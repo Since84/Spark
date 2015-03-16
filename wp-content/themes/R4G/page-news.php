@@ -8,9 +8,9 @@
 
 
 	/// Category List
-	$catContext['header'] 		= 	'News & Updates';
-	$catContext['categories']	=	Timber::get_terms('category');
-	$context['categories'] 	= 	Timber::compile('/views/components/category_selector.html.twig', $catContext);
+	// $catContext['header'] 		= 	'News & Updates';
+	// $catContext['categories']	=	Timber::get_terms('category');
+	// $context['categories'] 	= 	Timber::compile('/views/components/category_selector.html.twig', $catContext);
 
 	/// Featured Post
 	$featureContextArgs 		= 	array( 

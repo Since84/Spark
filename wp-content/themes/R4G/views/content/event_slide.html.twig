@@ -1,5 +1,5 @@
-<li class="slide">
-	<a class="content" href="{{ slide.permalink }}">
+<li class="slide" slide-index="{{ loop.index }}">
+	<a class="content"{#  href="{{ slide.permalink }}" #}>
 		<div class="image-head" style="background-image:url({{ slide.thumbnail.src }});">
 			<h4>{{ slide.post_title }}</h4>
 			<h5>{{ slide.display_date }}</h5>

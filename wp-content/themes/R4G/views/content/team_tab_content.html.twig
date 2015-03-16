@@ -8,8 +8,12 @@
 		<h2>{{ slide.member_name }}</h2>
 		<h3>{{ slide.member_position }}</h3>
 		<ul class="links">
-			<li class="email"><a href="mailto:{{ slide.member_email }}">{{ slide.member_email }}</a></li>
-			<li class="personal-link"><a href="{{ slide.member_link_url }}">{{ slide.member_link_label }}</a></li>
+			{% if slide.member_link_label %}
+				<li class="email"><a href="mailto:{{ slide.member_email }}">{{ slide.member_email }}</a></li>
+			{% endif %}
+			{% if slide.member_link_label %}
+				<li class="personal-link"><a href="{{ slide.member_link_url }}">{{ slide.member_link_label }}</a></li>
+			{% endif %}
 		</ul>
 		<div class="member-bio">{{ slide.member_bio }}</div>
 	</div>

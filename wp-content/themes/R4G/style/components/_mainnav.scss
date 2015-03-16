@@ -48,13 +48,13 @@ nav.full-width-nav{
 			background: $purple1;
 			width: 100%;
 			left: 0;
-			padding: 0 #{$margin}px;
+			padding: 0;
 			line-height: 1.5rem;
 			z-index: -1;
 			bottom: 0;
 			height: 0;
 			overflow: hidden;
-			transition: .5s all ease-in-out; 
+			transition: .5s all ease-in-out .5s; 
 			ul { 
 				// position: absolute;
 				bottom: 0;
@@ -75,7 +75,7 @@ nav.full-width-nav{
 			.nav-drop{
 				height: 52px;
 				bottom: -52px;
-				padding: 10px #{$margin}px;
+				padding: 10px 0;
 			}
 		}
 	}

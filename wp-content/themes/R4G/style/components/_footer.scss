@@ -45,10 +45,31 @@ footer.spark_region{
 				}
 
 				&.newsletter{
+					position: relative;
 					input[type="email"]{
 						margin-top: 20px;
 						width: 100%;
 						display: block;
+					}
+					input[type="submit"]:hover{
+						color: $purple3;
+						border-bottom-color: $purple3;
+						cursor: pointer;
+					}
+					div.wpcf7-validation-errors{
+						position: absolute;
+						bottom: 90px;
+						left: 28px;
+						border: none;
+						font-size: 14px;
+						font-style: italic;
+						padding: 0px 20px;
+						margin-right: 25px;
+						color: white;
+						background: $purple3;
+					}
+					span.wpcf7-not-valid-tip{
+						display: none;
 					}
 				}
 	

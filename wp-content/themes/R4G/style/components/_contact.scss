@@ -13,8 +13,8 @@ section.contact{
 		@include h2;
 		margin-bottom: 40px;
 		width: 1000px;
-		font-size: 24px;
-		color: $purple1;
+		// font-size: 24px;
+		color: $purple3;
 	}
 	ul.info {
 		text-align: center;
@@ -67,5 +67,63 @@ section.contact{
 		display: block;
 		clear:both;
 		padding-bottom: 20px;
+	}
+
+	&:not(.our-mission){
+		h2{
+			width: $container-width;
+			display: block;
+			margin: auto;
+			font-weight: 600;
+			padding: 20px 0 0;
+			font-size: 32px;
+		}
+		input[type="submit"]{
+			display: block;
+			background: none;
+			border: none;
+			padding: 0 5px;
+			margin-top: 0px;
+			font-style: normal;
+			font-weight: normal;
+			color: $purple3;
+			cursor: pointer;
+			&:hover{
+				color: $purple4;
+			}
+			&:before{
+				content: $rightarrow;
+			}
+		}
+		.wpcf7 {
+			position: relative;
+		}
+		.wpcf7-validation-errors{
+			position: absolute;
+			bottom: -25px;
+			right: 0;
+			border: none;
+			font-size: 14px;
+			font-style: italic;
+			padding: 10px 20px;
+			margin-right: 22px;
+			color: white;
+			background: $purple3;
+		}
+		.wpcf7-not-valid-tip{
+			display: none!important;
+		}
+		div.wpcf7-mail-sent-ok {
+			position: absolute;
+			bottom: -25px;
+			right: 0;
+			border: none;
+			font-size: 14px;
+			font-style: italic;
+			padding: 10px 20px;
+			margin-right: 22px;
+			color: white;
+			background: $purple3;			
+		}
 	}
 }

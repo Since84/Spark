@@ -25,10 +25,17 @@
 						);
 	$eventsContext['feed'] = Timber::get_posts($eventsContextArgs);
 	Theme_Theme::processPosts($eventsContext['feed']);
-	
-	$eventsContext['slide_template'] = '/views/content/event_slide.html.twig';
- 	$context['events'] = Timber::compile('/views/components/static_feed.html.twig', $eventsContext);
 
+	$eventSlideContext['spark_class'] = 'featured-news events';
+	$eventSlideContext['header'] = 'Join Rights4Girls at our next event';
+	$eventSlideContext['slide_template'] = '/views/content/event_slide.html.twig';
+	$eventSlideContext['feed'] = $eventsContext['feed'];
+ 	$context['event_slides'] = Timber::compile('/views/components/static_feed.html.twig', $eventSlideContext);
+
+ 	$eventDetailContext['spark_class'] = 'event-detail';
+	$eventDetailContext['slide_template'] = '/views/content/event_detail.html.twig';
+	$eventDetailContext['feed'] = $eventsContext['feed'];
+ 	$context['event_details'] = Timber::compile('/views/components/static_feed.html.twig', $eventDetailContext);
 
 	/// Papers & Factsheets
 	$fileContext['spark_class'] = 'letters-briefs-petitions';

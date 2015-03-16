@@ -217,6 +217,7 @@
 		vertical-align: top;
 		width: 260px;
 		margin-right: 30px;
+		background-size: cover;
 		&:before{
 			content: $commentbubble;
 			font-family: "FontAwesome";
