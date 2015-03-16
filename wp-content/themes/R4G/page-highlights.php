@@ -16,6 +16,7 @@
 	$accomplishmentsContext['spark_class'] 		= 'accomplishments';
 	$accomplishmentsContext['header'] 			= 'Accomplishments';
 	$accomplishmentsContext['slide_template'] 	= '/views/content/accomplishment_slide.html.twig';
+	$accomplishmentsContext['more']				= true;
 	$context['accomplishments']					= Timber::compile('/views/components/static_feed.html.twig', $accomplishmentsContext );
 
 	//Display Page using home template 

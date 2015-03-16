@@ -343,3 +343,31 @@
 
 	}
 }
+
+@mixin gallery-pager-arrows{
+	.gallery-pager{
+		display: block;
+		position: absolute;
+		width: 58px;
+		height: 105px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 1000;
+		&.cycle-next{
+			right: 0;
+			background: url(style/images/gallery-arrow-right.png) no-repeat;
+			&:hover{
+				background: url(style/images/gallery-arrow-right-active.png) no-repeat;
+			}
+		}
+		&.cycle-prev{
+			left: 0;
+			background: url(style/images/gallery-arrow-left.png) no-repeat;
+			&:hover{
+				background: url(style/images/gallery-arrow-left-active.png) no-repeat;
+			}
+		}
+
+	}
+}

@@ -217,8 +217,31 @@
 				width: 300px;
 				height: 220px;
 				display: block;
+				background-size: cover;
+				position: relative;
+				&:not(.on){
+					&:before{
+						content:'';
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						margin: auto;
+						background: url(style/images/play-button.png) no-repeat;
+						background-position: center;
+					}
+				}
+
 				object {
-					// display: none;
+					visibility: hidden;
+					display: none;
+					transition: .5s visibility;
+				}
+				&.on object{
+					visibility: visible;
+					display: block;
 				}
 			}
 

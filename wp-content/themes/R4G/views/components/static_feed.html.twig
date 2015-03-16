@@ -3,6 +3,9 @@
 	<ul class="slides">
 	{% for slide in feed %}
 		{% include slide_template %}
+		{% if ( more == true ) and ( loop.length > 3 ) and ( loop.last )  %}
+			<span class="load-more">Load More</span>
+		{% endif %}
 	{% endfor %}
 	</ul>
 </section>
