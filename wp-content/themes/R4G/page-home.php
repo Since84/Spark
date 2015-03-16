@@ -61,6 +61,7 @@
  	/// Featured News and Updates 
 	$newsContext['spark_class'] = 'featured-news';
 	$newsContext['header'] = 'Featured News & Updates';
+	$newsContext['newspage'] = new TimberPost('news');
 	$newsContextArgs = 	array( 
 							'showposts'		=> '3',
 							'category_name'	=> 'home-feature'

@@ -774,8 +774,9 @@ section.resolution-content li strong {
 .why-it-matters .slides {
   padding: 0 70px;
   white-space: nowrap;
+  text-align: center;
 }
-/* line 20, style/components/_why_it_matters.scss */
+/* line 21, style/components/_why_it_matters.scss */
 .why-it-matters .slides .slide {
   display: inline-block;
   position: relative;
@@ -891,15 +892,15 @@ section.resolution-content li strong {
 .why-it-matters .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 25, style/components/_why_it_matters.scss */
+/* line 26, style/components/_why_it_matters.scss */
 .why-it-matters .feed-pager {
   opacity: .5;
 }
-/* line 27, style/components/_why_it_matters.scss */
+/* line 28, style/components/_why_it_matters.scss */
 .why-it-matters .feed-pager:hover {
   opacity: 1;
 }
-/* line 32, style/components/_why_it_matters.scss */
+/* line 33, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span {
   display: block;
   position: absolute;
@@ -910,7 +911,7 @@ section.resolution-content li strong {
   height: 66px;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 41, style/components/_why_it_matters.scss */
+/* line 42, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span::before {
   content: '';
   font-family: "FontAwesome";
@@ -926,19 +927,19 @@ section.resolution-content li strong {
   height: 1em;
   font-size: 2em;
 }
-/* line 58, style/components/_why_it_matters.scss */
+/* line 59, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next {
   right: 0;
 }
-/* line 60, style/components/_why_it_matters.scss */
+/* line 61, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next::before {
   content: "";
 }
-/* line 64, style/components/_why_it_matters.scss */
+/* line 65, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev {
   left: 0;
 }
-/* line 66, style/components/_why_it_matters.scss */
+/* line 67, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev::before {
   content: "";
 }
@@ -2655,23 +2656,23 @@ section.action-feature .feature-link span {
   width: 1200px;
   padding: 0 60px;
   position: relative;
-  padding: 35px;
+  padding: 0;
   margin: 20px auto 40px;
   box-shadow: 0px 0px 10px 0px #777;
 }
 /* line 104, style/components/_news.scss */
 .news-feed .post-preview a {
   text-decoration: none;
-  color: #2f2f2f;
 }
-/* line 109, style/components/_news.scss */
+/* line 108, style/components/_news.scss */
 .news-feed .post-preview .thumbnail {
   width: 180px;
   height: 180px;
   display: inline-block;
   vertical-align: top;
   margin-right: 35px;
-  background-size: auto 100%;
+  background-size: cover;
+  margin: 30px 35px 30px;
 }
 /* line 116, style/components/_news.scss */
 .news-feed .post-preview .thumbnail span {
@@ -2693,12 +2694,18 @@ section.action-feature .feature-link span {
   margin-bottom: 10px;
 }
 /* line 134, style/components/_news.scss */
+.news-feed .post-preview.open .post-content {
+  max-height: 2000px;
+  padding: 60px 30px 30px;
+}
+/* line 140, style/components/_news.scss */
 .news-feed .post-text {
   display: inline-block;
   width: 800px;
+  margin: 30px 0;
 }
 
-/* line 139, style/components/_news.scss */
+/* line 146, style/components/_news.scss */
 .post-content {
   background: #6b0269;
   color: #fff;
@@ -2706,15 +2713,37 @@ section.action-feature .feature-link span {
   margin: 20px 0;
   max-height: 0px;
   overflow: hidden;
-  padding: 0px;
+  padding: 0px 30px;
+  position: relative;
+  transition: 1s all ease-in-out;
+}
+/* line 156, style/components/_news.scss */
+.post-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url(style/images/close_inactive.png) no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+}
+/* line 167, style/components/_news.scss */
+.post-content p {
+  margin-bottom: 1em;
+}
+/* line 170, style/components/_news.scss */
+.post-content a {
+  color: #21e3db;
 }
 
-/* line 152, style/components/_news.scss */
+/* line 178, style/components/_news.scss */
 .in-the-media {
   background: #4a1249;
   padding: 90px 0;
 }
-/* line 155, style/components/_news.scss */
+/* line 181, style/components/_news.scss */
 .in-the-media h2 {
   display: block;
   margin: auto;
@@ -2729,7 +2758,7 @@ section.action-feature .feature-link span {
   padding: 0;
   color: white;
 }
-/* line 161, style/components/_news.scss */
+/* line 187, style/components/_news.scss */
 .in-the-media .slides {
   display: block;
   margin: auto;
@@ -2739,22 +2768,23 @@ section.action-feature .feature-link span {
   padding: 40px 0;
   text-align: center;
 }
-/* line 166, style/components/_news.scss */
+/* line 192, style/components/_news.scss */
 .in-the-media .slides li {
   display: inline-block;
   width: 355px;
   text-align: left;
+  vertical-align: top;
 }
-/* line 170, style/components/_news.scss */
+/* line 197, style/components/_news.scss */
 .in-the-media .slides li:not(:nth-child(3)) {
   margin-right: 60px;
 }
-/* line 173, style/components/_news.scss */
+/* line 200, style/components/_news.scss */
 .in-the-media .slides li a {
   color: white;
   text-decoration: none;
 }
-/* line 179, style/components/_news.scss */
+/* line 206, style/components/_news.scss */
 .in-the-media .slides li .post-text h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2764,27 +2794,23 @@ section.action-feature .feature-link span {
   font-size: 32px;
   margin: 20px 0 0;
 }
-/* line 184, style/components/_news.scss */
+/* line 211, style/components/_news.scss */
 .in-the-media .slides li .post-text p {
   margin-top: 10px;
 }
-/* line 189, style/components/_news.scss */
+/* line 216, style/components/_news.scss */
 .in-the-media .slides li .video {
   width: 300px;
   height: 220px;
   display: block;
 }
-/* line 193, style/components/_news.scss */
-.in-the-media .slides li .video object {
-  display: none;
-}
 
-/* line 202, style/components/_news.scss */
+/* line 229, style/components/_news.scss */
 .malikas-blog {
   background: #dedade;
   padding: 90px 0;
 }
-/* line 205, style/components/_news.scss */
+/* line 232, style/components/_news.scss */
 .malikas-blog .slides {
   display: block;
   margin: auto;
@@ -2793,21 +2819,21 @@ section.action-feature .feature-link span {
   position: relative;
   padding: 0;
 }
-/* line 209, style/components/_news.scss */
+/* line 236, style/components/_news.scss */
 .malikas-blog a {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 210, style/components/_news.scss */
+/* line 237, style/components/_news.scss */
 .malikas-blog a:hover {
   color: #ca02c5;
   font-weight: 100;
 }
-/* line 214, style/components/_news.scss */
+/* line 241, style/components/_news.scss */
 .malikas-blog li {
   display: inline-block;
 }
-/* line 215, style/components/_news.scss */
+/* line 242, style/components/_news.scss */
 .malikas-blog .thumbnail {
   display: inline-block;
   vertical-align: top;
@@ -2815,7 +2841,7 @@ section.action-feature .feature-link span {
   margin-right: 30px;
   background-size: cover;
 }
-/* line 221, style/components/_news.scss */
+/* line 248, style/components/_news.scss */
 .malikas-blog .thumbnail:before {
   content: "";
   font-family: "FontAwesome";
@@ -2825,20 +2851,20 @@ section.action-feature .feature-link span {
   background-color: rgba(129, 2, 110, 0.5);
   color: white;
 }
-/* line 230, style/components/_news.scss */
+/* line 257, style/components/_news.scss */
 .malikas-blog .thumbnail a {
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: bold;
   margin-top: 5px;
 }
-/* line 237, style/components/_news.scss */
+/* line 264, style/components/_news.scss */
 .malikas-blog .post-text {
   display: inline-block;
   vertical-align: top;
   width: 900px;
 }
-/* line 242, style/components/_news.scss */
+/* line 269, style/components/_news.scss */
 .malikas-blog h2 {
   display: block;
   margin: auto;
@@ -2853,7 +2879,7 @@ section.action-feature .feature-link span {
   padding: 0 0 60px;
   color: #4a1249;
 }
-/* line 248, style/components/_news.scss */
+/* line 275, style/components/_news.scss */
 .malikas-blog h4 {
   display: inline-block;
   color: white;
@@ -2862,7 +2888,7 @@ section.action-feature .feature-link span {
   padding: 10px;
   margin: 0;
 }
-/* line 257, style/components/_news.scss */
+/* line 284, style/components/_news.scss */
 .malikas-blog h5 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2871,7 +2897,7 @@ section.action-feature .feature-link span {
   line-height: 1.5em;
   margin: 15px 0;
 }
-/* line 258, style/components/_news.scss */
+/* line 285, style/components/_news.scss */
 .malikas-blog p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2880,7 +2906,7 @@ section.action-feature .feature-link span {
   line-height: 1.5em;
   margin: 0;
 }
-/* line 260, style/components/_news.scss */
+/* line 287, style/components/_news.scss */
 .malikas-blog .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2893,7 +2919,7 @@ section.action-feature .feature-link span {
   display: block;
   padding-top: 20px;
 }
-/* line 268, style/components/_news.scss */
+/* line 295, style/components/_news.scss */
 .malikas-blog .read-more:before {
   content: "";
   font-family: "FontAwesome";

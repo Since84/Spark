@@ -5,6 +5,7 @@
 	$context 		= Timber::get_context();
  	/// Featured News and Updates 
 	$newsContext['spark_class'] = 	'featured-news';
+	$newsContext['pid'] = isset( $_GET['pid'] ) ? $_GET['pid'] : null;
 
 
 	/// Category List
@@ -49,7 +50,7 @@
 	$mediaContext['spark_class']	= 'in-the-media';
 	$mediaContext['header']			= 'Rights4Girls in the Media';
 	$mediaContext['slide_template'] = '/views/content/media_post.html.twig';
- 	$context['media'] 			= Timber::compile('/views/components/static_feed.html.twig', $mediaContext);
+ 	$context['media'] 			= Timber::compile('/views/components/cycle-feed.twig', $mediaContext);
 
 
  	/// Malika Blog

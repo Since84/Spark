@@ -1,11 +1,11 @@
-<li class="post-preview">
-	<a class="content" href="{{ slide.permalink }}">
+<li class="post-preview {% if pid == slide.id %}open{% endif %}">
+	<a class="content">
 		<div class="thumbnail" style="background-image:url( '{{ slide.thumbnail.src }}' );">
 			<span>{{slide.post_date|date('m.d.y')}}</span>
 		</div>
 		<div class="post-text">
 			<h4>{{ slide.post_title }}</h4>
-			<p>{{ slide.get_preview(25) }}</p>
+			<p>{{ slide.get_preview(25,false,'',true) }}</p>
 		</div>
 		
 	</a> 

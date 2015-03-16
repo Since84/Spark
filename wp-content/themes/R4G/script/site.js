@@ -16,7 +16,8 @@
 	  			// "click .team-member": "goToTeamMember",
 	  			"click .issue-area": "goToIssueArea",
 	  			"click .spark-modal-trigger": "openDonateModal",
-	  			"click .events .slide": "toggleEvent"
+	  			"click .events .slide": "toggleEvent",
+	  			"click .news-feed .post-preview": "openNewsPost"
 	  		},
 
 
@@ -54,6 +55,9 @@
 			openDonateModal: function(e) {
 				var modal = $(e.currentTarget).attr('modal-name');
 				$('.'+ modal).toggleClass('show');
+			},
+			openNewsPost: function(e){
+				$(e.currentTarget).toggleClass('open');
 			},
 			toggleEvent: function(e) {
 				var ev = $(e.currentTarget),

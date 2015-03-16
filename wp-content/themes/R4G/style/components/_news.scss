@@ -97,13 +97,12 @@
 	.post-preview{
 		background: $lightgray;
 		@include container;
-		padding: 35px;
+		padding: 0;
 		margin: 20px auto 40px;
 		box-shadow: 0px 0px 10px 0px #777;
 
 		a {
 			text-decoration: none;
-			color: $black;
 		}
 
 		.thumbnail{
@@ -112,7 +111,8 @@
 			display: inline-block;
 			vertical-align: top;
 			margin-right: 35px;
-			background-size: auto 100%;
+			background-size: cover;
+			margin: 30px 35px 30px;
 			span{
 				padding: 0px;
 				// background: $purple4opaque;
@@ -130,10 +130,17 @@
 			color: $purple3;
 			margin-bottom: 10px;
 		}
+        &.open{ 
+        	.post-content{
+        		max-height: 2000px;
+        		padding: 60px 30px 30px;
+        	}
+       	}
 	}
 	.post-text {
 		display: inline-block;
 		width: 800px;
+		margin: 30px 0;
 	}
 }
 .post-content{ 
@@ -143,12 +150,31 @@
 		margin: 20px 0;
         max-height:0px;
        	overflow: hidden;
-       	padding:0px;
+       	padding:0px 30px;
+       	position: relative;
+       	transition: 1s all ease-in-out; 
+       	&:before{
+       		content:"";
+       		display: block;
+       		position: absolute;
+       		width: 55px;
+       		height: 55px;
+       		background: url(style/images/close_inactive.png) no-repeat;
+       		background-size: cover;
+       		top: 0;
+       		right: 0;
+       	}
+       	p {
+       		margin-bottom: 1em;
+       	}
+       	a{
+       		color: $teal;
+       	}
         
+
+
 }
-        //  &.open{ 
-        //  	max-height: 600px 
-       	// }
+
 .in-the-media {
 	background: $purple2;
 	padding: 90px 0;
@@ -167,6 +193,7 @@
 			display: inline-block;
 			width: 355px;
 			text-align: left;
+			vertical-align: top;
 			&:not(:nth-child(3)){
 				margin-right: 60px;
 			}
@@ -191,7 +218,7 @@
 				height: 220px;
 				display: block;
 				object {
-					display: none;
+					// display: none;
 				}
 			}
 

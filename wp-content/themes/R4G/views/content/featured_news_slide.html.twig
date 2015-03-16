@@ -1,5 +1,5 @@
-<li class="slide" style="background-image:url( '{{ slide.statistic_image }}' );">
-	<a class="content" href="{{ slide.permalink }}">
+<li class="slide" style="background-image:url( '{{ slide.statistic_image }}' );" data-id="{{ slide.id }}">
+	<a class="content" href="{{ newspage.permalink }}?pid={{ slide.id }}">
 		<h5>{{ slide.display_date }}</h5>
 		<h4>{{ slide.post_title }}</h2>
 		<p>{{ slide.get_preview(25) }}</p>
