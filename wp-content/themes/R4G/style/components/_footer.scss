@@ -52,6 +52,18 @@ footer.spark_region{
 						margin-top: 20px;
 						width: 100%;
 						display: block;
+						::-webkit-input-placeholder {
+						   font-style: italic;
+						}
+						:-moz-placeholder { /* Firefox 18- */
+						   font-style: italic;  
+						}
+						::-moz-placeholder {  /* Firefox 19+ */
+						   font-style: italic;  
+						}
+						:-ms-input-placeholder {  
+						   font-style: italic;  
+						}
 					}
 					input[type="submit"]:hover{
 						color: $purple3;

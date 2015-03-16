@@ -1121,9 +1121,9 @@ section.resolution-content li strong {
   content: '';
   display: block;
   width: 100%;
-  border-bottom: 10px solid #6b0269;
+  border-bottom: 5px solid #6b0269;
   position: absolute;
-  bottom: -95px;
+  bottom: -70px;
   z-index: 100;
 }
 /* line 47, style/components/_team.scss */
@@ -1188,15 +1188,20 @@ section.resolution-content li strong {
 
 /* line 99, style/components/_team.scss */
 .tab-pager {
-  z-index: 100;
+  z-index: 1000;
+}
+/* line 102, style/components/_team.scss */
+.tab-pager li:hover {
+  color: #21e3db;
+  border-bottom-color: #21e3db;
 }
 
-/* line 102, style/components/_team.scss */
+/* line 108, style/components/_team.scss */
 .tab-content {
   background: #dedade;
   padding: 60px 60px;
 }
-/* line 105, style/components/_team.scss */
+/* line 111, style/components/_team.scss */
 .tab-content > ul {
   display: block;
   margin: auto;
@@ -1205,12 +1210,16 @@ section.resolution-content li strong {
   position: relative;
   padding: 75px 60px;
 }
-/* line 110, style/components/_team.scss */
+/* line 115, style/components/_team.scss */
+.tab-content .team-member-content {
+  padding-bottom: 100px;
+}
+/* line 117, style/components/_team.scss */
 .tab-content .team-member-content .front {
   width: 1100px;
   margin: auto;
 }
-/* line 114, style/components/_team.scss */
+/* line 121, style/components/_team.scss */
 .tab-content .team-member-content h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1222,51 +1231,51 @@ section.resolution-content li strong {
   text-align: left;
   padding: 60px 0 10px;
 }
-/* line 121, style/components/_team.scss */
+/* line 128, style/components/_team.scss */
 .tab-content .team-member-content h3 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
 }
-/* line 125, style/components/_team.scss */
+/* line 132, style/components/_team.scss */
 .tab-content .team-member-content .links {
   margin: 35px 0 45px;
 }
-/* line 127, style/components/_team.scss */
+/* line 134, style/components/_team.scss */
 .tab-content .team-member-content .links li {
   display: inline-block;
 }
-/* line 130, style/components/_team.scss */
+/* line 137, style/components/_team.scss */
 .tab-content .team-member-content .links li a {
   color: #ab01a7;
   text-decoration: none;
   margin-right: 30px;
 }
-/* line 134, style/components/_team.scss */
+/* line 141, style/components/_team.scss */
 .tab-content .team-member-content .links li a:before {
   content: '';
   font-family: "FontAwesome";
   font-size: 20px;
   margin-right: 10px;
 }
-/* line 140, style/components/_team.scss */
+/* line 147, style/components/_team.scss */
 .tab-content .team-member-content .links li a:hover {
   color: #ff00ff;
 }
-/* line 142, style/components/_team.scss */
+/* line 149, style/components/_team.scss */
 .tab-content .team-member-content .links li a:hover:before {
   color: #ff00ff;
 }
-/* line 145, style/components/_team.scss */
+/* line 152, style/components/_team.scss */
 .tab-content .team-member-content .links li.email a:before {
   content: "";
 }
-/* line 148, style/components/_team.scss */
+/* line 155, style/components/_team.scss */
 .tab-content .team-member-content .links li.personal-link a:before {
   content: "";
 }
-/* line 153, style/components/_team.scss */
+/* line 160, style/components/_team.scss */
 .tab-content .team-member-content .member-bio {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1276,13 +1285,13 @@ section.resolution-content li strong {
   margin: auto;
 }
 
-/* line 162, style/components/_team.scss */
+/* line 169, style/components/_team.scss */
 .board-of-directors {
   background: #4a1249;
   padding: 60px 0;
   color: white;
 }
-/* line 166, style/components/_team.scss */
+/* line 173, style/components/_team.scss */
 .board-of-directors h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1292,18 +1301,18 @@ section.resolution-content li strong {
   margin: 60px 0;
   text-align: center;
 }
-/* line 172, style/components/_team.scss */
+/* line 179, style/components/_team.scss */
 .board-of-directors .member-list li {
   display: inline-block;
   vertical-align: top;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 177, style/components/_team.scss */
+/* line 184, style/components/_team.scss */
 .board-of-directors .member-list li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 180, style/components/_team.scss */
+/* line 187, style/components/_team.scss */
 .board-of-directors .member-list li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1312,7 +1321,7 @@ section.resolution-content li strong {
   font-size: 24px;
   font-size: 30px;
 }
-/* line 184, style/components/_team.scss */
+/* line 191, style/components/_team.scss */
 .board-of-directors .member-list li span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1320,12 +1329,12 @@ section.resolution-content li strong {
   color: #c4c2c7;
 }
 
-/* line 193, style/components/_team.scss */
+/* line 200, style/components/_team.scss */
 .coalitions-partnerships {
   background: #dedade;
   padding: 60px 0;
 }
-/* line 196, style/components/_team.scss */
+/* line 203, style/components/_team.scss */
 .coalitions-partnerships > h2, .coalitions-partnerships > ul {
   display: block;
   margin: auto;
@@ -1333,7 +1342,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 199, style/components/_team.scss */
+/* line 206, style/components/_team.scss */
 .coalitions-partnerships h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1341,47 +1350,55 @@ section.resolution-content li strong {
   font-weight: 400;
   font-size: 54px;
   margin: 60px auto;
-  text-align: center;
+  text-align: left;
 }
-/* line 205, style/components/_team.scss */
+/* line 212, style/components/_team.scss */
 .coalitions-partnerships ul li {
   display: inline-block;
   width: 45%;
   margin-bottom: 20px;
 }
-/* line 209, style/components/_team.scss */
+/* line 216, style/components/_team.scss */
 .coalitions-partnerships ul li:nth-child(odd) {
   margin-right: 7%;
 }
-/* line 212, style/components/_team.scss */
+/* line 219, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail {
   display: inline-block;
   vertical-align: top;
   width: 116px;
   background: #6b0269;
 }
-/* line 217, style/components/_team.scss */
+/* line 224, style/components/_team.scss */
 .coalitions-partnerships ul li .thumbnail a {
+  text-decoration: none;
+  display: block;
+}
+/* line 227, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail a:hover {
+  background: #ab01a7;
+}
+/* line 229, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail a:hover span {
   color: #21e3db;
+}
+/* line 234, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail span {
+  color: #ff00ff;
   text-align: center;
   display: block;
-  padding: 10px 0;
-  text-decoration: none;
+  padding: 0;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
 }
-/* line 225, style/components/_team.scss */
-.coalitions-partnerships ul li .thumbnail a:before {
+/* line 241, style/components/_team.scss */
+.coalitions-partnerships ul li .thumbnail span:before {
   content: "";
   font-family: 'FontAwesome';
   font-size: 18px;
   margin-right: 5px;
 }
-/* line 231, style/components/_team.scss */
-.coalitions-partnerships ul li .thumbnail a:hover {
-  background: #ab01a7;
-}
-/* line 236, style/components/_team.scss */
+/* line 249, style/components/_team.scss */
 .coalitions-partnerships ul li img {
   width: 116px;
   height: 116px;
@@ -1389,7 +1406,7 @@ section.resolution-content li strong {
   display: block;
   position: relative;
 }
-/* line 244, style/components/_team.scss */
+/* line 257, style/components/_team.scss */
 .coalitions-partnerships ul li .content {
   display: inline-block;
   vertical-align: top;
@@ -1397,18 +1414,18 @@ section.resolution-content li strong {
   margin-left: 30px;
   margin-bottom: 50px;
 }
-/* line 250, style/components/_team.scss */
+/* line 263, style/components/_team.scss */
 .coalitions-partnerships ul li .content h4 {
   color: #ab01a7;
 }
 
-/* line 260, style/components/_team.scss */
+/* line 273, style/components/_team.scss */
 .partners {
   background: #4a1249;
   color: white;
   padding-bottom: 70px;
 }
-/* line 265, style/components/_team.scss */
+/* line 278, style/components/_team.scss */
 .partners > h2, .partners > ul {
   display: block;
   margin: auto;
@@ -1416,7 +1433,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 268, style/components/_team.scss */
+/* line 281, style/components/_team.scss */
 .partners h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1426,18 +1443,26 @@ section.resolution-content li strong {
   padding: 60px;
   text-align: left;
 }
-/* line 274, style/components/_team.scss */
+/* line 286, style/components/_team.scss */
+.partners > ul {
+  -webkit-columns: 380px 2;
+  -moz-columns: 380px 2;
+  columns: 380px 2;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+/* line 293, style/components/_team.scss */
 .partners > ul li {
-  display: inline-block;
   vertical-align: top;
-  width: 48%;
+  width: 100%;
   margin-bottom: 20px;
 }
-/* line 279, style/components/_team.scss */
+/* line 297, style/components/_team.scss */
 .partners > ul li:nth-child(odd) {
   margin-right: 3%;
 }
-/* line 282, style/components/_team.scss */
+/* line 300, style/components/_team.scss */
 .partners > ul li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1447,7 +1472,7 @@ section.resolution-content li strong {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 287, style/components/_team.scss */
+/* line 305, style/components/_team.scss */
 .partners > ul li a {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1455,7 +1480,7 @@ section.resolution-content li strong {
   color: #21e3db;
   text-decoration: none;
 }
-/* line 292, style/components/_team.scss */
+/* line 310, style/components/_team.scss */
 .partners > ul li a:hover {
   color: #ff00ff;
 }
@@ -3233,13 +3258,31 @@ footer.spark_region .footer-content > ul > li.newsletter input[type="email"] {
   width: 100%;
   display: block;
 }
-/* line 56, style/components/_footer.scss */
+/* line 55, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-webkit-input-placeholder {
+  font-style: italic;
+}
+/* line 58, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic;
+}
+/* line 61, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic;
+}
+/* line 64, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-ms-input-placeholder {
+  font-style: italic;
+}
+/* line 68, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter input[type="submit"]:hover {
   color: #6b0269;
   border-bottom-color: #6b0269;
   cursor: pointer;
 }
-/* line 61, style/components/_footer.scss */
+/* line 73, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter > span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3248,7 +3291,7 @@ footer.spark_region .footer-content > ul > li.newsletter > span {
   line-height: 1.3em;
   display: block;
 }
-/* line 67, style/components/_footer.scss */
+/* line 79, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok {
   width: auto;
   margin: 0;
@@ -3256,22 +3299,22 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-error
   left: 0;
   padding: 0 0 0;
 }
-/* line 73, style/components/_footer.scss */
+/* line 85, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors:before, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng:before, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok:before {
   padding: 5px;
   margin-right: 10px;
 }
-/* line 78, style/components/_footer.scss */
+/* line 90, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter span.wpcf7-not-valid-tip {
   display: none;
 }
-/* line 81, style/components/_footer.scss */
+/* line 93, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
 }
-/* line 83, style/components/_footer.scss */
+/* line 95, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   content: "";
   font-family: "FontAwesome";
@@ -3279,7 +3322,7 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 93, style/components/_footer.scss */
+/* line 105, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition {
   background: #dedade;
   margin-top: -40px;
@@ -3287,7 +3330,7 @@ footer.spark_region .footer-content > ul > li.petition {
   box-shadow: 0px 2px 15px 0px #666666;
   width: 39%;
 }
-/* line 99, style/components/_footer.scss */
+/* line 111, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3299,7 +3342,7 @@ footer.spark_region .footer-content > ul > li.petition .text {
   text-align: center;
   line-height: 25px;
 }
-/* line 107, style/components/_footer.scss */
+/* line 119, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a {
   display: block;
   color: white;
@@ -3314,11 +3357,11 @@ footer.spark_region .footer-content > ul > li.petition .text a {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 119, style/components/_footer.scss */
+/* line 131, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a:hover {
   background: #ff00ff;
 }
-/* line 125, style/components/_footer.scss */
+/* line 137, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3326,27 +3369,27 @@ footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-twe
   padding: 0;
   line-height: 1.3em;
 }
-/* line 130, style/components/_footer.scss */
+/* line 142, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
-/* line 134, style/components/_footer.scss */
+/* line 146, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
 }
-/* line 139, style/components/_footer.scss */
+/* line 151, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer {
   float: left;
   font-size: 16px;
   line-height: 20px;
 }
-/* line 146, style/components/_footer.scss */
+/* line 158, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer div.post {
   padding: 0px 0px 0px 2px;
 }
-/* line 151, style/components/_footer.scss */
+/* line 163, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3 {
   margin: 0px;
   padding: 0px 0px 15px 0px;
@@ -3356,16 +3399,16 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3
   text-transform: uppercase;
   color: #434343;
 }
-/* line 162, style/components/_footer.scss */
+/* line 174, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer a {
   color: #434343;
   text-decoration: none;
 }
-/* line 168, style/components/_footer.scss */
+/* line 180, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer p {
   padding: 0px 0px 24px 0px;
 }
-/* line 173, style/components/_footer.scss */
+/* line 185, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul {
   margin: 0px;
   padding: 0px 0px 29px 2px;
@@ -3374,49 +3417,49 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul
   line-height: 20px;
   margin-bottom: 20px;
 }
-/* line 183, style/components/_footer.scss */
+/* line 195, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li {
   padding: 0px 12px 0px 0px;
   float: left;
 }
-/* line 189, style/components/_footer.scss */
+/* line 201, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a {
   display: block;
   color: #4d4d4d;
   text-decoration: none;
 }
-/* line 196, style/components/_footer.scss */
+/* line 208, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a:hover {
   color: #9a0197;
   text-decoration: none;
 }
-/* line 202, style/components/_footer.scss */
+/* line 214, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a span {
   display: none;
 }
-/* line 207, style/components/_footer.scss */
+/* line 219, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li a::before {
   font-size: 20px;
 }
-/* line 209, style/components/_footer.scss */
+/* line 221, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.facebook a::before {
   content: "";
 }
-/* line 210, style/components/_footer.scss */
+/* line 222, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.mail a::before {
   content: "";
 }
-/* line 214, style/components/_footer.scss */
+/* line 226, style/components/_footer.scss */
 footer.spark_region .footer-contact {
   padding-top: 1em;
   color: white;
 }
-/* line 217, style/components/_footer.scss */
+/* line 229, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-action {
   display: inline-block;
   vertical-align: top;
 }
-/* line 221, style/components/_footer.scss */
+/* line 233, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo {
   background: url("style/images/logo.png");
   display: block;
@@ -3426,24 +3469,24 @@ footer.spark_region .footer-contact .logo {
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 229, style/components/_footer.scss */
+/* line 241, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo:hover {
   background-image: url("style/images/logo_hover.png");
 }
-/* line 233, style/components/_footer.scss */
+/* line 245, style/components/_footer.scss */
 footer.spark_region .footer-contact nav {
   margin: 0px 0 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 237, style/components/_footer.scss */
+/* line 249, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li {
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
   color: #ab01a7;
 }
-/* line 242, style/components/_footer.scss */
+/* line 254, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a {
   color: #ab01a7;
   text-decoration: none;
@@ -3454,34 +3497,34 @@ footer.spark_region .footer-contact nav li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 246, style/components/_footer.scss */
+/* line 258, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:hover {
   color: #21e3db;
 }
-/* line 248, style/components/_footer.scss */
+/* line 260, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:before {
   font-family: "FontAwesome";
   font-size: 25px;
 }
-/* line 253, style/components/_footer.scss */
+/* line 265, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.twitter a::before {
   content: "";
 }
-/* line 254, style/components/_footer.scss */
+/* line 266, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.facebook a::before {
   content: "";
 }
-/* line 255, style/components/_footer.scss */
+/* line 267, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.mail a::before {
   content: "";
 }
-/* line 256, style/components/_footer.scss */
+/* line 268, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li:not(:last-of-type) {
   border-right: 1px solid #ab01a7;
   padding-right: .5em;
   margin-right: .5em;
 }
-/* line 263, style/components/_footer.scss */
+/* line 275, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social {
   margin-left: 60%;
   width: 200px;
@@ -3489,7 +3532,7 @@ footer.spark_region .footer-contact .footer-social {
   text-align: right;
   vertical-align: top;
 }
-/* line 269, style/components/_footer.scss */
+/* line 281, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social h3 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3500,26 +3543,26 @@ footer.spark_region .footer-contact .footer-social h3 {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-/* line 270, style/components/_footer.scss */
+/* line 282, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social li {
   border: none !important;
 }
-/* line 271, style/components/_footer.scss */
+/* line 283, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a {
   color: #ab01a7;
 }
-/* line 272, style/components/_footer.scss */
+/* line 284, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a:hover {
   color: #21e3db;
 }
-/* line 276, style/components/_footer.scss */
+/* line 288, style/components/_footer.scss */
 footer.spark_region .footer-bottom {
   background: #2f2f2f;
   width: 100%;
   padding: 5px;
   color: #dedade;
 }
-/* line 282, style/components/_footer.scss */
+/* line 294, style/components/_footer.scss */
 footer.spark_region .footer-bottom .designed.by {
   width: 100px;
   display: inline-block;
@@ -3527,7 +3570,7 @@ footer.spark_region .footer-bottom .designed.by {
   margin-top: 5px;
   vertical-align: middle;
 }
-/* line 289, style/components/_footer.scss */
+/* line 301, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo {
   float: right;
   white-space: nowrap;
@@ -3543,19 +3586,19 @@ footer.spark_region .footer-bottom .elefintlogo {
   text-decoration: none;
   font-size: 14px;
 }
-/* line 299, style/components/_footer.scss */
+/* line 311, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo:hover {
   max-width: 1000px;
 }
-/* line 302, style/components/_footer.scss */
+/* line 314, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg {
   width: 30px;
 }
-/* line 304, style/components/_footer.scss */
+/* line 316, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg .logomark {
   fill: #c4c2c7;
 }
-/* line 309, style/components/_footer.scss */
+/* line 321, style/components/_footer.scss */
 footer.spark_region .footer-bottom .copyright {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
