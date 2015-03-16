@@ -183,7 +183,9 @@
 			&.next {
 				float: right;
 			}
-			
+			&:hover{
+				border-color: $teal;
+			}	
 		}
 	}
 }

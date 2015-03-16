@@ -1856,8 +1856,12 @@ section.resolution-content li strong {
 .tab-content .tab-pager li.next {
   float: right;
 }
+/* line 186, style/components/_issue_areas.scss */
+.tab-content .tab-pager li:hover {
+  border-color: #21e3db;
+}
 
-/* line 191, style/components/_issue_areas.scss */
+/* line 193, style/components/_issue_areas.scss */
 .file-feed {
   background: #c4c2c7;
 }
@@ -2139,7 +2143,7 @@ section.resolution-content li strong {
   margin-right: 10px;
 }
 
-/* line 194, style/components/_issue_areas.scss */
+/* line 196, style/components/_issue_areas.scss */
 .close-tab {
   position: absolute;
   right: 140px;
