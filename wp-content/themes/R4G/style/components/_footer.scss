@@ -58,6 +58,12 @@ footer.spark_region{
 						border-bottom-color: $purple3;
 						cursor: pointer;
 					}
+					& > span {
+						@include short-body;
+						font-weight: 700;
+						line-height: 1.3em;
+						display: block;
+					}
 					.wpcf7-validation-errors, .wpcf7-mail-sent-ng, div.wpcf7-mail-sent-ok{
 						width: auto;
 						margin: 0;
@@ -73,6 +79,7 @@ footer.spark_region{
 						display: none;
 					}
 					.wpcf7-form p {
+						@include short-body;
 						&:before{
 							content: $pencil;
 							font-family: "FontAwesome";
@@ -90,6 +97,8 @@ footer.spark_region{
 					box-shadow: 0px 2px 15px 0px #666666;
 					width: 39%;
 					.text {
+						@include short-body;
+						font-weight: bold;
 						background: $purple2;
 						padding: 30px;
 						color: white;
@@ -103,6 +112,7 @@ footer.spark_region{
 							text-decoration: none;
 							padding: 20px;
 							margin-top: 1em;
+							letter-spacing: 1px;
 							@include call-to-action;
 							text-transform: uppercase;
 						}

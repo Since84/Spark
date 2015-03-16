@@ -3240,6 +3240,15 @@ footer.spark_region .footer-content > ul > li.newsletter input[type="submit"]:ho
   cursor: pointer;
 }
 /* line 61, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter > span {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3em;
+  display: block;
+}
+/* line 67, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok {
   width: auto;
   margin: 0;
@@ -3247,16 +3256,22 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-error
   left: 0;
   padding: 0 0 0;
 }
-/* line 67, style/components/_footer.scss */
+/* line 73, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors:before, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng:before, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok:before {
   padding: 5px;
   margin-right: 10px;
 }
-/* line 72, style/components/_footer.scss */
+/* line 78, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter span.wpcf7-not-valid-tip {
   display: none;
 }
-/* line 76, style/components/_footer.scss */
+/* line 81, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+}
+/* line 83, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   content: "";
   font-family: "FontAwesome";
@@ -3264,7 +3279,7 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 86, style/components/_footer.scss */
+/* line 93, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition {
   background: #dedade;
   margin-top: -40px;
@@ -3272,15 +3287,19 @@ footer.spark_region .footer-content > ul > li.petition {
   box-shadow: 0px 2px 15px 0px #666666;
   width: 39%;
 }
-/* line 92, style/components/_footer.scss */
+/* line 99, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: bold;
   background: #4a1249;
   padding: 30px;
   color: white;
   text-align: center;
   line-height: 25px;
 }
-/* line 98, style/components/_footer.scss */
+/* line 107, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a {
   display: block;
   color: white;
@@ -3289,16 +3308,17 @@ footer.spark_region .footer-content > ul > li.petition .text a {
   text-decoration: none;
   padding: 20px;
   margin-top: 1em;
+  letter-spacing: 1px;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 109, style/components/_footer.scss */
+/* line 119, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a:hover {
   background: #ff00ff;
 }
-/* line 115, style/components/_footer.scss */
+/* line 125, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3306,27 +3326,27 @@ footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-twe
   padding: 0;
   line-height: 1.3em;
 }
-/* line 120, style/components/_footer.scss */
+/* line 130, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
-/* line 124, style/components/_footer.scss */
+/* line 134, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
 }
-/* line 129, style/components/_footer.scss */
+/* line 139, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer {
   float: left;
   font-size: 16px;
   line-height: 20px;
 }
-/* line 136, style/components/_footer.scss */
+/* line 146, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer div.post {
   padding: 0px 0px 0px 2px;
 }
-/* line 141, style/components/_footer.scss */
+/* line 151, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3 {
   margin: 0px;
   padding: 0px 0px 15px 0px;
@@ -3336,16 +3356,16 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3
   text-transform: uppercase;
   color: #434343;
 }
-/* line 152, style/components/_footer.scss */
+/* line 162, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer a {
   color: #434343;
   text-decoration: none;
 }
-/* line 158, style/components/_footer.scss */
+/* line 168, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer p {
   padding: 0px 0px 24px 0px;
 }
-/* line 163, style/components/_footer.scss */
+/* line 173, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul {
   margin: 0px;
   padding: 0px 0px 29px 2px;
@@ -3354,49 +3374,49 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul
   line-height: 20px;
   margin-bottom: 20px;
 }
-/* line 173, style/components/_footer.scss */
+/* line 183, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li {
   padding: 0px 12px 0px 0px;
   float: left;
 }
-/* line 179, style/components/_footer.scss */
+/* line 189, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a {
   display: block;
   color: #4d4d4d;
   text-decoration: none;
 }
-/* line 186, style/components/_footer.scss */
+/* line 196, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a:hover {
   color: #9a0197;
   text-decoration: none;
 }
-/* line 192, style/components/_footer.scss */
+/* line 202, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a span {
   display: none;
 }
-/* line 197, style/components/_footer.scss */
+/* line 207, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li a::before {
   font-size: 20px;
 }
-/* line 199, style/components/_footer.scss */
+/* line 209, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.facebook a::before {
   content: "";
 }
-/* line 200, style/components/_footer.scss */
+/* line 210, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.mail a::before {
   content: "";
 }
-/* line 204, style/components/_footer.scss */
+/* line 214, style/components/_footer.scss */
 footer.spark_region .footer-contact {
   padding-top: 1em;
   color: white;
 }
-/* line 207, style/components/_footer.scss */
+/* line 217, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-action {
   display: inline-block;
   vertical-align: top;
 }
-/* line 211, style/components/_footer.scss */
+/* line 221, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo {
   background: url("style/images/logo.png");
   display: block;
@@ -3406,24 +3426,24 @@ footer.spark_region .footer-contact .logo {
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 219, style/components/_footer.scss */
+/* line 229, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo:hover {
   background-image: url("style/images/logo_hover.png");
 }
-/* line 223, style/components/_footer.scss */
+/* line 233, style/components/_footer.scss */
 footer.spark_region .footer-contact nav {
   margin: 0px 0 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 227, style/components/_footer.scss */
+/* line 237, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li {
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
   color: #ab01a7;
 }
-/* line 232, style/components/_footer.scss */
+/* line 242, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a {
   color: #ab01a7;
   text-decoration: none;
@@ -3434,34 +3454,34 @@ footer.spark_region .footer-contact nav li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 236, style/components/_footer.scss */
+/* line 246, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:hover {
   color: #21e3db;
 }
-/* line 238, style/components/_footer.scss */
+/* line 248, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:before {
   font-family: "FontAwesome";
   font-size: 25px;
 }
-/* line 243, style/components/_footer.scss */
+/* line 253, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.twitter a::before {
   content: "";
 }
-/* line 244, style/components/_footer.scss */
+/* line 254, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.facebook a::before {
   content: "";
 }
-/* line 245, style/components/_footer.scss */
+/* line 255, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.mail a::before {
   content: "";
 }
-/* line 246, style/components/_footer.scss */
+/* line 256, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li:not(:last-of-type) {
   border-right: 1px solid #ab01a7;
   padding-right: .5em;
   margin-right: .5em;
 }
-/* line 253, style/components/_footer.scss */
+/* line 263, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social {
   margin-left: 60%;
   width: 200px;
@@ -3469,7 +3489,7 @@ footer.spark_region .footer-contact .footer-social {
   text-align: right;
   vertical-align: top;
 }
-/* line 259, style/components/_footer.scss */
+/* line 269, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social h3 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3480,26 +3500,26 @@ footer.spark_region .footer-contact .footer-social h3 {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-/* line 260, style/components/_footer.scss */
+/* line 270, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social li {
   border: none !important;
 }
-/* line 261, style/components/_footer.scss */
+/* line 271, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a {
   color: #ab01a7;
 }
-/* line 262, style/components/_footer.scss */
+/* line 272, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a:hover {
   color: #21e3db;
 }
-/* line 266, style/components/_footer.scss */
+/* line 276, style/components/_footer.scss */
 footer.spark_region .footer-bottom {
   background: #2f2f2f;
   width: 100%;
   padding: 5px;
   color: #dedade;
 }
-/* line 272, style/components/_footer.scss */
+/* line 282, style/components/_footer.scss */
 footer.spark_region .footer-bottom .designed.by {
   width: 100px;
   display: inline-block;
@@ -3507,7 +3527,7 @@ footer.spark_region .footer-bottom .designed.by {
   margin-top: 5px;
   vertical-align: middle;
 }
-/* line 279, style/components/_footer.scss */
+/* line 289, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo {
   float: right;
   white-space: nowrap;
@@ -3523,19 +3543,19 @@ footer.spark_region .footer-bottom .elefintlogo {
   text-decoration: none;
   font-size: 14px;
 }
-/* line 289, style/components/_footer.scss */
+/* line 299, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo:hover {
   max-width: 1000px;
 }
-/* line 292, style/components/_footer.scss */
+/* line 302, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg {
   width: 30px;
 }
-/* line 294, style/components/_footer.scss */
+/* line 304, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg .logomark {
   fill: #c4c2c7;
 }
-/* line 299, style/components/_footer.scss */
+/* line 309, style/components/_footer.scss */
 footer.spark_region .footer-bottom .copyright {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
