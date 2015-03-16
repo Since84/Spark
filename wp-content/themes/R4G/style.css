@@ -333,49 +333,6 @@ nav.full-width-nav > ul > li:hover .nav-drop {
   padding: 10px 0;
 }
 
-/* line 1, style/components/_modal.scss */
-.spark-modal-trigger {
-  cursor: pointer;
-}
-
-/* line 5, style/components/_modal.scss */
-.spark-modal {
-  position: fixed;
-  opacity: 0;
-  top: 500px;
-  left: 50%;
-  width: 50%;
-  max-width: 1000px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: white;
-  transition: .25s all ease-in-out;
-}
-/* line 26, style/components/_modal.scss */
-.spark-modal.show {
-  visibility: visible;
-  opacity: 1;
-  top: 450px;
-}
-/* line 32, style/components/_modal.scss */
-.spark-modal .modal-content {
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
 /* line 2, style/components/_home_feature.scss */
 section.home-feature {
   position: relative;
@@ -998,8 +955,9 @@ section.resolution-content li strong {
 .featured-news {
   background: #c4c2c7;
   padding: 70px 0;
+  position: relative;
 }
-/* line 5, style/components/_featured_news.scss */
+/* line 6, style/components/_featured_news.scss */
 .featured-news .slides, .featured-news > h2 {
   display: block;
   margin: auto;
@@ -1007,7 +965,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 9, style/components/_featured_news.scss */
+/* line 10, style/components/_featured_news.scss */
 .featured-news h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1017,7 +975,7 @@ section.resolution-content li strong {
   color: #6b0269;
   margin-bottom: 1em;
 }
-/* line 15, style/components/_featured_news.scss */
+/* line 16, style/components/_featured_news.scss */
 .featured-news h4 {
   color: white;
   background: #6b0269;
@@ -1026,11 +984,11 @@ section.resolution-content li strong {
   text-transform: uppercase;
   display: inline-block;
 }
-/* line 23, style/components/_featured_news.scss */
+/* line 24, style/components/_featured_news.scss */
 .featured-news h4:hover {
   color: #21e3db;
 }
-/* line 27, style/components/_featured_news.scss */
+/* line 28, style/components/_featured_news.scss */
 .featured-news h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1041,19 +999,19 @@ section.resolution-content li strong {
   font-style: italic;
   margin-bottom: .5em;
 }
-/* line 32, style/components/_featured_news.scss */
+/* line 33, style/components/_featured_news.scss */
 .featured-news p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   line-height: 1em;
 }
-/* line 37, style/components/_featured_news.scss */
+/* line 38, style/components/_featured_news.scss */
 .featured-news .content {
   text-decoration: none;
   color: black;
 }
-/* line 42, style/components/_featured_news.scss */
+/* line 43, style/components/_featured_news.scss */
 .featured-news .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1067,17 +1025,17 @@ section.resolution-content li strong {
   bottom: 5px;
   left: 27px;
 }
-/* line 52, style/components/_featured_news.scss */
+/* line 53, style/components/_featured_news.scss */
 .featured-news .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 58, style/components/_featured_news.scss */
+/* line 59, style/components/_featured_news.scss */
 .featured-news .read-more:hover, .featured-news .read-more:hover:before {
   color: #21e3db;
 }
-/* line 63, style/components/_featured_news.scss */
+/* line 64, style/components/_featured_news.scss */
 .featured-news .slide {
   width: 320px;
   height: 280px;
@@ -1087,7 +1045,7 @@ section.resolution-content li strong {
   display: inline-block;
   position: relative;
 }
-/* line 71, style/components/_featured_news.scss */
+/* line 72, style/components/_featured_news.scss */
 .featured-news .slide:not(:nth-child(3n)) {
   margin-right: 50px;
 }
@@ -2004,99 +1962,100 @@ section.resolution-content li strong {
 }
 /* line 232, style/brand/_mixins.scss */
 .file-feed .file .view-pdf {
-  bottom: 0;
-  border-top: 2px solid #6b0269;
-  color: #6b0269;
+  bottom: 10px;
+  border-top: 2px solid #ab01a7;
+  color: #ab01a7;
   font-family: "franklin-gothic-urw-comp";
   font-size: 18px;
   margin: auto;
+  padding-top: 10px;
   position: absolute;
   text-transform: uppercase;
   visibility: hidden;
   width: 75%;
 }
-/* line 245, style/brand/_mixins.scss */
+/* line 246, style/brand/_mixins.scss */
 .file-feed .file:not(:nth-child(3n)) {
   margin-right: 100px;
 }
-/* line 249, style/brand/_mixins.scss */
+/* line 250, style/brand/_mixins.scss */
 .file-feed .file.Paper {
   border-top: 20px solid #4a1249;
   color: #4a1249;
 }
-/* line 252, style/brand/_mixins.scss */
+/* line 253, style/brand/_mixins.scss */
 .file-feed .file.Paper a {
   color: #4a1249;
 }
-/* line 253, style/brand/_mixins.scss */
+/* line 254, style/brand/_mixins.scss */
 .file-feed .file.Paper:before {
   content: "";
 }
-/* line 256, style/brand/_mixins.scss */
+/* line 257, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 259, style/brand/_mixins.scss */
+/* line 260, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet a {
   color: #81026e;
 }
-/* line 260, style/brand/_mixins.scss */
+/* line 261, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet:before {
   content: "";
 }
-/* line 262, style/brand/_mixins.scss */
+/* line 263, style/brand/_mixins.scss */
 .file-feed .file.Letter {
   border-top: 20px solid #380d36;
   color: #380d36;
 }
-/* line 265, style/brand/_mixins.scss */
+/* line 266, style/brand/_mixins.scss */
 .file-feed .file.Letter a {
   color: #380d36;
 }
-/* line 266, style/brand/_mixins.scss */
+/* line 267, style/brand/_mixins.scss */
 .file-feed .file.Letter:before {
   content: "";
 }
-/* line 268, style/brand/_mixins.scss */
+/* line 269, style/brand/_mixins.scss */
 .file-feed .file.Brief {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 271, style/brand/_mixins.scss */
+/* line 272, style/brand/_mixins.scss */
 .file-feed .file.Brief a {
   color: #81026e;
 }
-/* line 272, style/brand/_mixins.scss */
+/* line 273, style/brand/_mixins.scss */
 .file-feed .file.Brief:before {
   content: "";
 }
-/* line 274, style/brand/_mixins.scss */
+/* line 275, style/brand/_mixins.scss */
 .file-feed .file.Petition {
   border-top: 20px solid #ab01a7;
   color: #ab01a7;
 }
-/* line 277, style/brand/_mixins.scss */
+/* line 278, style/brand/_mixins.scss */
 .file-feed .file.Petition a {
   color: #ab01a7;
 }
-/* line 278, style/brand/_mixins.scss */
+/* line 279, style/brand/_mixins.scss */
 .file-feed .file.Petition:before {
   content: "";
 }
-/* line 281, style/brand/_mixins.scss */
+/* line 282, style/brand/_mixins.scss */
 .file-feed .file:before {
   display: block;
   font-size: 30px;
   font-family: "FontAwesome";
   margin-bottom: 10px;
 }
-/* line 302, style/brand/_mixins.scss */
+/* line 303, style/brand/_mixins.scss */
 .file-feed .file:hover .view-pdf {
   visibility: visible;
-  color: #ff00ff;
+  transition: .25s visibility ease-in-out;
 }
-/* line 306, style/brand/_mixins.scss */
+/* line 307, style/brand/_mixins.scss */
 .file-feed .view-pdf:before {
   content: "";
   font-family: "FontAwesome";
@@ -2110,25 +2069,31 @@ section.resolution-content li strong {
   margin-top: 275px;
 }
 
-/* line 3, style/components/_take_action.scss */
-.action-feature .container > div {
+/* line 2, style/components/_take_action.scss */
+section.action-feature {
+  height: 690px;
+  position: relative;
+}
+/* line 5, style/components/_take_action.scss */
+section.action-feature .container > div {
   margin: auto;
   position: absolute;
   display: block;
   width: 900px;
+  top: 220px;
   background: rgba(129, 2, 110, 0.5);
   bottom: 85px;
   left: 0;
   right: 0;
   color: white;
 }
-/* line 13, style/components/_take_action.scss */
-.action-feature .container > div .main-text, .action-feature .container > div .feature-link {
-  padding: 35px;
+/* line 16, style/components/_take_action.scss */
+section.action-feature .container > div .main-text, section.action-feature .container > div .feature-link {
+  padding: 30px;
   display: block;
 }
-/* line 18, style/components/_take_action.scss */
-.action-feature h2 {
+/* line 21, style/components/_take_action.scss */
+section.action-feature h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
@@ -2138,56 +2103,59 @@ section.resolution-content li strong {
   font-size: 48px;
   margin-bottom: 20px;
 }
-/* line 24, style/components/_take_action.scss */
-.action-feature .main-text > p {
+/* line 27, style/components/_take_action.scss */
+section.action-feature .main-text > p {
   text-align: center;
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
   font-size: 24px;
   line-height: 1.5em;
-  font-size: 34px;
+  font-size: 32px;
 }
-/* line 29, style/components/_take_action.scss */
-.action-feature .feature-link {
+/* line 32, style/components/_take_action.scss */
+section.action-feature .feature-link {
   background: #380d36;
 }
-/* line 31, style/components/_take_action.scss */
-.action-feature .feature-link a {
-  background: #6b0269;
+/* line 34, style/components/_take_action.scss */
+section.action-feature .feature-link > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 38, style/components/_take_action.scss */
+section.action-feature .feature-link a {
+  background: #ab01a7;
   color: white;
   text-decoration: none;
-  padding: 20px 25px;
-  display: inline-block;
-  vertical-align: top;
+  padding: 25px 35px;
   margin-right: 20px;
+  letter-spacing: 1px;
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 24px;
 }
-/* line 41, style/components/_take_action.scss */
-.action-feature .feature-link a:hover {
-  background: #ab01a7;
-  font-weight: 100;
+/* line 47, style/components/_take_action.scss */
+section.action-feature .feature-link a:hover {
+  background: #ff00ff;
 }
-/* line 45, style/components/_take_action.scss */
-.action-feature .feature-link span {
-  display: inline-block;
-  vertical-align: top;
+/* line 50, style/components/_take_action.scss */
+section.action-feature .feature-link span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
-  width: 440px;
+  width: 390px;
+  font-size: 18px;
+  line-height: 1.3em;
 }
 
-/* line 54, style/components/_take_action.scss */
+/* line 59, style/components/_take_action.scss */
 .featured-news.events {
   width: 100%;
   padding-top: 0;
 }
-/* line 57, style/components/_take_action.scss */
+/* line 62, style/components/_take_action.scss */
 .featured-news.events h2 {
   max-width: 9000px;
   width: 100%;
@@ -2204,13 +2172,47 @@ section.resolution-content li strong {
   font-size: 54px;
   padding: 90px;
 }
-/* line 66, style/components/_take_action.scss */
+/* line 316, style/brand/_mixins.scss */
+.featured-news.events .feed-pager {
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 324, style/brand/_mixins.scss */
+.featured-news.events .feed-pager.next {
+  right: 0;
+  background: url(style/images/pager-left-inactive.png) no-repeat;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* line 332, style/brand/_mixins.scss */
+.featured-news.events .feed-pager.next:hover {
+  background: url(style/images/pager-left-active.png) no-repeat;
+}
+/* line 336, style/brand/_mixins.scss */
+.featured-news.events .feed-pager.prev {
+  left: 0;
+  background: url(style/images/pager-left-inactive.png) no-repeat;
+}
+/* line 339, style/brand/_mixins.scss */
+.featured-news.events .feed-pager.prev:hover {
+  background: url(style/images/pager-left-active.png) no-repeat;
+}
+/* line 72, style/components/_take_action.scss */
 .featured-news.events .slide {
   padding: 0;
   height: 415px;
   vertical-align: top;
+  cursor: pointer;
 }
-/* line 70, style/components/_take_action.scss */
+/* line 77, style/components/_take_action.scss */
 .featured-news.events .slide .image-head {
   display: block;
   width: 100%;
@@ -2220,8 +2222,40 @@ section.resolution-content li strong {
   font-size: 28px;
   background-size: auto 100%;
   background-position: center;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
 }
-/* line 80, style/components/_take_action.scss */
+/* line 94, style/components/_take_action.scss */
+.featured-news.events .slide .image-head:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/* line 105, style/components/_take_action.scss */
+.featured-news.events .slide .image-head > * {
+  z-index: 1;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+}
+/* line 115, style/components/_take_action.scss */
 .featured-news.events .slide h4 {
   background: none;
   font-family: "franklin-gothic-urw-comp";
@@ -2233,7 +2267,7 @@ section.resolution-content li strong {
   line-height: 1em;
   height: 80px;
 }
-/* line 87, style/components/_take_action.scss */
+/* line 122, style/components/_take_action.scss */
 .featured-news.events .slide h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2242,7 +2276,7 @@ section.resolution-content li strong {
   font-size: 24px;
   color: white;
 }
-/* line 95, style/components/_take_action.scss */
+/* line 130, style/components/_take_action.scss */
 .featured-news.events .slide span {
   background: #380d36;
   font-family: "franklin-gothic-urw-cond";
@@ -2255,11 +2289,11 @@ section.resolution-content li strong {
   font-size: 18px;
   color: white;
 }
-/* line 105, style/components/_take_action.scss */
-.featured-news.events .slide.active span, .featured-news.events .slide span:hover {
+/* line 140, style/components/_take_action.scss */
+.featured-news.events .slide.active span, .featured-news.events .slide:hover span {
   background: #6b0269;
 }
-/* line 109, style/components/_take_action.scss */
+/* line 144, style/components/_take_action.scss */
 .featured-news.events .slide .event-info {
   position: absolute;
   left: 0;
@@ -2271,12 +2305,24 @@ section.resolution-content li strong {
   visibility: hidden;
   trasition: .25s bottom ease-in-out, .25 opacity ease-in-out;
 }
-/* line 119, style/components/_take_action.scss */
+/* line 154, style/components/_take_action.scss */
 .featured-news.events .slide .event-info .contain {
   width: 1200;
 }
+/* line 160, style/components/_take_action.scss */
+.featured-news.events .slide:hover .image-head a {
+  color: #6b0269;
+}
+/* line 163, style/components/_take_action.scss */
+.featured-news.events .slide:hover a.read-more {
+  color: #ff00ff;
+}
+/* line 165, style/components/_take_action.scss */
+.featured-news.events .slide:hover a.read-more:before {
+  color: #ff00ff;
+}
 
-/* line 128, style/components/_take_action.scss */
+/* line 174, style/components/_take_action.scss */
 .event-detail {
   max-height: 0px;
   min-height: 0px;
@@ -2286,47 +2332,29 @@ section.resolution-content li strong {
   color: white;
   background: #6b0269;
 }
-/* line 136, style/components/_take_action.scss */
+/* line 182, style/components/_take_action.scss */
 .event-detail .event-info {
+  max-height: 0px;
+  overflow-y: hidden;
   visibility: hidden;
-  height: 0;
+  transition: 1s max-height ease-in-out, .5s visibility 0s;
+  cursor: pointer;
 }
-/* line 141, style/components/_take_action.scss */
-.event-detail > * {
-  opacity: 0;
-  transition: .5s opacity ease-in-out .5s;
-}
-/* line 145, style/components/_take_action.scss */
-.event-detail.open {
-  overflow: visible;
-  max-height: 700px;
-  min-height: 200px;
-  padding: 60px 0;
-  position: relative;
-}
-/* line 151, style/components/_take_action.scss */
-.event-detail.open > * {
-  opacity: 1;
-}
-/* line 154, style/components/_take_action.scss */
-.event-detail.open .event-info {
-  transition: .25s visibility ease-in-out .1s;
-}
-/* line 156, style/components/_take_action.scss */
-.event-detail.open .event-info .contain {
+/* line 188, style/components/_take_action.scss */
+.event-detail .event-info .contain {
   width: 1200px;
   margin: auto;
   display: block;
   position: relative;
 }
-/* line 161, style/components/_take_action.scss */
-.event-detail.open .event-info .contain p {
+/* line 193, style/components/_take_action.scss */
+.event-detail .event-info .contain p {
   position: relative;
   display: block;
   z-index: 10;
 }
-/* line 166, style/components/_take_action.scss */
-.event-detail.open .event-info .contain:before {
+/* line 198, style/components/_take_action.scss */
+.event-detail .event-info .contain:before {
   content: '';
   top: -60px;
   transition: top .25s ease-in-out .15s;
@@ -2338,34 +2366,57 @@ section.resolution-content li strong {
   position: absolute;
   z-index: 0;
 }
-/* line 181, style/components/_take_action.scss */
+/* line 212, style/components/_take_action.scss */
+.event-detail > * {
+  opacity: 0;
+  transition: .5s opacity ease-in-out .5s;
+}
+/* line 216, style/components/_take_action.scss */
+.event-detail.open {
+  overflow: visible;
+  max-height: 700px;
+  min-height: 400px;
+  padding: 60px 0;
+  position: relative;
+}
+/* line 222, style/components/_take_action.scss */
+.event-detail.open > * {
+  opacity: 1;
+}
+/* line 225, style/components/_take_action.scss */
+.event-detail.open .event-info {
+  transition: 0s visibility ease-in-out 0s;
+  visibility: visible;
+}
+/* line 230, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="1"] .contain:before {
   left: 170px;
 }
-/* line 186, style/components/_take_action.scss */
+/* line 235, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="2"] .contain:before {
   left: 560px;
 }
-/* line 191, style/components/_take_action.scss */
+/* line 240, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="3"] .contain:before {
   left: 940px;
 }
-/* line 196, style/components/_take_action.scss */
+/* line 245, style/components/_take_action.scss */
 .event-detail.open .event-info.active {
   visibility: visible;
-  height: auto;
+  max-height: 1000px;
   transition: .5s;
   position: relative;
+  overflow-y: visible;
 }
-/* line 202, style/components/_take_action.scss */
+/* line 251, style/components/_take_action.scss */
 .event-detail.open .event-info.active .contain:before {
   top: -100px;
 }
-/* line 205, style/components/_take_action.scss */
+/* line 254, style/components/_take_action.scss */
 .event-detail.open .event-info.active h4 {
   color: #21e3db;
 }
-/* line 209, style/components/_take_action.scss */
+/* line 258, style/components/_take_action.scss */
 .event-detail.open .event-info h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;

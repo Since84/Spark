@@ -1,17 +1,20 @@
 
-.action-feature {
+section.action-feature {
+	height: 690px;
+	position: relative;
 	.container > div{
 		margin: auto;
 		position: absolute;
 		display: block;
 		width: 900px;
+		top: 220px;
 		background: $purple4opaque;
 		bottom: 85px;
 		left: 0;
 		right: 0;
 		color: white;
 		.main-text, .feature-link {
-			padding: 35px;
+			padding: 30px;
 			display: block;
 		}
 	}
@@ -24,29 +27,31 @@
 	.main-text > p {
 		text-align: center;
 		@include long-body;
-		font-size: 34px;
+		font-size: 32px;
 	}
 	.feature-link {
 		background: $purple1;
+		& > * {
+			display: inline-block;
+			vertical-align: middle;
+		}
 		a{
-			background: $purple3;
+			background: $purple5;
 			color: white;
 			text-decoration: none;
-			padding: 20px 25px;
-			display: inline-block;
-			vertical-align: top;
+			padding: 25px 35px;
 			margin-right: 20px;
+			letter-spacing: 1px;
 			@include h6;
 		}
 		a:hover{
-			background: #ab01a7;
-			font-weight: 100;
+			background: $purple6;
 		}
 		span {
-			display: inline-block;
-			vertical-align: top;
 			@include short-body;
-			width: 440px;
+			width: 390px;
+			font-size: 18px;
+			line-height: 1.3em;
 		}
 	}
 }
@@ -63,10 +68,12 @@
 		@include h2;
 		padding: 90px;
 	}
+	@include feed-pager-arrows;
 	.slide{
 		padding: 0;
 		height: 415px;
-		vertical-align: top;		
+		vertical-align: top;
+		cursor: pointer;		
 		.image-head{
 			display: block;
 			width: 100%;
@@ -76,6 +83,34 @@
 			font-size: 28px;
 			background-size: auto 100%;
 			background-position: center;
+			position: relative;
+			-webkit-filter: grayscale(100%);
+			  -moz-filter: grayscale(100%);
+			  -ms-filter: grayscale(100%);
+			  -o-filter: grayscale(100%);
+			  filter: grayscale(100%);
+			  filter: url(grayscale.svg); /* Firefox 4+ */
+			  filter: gray; /* IE 6-9 */;
+			  &:before{
+			  	content: '';
+			  	position: absolute;
+			  	display: block;
+			  	width: 100%;
+			  	height: 100%;
+			  	background: rgba(0,0,0,.6);
+			  	top: 0;
+			  	left: 0;
+			  	z-index: 0;
+			  }
+			  & > * {
+			  	z-index: 1;
+			  	position: relative;
+				-webkit-filter: grayscale(100%);
+				-moz-filter: none;
+				-ms-filter: none;
+				-o-filter: none;
+				filter: none;
+			  }
 		}
 		h4 {
 			background: none;
@@ -102,7 +137,7 @@
 			font-size: 18px;
 			color: white;
 		}
-		&.active span, span:hover{
+		&.active span, &:hover span{
 			background: $purple3;
 		}
 
@@ -121,6 +156,17 @@
 
 			}
 		}
+		&:hover{
+			.image-head a {
+				color: $purple3;
+			}
+			a.read-more {
+				color: $purple6;
+				&:before{
+					color: $purple6;
+				}
+			}
+		}
 	}
 
 }
@@ -134,9 +180,34 @@
 	color: white;
 	background: $purple3;
 	.event-info{
+		max-height: 0px;
+		overflow-y: hidden;
 		visibility: hidden;
-		height: 0;
-
+		transition: 1s max-height ease-in-out, .5s visibility 0s;
+		cursor: pointer;
+		.contain{
+			width: #{$container-width}px;
+			margin: auto;
+			display: block;
+			position: relative;
+			p {
+				position: relative;
+				display: block;
+				z-index: 10;
+			}
+			&:before{
+				content: '';
+				top: -60px;
+				transition: top .25s ease-in-out .15s;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 40px 40px 40px;
+				border-color: transparent transparent $purple3 transparent;
+				position: absolute;
+				z-index: 0;
+			}
+		}
 	}
 	& > * {
 		opacity: 0;
@@ -145,37 +216,15 @@
 	&.open {
 		overflow: visible;
 		max-height: 700px;
-		min-height: 200px;
+		min-height: 400px;
 		padding: 60px 0;
 		position: relative;
 		& > * {
 			opacity: 1;
 		}
 		.event-info{
-			transition: .25s visibility ease-in-out .1s; 
-			.contain{
-				width: #{$container-width}px;
-				margin: auto;
-				display: block;
-				position: relative;
-				p {
-					position: relative;
-					display: block;
-					z-index: 10;
-				}
-				&:before{
-					content: '';
-					top: -60px;
-					transition: top .25s ease-in-out .15s;
-					width: 0;
-					height: 0;
-					border-style: solid;
-					border-width: 0 40px 40px 40px;
-					border-color: transparent transparent $purple3 transparent;
-					position: absolute;
-					z-index: 0;
-				}
-			}
+			transition: 0s visibility ease-in-out 0s; 
+			visibility: visible;
 
 			&[slide-index="1"]{
 				.contain:before{
@@ -194,11 +243,11 @@
 			}
 
 			&.active{
-
 				visibility: visible;
-				height: auto;
+				max-height: 1000px;
 				transition: .5s;
 				position: relative;
+				overflow-y: visible;
 				.contain:before{
 					top: -100px;
 				}

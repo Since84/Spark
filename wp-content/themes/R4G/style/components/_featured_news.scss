@@ -1,6 +1,7 @@
 .featured-news {
 	background: $stronggray;
 	padding: 70px 0;
+	position: relative;
 
 	.slides, & > h2 {
 		@include container;

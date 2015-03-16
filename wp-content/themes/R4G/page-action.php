@@ -30,10 +30,10 @@
 	$eventSlideContext['header'] = 'Join Rights4Girls at our next event';
 	$eventSlideContext['slide_template'] = '/views/content/event_slide.html.twig';
 	$eventSlideContext['feed'] = $eventsContext['feed'];
- 	$context['event_slides'] = Timber::compile('/views/components/static_feed.html.twig', $eventSlideContext);
+ 	$context['event_slides'] = Timber::compile('/views/components/cycle-feed.twig', $eventSlideContext);
 
  	$eventDetailContext['spark_class'] = 'event-detail';
-	$eventDetailContext['slide_template'] = '/views/content/event_detail.html.twig';
+	$eventDetailContext['slide_template'] = '/views/content/event_detail.twig';
 	$eventDetailContext['feed'] = $eventsContext['feed'];
  	$context['event_details'] = Timber::compile('/views/components/static_feed.html.twig', $eventDetailContext);
 

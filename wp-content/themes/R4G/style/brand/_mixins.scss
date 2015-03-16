@@ -230,12 +230,13 @@
 			display: block;
 		}
 		.view-pdf{
-			bottom: 0;
-			border-top: 2px solid $purple3;
-			color: $purple3;
+			bottom: 10px;
+			border-top: 2px solid $purple5;
+			color: $purple5;
 			font-family: "franklin-gothic-urw-comp";
 			font-size: 18px;
 			margin: auto;
+			padding-top: 10px;
 			position: absolute;
 			text-transform: uppercase;
 			visibility: hidden;
@@ -301,7 +302,7 @@
 	}	
 	.file:hover .view-pdf{
 			visibility: visible;
-			color: $purple6;
+			transition: .25s visibility ease-in-out;
 			}
 			.view-pdf:before{
 				content:$circlerightarrow;
@@ -309,4 +310,36 @@
 				// font-size: 20px;
 			 	margin-right: 10px;
 			}
+}
+
+@mixin feed-pager-arrows{
+	.feed-pager{
+		display: block;
+		position: absolute;
+		width: 65px;
+		height: 70px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		&.next{
+			right: 0;
+			background: url(style/images/pager-left-inactive.png) no-repeat;
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+			&:hover{
+				background: url(style/images/pager-left-active.png) no-repeat;
+			}
+		}
+		&.prev{
+			left: 0;
+			background: url(style/images/pager-left-inactive.png) no-repeat;
+			&:hover{
+				background: url(style/images/pager-left-active.png) no-repeat;
+			}
+		}
+
+	}
 }
