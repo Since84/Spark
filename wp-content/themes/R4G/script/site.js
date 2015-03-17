@@ -29,6 +29,7 @@
 	  			var self = this;
 	  			var issue = this.getParameterByName("issue");
 	  			$('<h3>@Rights4Girls</h3>').insertAfter('.footer-content .twitter .widget_display-latest-tweets .widgettitle')
+	  			this.runActiveTab();
 	  		},
 
 	  		initPanelNav: function(){ // Navigation
@@ -56,8 +57,11 @@
 			    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 			},
 			openDonateModal: function(e) {
-				var modal = $(e.currentTarget).attr('modal-name');
+				var modal = $(e.currentTarget).hasClass('donate') ? "donate" : $(e.currentTarget).attr('modal-name');
 				$('.'+ modal).toggleClass('show');
+				$('.'+ modal).find('.close').click(function(){
+					$('.'+modal).removeClass('show');
+				})
 			},
 			openGalleryFull: function(e) {
 				var slideshow = $('#cycle-1').clone()
@@ -90,6 +94,19 @@
 			},
 			loadMore: function(e){
 				$(e.currentTarget).parent().addClass('loaded');
+			},
+			runActiveTab: function(e){
+				var active = $('.issue-areas').attr('active-tab');
+
+				if ( active ){
+					var activeIndex = $("[tab-slug="+active+"]").attr('tab-index'); 
+					$('.tab-content')
+						.cycle()
+						.addClass('cycle-slideshow');
+						$('.tab-content').cycle('goto', activeIndex - 1);	
+						
+					
+				}
 			}
 	  	});
 

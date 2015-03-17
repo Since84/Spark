@@ -4,9 +4,11 @@
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
 	$post 			= new TimberPost();
+	$query			= isset( $_GET['issue'] ) ? $_GET['issue'] : null;
 
 	///Issue Areas
 	$teamContext['spark_class'] = 'issue-areas';
+	$teamContext['active_tab'] = $query ? $query : null;
 	$teamContext['header'] = 'Issue Areas';
 	$teamContext['post'] = $post;
 	$teamContext['tab_template'] = '/views/content/issue_tab.html.twig';

@@ -174,29 +174,53 @@ header.spark-header .social li.donate a::before {
 
 /* line 84, style/components/_header.scss */
 .donate.spark-modal {
-  background: white;
-  height: 600px;
-  width: 945px;
-  padding: 10px;
+  white-space: normal;
+  width: 0;
+  height: 0;
+  max-width: none;
+  overflow: hidden;
 }
-/* line 89, style/components/_header.scss */
+/* line 90, style/components/_header.scss */
+.donate.spark-modal.show {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+/* line 95, style/components/_header.scss */
 .donate.spark-modal .modal-content {
   background: #dedade;
-  padding: 20px;
-  height: 100%;
-  white-space: normal;
+  border: 10px solid white;
+  width: 1000px;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-/* line 94, style/components/_header.scss */
+/* line 104, style/components/_header.scss */
+.donate.spark-modal .modal-content .close {
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url(style/images/lightbox-close.png) no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+/* line 115, style/components/_header.scss */
 .donate.spark-modal .modal-content > * {
   display: inline-block;
   vertical-align: top;
 }
-/* line 98, style/components/_header.scss */
+/* line 119, style/components/_header.scss */
 .donate.spark-modal .modal-content .text {
-  width: 400px;
+  width: 520px;
+  padding-top: 40px;
   margin-left: 30px;
 }
-/* line 102, style/components/_header.scss */
+/* line 124, style/components/_header.scss */
 .donate.spark-modal .modal-content .text h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -207,11 +231,11 @@ header.spark-header .social li.donate a::before {
   margin-bottom: 25px;
   color: #6b0269;
 }
-/* line 108, style/components/_header.scss */
+/* line 130, style/components/_header.scss */
 .donate.spark-modal .modal-content .text p {
   margin-bottom: 5px;
 }
-/* line 111, style/components/_header.scss */
+/* line 133, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .button {
   display: inline-block;
   color: white;
@@ -226,11 +250,11 @@ header.spark-header .social li.donate a::before {
   text-transform: uppercase;
   transition: .25s background ease-in-out;
 }
-/* line 124, style/components/_header.scss */
+/* line 146, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .button:hover {
   background: #81026e;
 }
-/* line 128, style/components/_header.scss */
+/* line 150, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .close {
   background: url("style/images/x.png") no-repeat;
   width: 50px;
@@ -263,6 +287,10 @@ nav.full-width-nav .nav-drop {
   width: 100%;
 }
 /* line 19, style/components/_mainnav.scss */
+nav.full-width-nav li {
+  cursor: pointer;
+}
+/* line 23, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li {
   display: inline-block;
   font-family: "franklin-gothic-urw-comp";
@@ -271,30 +299,30 @@ nav.full-width-nav > ul > li {
   font-weight: 500;
   font-size: 24px;
 }
-/* line 24, style/components/_mainnav.scss */
+/* line 28, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li a, nav.full-width-nav > ul > li span {
   display: block;
   text-decoration: none;
   color: white;
 }
-/* line 30, style/components/_mainnav.scss */
+/* line 34, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li:hover > a, nav.full-width-nav > ul > li:hover > span {
   color: #21e3db;
 }
-/* line 34, style/components/_mainnav.scss */
+/* line 38, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li > a, nav.full-width-nav > ul > li span {
   padding: 19px 28px;
 }
-/* line 38, style/components/_mainnav.scss */
-nav.full-width-nav > ul > li.current_page_item {
+/* line 42, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li.current_page_item, nav.full-width-nav > ul > li.current-menu-parent {
   background: #380d36;
   border-bottom: 5px solid #6b0269;
 }
-/* line 41, style/components/_mainnav.scss */
-nav.full-width-nav > ul > li.current_page_item a, nav.full-width-nav > ul > li.current_page_item span {
+/* line 45, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li.current_page_item > a, nav.full-width-nav > ul > li.current_page_item > span, nav.full-width-nav > ul > li.current-menu-parent > a, nav.full-width-nav > ul > li.current-menu-parent > span {
   color: #21e3db;
 }
-/* line 45, style/components/_mainnav.scss */
+/* line 49, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop {
   position: absolute;
   background: #380d36;
@@ -308,12 +336,12 @@ nav.full-width-nav > ul > li .nav-drop {
   overflow: hidden;
   transition: .5s all ease-in-out .5s;
 }
-/* line 58, style/components/_mainnav.scss */
+/* line 62, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop ul {
   bottom: 0;
   padding: 0 88px;
 }
-/* line 63, style/components/_mainnav.scss */
+/* line 67, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li .nav-drop li {
   display: inline-block;
   font-family: "franklin-gothic-urw-comp";
@@ -326,11 +354,11 @@ nav.full-width-nav > ul > li .nav-drop li {
   margin-right: 1.5rem;
   line-height: 2rem;
 }
-/* line 69, style/components/_mainnav.scss */
-nav.full-width-nav > ul > li .nav-drop li:hover a {
+/* line 73, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop li:hover a, nav.full-width-nav > ul > li .nav-drop li.current-menu-item a {
   color: #21e3db;
 }
-/* line 75, style/components/_mainnav.scss */
+/* line 79, style/components/_mainnav.scss */
 nav.full-width-nav > ul > li:hover .nav-drop {
   height: 52px;
   bottom: -52px;
@@ -338,6 +366,11 @@ nav.full-width-nav > ul > li:hover .nav-drop {
 }
 
 /* line 1, style/components/modal.scss */
+.spark-modal-trigger {
+  cursor: pointer;
+}
+
+/* line 4, style/components/modal.scss */
 .spark-modal {
   position: fixed;
   top: 50%;
@@ -356,11 +389,11 @@ nav.full-width-nav > ul > li:hover .nav-drop {
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 19, style/components/modal.scss */
+/* line 22, style/components/modal.scss */
 .spark-modal.show {
   visibility: visible;
 }
-/* line 22, style/components/modal.scss */
+/* line 25, style/components/modal.scss */
 .spark-modal:before {
   content: '';
   position: fixed;
@@ -3302,7 +3335,7 @@ section.action-feature .feature-link span {
   width: 850px;
 }
 /* line 40, style/components/_accomplishments.scss */
-.accomplishments .slide:nth-child(n+3) {
+.accomplishments .slide:nth-child(n+6) {
   opacity: 0;
   transition: .5s max-height linear, .5s opacity linear;
   transition-delay: 0s, .5s;
@@ -3310,7 +3343,7 @@ section.action-feature .feature-link span {
   overflow: hidden;
 }
 /* line 51, style/components/_accomplishments.scss */
-.accomplishments .slides.loaded .slide:nth-child(n+3) {
+.accomplishments .slides.loaded .slide:nth-child(n+6) {
   opacity: 1;
   max-height: 100px;
 }

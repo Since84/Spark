@@ -1,7 +1,7 @@
 {# {% if loop.index%3 == 1 %}
 	<ul class="tab-group slide">
 {% endif %}  #}
-	<li class="tab issue-area" style="background-image:url( '{{ slide.image.url }}' );" tab-index="{{ loop.index }}"> 
+	<li class="tab issue-area" style="background-image:url( '{{ slide.image.url }}' );" tab-slug="{{ slide.heading | lower |replace({"'":"", " ":"-"}) }}" tab-index="{{ loop.index }}"> 
 		<section class="slide-content">
 			<h4>{{ slide.heading }}</h4>
 			<div>{{ slide.caption }}</div>

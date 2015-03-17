@@ -15,6 +15,10 @@ nav.full-width-nav{
 	.nav-drop{
 		width: 100%;
 	}
+
+	li {
+		cursor: pointer;
+	}
 	
 	& > ul > li {
 		display: inline-block;
@@ -35,10 +39,10 @@ nav.full-width-nav{
 			padding: 19px 28px;
 		}
 
-		&.current_page_item{
+		&.current_page_item, &.current-menu-parent{
 			background: $purple1;
 			border-bottom: 5px solid $purple3;
-			a, span { color: $teal; }
+			& > a, & > span { color: $teal; }
 
 		}
 
@@ -66,7 +70,7 @@ nav.full-width-nav{
 				margin-right: 1.5rem;
 				line-height: 2rem;
 
-				&:hover a {
+				&:hover a, &.current-menu-item a {
 					color: $teal;
 				}
 			}

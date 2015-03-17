@@ -1,4 +1,9 @@
 /* line 1, ../style/components/modal.scss */
+.spark-modal-trigger {
+  cursor: pointer;
+}
+
+/* line 4, ../style/components/modal.scss */
 .spark-modal {
   position: fixed;
   top: 50%;
@@ -17,11 +22,11 @@
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 19, ../style/components/modal.scss */
+/* line 22, ../style/components/modal.scss */
 .spark-modal.show {
   visibility: visible;
 }
-/* line 22, ../style/components/modal.scss */
+/* line 25, ../style/components/modal.scss */
 .spark-modal:before {
   content: '';
   position: fixed;

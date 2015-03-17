@@ -1,4 +1,5 @@
-<section class="spark-gallery scrolling-tabs {{ spark_class }}">
+<section 	class="spark-gallery scrolling-tabs {{ spark_class }}"
+			active-tab="{{ active_tab }}">
 	{% if header %}<h2>{{ header }}</h2>{% endif %}
 	<ul id="thumbnail-pager"class="tabs">
 	{% for slide in post.get_field( 'issue_area' ) %}

@@ -37,7 +37,7 @@
 			width: 850px;
 		}
 
-		&:nth-child(n+3) {
+		&:nth-child(n+6) {
 		    opacity: 0;
 		    transition: .5s max-height linear, .5s opacity linear; 
 		    transition-delay: 0s, .5s;
@@ -48,7 +48,7 @@
 	}
 
 	.slides.loaded {
-		.slide:nth-child(n+3) {
+		.slide:nth-child(n+6) {
 		    opacity: 1;  
 		    max-height: 100px;
 		}		
