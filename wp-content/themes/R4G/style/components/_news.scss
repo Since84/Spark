@@ -50,7 +50,7 @@
 					text-decoration: none; color: white; 
 				}
 				a:hover{
-					color:white;
+					color: $purple6;
 				}
 				hgroup {
 					background: $purple2opaque;
@@ -210,6 +210,8 @@
 				}
 				p{
 					margin-top: 10px;
+					font-size: 18px;
+					line-height: 1.5em;
 				}
 			}
 
@@ -256,10 +258,10 @@
 		@include container;
 		padding: 0;
 	}
-	a { text-decoration: none; color: $black; }
+	a:link { text-decoration: none; color: $black; }
 	a:hover {
-		color: #ca02c5;
-		font-weight: 100;
+		// color: #ca02c5;
+		// font-weight: 100;
 	}
 	li { display: inline-block; }
 	.thumbnail {
@@ -274,6 +276,8 @@
 			position: absolute;
 			padding: 30px 20px;
 			font-size: 60px;
+			top: 15px;
+			left: 16px;
 			background-color: $purple4opaque;
 			color: white;
 		}
@@ -282,12 +286,14 @@
 			text-decoration: underline;
 			font-weight: bold;
 			margin-top: 5px;
+			color: $black;
 		}
 	}
 	.post-text {
 		display: inline-block;
 		vertical-align: top;
 		width: 900px;
+		padding-top: 16px;
 	}
 	h2{
 		@include container;
@@ -321,6 +327,10 @@
 			font-family: "FontAwesome";
 			margin-right: 10px;
 		}	
+	}
+	.post-preview a:hover .read-more{
+		color: $teal;
+		&:before{ color: $teal; }
 	}
 
 }
