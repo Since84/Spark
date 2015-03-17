@@ -4,6 +4,8 @@ div.wpcf7 {
 	margin: auto;
 
 	input[type="text"], input[type="email"], textarea{
+		color: $black;
+		font-style: normal;
 		-webkit-transition: all 0.30s ease-in-out;
 		-moz-transition: all 0.30s ease-in-out;
 		-ms-transition: all 0.30s ease-in-out;
@@ -66,6 +68,7 @@ section.contact{
 	
 	&.our-mission{
 		background: $lightgray;
+		padding: 0;
 	}
 
 	.container{
@@ -112,9 +115,9 @@ section.contact{
 	// 	padding-top: 30px;
 	// 	font-weight: bold;
 	// }
-	input, textarea{
+	input[type="text"], input[type="email"], textarea{
 		background: $lightgray;
-		font-style: italic;
+		// font-style: italic;
 		padding: 20px;
 	}
 	textarea{
@@ -142,17 +145,12 @@ section.contact{
 			font-size: 32px;
 		}
 		input[type="submit"]{
-			display: block;
-			background: none;
-			border: none;
-			padding: 0 5px;
+			padding: 0;
 			margin-top: 0px;
-			font-style: normal;
-			font-weight: normal;
-			color: $purple3;
 			cursor: pointer;
 			&:hover{
 				color: $purple4;
+				border-color: $purple4;
 			}
 			&:before{
 				content: $rightarrow;

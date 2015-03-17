@@ -73,6 +73,8 @@ body.rights_app{
 		box-sizing: border-box;
 	}
 
+	a { color: $teal; }
+
 	.container{
 		@include container;
 	}

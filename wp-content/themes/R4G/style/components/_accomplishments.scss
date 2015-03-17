@@ -9,6 +9,7 @@
 		background: none;
 		color: $purple3;
 		@include h2;
+
 	}
 
 	.slide{
@@ -28,7 +29,7 @@
 		h4{
 			@include h6;
 			font-weight: bold;
-			line-height: .8em;
+			line-height: 1.3em;
 			margin-bottom: 5px;
 		}
 		.content {
@@ -39,19 +40,13 @@
 
 		&:nth-child(n+6) {
 		    opacity: 0;
-		    transition: .5s max-height linear, .5s opacity linear; 
-		    transition-delay: 0s, .5s;
+		    transition: .5s max-height linear, .5s margin-bottom linear, .5s opacity linear; 
+		    transition-delay: 0s, 0s, .5s;
 		    max-height: 0px;
 		    overflow: hidden;
+    		margin-bottom: 0px;
 		}
 
-	}
-
-	.slides.loaded {
-		.slide:nth-child(n+6) {
-		    opacity: 1;  
-		    max-height: 100px;
-		}		
 	}
 
 	.load-more{
@@ -61,6 +56,7 @@
 		width: 170px;
 		color: white;
 		margin: auto;
+		transition: .5s max-height linear;
 		&:before{
 			content: $leftarrow;
 			font-family: "FontAwesome";
@@ -73,5 +69,16 @@
 			width: 0.6em;
 			height: 1.4em;
 		}
+	}
+
+	.slides.loaded {
+		.slide:nth-child(n+6) {
+		    opacity: 1;  
+		    max-height: 100px;
+    		margin-bottom: 40px;
+		}	
+		.load-more{
+			visibility: hidden;
+		}	
 	}
 }

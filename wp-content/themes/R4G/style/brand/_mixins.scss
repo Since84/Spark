@@ -322,7 +322,7 @@
 		bottom: 0;
 		margin: auto;
 		&.next{
-			right: 0;
+			right: 5px;
 			background: url(style/images/pager-left-inactive.png) no-repeat;
 			-webkit-transform: rotate(180deg);
 			-moz-transform: rotate(180deg);
@@ -334,7 +334,7 @@
 			}
 		}
 		&.prev{
-			left: 0;
+			left: 5px;
 			background: url(style/images/pager-left-inactive.png) no-repeat;
 			&:hover{
 				background: url(style/images/pager-left-active.png) no-repeat;

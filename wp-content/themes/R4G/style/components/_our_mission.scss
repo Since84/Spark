@@ -119,11 +119,11 @@ section.resolution-doc {
 	.resolution-download {
 		display: inline-block;
 		vertical-align: middle;
-		text-align: center;
+		text-align: left;
 		width: 540px;
 		@include call-to-action;
 		line-height: 1em;
-		padding: 10px;
+		padding: 18px;
 		margin-bottom: 60px;
 		background: $purple2;
 		&:nth-child(1){

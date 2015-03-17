@@ -4,6 +4,7 @@
 		@include issue_tab;
 		padding: 55px;
 		border-color: $black;
+		cursor: pointer;
 		&.active{
 			border-color: $purple4;
 		}
@@ -169,14 +170,16 @@
 		padding-bottom:40px;
 		display: block;
 		white-space: nowrap;
-		color: $purple4;
+		color: $purple5;
 		li{
 			display: inline-block;
 			width: auto;
 			padding-bottom: 3px;
-			border-bottom: 1px solid $purple4;
+			border-bottom: 1px solid $purple5;
 			text-align: center;
 			cursor: pointer;
+			font-weight: bold;
+			text-transform: uppercase;
 			&.prev {
 				margin-right: 50%;
 			}

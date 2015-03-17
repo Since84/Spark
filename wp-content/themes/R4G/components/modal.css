@@ -26,7 +26,7 @@
 .spark-modal.show {
   visibility: visible;
 }
-/* line 25, ../style/components/modal.scss */
+/* line 26, ../style/components/modal.scss */
 .spark-modal:before {
   content: '';
   position: fixed;
