@@ -81,17 +81,17 @@ section.action-feature {
 			text-align: center;
 			padding: 45px 20px;
 			font-size: 28px;
-			background-size: auto 100%;
+			background-size: cover;
 			background-position: center;
 			position: relative;
-			-webkit-filter: grayscale(100%);
-			  -moz-filter: grayscale(100%);
-			  -ms-filter: grayscale(100%);
-			  -o-filter: grayscale(100%);
-			  filter: grayscale(100%);
-			  filter: url(grayscale.svg); /* Firefox 4+ */
-			  filter: gray; /* IE 6-9 */;
-			  &:before{
+			// -webkit-filter: grayscale(100%);
+			//   -moz-filter: grayscale(100%);
+			//   -ms-filter: grayscale(100%);
+			//   -o-filter: grayscale(100%);
+			//   filter: grayscale(100%);
+			//   filter: url(grayscale.svg); /* Firefox 4+ */
+			//   filter: gray; /* IE 6-9 */;
+			  &:after{
 			  	content: '';
 			  	position: absolute;
 			  	display: block;
@@ -103,13 +103,13 @@ section.action-feature {
 			  	z-index: 0;
 			  }
 			  & > * {
-			  	z-index: 1;
-			  	position: relative;
-				-webkit-filter: grayscale(100%);
-				-moz-filter: none;
-				-ms-filter: none;
-				-o-filter: none;
-				filter: none;
+			 //  	z-index: 1;
+			 //  	position: relative;
+				// -webkit-filter: grayscale(100%);
+				// -moz-filter: none;
+				// -ms-filter: none;
+				// -o-filter: none;
+				// filter: none;
 			  }
 		}
 		h4 {
@@ -118,15 +118,17 @@ section.action-feature {
 			font-size: 26px;
 			line-height: 1em;
 			height: 80px;
+			color: white;
 		}
 		h5{
 			@include h6;
 			color: white;
 			// font-weight: bold;
 		}
-		// h5:hover{
-		// 	font-weight: 900;
-		// }
+		h4,h5{
+			position: relative;
+			z-index: 1;
+		}
 		span{
 			background: $purple1;
 			@include short-body;
@@ -137,8 +139,11 @@ section.action-feature {
 			font-size: 18px;
 			color: white;
 		}
-		&.active span, &:hover span{
-			background: $purple3;
+		&.active, &:hover{
+			span{ background: $purple3; }
+			h4, .read-more, .read-more:before {
+				color: $teal !important;
+			}
 		}
 
 		.event-info {

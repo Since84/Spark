@@ -18,6 +18,7 @@
 	  			"click .spark-modal-trigger.donate": "openDonateModal",
 	  			"click .spark-modal-trigger.gallery": "openGalleryFull",
 	  			"click .events .slide": "toggleEvent",
+	  			"click .events .event-detail .close": "closeEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
 	  			"click .video": "playVideo",
 	  			"click .load-more": "loadMore",
