@@ -20,7 +20,8 @@
 	  			"click .events .slide": "toggleEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
 	  			"click .video": "playVideo",
-	  			"click .load-more": "loadMore"
+	  			"click .load-more": "loadMore",
+	  			"click .wpcf7-form": "hideAlert"
 	  		},
 
 
@@ -107,6 +108,9 @@
 						
 					
 				}
+			},
+			hideAlert: function(e){
+				$( e.currentTarget ).children( "[role='alert']" ).css( "display", "none" );
 			}
 	  	});
 

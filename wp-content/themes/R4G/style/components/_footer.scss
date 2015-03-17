@@ -294,9 +294,10 @@ footer.spark_region{
 		.designed.by {
 			width: 100px;
 			display: inline-block;
-			margin-left: 78%;
+			margin-left: 0;
 			margin-top: 5px;
 			vertical-align: middle;
+			float: right;
 		}
 		.elefintlogo {
 			float: right;
@@ -313,6 +314,8 @@ footer.spark_region{
 			}
 			svg{
 				width: 30px;
+				display: inline-block;
+				vertical-align: middle;
 				.logomark {
 					fill: $stronggray;
 				}

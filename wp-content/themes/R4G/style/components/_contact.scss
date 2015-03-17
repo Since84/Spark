@@ -3,6 +3,17 @@ div.wpcf7 {
 	max-width: #{$container-width}px;
 	margin: auto;
 
+	input[type="text"], input[type="email"], textarea{
+		-webkit-transition: all 0.30s ease-in-out;
+		-moz-transition: all 0.30s ease-in-out;
+		-ms-transition: all 0.30s ease-in-out;
+		-o-transition: all 0.30s ease-in-out;
+		outline: none;
+		&:focus{
+			box-shadow: 0 0 10px $purple3;
+		}
+	}
+
 	.wpcf7-validation-errors, .wpcf7-mail-sent-ng, div.wpcf7-mail-sent-ok{
 		position: absolute;
 		display: block;
@@ -46,7 +57,7 @@ div.wpcf7 {
 	.wpcf7-not-valid-tip{
 		display: none!important;
 	}
-
+	.wpcf7-form-control-wrap:hover .wpcf7-not-valid-tip, .wpcf7-form-control:focus + .wpcf7-not-valid-tip { display:none; }
 }
 
 section.contact{
