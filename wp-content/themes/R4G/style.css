@@ -2534,6 +2534,18 @@ section.action-feature .feature-link span {
   z-index: 0;
 }
 /* line 217, style/components/_take_action.scss */
+.event-detail .event-info .contain:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url(style/images/close_inactive.png) no-repeat;
+  background-size: cover;
+  top: -0px;
+  right: 0;
+}
+/* line 228, style/components/_take_action.scss */
 .event-detail .event-info .contain .credit {
   position: absolute;
   right: 10px;
@@ -2541,40 +2553,40 @@ section.action-feature .feature-link span {
   color: white;
   font-size: 16px;
 }
-/* line 226, style/components/_take_action.scss */
+/* line 237, style/components/_take_action.scss */
 .event-detail > * {
   opacity: 0;
   transition: .5s opacity ease-in-out .5s;
 }
-/* line 230, style/components/_take_action.scss */
+/* line 241, style/components/_take_action.scss */
 .event-detail.open {
   overflow: visible;
   max-height: 700px;
   padding: 60px 0;
   position: relative;
 }
-/* line 235, style/components/_take_action.scss */
+/* line 246, style/components/_take_action.scss */
 .event-detail.open > * {
   opacity: 1;
 }
-/* line 238, style/components/_take_action.scss */
+/* line 249, style/components/_take_action.scss */
 .event-detail.open .event-info {
   transition: 0s visibility ease-in-out 0s;
   visibility: visible;
 }
-/* line 243, style/components/_take_action.scss */
+/* line 254, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="1"] .contain:before {
   left: 170px;
 }
-/* line 248, style/components/_take_action.scss */
+/* line 259, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="2"] .contain:before {
   left: 560px;
 }
-/* line 253, style/components/_take_action.scss */
+/* line 264, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="3"] .contain:before {
   left: 940px;
 }
-/* line 258, style/components/_take_action.scss */
+/* line 269, style/components/_take_action.scss */
 .event-detail.open .event-info.active {
   visibility: visible;
   max-height: 1000px;
@@ -2582,15 +2594,15 @@ section.action-feature .feature-link span {
   position: relative;
   overflow-y: visible;
 }
-/* line 264, style/components/_take_action.scss */
+/* line 275, style/components/_take_action.scss */
 .event-detail.open .event-info.active .contain:before {
   top: -100px;
 }
-/* line 267, style/components/_take_action.scss */
+/* line 278, style/components/_take_action.scss */
 .event-detail.open .event-info.active h4 {
   color: #21e3db;
 }
-/* line 271, style/components/_take_action.scss */
+/* line 282, style/components/_take_action.scss */
 .event-detail.open .event-info h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;

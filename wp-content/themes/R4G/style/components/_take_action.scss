@@ -214,6 +214,17 @@ section.action-feature {
 				position: absolute;
 				z-index: 0;
 			}
+			&:after{
+	       		content:"";
+	       		display: block;
+	       		position: absolute;
+	       		width: 55px;
+	       		height: 55px;
+	       		background: url(style/images/close_inactive.png) no-repeat;
+	       		background-size: cover;
+	       		top: -50px;
+	       		right: 0;
+	       	}
 			.credit {
 				position: absolute;
 				right: 10px;
