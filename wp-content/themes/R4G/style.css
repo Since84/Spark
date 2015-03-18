@@ -2542,7 +2542,7 @@ section.action-feature .feature-link span {
   height: 55px;
   background: url(style/images/close_inactive.png) no-repeat;
   background-size: cover;
-  top: -0px;
+  top: -50px;
   right: 0;
 }
 /* line 228, style/components/_take_action.scss */
