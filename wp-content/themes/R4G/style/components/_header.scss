@@ -61,19 +61,24 @@ header.spark-header{
 			&.twitter a::before { content: $twitter; }
 			&.facebook a::before { content: $facebook; }
 			&.mail a::before { content: $mail; }
-			&.donate a { 
-				background: #404040;
-				color: #a6048e;
+			&.donate { 
+				background: $black2;
 				padding: 25px 40px;
 				display: inline-block;
-				&::hover{
-					background: $lightgray;
-				}
+				cursor: pointer;
+				a{ color: $purple5; }
 				&::before{
 					content: $heart;
 					display: inline-block;
 					font-family: "FontAwesome";
-					color: #a6048e;
+					color: $purple5;
+				}				
+				&:hover{
+					background: #535353;
+					a { color: $purple6; }
+					&::before{
+						color: $purple6;
+					}
 				}
 			}
 		}

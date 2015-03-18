@@ -249,6 +249,7 @@
 				display: block;
 				background-size: cover;
 				position: relative;
+				cursor: pointer;
 				&:not(.on){
 					&:before{
 						content:'';
@@ -261,6 +262,22 @@
 						margin: auto;
 						background: url(style/images/play-button.png) no-repeat;
 						background-position: center;
+						z-index: 10;
+					}
+					&:after{
+						content: '';
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						background: $opaqueblack;
+					}
+				}
+				&:hover, &.on { 
+					&:after{
+						background: $purple4opaque;
 					}
 				}
 

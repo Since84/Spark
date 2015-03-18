@@ -264,6 +264,10 @@
 					color: $purple5;
 					// font-weight: bold;
 				}
+				p{
+					@include short-body;
+					line-height: 1.4em;
+				}
 			}
 		}
 	}

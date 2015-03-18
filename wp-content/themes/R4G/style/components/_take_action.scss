@@ -59,6 +59,7 @@ section.action-feature {
 .featured-news.events {
 	width: 100%;
 	padding-top: 0;
+	padding-bottom: 120px;
 	h2{
 		max-width: 9000px;
 		width: 100%;
@@ -161,6 +162,7 @@ section.action-feature {
 
 			}
 		}
+
 		&:hover{
 			.image-head a {
 				color: $purple3;
@@ -212,6 +214,13 @@ section.action-feature {
 				position: absolute;
 				z-index: 0;
 			}
+			.credit {
+				position: absolute;
+				right: 10px;
+				bottom: -20px;
+				color: white;
+				font-size: 16px;
+			}
 		}
 	}
 	& > * {
@@ -221,7 +230,6 @@ section.action-feature {
 	&.open {
 		overflow: visible;
 		max-height: 700px;
-		min-height: 400px;
 		padding: 60px 0;
 		position: relative;
 		& > * {

@@ -158,25 +158,37 @@ header.spark-header .social li.mail a::before {
   content: "";
 }
 /* line 64, style/components/_header.scss */
-header.spark-header .social li.donate a {
+header.spark-header .social li.donate {
   background: #404040;
-  color: #a6048e;
   padding: 25px 40px;
   display: inline-block;
+  cursor: pointer;
 }
 /* line 69, style/components/_header.scss */
-header.spark-header .social li.donate a::hover {
-  background: #dedade;
+header.spark-header .social li.donate a {
+  color: #ab01a7;
 }
-/* line 72, style/components/_header.scss */
-header.spark-header .social li.donate a::before {
+/* line 70, style/components/_header.scss */
+header.spark-header .social li.donate::before {
   content: "";
   display: inline-block;
   font-family: "FontAwesome";
-  color: #a6048e;
+  color: #ab01a7;
+}
+/* line 76, style/components/_header.scss */
+header.spark-header .social li.donate:hover {
+  background: #535353;
+}
+/* line 78, style/components/_header.scss */
+header.spark-header .social li.donate:hover a {
+  color: #ff00ff;
+}
+/* line 79, style/components/_header.scss */
+header.spark-header .social li.donate:hover::before {
+  color: #ff00ff;
 }
 
-/* line 84, style/components/_header.scss */
+/* line 89, style/components/_header.scss */
 .donate.spark-modal {
   white-space: normal;
   width: 0;
@@ -184,13 +196,13 @@ header.spark-header .social li.donate a::before {
   max-width: none;
   overflow: hidden;
 }
-/* line 90, style/components/_header.scss */
+/* line 95, style/components/_header.scss */
 .donate.spark-modal.show {
   width: 100%;
   height: 100%;
   max-width: none;
 }
-/* line 95, style/components/_header.scss */
+/* line 100, style/components/_header.scss */
 .donate.spark-modal .modal-content {
   background: #dedade;
   border: 10px solid white;
@@ -201,7 +213,7 @@ header.spark-header .social li.donate a::before {
   right: 0;
   margin: auto;
 }
-/* line 104, style/components/_header.scss */
+/* line 109, style/components/_header.scss */
 .donate.spark-modal .modal-content .close {
   display: block;
   position: absolute;
@@ -213,18 +225,18 @@ header.spark-header .social li.donate a::before {
   right: 0;
   z-index: 1000;
 }
-/* line 115, style/components/_header.scss */
+/* line 120, style/components/_header.scss */
 .donate.spark-modal .modal-content > * {
   display: inline-block;
   vertical-align: top;
 }
-/* line 119, style/components/_header.scss */
+/* line 124, style/components/_header.scss */
 .donate.spark-modal .modal-content .text {
   width: 520px;
   padding-top: 40px;
   margin-left: 30px;
 }
-/* line 124, style/components/_header.scss */
+/* line 129, style/components/_header.scss */
 .donate.spark-modal .modal-content .text h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -235,11 +247,11 @@ header.spark-header .social li.donate a::before {
   margin-bottom: 25px;
   color: #6b0269;
 }
-/* line 130, style/components/_header.scss */
+/* line 135, style/components/_header.scss */
 .donate.spark-modal .modal-content .text p {
   margin-bottom: 5px;
 }
-/* line 133, style/components/_header.scss */
+/* line 138, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .button {
   display: inline-block;
   color: white;
@@ -254,11 +266,11 @@ header.spark-header .social li.donate a::before {
   text-transform: uppercase;
   transition: .25s background ease-in-out;
 }
-/* line 146, style/components/_header.scss */
+/* line 151, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .button:hover {
   background: #81026e;
 }
-/* line 150, style/components/_header.scss */
+/* line 155, style/components/_header.scss */
 .donate.spark-modal .modal-content .text .close {
   background: url("style/images/x.png") no-repeat;
   width: 50px;
@@ -1534,14 +1546,21 @@ section.resolution-content li strong {
 .coalitions-partnerships ul li .content h4 {
   color: #ab01a7;
 }
+/* line 267, style/components/_team.scss */
+.coalitions-partnerships ul li .content p {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
+}
 
-/* line 273, style/components/_team.scss */
+/* line 277, style/components/_team.scss */
 .partners {
   background: #4a1249;
   color: white;
   padding-bottom: 70px;
 }
-/* line 278, style/components/_team.scss */
+/* line 282, style/components/_team.scss */
 .partners > h2, .partners > ul {
   display: block;
   margin: auto;
@@ -1549,7 +1568,7 @@ section.resolution-content li strong {
   padding: 0 60px;
   position: relative;
 }
-/* line 281, style/components/_team.scss */
+/* line 285, style/components/_team.scss */
 .partners h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1559,7 +1578,7 @@ section.resolution-content li strong {
   padding: 60px;
   text-align: left;
 }
-/* line 286, style/components/_team.scss */
+/* line 290, style/components/_team.scss */
 .partners > ul {
   -webkit-columns: 380px 2;
   -moz-columns: 380px 2;
@@ -1568,17 +1587,17 @@ section.resolution-content li strong {
   -moz-column-gap: 40px;
   column-gap: 40px;
 }
-/* line 293, style/components/_team.scss */
+/* line 297, style/components/_team.scss */
 .partners > ul li {
   vertical-align: top;
   width: 100%;
   margin-bottom: 20px;
 }
-/* line 297, style/components/_team.scss */
+/* line 301, style/components/_team.scss */
 .partners > ul li:nth-child(odd) {
   margin-right: 3%;
 }
-/* line 300, style/components/_team.scss */
+/* line 304, style/components/_team.scss */
 .partners > ul li h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1588,7 +1607,7 @@ section.resolution-content li strong {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 305, style/components/_team.scss */
+/* line 309, style/components/_team.scss */
 .partners > ul li a {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -1596,7 +1615,7 @@ section.resolution-content li strong {
   color: #21e3db;
   text-decoration: none;
 }
-/* line 310, style/components/_team.scss */
+/* line 314, style/components/_team.scss */
 .partners > ul li a:hover {
   color: #ff00ff;
 }
@@ -2094,7 +2113,7 @@ section.resolution-content li strong {
 .file-feed .file {
   display: inline-block;
   width: 255px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   height: 255px;
   vertical-align: top;
   position: relative;
@@ -2310,8 +2329,9 @@ section.action-feature .feature-link span {
 .featured-news.events {
   width: 100%;
   padding-top: 0;
+  padding-bottom: 120px;
 }
-/* line 62, style/components/_take_action.scss */
+/* line 63, style/components/_take_action.scss */
 .featured-news.events h2 {
   max-width: 9000px;
   width: 100%;
@@ -2361,14 +2381,14 @@ section.action-feature .feature-link span {
 .featured-news.events .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 72, style/components/_take_action.scss */
+/* line 73, style/components/_take_action.scss */
 .featured-news.events .slide {
   padding: 0;
   height: 415px;
   vertical-align: top;
   cursor: pointer;
 }
-/* line 77, style/components/_take_action.scss */
+/* line 78, style/components/_take_action.scss */
 .featured-news.events .slide .image-head {
   display: block;
   width: 100%;
@@ -2380,7 +2400,7 @@ section.action-feature .feature-link span {
   background-position: center;
   position: relative;
 }
-/* line 94, style/components/_take_action.scss */
+/* line 95, style/components/_take_action.scss */
 .featured-news.events .slide .image-head:after {
   content: '';
   position: absolute;
@@ -2392,7 +2412,7 @@ section.action-feature .feature-link span {
   left: 0;
   z-index: 0;
 }
-/* line 115, style/components/_take_action.scss */
+/* line 116, style/components/_take_action.scss */
 .featured-news.events .slide h4 {
   background: none;
   font-family: "franklin-gothic-urw-comp";
@@ -2405,7 +2425,7 @@ section.action-feature .feature-link span {
   height: 80px;
   color: white;
 }
-/* line 123, style/components/_take_action.scss */
+/* line 124, style/components/_take_action.scss */
 .featured-news.events .slide h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2414,12 +2434,12 @@ section.action-feature .feature-link span {
   font-size: 24px;
   color: white;
 }
-/* line 128, style/components/_take_action.scss */
+/* line 129, style/components/_take_action.scss */
 .featured-news.events .slide h4, .featured-news.events .slide h5 {
   position: relative;
   z-index: 1;
 }
-/* line 132, style/components/_take_action.scss */
+/* line 133, style/components/_take_action.scss */
 .featured-news.events .slide span {
   background: #380d36;
   font-family: "franklin-gothic-urw-cond";
@@ -2432,15 +2452,15 @@ section.action-feature .feature-link span {
   font-size: 18px;
   color: white;
 }
-/* line 143, style/components/_take_action.scss */
+/* line 144, style/components/_take_action.scss */
 .featured-news.events .slide.active span, .featured-news.events .slide:hover span {
   background: #6b0269;
 }
-/* line 144, style/components/_take_action.scss */
+/* line 145, style/components/_take_action.scss */
 .featured-news.events .slide.active h4, .featured-news.events .slide.active .read-more, .featured-news.events .slide.active .read-more:before, .featured-news.events .slide:hover h4, .featured-news.events .slide:hover .read-more, .featured-news.events .slide:hover .read-more:before {
   color: #21e3db !important;
 }
-/* line 149, style/components/_take_action.scss */
+/* line 150, style/components/_take_action.scss */
 .featured-news.events .slide .event-info {
   position: absolute;
   left: 0;
@@ -2452,24 +2472,24 @@ section.action-feature .feature-link span {
   visibility: hidden;
   trasition: .25s bottom ease-in-out, .25 opacity ease-in-out;
 }
-/* line 159, style/components/_take_action.scss */
+/* line 160, style/components/_take_action.scss */
 .featured-news.events .slide .event-info .contain {
   width: 1200;
 }
-/* line 165, style/components/_take_action.scss */
+/* line 167, style/components/_take_action.scss */
 .featured-news.events .slide:hover .image-head a {
   color: #6b0269;
 }
-/* line 168, style/components/_take_action.scss */
+/* line 170, style/components/_take_action.scss */
 .featured-news.events .slide:hover a.read-more {
   color: #ff00ff;
 }
-/* line 170, style/components/_take_action.scss */
+/* line 172, style/components/_take_action.scss */
 .featured-news.events .slide:hover a.read-more:before {
   color: #ff00ff;
 }
 
-/* line 179, style/components/_take_action.scss */
+/* line 181, style/components/_take_action.scss */
 .event-detail {
   max-height: 0px;
   min-height: 0px;
@@ -2479,7 +2499,7 @@ section.action-feature .feature-link span {
   color: white;
   background: #6b0269;
 }
-/* line 187, style/components/_take_action.scss */
+/* line 189, style/components/_take_action.scss */
 .event-detail .event-info {
   max-height: 0px;
   overflow-y: hidden;
@@ -2487,20 +2507,20 @@ section.action-feature .feature-link span {
   transition: 1s max-height ease-in-out, .5s visibility 0s;
   cursor: pointer;
 }
-/* line 193, style/components/_take_action.scss */
+/* line 195, style/components/_take_action.scss */
 .event-detail .event-info .contain {
   width: 1200px;
   margin: auto;
   display: block;
   position: relative;
 }
-/* line 198, style/components/_take_action.scss */
+/* line 200, style/components/_take_action.scss */
 .event-detail .event-info .contain p {
   position: relative;
   display: block;
   z-index: 10;
 }
-/* line 203, style/components/_take_action.scss */
+/* line 205, style/components/_take_action.scss */
 .event-detail .event-info .contain:before {
   content: '';
   top: -60px;
@@ -2514,40 +2534,47 @@ section.action-feature .feature-link span {
   z-index: 0;
 }
 /* line 217, style/components/_take_action.scss */
+.event-detail .event-info .contain .credit {
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  color: white;
+  font-size: 16px;
+}
+/* line 226, style/components/_take_action.scss */
 .event-detail > * {
   opacity: 0;
   transition: .5s opacity ease-in-out .5s;
 }
-/* line 221, style/components/_take_action.scss */
+/* line 230, style/components/_take_action.scss */
 .event-detail.open {
   overflow: visible;
   max-height: 700px;
-  min-height: 400px;
   padding: 60px 0;
   position: relative;
 }
-/* line 227, style/components/_take_action.scss */
+/* line 235, style/components/_take_action.scss */
 .event-detail.open > * {
   opacity: 1;
 }
-/* line 230, style/components/_take_action.scss */
+/* line 238, style/components/_take_action.scss */
 .event-detail.open .event-info {
   transition: 0s visibility ease-in-out 0s;
   visibility: visible;
 }
-/* line 235, style/components/_take_action.scss */
+/* line 243, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="1"] .contain:before {
   left: 170px;
 }
-/* line 240, style/components/_take_action.scss */
+/* line 248, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="2"] .contain:before {
   left: 560px;
 }
-/* line 245, style/components/_take_action.scss */
+/* line 253, style/components/_take_action.scss */
 .event-detail.open .event-info[slide-index="3"] .contain:before {
   left: 940px;
 }
-/* line 250, style/components/_take_action.scss */
+/* line 258, style/components/_take_action.scss */
 .event-detail.open .event-info.active {
   visibility: visible;
   max-height: 1000px;
@@ -2555,15 +2582,15 @@ section.action-feature .feature-link span {
   position: relative;
   overflow-y: visible;
 }
-/* line 256, style/components/_take_action.scss */
+/* line 264, style/components/_take_action.scss */
 .event-detail.open .event-info.active .contain:before {
   top: -100px;
 }
-/* line 259, style/components/_take_action.scss */
+/* line 267, style/components/_take_action.scss */
 .event-detail.open .event-info.active h4 {
   color: #21e3db;
 }
-/* line 263, style/components/_take_action.scss */
+/* line 271, style/components/_take_action.scss */
 .event-detail.open .event-info h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2911,8 +2938,9 @@ section.action-feature .feature-link span {
   display: block;
   background-size: cover;
   position: relative;
+  cursor: pointer;
 }
-/* line 253, style/components/_news.scss */
+/* line 254, style/components/_news.scss */
 .in-the-media .slides li .video:not(.on):before {
   content: '';
   display: block;
@@ -2924,25 +2952,41 @@ section.action-feature .feature-link span {
   margin: auto;
   background: url(style/images/play-button.png) no-repeat;
   background-position: center;
+  z-index: 10;
 }
 /* line 267, style/components/_news.scss */
+.in-the-media .slides li .video:not(.on):after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 279, style/components/_news.scss */
+.in-the-media .slides li .video:hover:after, .in-the-media .slides li .video.on:after {
+  background: rgba(129, 2, 110, 0.5);
+}
+/* line 284, style/components/_news.scss */
 .in-the-media .slides li .video object {
   visibility: hidden;
   display: none;
   transition: .5s visibility;
 }
-/* line 272, style/components/_news.scss */
+/* line 289, style/components/_news.scss */
 .in-the-media .slides li .video.on object {
   visibility: visible;
   display: block;
 }
 
-/* line 282, style/components/_news.scss */
+/* line 299, style/components/_news.scss */
 .malikas-blog {
   background: #dedade;
   padding: 90px 0;
 }
-/* line 285, style/components/_news.scss */
+/* line 302, style/components/_news.scss */
 .malikas-blog .slides {
   display: block;
   margin: auto;
@@ -2951,16 +2995,16 @@ section.action-feature .feature-link span {
   position: relative;
   padding: 0;
 }
-/* line 289, style/components/_news.scss */
+/* line 306, style/components/_news.scss */
 .malikas-blog a:link {
   text-decoration: none;
   color: #2f2f2f;
 }
-/* line 294, style/components/_news.scss */
+/* line 311, style/components/_news.scss */
 .malikas-blog li {
   display: inline-block;
 }
-/* line 295, style/components/_news.scss */
+/* line 312, style/components/_news.scss */
 .malikas-blog .thumbnail {
   display: inline-block;
   vertical-align: top;
@@ -2968,7 +3012,7 @@ section.action-feature .feature-link span {
   margin-right: 30px;
   background-size: cover;
 }
-/* line 301, style/components/_news.scss */
+/* line 318, style/components/_news.scss */
 .malikas-blog .thumbnail:before {
   content: "";
   font-family: "FontAwesome";
@@ -2980,7 +3024,7 @@ section.action-feature .feature-link span {
   background-color: rgba(129, 2, 110, 0.5);
   color: white;
 }
-/* line 312, style/components/_news.scss */
+/* line 329, style/components/_news.scss */
 .malikas-blog .thumbnail a {
   text-transform: uppercase;
   text-decoration: underline;
@@ -2988,14 +3032,14 @@ section.action-feature .feature-link span {
   margin-top: 5px;
   color: #2f2f2f;
 }
-/* line 320, style/components/_news.scss */
+/* line 337, style/components/_news.scss */
 .malikas-blog .post-text {
   display: inline-block;
   vertical-align: top;
   width: 900px;
   padding-top: 16px;
 }
-/* line 326, style/components/_news.scss */
+/* line 343, style/components/_news.scss */
 .malikas-blog h2 {
   display: block;
   margin: auto;
@@ -3010,7 +3054,7 @@ section.action-feature .feature-link span {
   padding: 0 0 60px;
   color: #4a1249;
 }
-/* line 332, style/components/_news.scss */
+/* line 349, style/components/_news.scss */
 .malikas-blog h4 {
   display: inline-block;
   color: white;
@@ -3019,7 +3063,7 @@ section.action-feature .feature-link span {
   padding: 10px;
   margin: 0;
 }
-/* line 341, style/components/_news.scss */
+/* line 358, style/components/_news.scss */
 .malikas-blog h5 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3028,7 +3072,7 @@ section.action-feature .feature-link span {
   line-height: 1.5em;
   margin: 15px 0;
 }
-/* line 342, style/components/_news.scss */
+/* line 359, style/components/_news.scss */
 .malikas-blog p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -3037,7 +3081,7 @@ section.action-feature .feature-link span {
   line-height: 1.5em;
   margin: 0;
 }
-/* line 344, style/components/_news.scss */
+/* line 361, style/components/_news.scss */
 .malikas-blog .read-more {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3050,17 +3094,17 @@ section.action-feature .feature-link span {
   display: block;
   padding-top: 20px;
 }
-/* line 352, style/components/_news.scss */
+/* line 369, style/components/_news.scss */
 .malikas-blog .read-more:before {
   content: "";
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 359, style/components/_news.scss */
+/* line 376, style/components/_news.scss */
 .malikas-blog .post-preview a:hover .read-more {
   color: #21e3db;
 }
-/* line 361, style/components/_news.scss */
+/* line 378, style/components/_news.scss */
 .malikas-blog .post-preview a:hover .read-more:before {
   color: #21e3db;
 }
