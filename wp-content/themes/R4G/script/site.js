@@ -18,7 +18,6 @@
 	  			"click .spark-modal-trigger.donate": "openDonateModal",
 	  			"click .spark-modal-trigger.gallery": "openGalleryFull",
 	  			"click .events .slide": "toggleEvent",
-	  			"click .event-detail.open": "toggleEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
 	  			"click .video": "playVideo",
 	  			"click .load-more": "loadMore"
@@ -83,7 +82,10 @@
 				if ( slideIndex.hasClass('active') ){
 					$('.event-detail').removeClass('open')
 				} else if ( $('.event-detail').not('.open') ){
-					$('.event-detail').addClass('open');
+					$('.event-detail').addClass('open').click(function(){
+						$(this).removeClass('open');
+						$slideIndex.removeClass('active');
+					});
 				}
 
 				$('[slide-index="'+index+'"]').toggleClass('active');
