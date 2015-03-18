@@ -63,6 +63,7 @@
 						color: $teal; 
 						@include long-body; 
 						margin: 0;
+						text-transform: uppercase
 					}
 				}
 				p{
@@ -130,6 +131,9 @@
 			@include h4;
 			color: $purple3;
 			margin-bottom: 10px;
+		}
+		h5{
+			text-transform: uppercase;
 		}
         &.open{ 
         	.post-content{
@@ -230,6 +234,7 @@
 					@include h5;
 					font-size: 32px;
 					margin: 20px 0 0;
+					text-transform: uppercase;
 				}
 				p{
 					margin-top: 10px;

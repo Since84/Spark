@@ -18,11 +18,9 @@
 	  			"click .spark-modal-trigger.donate": "openDonateModal",
 	  			"click .spark-modal-trigger.gallery": "openGalleryFull",
 	  			"click .events .slide": "toggleEvent",
-	  			"click .events .event-detail .close": "closeEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
 	  			"click .video": "playVideo",
-	  			"click .load-more": "loadMore",
-	  			"click .wpcf7-form": "hideAlert"
+	  			"click .load-more": "loadMore"
 	  		},
 
 
@@ -59,7 +57,7 @@
 			    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 			},
 			openDonateModal: function(e) {
-				var modal = $(e.currentTarget).hasClass('donate') ? "donate" : $(e.currentTarget).attr('modal-name');
+				var modal = $(e.currentTarget).attr('modal-name');
 				$('.'+ modal).toggleClass('show');
 				$('.'+ modal).find('.close').click(function(){
 					$('.'+modal).removeClass('show');
@@ -106,12 +104,7 @@
 						.cycle()
 						.addClass('cycle-slideshow');
 						$('.tab-content').cycle('goto', activeIndex - 1);	
-						
-					
 				}
-			},
-			hideAlert: function(e){
-				$( e.currentTarget ).children( "[role='alert']" ).css( "display", "none" );
 			}
 	  	});
 

@@ -29,7 +29,7 @@
  	/// News Feed
 	$newsContextArgs 			= 	array( 
 									'showposts'			=> '3'
-									,'category__not_in'	=> array(8, 9, 3, 5)//TODO: Add News Feature and In the Media ids
+									,'category__not_in'	=> array(9, 3, 5)//TODO: Add News Feature and In the Media ids
 								);
 	$newsContext['feed'] 		= 	Timber::get_posts($newsContextArgs);
 	$newsContext['spark_class']	= 	'news-feed';
