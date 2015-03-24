@@ -56,7 +56,8 @@
 		width: 170px;
 		color: white;
 		margin: auto;
-		transition: .5s max-height linear;
+		transition: .5s all linear;
+		cursor: pointer;
 		&:before{
 			content: $leftarrow;
 			font-family: "FontAwesome";
@@ -69,16 +70,30 @@
 			width: 0.6em;
 			height: 1.4em;
 		}
+		&:after{
+			content: "Load More";
+		}
+		&:hover{
+			background-color: $purple6;
+		}
 	}
 
 	.slides.loaded {
 		.slide:nth-child(n+6) {
 		    opacity: 1;  
-		    max-height: 100px;
+		    max-height: 1000px;
     		margin-bottom: 40px;
 		}	
 		.load-more{
-			visibility: hidden;
+			&:before{
+			    -moz-transform: rotate(90deg);
+			    -ms-transform: rotate(90deg); /* IE 9 */
+			    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+			    transform: rotate(90deg);				
+			}
+			&:after{
+				content: "See Less";
+			}
 		}	
 	}
 }

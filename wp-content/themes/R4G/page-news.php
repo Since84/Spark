@@ -20,23 +20,24 @@
 								);
 	
 	/// Featured News and Updates 
-	$featureContext['spark_class'] = 	'featured-post';
-	$featureContext['feed'] 	= 	Timber::get_posts($featureContextArgs);
-	$featureContext['slide_template'] = '/views/components/featured_news_slide.html.twig';
- 	$context['feature'] 		= Timber::compile('/views/components/static_feed.html.twig', $featureContext);
+	$featureContext['spark_class'] 		= 	'featured-post';
+	$featureContext['feed'] 			= 	Timber::get_posts($featureContextArgs);
+	$featureContext['slide_template'] 	= '/views/components/featured_news_slide.html.twig';
+ 	$context['feature'] 				= Timber::compile('/views/components/static_feed.html.twig', $featureContext);
 
 
  	/// News Feed
-	$newsContextArgs 			= 	array( 
-									'showposts'			=> '3'
-									,'category__not_in'	=> array(9, 3, 5)//TODO: Add News Feature and In the Media ids
-								);
-	$newsContext['feed'] 		= 	Timber::get_posts($newsContextArgs);
-	$newsContext['spark_class']	= 	'news-feed';
+	$newsContextArgs 					= 	array( 
+											'showposts'			=> '0'
+											,'category__not_in'	=> array(9, 3, 5)//TODO: Add News Feature and In the Media ids
+										);
+	$newsContext['feed'] 				= 	Timber::get_posts($newsContextArgs);
+	$newsContext['spark_class']			= 	'news-feed';
 	Theme_Theme::processPosts($newsContext['feed']);
 
-	$newsContext['slide_template'] = '/views/content/news_post.html.twig';
- 	$context['news'] 		= Timber::compile('/views/components/static_feed.html.twig', $newsContext);
+	$newsContext['slide_template'] 		= '/views/content/news_post.html.twig';
+	$newsContext['more']				= true;
+ 	$context['news'] 					= Timber::compile('/views/components/static_feed.html.twig', $newsContext);
 
 
  	/// In the Media Feed

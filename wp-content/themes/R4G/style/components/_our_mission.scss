@@ -6,8 +6,10 @@ section.our-mission{
 		@include h1;
 		color: $teal;
 		background-size: cover;
-		padding: 108px;
+		background-position: center;
+		padding: 52px;
 		line-height: 240px;
+		min-width: #{$container-width}px;
 	}
 
 	.container{
@@ -177,6 +179,7 @@ section.resolution-content{
 		&::before {
 		    content: counter(step-counter);
 		    margin-right: 5px;
+		    margin-top: 5px;
 		    font-size: 30px;
 		    background-color: $purple2;
 		    color: white;
@@ -196,7 +199,7 @@ section.resolution-content{
 		}		
 		strong {
 			font-weight: 600;
-			line-height: 1.1em;
+			line-height: 1.2em;
 			display: block;
 			margin-bottom: 5px;
 		}

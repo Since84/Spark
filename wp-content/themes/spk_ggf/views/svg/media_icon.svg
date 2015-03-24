@@ -7,20 +7,17 @@
 	<defs>
 		<rect id="SVGID_1_" y="0" width="26.8" height="23.1"/>
 	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  overflow="visible"/>
-	</clipPath>
-	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M18,18L7.6,13.2V5.6
+	<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M18,18L7.6,13.2V5.6
 		L18,0.8c0.4-0.1,0.8,0.1,0.8,0.6v16.1C18.8,17.9,18.4,18.1,18,18z"/>
-	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M1.5,13.3h6.1V5.5
+	<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M1.5,13.3h6.1V5.5
 		H1.5c-0.4,0-0.7,0.3-0.7,0.7v6.4C0.8,13,1.1,13.3,1.5,13.3z"/>
-	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M6,13.3H2L4,22.1
+	<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M6,13.3H2L4,22.1
 		c0,0.1,0.2,0.2,0.3,0.2h3.4C7.9,22.4,8,22.2,8,22L6,13.3z"/>
 	
-		<path clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="
 		M21.9,14.7c2.4-0.6,4.1-2.7,4.1-5.3c0-2.6-1.7-4.7-4.1-5.3"/>
 	
-		<path clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="
 		M21.9,7.4c0.8,0.3,1.4,1.1,1.4,2s-0.6,1.7-1.4,2"/>
 </g>
 </svg>

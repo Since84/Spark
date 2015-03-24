@@ -1,9 +1,13 @@
-(function(){
+(function($){
 	// Spark Application
 	var AppView = Backbone.View.extend({
 		el: 'body',
-		defaults: function(){},
+		// defaults: function(){},
 		events:{},
-		initialize: {}
+		initialize: function(){
+			
+		}
 	});
+
+	  	var App = new AppView();
 })(jQuery);

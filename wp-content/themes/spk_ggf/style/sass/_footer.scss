@@ -33,6 +33,14 @@ footer{
 				stroke: $darkred;
 			}
 		}
+		&:hover{
+			color: $gold;
+			svg{
+				path{
+					stroke: $gold;
+				}
+			}
+		}
 	}
 }
 .footer-middle{
@@ -555,6 +563,7 @@ section.resources-media{
 
 		.close{
 			cursor: pointer;
+			color: $green;
 			&:before{
 				content: $backarrow;
 				font-family: "FontAwesome";

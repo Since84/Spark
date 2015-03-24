@@ -1,0 +1,21 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 8, sass/spark-style.scss */
+.spark.browse nav {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background: #ddd;
+}
+/* line 14, sass/spark-style.scss */
+.spark.browse .tile {
+  display: inline-block;
+  width: 20%;
+  margin-left: -4px;
+}
+/* line 18, sass/spark-style.scss */
+.spark.browse .tile img {
+  width: 100%;
+}

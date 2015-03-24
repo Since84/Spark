@@ -34,7 +34,7 @@
 
 	/// Mission Statement
 	$missionContext['spark_class'] = 'our-mission';
-	$missionID = get_page_by_title('Mission');
+	$missionID = get_page_by_path('mission');
 	$missionID = $missionID->ID;
 	$missionContext['text'] = new TimberPost($missionID);
 	$missionContext['text'] = $missionContext['text']->mission_statement;

@@ -68,7 +68,7 @@
 	  			}
 	  		},
 	  		openCase: function(e){
-	  			var index = $(e.target).parents('.case').data('index');
+	  			var index = $(e.currentTarget).parents('.case').data('index');
 	  			$('.case-study-frame').addClass('open');
 	  			$('.case-study-frame .cycle-slideshow').cycle(index-1);
 
@@ -77,10 +77,10 @@
 	  			$('.case-study-frame').removeClass('open');
 	  		},
 	  		toggleSelection: function(e){
-	  			var selected = $(e.target).data('index');
-	  			$(e.target).addClass('selected').siblings().removeClass('selected');
-	  			$(e.target).parents('.lessons').find('.selected-block li.selected').removeClass('selected');
-	  			$(e.target).parents('.lessons').find(".selected-block li."+ selected).addClass('selected');
+	  			var selected = $(e.currentTarget).data('index');
+	  			$(e.currentTarget).addClass('selected').siblings().removeClass('selected');
+	  			$(e.currentTarget).parents('.lessons').find('.selected-block li.selected').removeClass('selected');
+	  			$(e.currentTarget).parents('.lessons').find(".selected-block li."+ selected).addClass('selected');
 	  		},
 	  		openModal: function(e){ 
 	  			var self = this;
@@ -93,13 +93,13 @@
 	  			}, 500);
 	  		},
 	  		closeModal: function(e){ 
-	  			var modal = $(e.target).parents('section');
+	  			var modal = $(e.currentTarget).parents('section');
 	  			$(modal).removeClass('open');
 	  		},
 	  		scrollModal: function(e, target){
 				$.smoothScroll({
 		            scrollElement: $('section.resources-media .slides'),
-		            scrollTarget: target ? target : $(e.target).attr('href')
+		            scrollTarget: target ? target : $(e.currentTarget).attr('href')
 		        });
 		        return false;
 	  		},

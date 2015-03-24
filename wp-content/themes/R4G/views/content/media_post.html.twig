@@ -1,9 +1,16 @@
 <li class="post-preview">
-	<a class="content">
-		<div class="video" style="background-image:url( 'http://img.youtube.com/vi/{{ slide.post_video_id }}/default.jpg' );">
-			<object data="http://www.youtube.com/embed/{{ slide.post_video_id }}"
-   width="300" height="220"></object>
+	{% if "http" in slide.post_video_link %}
+	<a class="content" href="{{ slide.post_video_link }}" target="_blank">
+		<div class="video" style="background-image:url( '{{ slide.get_field('video_thumbnail').url }}' );">
 		</div>
+	{% else %}
+	<a class="content">
+		<div class="video" style="background-image:url( 'http://img.youtube.com/vi/{{ slide.post_video_link }}/default.jpg' );">
+			<object data="http://www.youtube.com/embed/{{ slide.post_video_link }}"
+   					width="300" height="220">
+   			</object>
+		</div>
+	{% endif %}
 		<div class="post-text">
 			<h4>{{ slide.post_title }}</h4>
 			<p>{{ slide.content }}</p>

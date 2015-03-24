@@ -1,7 +1,6 @@
 <?php
 get_header();
-?>
 
+Timber::render('/components/spark-browse/test/spark-browse.test.twig');
 
-<?php
 get_footer();

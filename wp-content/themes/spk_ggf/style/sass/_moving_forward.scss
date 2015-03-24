@@ -46,17 +46,22 @@ div.moving-forward{
 }
 .moving-forward li{
 	counter-increment: step-counter;
-	padding-bottom: 48px;
+	padding-bottom: 40px; 
 	font-family: "lato";
 	font-size: 24px;
+	margin-left: 4em;
+	height: 100px;
+	line-height: 1.2em;
 	/* width: 914px; */
 }
 
 .moving-forward li::before{
     content: counter(step-counter);
     margin-right: 25px;
+    margin-left: -3.5em;
    	font-family: "lato";
-    font-size: 24px;
+    font-size: 24px; 
+    line-height: .75em;
     background-color: $red;
     color: #fbaf22;
     font-weight: bold;
@@ -65,6 +70,7 @@ div.moving-forward{
   	width: 20px;
   	height: 20px;
   	display: inline-block;
+  	vertical-align: middle;
     border-radius: 50px;
     text-align: center;
 }

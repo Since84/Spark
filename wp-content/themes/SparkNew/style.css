@@ -1,15 +1,13 @@
 /*   
-
 	Theme Name: NewSpark
 	Template: Spark15
-
 */
-/* line 16, style/sass/style.scss */
+/* line 14, style/sass/style.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 23, style/sass/style.scss */
+/* line 22, style/sass/style.scss */
 .button {
   display: inline-block;
   height: 50px;
@@ -21,16 +19,16 @@
   font-size: 20px;
   font-style: italic;
 }
-/* line 30, style/sass/style.scss */
+/* line 29, style/sass/style.scss */
 .button.red {
   background: #f00;
 }
-/* line 33, style/sass/style.scss */
+/* line 32, style/sass/style.scss */
 .button.blue {
   background: blue;
 }
 
-/* line 38, style/sass/style.scss */
+/* line 37, style/sass/style.scss */
 .container {
   margin: auto;
   width: 100%;
@@ -38,7 +36,7 @@
   background: gray;
   color: white;
 }
-/* line 45, style/sass/style.scss */
+/* line 44, style/sass/style.scss */
 .container p {
   color: blue;
 }

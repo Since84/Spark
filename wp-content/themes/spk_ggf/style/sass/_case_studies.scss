@@ -141,19 +141,32 @@ section.case-studies {
 		a {
 			padding: 0px;
 			text-align: center;
-			display: block;
+			display: inline-block;
 			border-bottom: 1px solid $black;
-			color: white;
+			color: $tan;
 			height: 80px;
-			overflow: hidden;
 			width: 80px; 
 			position: relative;
-			display: block;
+			display: inline-block;
 			transition: .5s all ease-in-out;
+			white-space: nowrap;
+			float: left;
+			text-decoration: none;
+			@include medium-body;
+			font-size: 15px;
+			line-height: 1.3em;
+
+			* {
+				white-space: nowrap;
+			}
 
 			span:not(.icon){
 				opacity: 0;
-				transition: .5s width linear .5s;
+				transition: .5s width linear 0, .5s opacity linear 0;
+				float: left;
+				padding: 30px 0 0 30px;	 
+				width: 200px;
+				text-align: left;
 			}
 			.icon{
 				display: inline-block;
@@ -165,6 +178,7 @@ section.case-studies {
 			}
 
 			&:hover, &.cycle-pager-active {
+				background-color: $blackopaque;
 				.icon{
 					display: block;
 					background-color: $teal;
@@ -188,28 +202,18 @@ section.case-studies {
 				}
 			}
 			&:hover {
-				background-color: $blackopaque;
-				a{
-					text-decoration: none;
-					&:hover{
-						background-color: $blackopaque;
-					}
-				}
+				text-decoration: none;
 				span{
 				}
 			}
-			&.cycle-pager-active:after {
-				// right: -14px;
+			&.cycle-pager-active {
+				background-color: $blackopaque;
 			}
 		}
 		&:hover {
 			span:not(.icon){
 				opacity: 1 !important;
-				transition-delay: 0;	
-				float: left;
-				padding: 30px 0 0 30px;	 
-				width: 250px;
-				text-align: left;
+				transition-delay: 0, .5s;	
 
 			}
 			a{
@@ -219,7 +223,7 @@ section.case-studies {
 				@include medium-body;
 				font-size: 15px;
 				line-height: 1.3em;
-				&:hover{
+				&:hover, &.cycle-pager-active{
 					background: $blackopaque;
 					color: $teal;
 				}
@@ -227,7 +231,7 @@ section.case-studies {
 		}
 
 		.back{
-			display: block;
+			display: none;;
 			width: 80px !important;
 			a {
 				width: 80px !important;
@@ -262,7 +266,7 @@ section.case-studies {
 		bottom: 0;
 		margin: auto;
 		cursor: pointer;
-		z-index: 2000;
+		z-index: 1000;
 
 		&:before {
 			font-family: "FontAwesome";
@@ -310,13 +314,16 @@ section.case-studies {
 		}
 
 		.case-study-content{
-			// @include absolutecenter;
-			height: 100%;
+			@media screen and ( min-width: 640px ){
+				height: 900px;
+				@include absolutecenter;
+				padding-left: 130px;
+			}		
 		}
 
 		.case-study-info{
 			display:inline-block;
-			min-height: 100%;
+			height: 100%;
 			width: 50%;
 			padding-left: 100px;
 			background-image: url('images/case_studies_background.png');
@@ -324,10 +331,11 @@ section.case-studies {
 			text-align: center;
 			padding-bottom: 100px;
 			position: relative;
+			overflow-y: scroll;
 
 			.case-study-content{
-				@include absolutecenter;
-				height: 900px;
+				// height: auto;
+				// padding-bottom: 150px;
 			}
 
 			h2{
@@ -340,6 +348,7 @@ section.case-studies {
 
 			p {
 				width: 500px;
+				max-width: 90%;
 				margin: auto;
 				@include medium-body;
 				display: block;
@@ -365,6 +374,7 @@ section.case-studies {
 
 			.lessons {
 				width: 500px;
+				max-width: 90%;
 				margin: auto;
 				text-align: left;
 				h3{
@@ -458,9 +468,14 @@ section.case-studies {
 			color: $tan;
 			background-size: cover;
 			@include medium-body;
+			overflow-y: scroll;
 			.case-study-feature-content{
 				@include absolutecenter;
+				position: relative;
 				height: 400px;
+				@media screen and ( min-width: 640px ){
+					position: absolute;
+				}
 			}
 			.feature-name{
 				color: $gold;
@@ -491,8 +506,8 @@ section.case-studies {
 			}
 
 			.photo-credit{
-				bottom: 120px;
-				right: 30px;
+				bottom: -20px;
+				right: 10px;
 			}
 
 		}
@@ -538,6 +553,7 @@ section.case-studies {
 		}
 
 		.close{
+			cursor: pointer;
 			&:before{
 				content: $backarrow;
 				font-family: "FontAwesome";

@@ -1,13 +1,20 @@
 <li class="slide" style="background-image:url( '{{ slide.thumbnail.src }}' );">
 	<div class="container">
 		<div class="content">
-			<a href="{{ slide.permalink }}">
 				<hgroup>
 					<h4>{{ slide.post_title }}</h4>
 					<h5>{{ slide.display_date }}</h5>
 				</hgroup>
-				<p>{{ slide.get_preview(32) }}</p>
+				<p>
+					<em class="source">{{ slide.post_author_name }} / {{ slide.source }}</em>
+					{{ slide.get_preview(32, false, '', true) }}
+					<span class="read-more">Read More</span>
+				</p>
+
 			</a> 
 		</div>
 	</div>
+</li>
+<li class="post-content">
+	<div class="container">{{ slide.content }}</div>
 </li>

@@ -112,14 +112,14 @@
 			}
 		}
 	}
-
+	$slideshowheight: 530px; 
 	.cycle-slideshow {
-		height: 510px;
+		height: $slideshowheight;
 		float: left;
 		position: relative;
 		.cycle-slide {
 		    position:relative;
-		    height:510px;
+		    height: $slideshowheight - 10px;
 		    width:100%;
 		    background: $red;
 		    display: block;

@@ -1,8 +1,6 @@
 /*   
-
 	Theme Name: NewSpark
 	Template: Spark15
-
 */
 
 // 1. Importing External Sass Files
@@ -18,8 +16,9 @@
 }
 
 body { 
-}
 
+}
+ 
 .button{
 	@include button( 50px );
 	color: white;

@@ -19,6 +19,7 @@
 	  			"click .spark-modal-trigger.gallery": "openGalleryFull",
 	  			"click .events .slide": "toggleEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
+	  			"click .featured-post .read-more": "openFeaturedPost",
 	  			"click .video": "playVideo",
 	  			"click .load-more": "loadMore"
 	  		},
@@ -57,7 +58,7 @@
 			    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 			},
 			openDonateModal: function(e) {
-				var modal = $(e.currentTarget).attr('modal-name');
+				var modal = "donate";
 				$('.'+ modal).toggleClass('show');
 				$('.'+ modal).find('.close').click(function(){
 					$('.'+modal).removeClass('show');
@@ -74,7 +75,11 @@
 			openNewsPost: function(e){
 				$(e.currentTarget).toggleClass('open');
 			},
+			openFeaturedPost: function(e){
+				$(e.currentTarget).parents('.slides').toggleClass('open');
+			},
 			toggleEvent: function(e) {
+				var self = this;
 				var ev = $(e.currentTarget),
 					index = ev.attr('slide-index');
 					slideIndex = $('[slide-index="'+index+'"]')
@@ -84,7 +89,7 @@
 				} else if ( $('.event-detail').not('.open') ){
 					$('.event-detail').addClass('open').click(function(){
 						$(this).removeClass('open');
-						$slideIndex.removeClass('active');
+						slideIndex.removeClass('active');
 					});
 				}
 
@@ -96,7 +101,7 @@
 				video.addClass('on').find('object').playVideo();
 			},
 			loadMore: function(e){
-				$(e.currentTarget).parent().addClass('loaded');
+				$(e.currentTarget).parent().toggleClass('loaded');
 			},
 			runActiveTab: function(e){
 				var active = $('.issue-areas').attr('active-tab');

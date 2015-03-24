@@ -848,6 +848,7 @@ section{
 			transition-delay: 0s;
 			a{
 				background-color: $blackopaque;
+				color: $red;
 			}
 			&::after{
 				content: '';
@@ -868,6 +869,9 @@ section{
 					background-color: $red;
 				}
 			}
+		}
+		&.active a{
+			background-color: $blackopaque;
 		}
 
 	}

@@ -4,7 +4,7 @@
 	{% for slide in feed %}
 		{% include slide_template %}
 		{% if ( more == true ) and ( loop.length > 3 ) and ( loop.last )  %}
-			<span class="load-more">Load More</span>
+			<span class="load-more"></span>
 		{% endif %}
 	{% endfor %}
 	</ul>
