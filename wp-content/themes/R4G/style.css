@@ -13,7 +13,7 @@
 /** Base Styles for Rights for Girls **/
 /* line 64, style/_base.scss */
 html {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 /* line 68, style/_base.scss */
@@ -876,7 +876,7 @@ section.resolution-content li strong {
   border: 10px solid #dedade;
 }
 /* line 44, style/brand/_mixins.scss */
-.why-it-matters .slides .slide:not(:nth-child(3n)) {
+.why-it-matters .slides .slide:not(:nth-of-type(3n)) {
   margin-right: 70px;
 }
 /* line 48, style/brand/_mixins.scss */
@@ -1639,7 +1639,7 @@ section.resolution-content li strong {
   cursor: pointer;
 }
 /* line 44, style/brand/_mixins.scss */
-.issue-areas .tab:not(:nth-child(3n)) {
+.issue-areas .tab:not(:nth-of-type(3n)) {
   margin-right: 70px;
 }
 /* line 48, style/brand/_mixins.scss */
@@ -2154,7 +2154,7 @@ section.resolution-content li strong {
   width: 75%;
 }
 /* line 245, style/brand/_mixins.scss */
-.file-feed .file:not(:nth-child(3n)) {
+.file-feed .file:not(:nth-of-type(3n)) {
   margin-right: 100px;
 }
 /* line 249, style/brand/_mixins.scss */
