@@ -1,8 +1,8 @@
 <section 
 	class="spark-feed cycle-slideshow {{ spark_class }}"
 	data-cycle-timeout="0"
-	data-cycle-prev="> .feed-pager.prev" 
-	data-cycle-next="> .feed-pager.next"
+	data-cycle-prev=".feed-pager.prev" 
+	data-cycle-next=".feed-pager.next"
 	data-cycle-fx="carousel" 
 	data-cycle-carousel-visible="3" 
 	data-cycle-carousel-fluid="true" 
@@ -10,11 +10,11 @@
 	data-cycle-carousel-slide-dimension="200px"
 >
 	{% if header %}<h2>{{ header }}</h2>{% endif %}
-	<span class="feed-pager prev"></span>
 	<ul class="cycle-carousel-wrap slides">
+		<span class="feed-pager prev"></span>
 	{% for slide in feed %}
 		{% include slide_template %}
 	{% endfor %}
+		<span class="feed-pager next"></span>
 	</ul>
-	<span class="feed-pager next"></span>
 </section>

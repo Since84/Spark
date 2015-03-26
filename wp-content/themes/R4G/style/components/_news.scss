@@ -137,6 +137,7 @@
 		padding: 0;
 		margin: 20px auto 40px;
 		box-shadow: 0px 0px 10px 0px #777;
+		cursor: pointer;
 
 		a {
 			text-decoration: none;
@@ -175,7 +176,7 @@
         &.open{ 
         	.post-content{
         		max-height: 2000px;
-        		padding: 60px 30px 30px;
+        		padding: 60px 100px 30px;
         	}
        	}
 
@@ -255,7 +256,7 @@
 	.slides.loaded {
 		.post-preview:nth-child(n+4) {
 		    opacity: 1;  
-		    max-height: 1000px;
+		    max-height: 2000px;
     		margin-bottom: 40px;
 		}	
 		.load-more{
@@ -278,7 +279,7 @@
 		font-size: 18px;
         max-height:0px;
        	overflow: hidden;
-       	padding:0px 30px;
+       	padding:0px 100px;
        	position: relative;
        	transition: 1s all linear; 
        	&:before{
@@ -321,7 +322,7 @@
 			width: 355px;
 			text-align: left;
 			vertical-align: top;
-			&:not(:nth-child(3)){
+			&:not(:nth-of-type(3)){
 				margin-right: 60px;
 			}
 			a{

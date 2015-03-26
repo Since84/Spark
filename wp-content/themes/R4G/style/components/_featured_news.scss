@@ -70,7 +70,7 @@
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
-		&:not(:nth-child(3n)){
+		&:not(:nth-of-type(3n)){
 			margin-right: 50px;
 		} 
 		&:hover span, &:hover span:before{

@@ -25,7 +25,7 @@
 	/// Contact Area
 
 	$sitemapContext = Timber::get_context();
-	$sitemapContext['nav'] = new TimberMenu('contact menu');
+	$sitemapContext['nav'] = new TimberMenu('Footer Contact');
 	$sitemapContext['logo'] = get_header_image();
 	$footerContext['contact_menu'] = Timber::compile('views/components/nav.html.twig', $sitemapContext);
 

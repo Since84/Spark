@@ -62,11 +62,22 @@
 	$newsContext['spark_class'] = 'featured-news';
 	$newsContext['header'] = 'Featured News & Updates';
 	$newsContext['newspage'] = new TimberPost('news');
-	$newsContextArgs = 	array( 
-							'showposts'		=> '3',
-							'category_name'	=> 'home-feature'
+	$news_args = 	array( 
+							'showposts'		=> '2'
+							,'category__not_in'	=> array(9, 3, 5)
 						);
-	$newsContext['feed'] = Timber::get_posts($newsContextArgs);
+
+	$feature_args 	= 	array( 
+								'showposts'		=> '1',
+								'category_name'	=> 'news-feature'
+							);
+
+	$featured_query = Timber::get_posts( $feature_args );
+	$news_query = Timber::get_posts( $news_args );
+	$result = array_merge( $featured_query, $news_query );
+
+
+	$newsContext['feed'] = $result;
 	Theme_Theme::processPosts($newsContext['feed']);
 	
 	$newsContext['slide_template'] = '/views/content/featured_news_slide.html.twig';
