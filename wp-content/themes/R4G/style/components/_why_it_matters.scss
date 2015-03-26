@@ -17,6 +17,9 @@
 		padding: 0 70px;
 		white-space: nowrap;
 		text-align:center;
+		width: $container-width;
+		margin: auto;
+		position: relative;
 		
 		.slide{
 			@include issue_tab;
