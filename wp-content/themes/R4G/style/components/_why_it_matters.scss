@@ -23,6 +23,7 @@
 		
 		.slide{
 			@include issue_tab;
+			position: relative !important;
 		}
 	}
 	@include feed-pager-arrows;

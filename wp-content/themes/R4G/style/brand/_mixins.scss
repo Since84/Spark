@@ -32,7 +32,7 @@
 @mixin issue_tab {
  
 			display: inline-block;
-			position: relative;
+			position: relative !important;
 			vertical-align: top;
 			width: 305px;
 			height: 365px;
@@ -40,10 +40,7 @@
 
 			background-size: cover;
 			border: 10px solid $lightgray;
-
-			&:not(:nth-of-type(3n)){
-				margin-right: 70px;
-			}
+			margin-right: 70px;
 
 			.content, .stat-highlight, .learn-more {
 				display: block;

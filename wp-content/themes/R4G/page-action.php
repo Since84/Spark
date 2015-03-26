@@ -20,7 +20,7 @@
 	$eventsContext['spark_class'] = 'featured-news events';
 	$eventsContext['header'] = 'Join Rights4Girls at our next event';
 	$eventsContextArgs = 	array( 
-							'showposts'		=> '3',
+							'showposts'		=> '0',
 							'category_name'	=> 'event',
 						);
 	$eventsContext['feed'] = Timber::get_posts($eventsContextArgs);

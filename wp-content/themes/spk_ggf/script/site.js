@@ -68,7 +68,7 @@
 	  			}
 	  		},
 	  		openCase: function(e){
-	  			var index = $(e.currentTarget).parents('.case').data('index');
+	  			var index = $(e.currentTarget).data('index');
 	  			$('.case-study-frame').addClass('open');
 	  			$('.case-study-frame .cycle-slideshow').cycle(index-1);
 

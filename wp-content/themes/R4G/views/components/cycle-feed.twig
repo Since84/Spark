@@ -1,20 +1,27 @@
 <section 
-	class="spark-feed cycle-slideshow {{ spark_class }}"
-	data-cycle-timeout="0"
-	data-cycle-prev=".feed-pager.prev" 
-	data-cycle-next=".feed-pager.next"
-	data-cycle-fx="carousel" 
-	data-cycle-carousel-visible="3" 
-	data-cycle-carousel-fluid="true" 
-	data-allow-wrap="false" 
-	data-cycle-carousel-slide-dimension="200px"
+	class="spark-feed {{ spark_class }}"
 >
 	{% if header %}<h2>{{ header }}</h2>{% endif %}
-	<ul class="cycle-carousel-wrap slides">
-		<span class="feed-pager prev"></span>
-	{% for slide in feed %}
-		{% include slide_template %}
-	{% endfor %}
-		<span class="feed-pager next"></span>
-	</ul>
+	<div class="slides">
+		{% if feed|length > 3 %}
+			<span class="feed-pager prev"></span>
+		{% endif %}
+		<div 
+			class="cycle-slideshow"
+			data-cycle-timeout="0"
+			data-cycle-prev=".feed-pager.prev" 
+			data-cycle-next=".feed-pager.next"
+			data-cycle-fx=carousel 
+			data-cycle-carousel-visible=3 
+			data-allow-wrap=false
+			data-cycle-slides=".slide"
+		>
+			{% for slide in feed %}
+				{% include slide_template %}
+			{% endfor %}
+		</div>
+		{% if feed|length > 3 %}
+			<span class="feed-pager next"></span>
+		{% endif %}
+	</div>
 </section>

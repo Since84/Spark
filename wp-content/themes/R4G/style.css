@@ -870,19 +870,17 @@ section.resolution-content li strong {
 /* line 24, style/components/_why_it_matters.scss */
 .why-it-matters .slides .slide {
   display: inline-block;
-  position: relative;
+  position: relative !important;
   vertical-align: top;
   width: 305px;
   height: 365px;
   white-space: normal;
   background-size: cover;
   border: 10px solid #dedade;
-}
-/* line 44, style/brand/_mixins.scss */
-.why-it-matters .slides .slide:not(:nth-of-type(3n)) {
   margin-right: 70px;
+  position: relative !important;
 }
-/* line 48, style/brand/_mixins.scss */
+/* line 45, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .content, .why-it-matters .slides .slide .stat-highlight, .why-it-matters .slides .slide .learn-more {
   display: block;
   position: absolute;
@@ -898,7 +896,7 @@ section.resolution-content li strong {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 64, style/brand/_mixins.scss */
+/* line 61, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .content h2, .why-it-matters .slides .slide .stat-highlight h2, .why-it-matters .slides .slide .learn-more h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -910,7 +908,7 @@ section.resolution-content li strong {
   width: 100%;
   line-height: 50px;
 }
-/* line 71, style/brand/_mixins.scss */
+/* line 68, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .content h3, .why-it-matters .slides .slide .stat-highlight h3, .why-it-matters .slides .slide .learn-more h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -920,7 +918,7 @@ section.resolution-content li strong {
   font-size: 30px;
   margin-bottom: 1rem;
 }
-/* line 72, style/brand/_mixins.scss */
+/* line 69, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .content p, .why-it-matters .slides .slide .stat-highlight p, .why-it-matters .slides .slide .learn-more p {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -930,27 +928,27 @@ section.resolution-content li strong {
   font-size: 16px;
   line-height: 1.5em;
 }
-/* line 76, style/brand/_mixins.scss */
+/* line 73, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .learn-more {
   opacity: 0;
 }
-/* line 78, style/brand/_mixins.scss */
+/* line 75, style/brand/_mixins.scss */
 .why-it-matters .slides .slide .learn-more .action {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   display: block;
 }
-/* line 87, style/brand/_mixins.scss */
+/* line 84, style/brand/_mixins.scss */
 .why-it-matters .slides .slide:hover .stat-highlight, .why-it-matters .slides .slide.cycle-pager-active .stat-highlight {
   opacity: 0;
 }
-/* line 90, style/brand/_mixins.scss */
+/* line 87, style/brand/_mixins.scss */
 .why-it-matters .slides .slide:hover .learn-more, .why-it-matters .slides .slide.cycle-pager-active .learn-more {
   opacity: 1;
   background: rgba(0, 0, 0, 0.1);
 }
-/* line 315, style/brand/_mixins.scss */
+/* line 312, style/brand/_mixins.scss */
 .why-it-matters .feed-pager {
   display: block;
   position: absolute;
@@ -960,7 +958,7 @@ section.resolution-content li strong {
   bottom: 0;
   margin: auto;
 }
-/* line 323, style/brand/_mixins.scss */
+/* line 320, style/brand/_mixins.scss */
 .why-it-matters .feed-pager.next {
   right: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
@@ -970,28 +968,28 @@ section.resolution-content li strong {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 331, style/brand/_mixins.scss */
+/* line 328, style/brand/_mixins.scss */
 .why-it-matters .feed-pager.next:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 335, style/brand/_mixins.scss */
+/* line 332, style/brand/_mixins.scss */
 .why-it-matters .feed-pager.prev {
   left: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
 }
-/* line 338, style/brand/_mixins.scss */
+/* line 335, style/brand/_mixins.scss */
 .why-it-matters .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 29, style/components/_why_it_matters.scss */
+/* line 30, style/components/_why_it_matters.scss */
 .why-it-matters .feed-pager {
   opacity: .5;
 }
-/* line 31, style/components/_why_it_matters.scss */
+/* line 32, style/components/_why_it_matters.scss */
 .why-it-matters .feed-pager:hover {
   opacity: 1;
 }
-/* line 36, style/components/_why_it_matters.scss */
+/* line 37, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span {
   display: block;
   position: absolute;
@@ -1002,7 +1000,7 @@ section.resolution-content li strong {
   height: 66px;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 45, style/components/_why_it_matters.scss */
+/* line 46, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span::before {
   content: '';
   font-family: "FontAwesome";
@@ -1018,19 +1016,19 @@ section.resolution-content li strong {
   height: 1em;
   font-size: 2em;
 }
-/* line 62, style/components/_why_it_matters.scss */
+/* line 63, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next {
   right: 0;
 }
-/* line 64, style/components/_why_it_matters.scss */
+/* line 65, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.next::before {
   content: "";
 }
-/* line 68, style/components/_why_it_matters.scss */
+/* line 69, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev {
   left: 0;
 }
-/* line 70, style/components/_why_it_matters.scss */
+/* line 71, style/components/_why_it_matters.scss */
 .why-it-matters .pager > span.prev::before {
   content: "";
 }
@@ -1170,21 +1168,29 @@ section.resolution-content li strong {
   font-family: "FontAwesome";
   margin-right: 10px;
 }
+/* line 62, style/components/_featured_news.scss */
+.featured-news .slides {
+  white-space: nowrap;
+}
 /* line 64, style/components/_featured_news.scss */
+.featured-news .slides .slide {
+  white-space: normal;
+}
+/* line 67, style/components/_featured_news.scss */
 .featured-news .slide {
-  width: 320px;
+  width: auto;
+  height: auto;
+  width: 323px;
   padding: 20px;
   background: #dedade;
   box-shadow: 0 0 0.25em #2f2f2f;
   display: inline-block;
   vertical-align: top;
   position: relative;
+  margin-right: 51px;
+  white-space: normal;
 }
-/* line 73, style/components/_featured_news.scss */
-.featured-news .slide:not(:nth-of-type(3n)) {
-  margin-right: 50px;
-}
-/* line 76, style/components/_featured_news.scss */
+/* line 80, style/components/_featured_news.scss */
 .featured-news .slide:hover span, .featured-news .slide:hover span:before {
   color: #21e3db;
 }
@@ -1630,22 +1636,19 @@ section.resolution-content li strong {
 /* line 3, style/components/_issue_areas.scss */
 .issue-areas .tab {
   display: inline-block;
-  position: relative;
+  position: relative !important;
   vertical-align: top;
   width: 305px;
   height: 365px;
   white-space: normal;
   background-size: cover;
   border: 10px solid #dedade;
+  margin-right: 70px;
   padding: 55px;
   border-color: #2f2f2f;
   cursor: pointer;
 }
-/* line 44, style/brand/_mixins.scss */
-.issue-areas .tab:not(:nth-of-type(3n)) {
-  margin-right: 70px;
-}
-/* line 48, style/brand/_mixins.scss */
+/* line 45, style/brand/_mixins.scss */
 .issue-areas .tab .content, .issue-areas .tab .stat-highlight, .issue-areas .tab .learn-more {
   display: block;
   position: absolute;
@@ -1661,7 +1664,7 @@ section.resolution-content li strong {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 64, style/brand/_mixins.scss */
+/* line 61, style/brand/_mixins.scss */
 .issue-areas .tab .content h2, .issue-areas .tab .stat-highlight h2, .issue-areas .tab .learn-more h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1673,7 +1676,7 @@ section.resolution-content li strong {
   width: 100%;
   line-height: 50px;
 }
-/* line 71, style/brand/_mixins.scss */
+/* line 68, style/brand/_mixins.scss */
 .issue-areas .tab .content h3, .issue-areas .tab .stat-highlight h3, .issue-areas .tab .learn-more h3 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1683,7 +1686,7 @@ section.resolution-content li strong {
   font-size: 30px;
   margin-bottom: 1rem;
 }
-/* line 72, style/brand/_mixins.scss */
+/* line 69, style/brand/_mixins.scss */
 .issue-areas .tab .content p, .issue-areas .tab .stat-highlight p, .issue-areas .tab .learn-more p {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1693,22 +1696,22 @@ section.resolution-content li strong {
   font-size: 16px;
   line-height: 1.5em;
 }
-/* line 76, style/brand/_mixins.scss */
+/* line 73, style/brand/_mixins.scss */
 .issue-areas .tab .learn-more {
   opacity: 0;
 }
-/* line 78, style/brand/_mixins.scss */
+/* line 75, style/brand/_mixins.scss */
 .issue-areas .tab .learn-more .action {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   display: block;
 }
-/* line 87, style/brand/_mixins.scss */
+/* line 84, style/brand/_mixins.scss */
 .issue-areas .tab:hover .stat-highlight, .issue-areas .tab.cycle-pager-active .stat-highlight {
   opacity: 0;
 }
-/* line 90, style/brand/_mixins.scss */
+/* line 87, style/brand/_mixins.scss */
 .issue-areas .tab:hover .learn-more, .issue-areas .tab.cycle-pager-active .learn-more {
   opacity: 1;
   background: rgba(0, 0, 0, 0.1);
@@ -1966,7 +1969,7 @@ section.resolution-content li strong {
 .file-feed {
   background: #c4c2c7;
 }
-/* line 105, style/brand/_mixins.scss */
+/* line 102, style/brand/_mixins.scss */
 .file-feed hgroup {
   text-align: center;
   background: #6b0269;
@@ -1974,7 +1977,7 @@ section.resolution-content li strong {
   padding: 70px;
   background: #380d36;
 }
-/* line 108, style/brand/_mixins.scss */
+/* line 105, style/brand/_mixins.scss */
 .file-feed hgroup h2 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -1987,7 +1990,7 @@ section.resolution-content li strong {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 116, style/brand/_mixins.scss */
+/* line 113, style/brand/_mixins.scss */
 .file-feed hgroup span {
   display: block;
   font-family: "franklin-gothic-urw-comp";
@@ -1997,7 +2000,7 @@ section.resolution-content li strong {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 121, style/brand/_mixins.scss */
+/* line 118, style/brand/_mixins.scss */
 .file-feed .filters {
   text-align: center;
   background: #6b0269;
@@ -2014,84 +2017,84 @@ section.resolution-content li strong {
   position: relative;
   z-index: 100;
 }
-/* line 130, style/brand/_mixins.scss */
+/* line 127, style/brand/_mixins.scss */
 .file-feed .filters li {
   display: inline-block;
   width: 200px;
 }
-/* line 133, style/brand/_mixins.scss */
+/* line 130, style/brand/_mixins.scss */
 .file-feed .filters li:not(:last-of-type) {
   padding-right: 20px;
   border-right: 2px solid #c4c2c7;
 }
-/* line 138, style/brand/_mixins.scss */
+/* line 135, style/brand/_mixins.scss */
 .file-feed .filters li.paper {
   color: #4a1249;
 }
-/* line 140, style/brand/_mixins.scss */
+/* line 137, style/brand/_mixins.scss */
 .file-feed .filters li.paper a {
   color: #4a1249;
 }
-/* line 141, style/brand/_mixins.scss */
+/* line 138, style/brand/_mixins.scss */
 .file-feed .filters li.paper:before {
   content: "";
 }
-/* line 144, style/brand/_mixins.scss */
+/* line 141, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet {
   color: #81026e;
 }
-/* line 146, style/brand/_mixins.scss */
+/* line 143, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet a {
   color: #81026e;
 }
-/* line 147, style/brand/_mixins.scss */
+/* line 144, style/brand/_mixins.scss */
 .file-feed .filters li.factsheet:before {
   content: "";
 }
-/* line 149, style/brand/_mixins.scss */
+/* line 146, style/brand/_mixins.scss */
 .file-feed .filters li.letter {
   color: #380d36;
 }
-/* line 151, style/brand/_mixins.scss */
+/* line 148, style/brand/_mixins.scss */
 .file-feed .filters li.letter a {
   color: #380d36;
 }
-/* line 152, style/brand/_mixins.scss */
+/* line 149, style/brand/_mixins.scss */
 .file-feed .filters li.letter:before {
   content: "";
 }
-/* line 154, style/brand/_mixins.scss */
+/* line 151, style/brand/_mixins.scss */
 .file-feed .filters li.brief {
   color: #81026e;
 }
-/* line 156, style/brand/_mixins.scss */
+/* line 153, style/brand/_mixins.scss */
 .file-feed .filters li.brief a {
   color: #81026e;
 }
-/* line 157, style/brand/_mixins.scss */
+/* line 154, style/brand/_mixins.scss */
 .file-feed .filters li.brief:before {
   content: "";
 }
-/* line 159, style/brand/_mixins.scss */
+/* line 156, style/brand/_mixins.scss */
 .file-feed .filters li.petition {
   color: #ab01a7;
 }
-/* line 161, style/brand/_mixins.scss */
+/* line 158, style/brand/_mixins.scss */
 .file-feed .filters li.petition a {
   color: #ab01a7;
 }
-/* line 162, style/brand/_mixins.scss */
+/* line 159, style/brand/_mixins.scss */
 .file-feed .filters li.petition:before {
   content: "";
 }
-/* line 167, style/brand/_mixins.scss */
+/* line 164, style/brand/_mixins.scss */
 .file-feed .filters li:before {
   display: inline-block;
   font-size: 30px;
   font-family: "FontAwesome";
   margin-right: 10px;
 }
-/* line 175, style/brand/_mixins.scss */
+/* line 172, style/brand/_mixins.scss */
 .file-feed .filters:after {
   top: 100%;
   left: 50%;
@@ -2106,7 +2109,7 @@ section.resolution-content li strong {
   border-width: 30px;
   margin-left: -30px;
 }
-/* line 191, style/brand/_mixins.scss */
+/* line 188, style/brand/_mixins.scss */
 .file-feed .slides {
   display: block;
   margin: auto;
@@ -2116,7 +2119,7 @@ section.resolution-content li strong {
   text-align: center;
   padding: 90px 0 110px;
 }
-/* line 197, style/brand/_mixins.scss */
+/* line 194, style/brand/_mixins.scss */
 .file-feed .file {
   display: inline-block;
   width: 255px;
@@ -2129,7 +2132,7 @@ section.resolution-content li strong {
   background: #dedade;
   box-shadow: 0 0 10px 0 #888;
 }
-/* line 223, style/brand/_mixins.scss */
+/* line 220, style/brand/_mixins.scss */
 .file-feed .file a {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2142,7 +2145,7 @@ section.resolution-content li strong {
   line-height: 1em;
   display: block;
 }
-/* line 231, style/brand/_mixins.scss */
+/* line 228, style/brand/_mixins.scss */
 .file-feed .file .view-pdf {
   bottom: 10px;
   border-top: 2px solid #ab01a7;
@@ -2156,88 +2159,88 @@ section.resolution-content li strong {
   visibility: hidden;
   width: 75%;
 }
-/* line 245, style/brand/_mixins.scss */
+/* line 242, style/brand/_mixins.scss */
 .file-feed .file:not(:nth-of-type(3n)) {
   margin-right: 100px;
 }
-/* line 249, style/brand/_mixins.scss */
+/* line 246, style/brand/_mixins.scss */
 .file-feed .file.Paper {
   border-top: 20px solid #4a1249;
   color: #4a1249;
 }
-/* line 252, style/brand/_mixins.scss */
+/* line 249, style/brand/_mixins.scss */
 .file-feed .file.Paper a {
   color: #4a1249;
 }
-/* line 253, style/brand/_mixins.scss */
+/* line 250, style/brand/_mixins.scss */
 .file-feed .file.Paper:before {
   content: "";
 }
-/* line 256, style/brand/_mixins.scss */
+/* line 253, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 259, style/brand/_mixins.scss */
+/* line 256, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet a {
   color: #81026e;
 }
-/* line 260, style/brand/_mixins.scss */
+/* line 257, style/brand/_mixins.scss */
 .file-feed .file.Fact.Sheet:before {
   content: "";
 }
-/* line 262, style/brand/_mixins.scss */
+/* line 259, style/brand/_mixins.scss */
 .file-feed .file.Letter {
   border-top: 20px solid #380d36;
   color: #380d36;
 }
-/* line 265, style/brand/_mixins.scss */
+/* line 262, style/brand/_mixins.scss */
 .file-feed .file.Letter a {
   color: #380d36;
 }
-/* line 266, style/brand/_mixins.scss */
+/* line 263, style/brand/_mixins.scss */
 .file-feed .file.Letter:before {
   content: "";
 }
-/* line 268, style/brand/_mixins.scss */
+/* line 265, style/brand/_mixins.scss */
 .file-feed .file.Brief {
   border-top: 20px solid #81026e;
   color: #81026e;
 }
-/* line 271, style/brand/_mixins.scss */
+/* line 268, style/brand/_mixins.scss */
 .file-feed .file.Brief a {
   color: #81026e;
 }
-/* line 272, style/brand/_mixins.scss */
+/* line 269, style/brand/_mixins.scss */
 .file-feed .file.Brief:before {
   content: "";
 }
-/* line 274, style/brand/_mixins.scss */
+/* line 271, style/brand/_mixins.scss */
 .file-feed .file.Petition {
   border-top: 20px solid #ab01a7;
   color: #ab01a7;
 }
-/* line 277, style/brand/_mixins.scss */
+/* line 274, style/brand/_mixins.scss */
 .file-feed .file.Petition a {
   color: #ab01a7;
 }
-/* line 278, style/brand/_mixins.scss */
+/* line 275, style/brand/_mixins.scss */
 .file-feed .file.Petition:before {
   content: "";
 }
-/* line 281, style/brand/_mixins.scss */
+/* line 278, style/brand/_mixins.scss */
 .file-feed .file:before {
   display: block;
   font-size: 30px;
   font-family: "FontAwesome";
   margin-bottom: 10px;
 }
-/* line 302, style/brand/_mixins.scss */
+/* line 299, style/brand/_mixins.scss */
 .file-feed .file:hover .view-pdf {
   visibility: visible;
   transition: .25s visibility ease-in-out;
 }
-/* line 306, style/brand/_mixins.scss */
+/* line 303, style/brand/_mixins.scss */
 .file-feed .view-pdf:before {
   content: "";
   font-family: "FontAwesome";
@@ -2336,7 +2339,7 @@ section.action-feature .feature-link span {
 .featured-news.events {
   width: 100%;
   padding-top: 0;
-  padding-bottom: 120px;
+  padding-bottom: 0;
 }
 /* line 63, style/components/_take_action.scss */
 .featured-news.events h2 {
@@ -2355,7 +2358,7 @@ section.action-feature .feature-link span {
   font-size: 54px;
   padding: 90px;
 }
-/* line 315, style/brand/_mixins.scss */
+/* line 312, style/brand/_mixins.scss */
 .featured-news.events .feed-pager {
   display: block;
   position: absolute;
@@ -2365,7 +2368,7 @@ section.action-feature .feature-link span {
   bottom: 0;
   margin: auto;
 }
-/* line 323, style/brand/_mixins.scss */
+/* line 320, style/brand/_mixins.scss */
 .featured-news.events .feed-pager.next {
   right: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
@@ -2375,28 +2378,36 @@ section.action-feature .feature-link span {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 331, style/brand/_mixins.scss */
+/* line 328, style/brand/_mixins.scss */
 .featured-news.events .feed-pager.next:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 335, style/brand/_mixins.scss */
+/* line 332, style/brand/_mixins.scss */
 .featured-news.events .feed-pager.prev {
   left: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
 }
-/* line 338, style/brand/_mixins.scss */
+/* line 335, style/brand/_mixins.scss */
 .featured-news.events .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 73, style/components/_take_action.scss */
+/* line 74, style/components/_take_action.scss */
+.featured-news.events .feed-pager.next, .featured-news.events .feed-pager.prev {
+  margin-top: 150px;
+}
+/* line 80, style/components/_take_action.scss */
+.featured-news.events .slides .cycle-slideshow {
+  padding-bottom: 120px;
+}
+/* line 85, style/components/_take_action.scss */
 .featured-news.events .slide {
   padding: 0;
-  height: 400px;
   vertical-align: top;
   cursor: pointer;
   background: #380d36;
+  position: relative !important;
 }
-/* line 79, style/components/_take_action.scss */
+/* line 92, style/components/_take_action.scss */
 .featured-news.events .slide .image-head {
   display: block;
   width: 100%;
@@ -2408,7 +2419,7 @@ section.action-feature .feature-link span {
   background-position: center;
   position: relative;
 }
-/* line 96, style/components/_take_action.scss */
+/* line 109, style/components/_take_action.scss */
 .featured-news.events .slide .image-head:after {
   content: '';
   position: absolute;
@@ -2420,7 +2431,7 @@ section.action-feature .feature-link span {
   left: 0;
   z-index: 0;
 }
-/* line 117, style/components/_take_action.scss */
+/* line 130, style/components/_take_action.scss */
 .featured-news.events .slide h4 {
   background: none;
   font-family: "franklin-gothic-urw-comp";
@@ -2433,7 +2444,7 @@ section.action-feature .feature-link span {
   height: 80px;
   color: white;
 }
-/* line 125, style/components/_take_action.scss */
+/* line 138, style/components/_take_action.scss */
 .featured-news.events .slide h5 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -2442,12 +2453,12 @@ section.action-feature .feature-link span {
   font-size: 24px;
   color: white;
 }
-/* line 130, style/components/_take_action.scss */
+/* line 143, style/components/_take_action.scss */
 .featured-news.events .slide h4, .featured-news.events .slide h5 {
   position: relative;
   z-index: 1;
 }
-/* line 134, style/components/_take_action.scss */
+/* line 147, style/components/_take_action.scss */
 .featured-news.events .slide span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -2459,20 +2470,20 @@ section.action-feature .feature-link span {
   font-size: 18px;
   color: white;
 }
-/* line 143, style/components/_take_action.scss */
+/* line 156, style/components/_take_action.scss */
 .featured-news.events .slide .read-more {
   margin-top: 0;
   margin-left: 1.5em;
 }
-/* line 147, style/components/_take_action.scss */
+/* line 160, style/components/_take_action.scss */
 .featured-news.events .slide.active, .featured-news.events .slide:hover {
   background: #6b0269;
 }
-/* line 149, style/components/_take_action.scss */
+/* line 162, style/components/_take_action.scss */
 .featured-news.events .slide.active h4, .featured-news.events .slide.active .read-more, .featured-news.events .slide.active .read-more:before, .featured-news.events .slide:hover h4, .featured-news.events .slide:hover .read-more, .featured-news.events .slide:hover .read-more:before {
   color: #21e3db !important;
 }
-/* line 154, style/components/_take_action.scss */
+/* line 167, style/components/_take_action.scss */
 .featured-news.events .slide .event-info {
   position: absolute;
   left: 0;
@@ -2484,59 +2495,30 @@ section.action-feature .feature-link span {
   visibility: hidden;
   trasition: .25s bottom ease-in-out, .25 opacity ease-in-out;
 }
-/* line 164, style/components/_take_action.scss */
+/* line 177, style/components/_take_action.scss */
 .featured-news.events .slide .event-info .contain {
   width: 1200;
   padding: 0 100px;
 }
-/* line 171, style/components/_take_action.scss */
+/* line 184, style/components/_take_action.scss */
 .featured-news.events .slide:hover .image-head a {
   color: #6b0269;
 }
-/* line 174, style/components/_take_action.scss */
+/* line 187, style/components/_take_action.scss */
 .featured-news.events .slide:hover a.read-more {
   color: #ff00ff;
 }
-/* line 176, style/components/_take_action.scss */
+/* line 189, style/components/_take_action.scss */
 .featured-news.events .slide:hover a.read-more:before {
   color: #ff00ff;
 }
-
-/* line 185, style/components/_take_action.scss */
-.event-detail {
-  max-height: 0px;
-  min-height: 0px;
-  padding: 0;
-  overflow: hidden;
-  transition: .5s all ease-in-out;
-  color: white;
-  background: #6b0269;
-}
-/* line 193, style/components/_take_action.scss */
-.event-detail .event-info {
-  max-height: 0px;
-  overflow-y: hidden;
-  visibility: hidden;
-  transition: 1s max-height ease-in-out, .5s visibility 0s;
-  cursor: pointer;
-}
-/* line 199, style/components/_take_action.scss */
-.event-detail .event-info .contain {
-  width: 1200px;
-  margin: auto;
-  display: block;
-  position: relative;
-}
-/* line 204, style/components/_take_action.scss */
-.event-detail .event-info .contain p {
-  position: relative;
-  display: block;
-  z-index: 10;
-}
-/* line 209, style/components/_take_action.scss */
-.event-detail .event-info .contain:before {
+/* line 196, style/components/_take_action.scss */
+.featured-news.events .slide.active:before {
   content: '';
-  top: -60px;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  margin: auto;
   transition: top .25s ease-in-out .15s;
   width: 0;
   height: 0;
@@ -2546,7 +2528,39 @@ section.action-feature .feature-link span {
   position: absolute;
   z-index: 0;
 }
-/* line 221, style/components/_take_action.scss */
+
+/* line 217, style/components/_take_action.scss */
+.event-detail {
+  max-height: 0px;
+  min-height: 0px;
+  padding: 0;
+  overflow: hidden;
+  transition: .5s all ease-in-out;
+  color: white;
+  background: #6b0269;
+}
+/* line 225, style/components/_take_action.scss */
+.event-detail .event-info {
+  max-height: 0px;
+  overflow-y: hidden;
+  visibility: hidden;
+  transition: 1s max-height ease-in-out, .5s visibility 0s;
+  cursor: pointer;
+}
+/* line 231, style/components/_take_action.scss */
+.event-detail .event-info .contain {
+  width: 1200px;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+/* line 236, style/components/_take_action.scss */
+.event-detail .event-info .contain p {
+  position: relative;
+  display: block;
+  z-index: 10;
+}
+/* line 242, style/components/_take_action.scss */
 .event-detail .event-info .contain:after {
   content: "";
   display: block;
@@ -2558,7 +2572,7 @@ section.action-feature .feature-link span {
   top: -55px;
   right: 0;
 }
-/* line 232, style/components/_take_action.scss */
+/* line 253, style/components/_take_action.scss */
 .event-detail .event-info .contain .credit {
   position: absolute;
   right: 10px;
@@ -2566,40 +2580,28 @@ section.action-feature .feature-link span {
   color: white;
   font-size: 16px;
 }
-/* line 241, style/components/_take_action.scss */
+/* line 262, style/components/_take_action.scss */
 .event-detail > * {
   opacity: 0;
   transition: .5s opacity ease-in-out .5s;
 }
-/* line 245, style/components/_take_action.scss */
+/* line 266, style/components/_take_action.scss */
 .event-detail.open {
   overflow: visible;
   max-height: 700px;
   padding: 60px 0;
   position: relative;
 }
-/* line 250, style/components/_take_action.scss */
+/* line 271, style/components/_take_action.scss */
 .event-detail.open > * {
   opacity: 1;
 }
-/* line 253, style/components/_take_action.scss */
+/* line 274, style/components/_take_action.scss */
 .event-detail.open .event-info {
   transition: 0s visibility ease-in-out 0s;
   visibility: visible;
 }
-/* line 258, style/components/_take_action.scss */
-.event-detail.open .event-info[slide-index="1"] .contain:before {
-  left: 170px;
-}
-/* line 263, style/components/_take_action.scss */
-.event-detail.open .event-info[slide-index="2"] .contain:before {
-  left: 560px;
-}
-/* line 268, style/components/_take_action.scss */
-.event-detail.open .event-info[slide-index="3"] .contain:before {
-  left: 940px;
-}
-/* line 273, style/components/_take_action.scss */
+/* line 294, style/components/_take_action.scss */
 .event-detail.open .event-info.active {
   visibility: visible;
   max-height: 1000px;
@@ -2607,15 +2609,15 @@ section.action-feature .feature-link span {
   position: relative;
   overflow-y: visible;
 }
-/* line 279, style/components/_take_action.scss */
+/* line 300, style/components/_take_action.scss */
 .event-detail.open .event-info.active .contain:before {
   top: -100px;
 }
-/* line 282, style/components/_take_action.scss */
+/* line 303, style/components/_take_action.scss */
 .event-detail.open .event-info.active h4 {
   color: #21e3db;
 }
-/* line 286, style/components/_take_action.scss */
+/* line 307, style/components/_take_action.scss */
 .event-detail.open .event-info h4 {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;
@@ -3794,7 +3796,7 @@ section#content-section div.joinus-box p {
   text-align: right;
   line-height: 1em;
 }
-/* line 347, style/brand/_mixins.scss */
+/* line 344, style/brand/_mixins.scss */
 .highlight-gallery .gallery-pager {
   display: block;
   position: absolute;
@@ -3805,21 +3807,21 @@ section#content-section div.joinus-box p {
   margin: auto;
   z-index: 1000;
 }
-/* line 356, style/brand/_mixins.scss */
+/* line 353, style/brand/_mixins.scss */
 .highlight-gallery .gallery-pager.cycle-next {
   right: 0;
   background: url(style/images/gallery-arrow-right.png) no-repeat;
 }
-/* line 359, style/brand/_mixins.scss */
+/* line 356, style/brand/_mixins.scss */
 .highlight-gallery .gallery-pager.cycle-next:hover {
   background: url(style/images/gallery-arrow-right-active.png) no-repeat;
 }
-/* line 363, style/brand/_mixins.scss */
+/* line 360, style/brand/_mixins.scss */
 .highlight-gallery .gallery-pager.cycle-prev {
   left: 0;
   background: url(style/images/gallery-arrow-left.png) no-repeat;
 }
-/* line 366, style/brand/_mixins.scss */
+/* line 363, style/brand/_mixins.scss */
 .highlight-gallery .gallery-pager.cycle-prev:hover {
   background: url(style/images/gallery-arrow-left-active.png) no-repeat;
 }
@@ -3870,7 +3872,7 @@ section#content-section div.joinus-box p {
 .highlight-gallery #thumbnail-pager .cycle-pager-active img {
   border-color: #6b0269;
 }
-/* line 315, style/brand/_mixins.scss */
+/* line 312, style/brand/_mixins.scss */
 .highlight-gallery #thumbnail-pager .feed-pager {
   display: block;
   position: absolute;
@@ -3880,7 +3882,7 @@ section#content-section div.joinus-box p {
   bottom: 0;
   margin: auto;
 }
-/* line 323, style/brand/_mixins.scss */
+/* line 320, style/brand/_mixins.scss */
 .highlight-gallery #thumbnail-pager .feed-pager.next {
   right: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
@@ -3890,16 +3892,16 @@ section#content-section div.joinus-box p {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 331, style/brand/_mixins.scss */
+/* line 328, style/brand/_mixins.scss */
 .highlight-gallery #thumbnail-pager .feed-pager.next:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 335, style/brand/_mixins.scss */
+/* line 332, style/brand/_mixins.scss */
 .highlight-gallery #thumbnail-pager .feed-pager.prev {
   left: 5px;
   background: url(style/images/pager-left-inactive.png) no-repeat;
 }
-/* line 338, style/brand/_mixins.scss */
+/* line 335, style/brand/_mixins.scss */
 .highlight-gallery #thumbnail-pager .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }

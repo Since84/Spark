@@ -59,7 +59,7 @@ section.action-feature {
 .featured-news.events {
 	width: 100%;
 	padding-top: 0;
-	padding-bottom: 120px;
+	padding-bottom: 0;
 	h2{
 		max-width: 9000px;
 		width: 100%;
@@ -70,12 +70,25 @@ section.action-feature {
 		padding: 90px;
 	}
 	@include feed-pager-arrows;
+	.feed-pager {
+		&.next, &.prev{
+			margin-top: 150px; 
+		}
+	}
+
+	.slides{
+		.cycle-slideshow{
+			padding-bottom:120px;
+		}
+	}
+
 	.slide{
 		padding: 0;
-		height: 400px;
+		// height: 400px;
 		vertical-align: top;
 		cursor: pointer;
-		background: $purple1;		
+		background: $purple1;	
+		position: relative !important;	
 		.image-head{
 			display: block;
 			width: 100%;
@@ -178,6 +191,25 @@ section.action-feature {
 				}
 			}
 		}
+
+		&.active{
+			&:before{
+				content: '';
+				bottom: -120px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				transition: top .25s ease-in-out .15s;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 40px 40px 40px;
+				border-color: transparent transparent $purple3 transparent;
+				position: absolute;
+				z-index: 0;
+			}
+
+		}
 	}
 
 }
@@ -206,18 +238,7 @@ section.action-feature {
 				display: block;
 				z-index: 10;
 			}
-			&:before{
-				content: '';
-				top: -60px;
-				transition: top .25s ease-in-out .15s;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 0 40px 40px 40px;
-				border-color: transparent transparent $purple3 transparent;
-				position: absolute;
-				z-index: 0;
-			}
+
 			&:after{
 	       		content:"";
 	       		display: block;
@@ -254,21 +275,21 @@ section.action-feature {
 			transition: 0s visibility ease-in-out 0s; 
 			visibility: visible;
 
-			&[slide-index="1"]{
-				.contain:before{
-					left: 170px;
-				}
-			}
-			&[slide-index="2"]{
-				.contain:before{
-					left: 560px;
-				}
-			}
-			&[slide-index="3"]{
-				.contain:before{
-					left: 940px;
-				}
-			}
+			// &:nth-of-type(3n - 2){
+			// 	.contain:before{
+			// 		left: 170px;
+			// 	}
+			// }
+			// &:nth-of-type(3n - 1){
+			// 	.contain:before{
+			// 		left: 560px;
+			// 	}
+			// }
+			// &:nth-of-type(3n - 0){
+			// 	.contain:before{
+			// 		left: 940px;
+			// 	}
+			// }
 
 			&.active{
 				visibility: visible;
