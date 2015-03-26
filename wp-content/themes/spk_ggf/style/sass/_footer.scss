@@ -106,11 +106,12 @@ footer{
 					-webkit-transform:rotate(180deg);
     				-moz-transform:rotate(180deg);
 					background-position: top center;
-					margin-top: 10px;
+					margin-top: 5px;
 				}
 				&:after{
 					color: $teal;
-					margin-top: 50px;
+					font-size: 12px;
+					margin-top: 45px;
 				}
 			}
 			&.twitter:hover .circle:after{

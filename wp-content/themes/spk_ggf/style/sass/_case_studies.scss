@@ -142,7 +142,6 @@ section.case-studies {
 			padding: 0px;
 			text-align: center;
 			display: inline-block;
-			border-bottom: 1px solid $black;
 			color: $tan;
 			height: 80px;
 			width: 80px; 
@@ -155,6 +154,7 @@ section.case-studies {
 			@include medium-body;
 			font-size: 15px;
 			line-height: 1.3em;
+			overflow: hidden;
 
 			* {
 				white-space: nowrap;
@@ -174,15 +174,17 @@ section.case-studies {
 				height: 100%;
 				max-width: 80px;
 				position: relative;
+				border-bottom: 1px solid $black;
 				float: left;
 			}
 
 			&:hover, &.cycle-pager-active {
-				background-color: $blackopaque;
+				// background-color: $blackopaque;
 				.icon{
 					display: block;
 					background-color: $teal;
 					padding: 20px;
+					
 				}
 				// background: $teal;
 				&:after{
@@ -207,7 +209,7 @@ section.case-studies {
 				}
 			}
 			&.cycle-pager-active {
-				background-color: $blackopaque;
+				width: 95px;
 			}
 		}
 		&:hover {
@@ -216,6 +218,9 @@ section.case-studies {
 				transition-delay: 0, .5s;	
 
 			}
+			.icon{
+				border-bottom: none;
+			}
 			a{
 				width: 350px;
 				background: $blackopaquelight;
@@ -223,6 +228,7 @@ section.case-studies {
 				@include medium-body;
 				font-size: 15px;
 				line-height: 1.3em;
+				border-bottom: 1px solid $black;
 				&:hover, &.cycle-pager-active{
 					background: $blackopaque;
 					color: $teal;
@@ -275,7 +281,7 @@ section.case-studies {
 		}
 
 		&#prev {
-			left: 80px;
+			left: 100px;
 			&:before {
 				content: $arrowleft;
 			}
@@ -482,11 +488,15 @@ section.case-studies {
 				text-align: center;
 				font-size: 28px;
 				@include medium-body;
+				margin: auto;
 				margin-bottom: 8px;
+				width: 430px;
 			}
 			.feature-title {
 				font-weight: 500;
 				font-size: 18px;
+				width: 430px;
+				margin: auto;
 				margin-bottom: 8px;
 				text-align: center;
 			}
@@ -506,7 +516,7 @@ section.case-studies {
 			}
 
 			.photo-credit{
-				bottom: -20px;
+				bottom: 110px;
 				right: 10px;
 			}
 
