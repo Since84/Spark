@@ -187,7 +187,8 @@
 	background: $stronggray;
 	.slides {
 		@include container; 
-		text-align: center;
+		width: 980px
+		text-align: left;
 		padding: 90px 0 110px;
 
 	}
