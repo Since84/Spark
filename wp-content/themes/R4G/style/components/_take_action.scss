@@ -131,8 +131,8 @@ section.action-feature {
 			background: none;
 			@include h4;
 			font-size: 26px;
-			line-height: 1em;
-			height: 80px;
+			line-height: 1.2em;
+			height: 90px;
 			color: white;
 		}
 		h5{
@@ -147,7 +147,7 @@ section.action-feature {
 		span{
 			@include short-body;
 			display: block;
-			height: 140px;
+			height: 180px;
 			line-height: 1.5em;
 			padding: 20px 25px 0;
 			font-size: 18px;
@@ -156,6 +156,7 @@ section.action-feature {
 		.read-more {
 			margin-top: 0;
 			margin-left: 1.5em;
+			margin-bottom: 20px;
 		}
 		&.active, &:hover{
 			background: $purple3; 
@@ -247,7 +248,7 @@ section.action-feature {
 	       		height: 55px;
 	       		background: url(style/images/close_inactive.png) no-repeat;
 	       		background-size: cover;
-	       		top: -55px;
+	       		top: -65px;
 	       		right: 0;
 	       	}
 			.credit {

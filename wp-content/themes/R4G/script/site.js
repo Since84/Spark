@@ -15,13 +15,16 @@
 	  		events: {
 	  			// "click .team-member": "goToTeamMember",
 	  			"click .issue-area": "goToIssueArea",
+	  			"click .tab-content .close-tab": "closeIssueArea",
 	  			"click .spark-modal-trigger.donate": "openDonateModal",
 	  			"click .spark-modal-trigger.gallery": "openGalleryFull",
 	  			"click .events .slide": "toggleEvent",
 	  			"click .news-feed .post-preview": "openNewsPost",
 	  			"click .featured-post .read-more": "openFeaturedPost",
+	  			"click .featured-post .close": "closeFeaturedPost",
 	  			"click .video": "playVideo",
-	  			"click .load-more": "loadMore"
+	  			"click .load-more": "loadMore",
+	  			"focus .wpcf7-form input": "hideFormAlerts"
 	  		},
 
 
@@ -31,6 +34,8 @@
 	  			var issue = this.getParameterByName("issue");
 	  			$('<h3>@Rights4Girls</h3>').insertAfter('.footer-content .twitter .widget_display-latest-tweets .widgettitle')
 	  			this.runActiveTab();
+
+	  			this.goToHash();
 	  		},
 
 	  		initPanelNav: function(){ // Navigation
@@ -46,10 +51,20 @@
 
 	  		// Team Functions
 	  		goToTeamMember: function(elem){ 
-	  			$('.tab-content').cycle().addClass('cycle-slideshow');
+	  			$('.tab-content').cycle('reinit').addClass('cycle-slideshow');
 	  		},
-	  		goToIssueArea: function(elem){ 
-	  			$('.tab-content').cycle().addClass('cycle-slideshow');
+	  		goToIssueArea: function(e){ 
+	  			var id = $(e.currentTarget).attr('tab-index');
+	  			$('.tab-content').cycle({startingSlide:(id-1)}).addClass('cycle-slideshow');
+	  		},
+	  		closeIssueArea: function(e){
+	  			$(e.currentTarget).parents('.cycle-slideshow').removeClass('cycle-slideshow');
+	  			$('.issue-area.cycle-pager-active').removeClass('cycle-pager-active');
+	  		},
+	  		goToHash: function(e){
+	  			var hash = window.location.hash;
+	  			console.log('HASH: ' + hash);
+	  			$(hash).addClass('open');
 	  		},
 			getParameterByName: function(name) {
 			    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -77,6 +92,9 @@
 			},
 			openFeaturedPost: function(e){
 				$(e.currentTarget).parents('.slides').toggleClass('open');
+			},
+			closeFeaturedPost: function(e){
+				$(e.currentTarget).parents('.slides').removeClass('open');
 			},
 			toggleEvent: function(e) {
 				var self = this;
@@ -113,6 +131,9 @@
 						.addClass('cycle-slideshow');
 						$('.tab-content').cycle('goto', activeIndex - 1);	
 				}
+			},
+			hideFormAlerts: function(e){
+				$(e.currentTarget).parents('form').find('[role="alert"]').hide();
 			}
 	  	});
 

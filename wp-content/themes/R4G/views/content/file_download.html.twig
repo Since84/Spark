@@ -1,6 +1,6 @@
 <li class="file {{ file.download_file_type }}">
 	{# {{ dump(file) }} #}
-	<a href="{{ file.papers_factsheet_file.url }}" target="_blank">{{ file.download_file_name }}
+	<a {% if file.papers_factsheet_file.url %}href="{{ file.papers_factsheet_file.url }}"{% endif %} target="_blank">{{ file.download_file_name }}
 		<div class="view-pdf">view pdf</div>
 	</a>
 </li>

@@ -117,7 +117,6 @@
 			.post-content{
 				max-height: 3000px;
 				padding: 80px 0;
-				margin: 20px 0; 
 				overflow: visible;
 				&:after{
 					top: -90px;
@@ -130,7 +129,7 @@
 .news-feed{
 	background: $stronggray;
 	padding-top: 100px; 
-	padding-bottom: 205px;
+	padding-bottom: 40px;
 	.post-preview{
 		background: $lightgray;
 		@include container;
@@ -139,7 +138,7 @@
 		box-shadow: 0px 0px 10px 0px #777;
 		cursor: pointer;
 
-		a {
+		a.content {
 			text-decoration: none;
 			color: $black;	
 		}
@@ -282,8 +281,7 @@
        	padding:0px 100px;
        	position: relative;
        	transition: 1s all linear; 
-       	&:before{
-       		content:"";
+       	.close{
        		display: block;
        		position: absolute;
        		width: 55px;

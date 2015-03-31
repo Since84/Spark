@@ -4,7 +4,7 @@
 	{% for org in content.get_field('coalitions_partnerships') %}
 		<li class="organization">
 			<div class="thumbnail">
-				<a href="{{ org.org_link }}">
+				<a href="{{ org.org_link }}" target="_blank">
 					<img src="{{ org.org_logo.url }}"/>
 					{% if org.org_link %}
 						<span>Visit Site</span>

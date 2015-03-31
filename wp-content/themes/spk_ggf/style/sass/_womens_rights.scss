@@ -2,7 +2,7 @@
 .womens-rights{
 	background-size: cover;
 	background-color: #ce6513;
-	height: 770px;
+	min-height: 770px;
 	max-height: 900px;
 
 	@include circle;

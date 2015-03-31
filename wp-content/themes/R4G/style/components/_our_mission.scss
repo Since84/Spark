@@ -6,9 +6,9 @@ section.our-mission{
 		@include h1;
 		color: $teal;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 		padding: 52px;
-		line-height: 240px;
+		line-height: 300px;
 		min-width: #{$container-width}px;
 	}
 

@@ -1,5 +1,5 @@
-<li class="post-preview {% if pid == slide.id %}open{% endif %}">
-	<a class="content">
+<li id="{{ slide.id }}" class="post-preview {% if pid == slide.id %}open{% endif %}">
+	<a name="{{slide.id}}"class="content">
 		<div class="thumbnail" style="background-image:url( '{{ slide.thumbnail.src }}' );">
 			<span>{{slide.post_date|date('m.d.y')}}</span>
 		</div>

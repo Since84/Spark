@@ -31,10 +31,12 @@
 		margin: auto;
 		text-align: center;
 		width: 1000px;
+		min-height: 650px;
 		margin-top: 4px;
 		overflow: hidden;
 		.cycle-slide{
 			width: 100%;
+			min-height: 400px;
 		}
 		.cycle-slide img{
 			width: 100%;
@@ -65,13 +67,18 @@
 	@include gallery-pager-arrows;
 	#thumbnail-pager{
 		width: 1000px;
-		margin: 40px auto;
+		margin: 0 auto;
 		padding: 0 70px;
 		position: relative;
+		.cycle-slideshow{
+			padding: 40px;
+			width: 100%;
+		}
 		.cycle-slide{
 			display: inline-block;
 			margin-right: 1em;
-			position: relative;
+			margin-top: 1em;
+			position: relative !important;
 			text-align: left;
 			&:before{
 				@include triangledown;
@@ -90,10 +97,10 @@
 		.cycle-slide:hover img{
 			border-color: $purple3;
 		}
-		.cycle-pager-active{
+		.cycle-slide-active{
 			&:before{
-				border-width: 0 30px 40px 30px;
-				top: -30px;
+				top: -25px;
+				border-width: 0 20px 30px 20px;
 			}
 			
 			img{
@@ -101,6 +108,13 @@
 			}
 		}
 		@include feed-pager-arrows;
+		.feed-pager{
+			bottom: auto;
+			top: 70px;
+			&.disabled {
+				display: none;
+			}
+		}
 	}
 }
 .gallery-full-screen{
@@ -158,6 +172,6 @@
 			vertical-align: baseline;
 		}
 		.caption{ width: 90%; }
-		.count{ width: 8%; text-align: right; line-height: 1em; }
+		.count{ width: 8%; text-align: right; line-height: 1em; color: $purple6;}
 	}
 }

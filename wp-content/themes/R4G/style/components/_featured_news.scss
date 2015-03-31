@@ -23,7 +23,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		width: 100%;
-		height: 3.5em;
+		height: 2.5em;
 	}
 
 	h5 {
@@ -33,7 +33,7 @@
 	}
 		p {
 		@include short-body;
-		line-height: 1em;
+		line-height: 1.4em;
 	}
 
 	.content { 

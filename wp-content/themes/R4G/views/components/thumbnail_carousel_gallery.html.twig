@@ -19,47 +19,47 @@
             data-cycle-pager-template=""
     		style="position: relative;">
 
-    	{% for slide in feed %}
+        	{% for slide in feed %}
 
-    	<div class="cycle-slide">
-            <div class="text">
-                <span class="caption">{{ slide.caption }}</span>
-                <span class="count">{{ loop.index }}/{{ loop.length }}</span>
-            </div>
-    		<img src="{{ slide.image.url }}"/>
-    	</div>
-    	{% endfor %} 
-         <ul class="tab-pager" id="slideshow-2">
-            <li class="gallery-pager cycle-prev"></li>
-            <li class="gallery-pager cycle-next"></li>
-        </ul>    
-</div>
-<div id="thumbnail-pager">
-    <ul class="tab-pager slideshow-2">
-            <li class="feed-pager prev"></li>
-    </ul>     
-    <div 	id="cycle-2" 
-    		class="cycle-slideshow" 
-    		data-cycle-timeout="0" 
-    		data-cycle-prev=".slideshow-2 .prev" 
-    		data-cycle-next=".slideshow-2 .next" 
-            data-cycle-pager=""
-    		data-cycle-caption="#slideshow-2 .custom-caption" 
-    		data-cycle-fx="carousel" 
-    		data-cycle-carousel-visible="5" 
-    		data-cycle-carousel-fluid="true" 
-    		data-allow-wrap="false" 
-    		>
-        {% for slide in feed %}
-        <div class="cycle-slide">
-            <img src="{{ slide.image.sizes.thumbnail }}"/>
-            
-        </div>
-        {% endfor %}  
+        	<div class="cycle-slide">
+                <div class="text">
+                    <span class="caption">{{ slide.caption }}</span>
+                    <span class="count">{{ loop.index }}/{{ loop.length }}</span>
+                </div>
+        		<img src="{{ slide.image.url }}"/>
+        	</div>
+        	{% endfor %} 
+             <ul class="tab-pager" id="slideshow-2">
+                <li class="gallery-pager cycle-prev"></li>
+                <li class="gallery-pager cycle-next"></li>
+            </ul>    
     </div>
-    <ul class="tab-pager slideshow-2">
-                <li class="next feed-pager"></li>
-    </ul> 
+    <div id="thumbnail-pager">
+        <ul class="tab-pager slideshow-2">
+                <li class="feed-pager prev"></li>
+        </ul>     
+        <div 	id="cycle-2" 
+        		class="cycle-slideshow"
+        		data-cycle-timeout="0" 
+        		data-cycle-prev=".slideshow-2 .prev" 
+        		data-cycle-next=".slideshow-2 .next" 
+                data-cycle-fx=carousel 
+                data-cycle-carousel-visible=5
+                data-allow-wrap=false
+                data-cycle-slides=".slide"
+                
+        >
+            {% for slide in feed %}
+            <div class="slide">
+                <img src="{{ slide.image.sizes.thumbnail }}"/>
+                
+            </div>
+            {% endfor %}  
+        </div>
+        <ul class="tab-pager slideshow-2">
+                    <li class="next feed-pager"></li>
+        </ul> 
+    </div>
 </div>
 <div class="spark-modal gallery-full-screen">
     <div class="modal-content"><span class="close"></span></div>
