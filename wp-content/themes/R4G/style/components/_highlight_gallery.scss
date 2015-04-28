@@ -68,51 +68,65 @@
 	#thumbnail-pager{
 		width: 1000px;
 		margin: 0 auto;
-		padding: 0 70px;
 		position: relative;
 		.cycle-slideshow{
-			padding: 40px;
-			width: 100%;
+			// padding: 40px;
+			width: 100% !important;
+			margin-bottom: 1em;
 		}
 		.cycle-slide{
+			padding-top: 40px;
 			display: inline-block;
-			margin-right: 1em;
-			margin-top: 1em;
+			// margin-top: 1em;
 			position: relative !important;
 			text-align: left;
-			&:before{
-				@include triangledown;
-				transition: .5s all ease-in-out;
-				left: 0;
-				right: 0;
-				top: 0;
-				position: absolute;
-				margin: auto;
+			.slideframe{
+				margin-right: 1em;
+				&:before{
+					@include triangledown;
+					transition: .5s all ease-in-out;
+					left: 0;
+					right: 0;
+					top: 0;
+					position: absolute;
+					margin: auto;
+				}
+
+				img{
+					border: 10px solid $black;
+					transition: .25s all ease-in-out;
+				}
+
 			}
 		}
-		.cycle-slide img{
-			border: 10px solid $black;
-			transition: .25s all ease-in-out;
-		}
-		.cycle-slide:hover img{
+		.cycle-slide:hover .slideframe img{
 			border-color: $purple3;
 		}
 		.cycle-slide-active{
-			&:before{
-				top: -25px;
-				border-width: 0 20px 30px 20px;
-			}
-			
-			img{
-				border-color: $purple3;		
+			.slideframe{
+				&:before{
+					top: 10px;
+					border-width: 0 20px 30px 20px;
+				}
+				
+				img{
+					border-color: $purple3;		
+				}
 			}
 		}
+
 		@include feed-pager-arrows;
 		.feed-pager{
 			bottom: auto;
 			top: 70px;
 			&.disabled {
 				display: none;
+			}
+			&.next {
+				right: -65px;
+			}
+			&.prev {
+				left: -65px;
 			}
 		}
 	}

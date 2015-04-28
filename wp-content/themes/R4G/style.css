@@ -3842,24 +3842,26 @@ section#content-section div.joinus-box p {
 .highlight-gallery #thumbnail-pager {
   width: 1000px;
   margin: 0 auto;
-  padding: 0 70px;
   position: relative;
 }
-/* line 73, style/components/_highlight_gallery.scss */
+/* line 72, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .cycle-slideshow {
-  padding: 40px;
-  width: 100%;
+  width: 100% !important;
+  margin-bottom: 1em;
 }
 /* line 77, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .cycle-slide {
+  padding-top: 40px;
   display: inline-block;
-  margin-right: 1em;
-  margin-top: 1em;
   position: relative !important;
   text-align: left;
 }
 /* line 83, style/components/_highlight_gallery.scss */
-.highlight-gallery #thumbnail-pager .cycle-slide:before {
+.highlight-gallery #thumbnail-pager .cycle-slide .slideframe {
+  margin-right: 1em;
+}
+/* line 85, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide .slideframe:before {
   content: '';
   width: 0;
   height: 0;
@@ -3873,22 +3875,22 @@ section#content-section div.joinus-box p {
   position: absolute;
   margin: auto;
 }
-/* line 93, style/components/_highlight_gallery.scss */
-.highlight-gallery #thumbnail-pager .cycle-slide img {
+/* line 95, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide .slideframe img {
   border: 10px solid #2f2f2f;
   transition: .25s all ease-in-out;
 }
-/* line 97, style/components/_highlight_gallery.scss */
-.highlight-gallery #thumbnail-pager .cycle-slide:hover img {
+/* line 102, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide:hover .slideframe img {
   border-color: #6b0269;
 }
-/* line 101, style/components/_highlight_gallery.scss */
-.highlight-gallery #thumbnail-pager .cycle-slide-active:before {
-  top: -25px;
+/* line 107, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide-active .slideframe:before {
+  top: 10px;
   border-width: 0 20px 30px 20px;
 }
-/* line 106, style/components/_highlight_gallery.scss */
-.highlight-gallery #thumbnail-pager .cycle-slide-active img {
+/* line 112, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .cycle-slide-active .slideframe img {
   border-color: #6b0269;
 }
 /* line 313, style/brand/_mixins.scss */
@@ -3924,24 +3926,32 @@ section#content-section div.joinus-box p {
 .highlight-gallery #thumbnail-pager .feed-pager.prev:hover {
   background: url(style/images/pager-left-active.png) no-repeat;
 }
-/* line 111, style/components/_highlight_gallery.scss */
+/* line 119, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .feed-pager {
   bottom: auto;
   top: 70px;
 }
-/* line 114, style/components/_highlight_gallery.scss */
+/* line 122, style/components/_highlight_gallery.scss */
 .highlight-gallery #thumbnail-pager .feed-pager.disabled {
   display: none;
 }
+/* line 125, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .feed-pager.next {
+  right: -65px;
+}
+/* line 128, style/components/_highlight_gallery.scss */
+.highlight-gallery #thumbnail-pager .feed-pager.prev {
+  left: -65px;
+}
 
-/* line 120, style/components/_highlight_gallery.scss */
+/* line 134, style/components/_highlight_gallery.scss */
 .gallery-full-screen {
   width: 0;
   height: 0;
   max-width: none;
   overflow: hidden;
 }
-/* line 126, style/components/_highlight_gallery.scss */
+/* line 140, style/components/_highlight_gallery.scss */
 .gallery-full-screen.show {
   width: 100%;
   height: 100%;
@@ -3950,11 +3960,11 @@ section#content-section div.joinus-box p {
   overflow: scroll;
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 133, style/components/_highlight_gallery.scss */
+/* line 147, style/components/_highlight_gallery.scss */
 .gallery-full-screen.show:before {
   content: none;
 }
-/* line 135, style/components/_highlight_gallery.scss */
+/* line 149, style/components/_highlight_gallery.scss */
 .gallery-full-screen .modal-content {
   border: 10px solid white;
   width: 1000px;
@@ -3964,7 +3974,7 @@ section#content-section div.joinus-box p {
   right: 0;
   margin: auto;
 }
-/* line 143, style/components/_highlight_gallery.scss */
+/* line 157, style/components/_highlight_gallery.scss */
 .gallery-full-screen .modal-content .close {
   display: block;
   position: absolute;
@@ -3976,19 +3986,19 @@ section#content-section div.joinus-box p {
   right: 0;
   z-index: 1000;
 }
-/* line 155, style/components/_highlight_gallery.scss */
+/* line 169, style/components/_highlight_gallery.scss */
 .gallery-full-screen .cycle-slideshow {
   overflow: hidden;
 }
-/* line 158, style/components/_highlight_gallery.scss */
+/* line 172, style/components/_highlight_gallery.scss */
 .gallery-full-screen .cycle-slide {
   width: 100%;
 }
-/* line 160, style/components/_highlight_gallery.scss */
+/* line 174, style/components/_highlight_gallery.scss */
 .gallery-full-screen .cycle-slide img {
   width: 100%;
 }
-/* line 162, style/components/_highlight_gallery.scss */
+/* line 176, style/components/_highlight_gallery.scss */
 .gallery-full-screen .text {
   position: absolute;
   bottom: 0px;
@@ -3998,16 +4008,16 @@ section#content-section div.joinus-box p {
   text-align: left;
   padding: 20px 40px;
 }
-/* line 170, style/components/_highlight_gallery.scss */
+/* line 184, style/components/_highlight_gallery.scss */
 .gallery-full-screen .text .caption, .gallery-full-screen .text .count {
   display: inline-block;
   vertical-align: baseline;
 }
-/* line 174, style/components/_highlight_gallery.scss */
+/* line 188, style/components/_highlight_gallery.scss */
 .gallery-full-screen .text .caption {
   width: 90%;
 }
-/* line 175, style/components/_highlight_gallery.scss */
+/* line 189, style/components/_highlight_gallery.scss */
 .gallery-full-screen .text .count {
   width: 8%;
   text-align: right;
@@ -4383,36 +4393,66 @@ footer.spark_region .footer-content > ul > li.newsletter {
   position: relative;
 }
 /* line 51, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="email"] {
-  margin-top: 20px;
+footer.spark_region .footer-content > ul > li.newsletter div#emma-form {
+  margin-top: 1em;
+}
+/* line 53, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter div#emma-form .emma-form-row {
+  margin: 0;
+  margin-top: 0em;
+}
+/* line 57, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter div#emma-form .emma-form-label {
+  display: none;
+}
+/* line 61, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"], footer.spark_region .footer-content > ul > li.newsletter #emma-email {
   width: 100%;
   display: block;
+  border: none;
+  background: #dedade;
+  margin-bottom: 1em;
 }
-/* line 55, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-webkit-input-placeholder {
+/* line 68, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-webkit-input-placeholder, footer.spark_region .footer-content > ul > li.newsletter #emma-email ::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 58, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-moz-placeholder {
+/* line 71, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-moz-placeholder, footer.spark_region .footer-content > ul > li.newsletter #emma-email :-moz-placeholder {
   /* Firefox 18- */
   font-style: italic;
 }
-/* line 61, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-moz-placeholder {
+/* line 74, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] ::-moz-placeholder, footer.spark_region .footer-content > ul > li.newsletter #emma-email ::-moz-placeholder {
   /* Firefox 19+ */
   font-style: italic;
 }
-/* line 64, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-ms-input-placeholder {
+/* line 77, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input[type="email"] :-ms-input-placeholder, footer.spark_region .footer-content > ul > li.newsletter #emma-email :-ms-input-placeholder {
   font-style: italic;
 }
-/* line 68, style/components/_footer.scss */
-footer.spark_region .footer-content > ul > li.newsletter input[type="submit"]:hover {
+/* line 81, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input#emma-form-submit[type="submit"] {
+  color: black;
+  border: 0;
+  border: none !important;
+  border-bottom: 3px solid black !important;
+  background-color: transparent !important;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  font-size: 24px;
+  padding: 0;
+  margin-top: 0;
+  float: left !important;
+}
+/* line 95, style/components/_footer.scss */
+footer.spark_region .footer-content > ul > li.newsletter input#emma-form-submit[type="submit"]:hover {
   color: #6b0269;
   border-bottom-color: #6b0269;
   cursor: pointer;
 }
-/* line 73, style/components/_footer.scss */
+/* line 100, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter > span {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -4421,7 +4461,7 @@ footer.spark_region .footer-content > ul > li.newsletter > span {
   line-height: 1.3em;
   display: block;
 }
-/* line 79, style/components/_footer.scss */
+/* line 106, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok {
   width: auto;
   margin: 0;
@@ -4429,22 +4469,22 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-error
   left: 0;
   padding: 0 0 0;
 }
-/* line 85, style/components/_footer.scss */
+/* line 112, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-validation-errors:before, footer.spark_region .footer-content > ul > li.newsletter .wpcf7-mail-sent-ng:before, footer.spark_region .footer-content > ul > li.newsletter div.wpcf7-mail-sent-ok:before {
   padding: 5px;
   margin-right: 10px;
 }
-/* line 90, style/components/_footer.scss */
+/* line 117, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter span.wpcf7-not-valid-tip {
   display: none;
 }
-/* line 93, style/components/_footer.scss */
+/* line 120, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
   font-size: 20px;
 }
-/* line 95, style/components/_footer.scss */
+/* line 122, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   content: "";
   font-family: "FontAwesome";
@@ -4452,7 +4492,7 @@ footer.spark_region .footer-content > ul > li.newsletter .wpcf7-form p:before {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 105, style/components/_footer.scss */
+/* line 132, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition {
   background: #dedade;
   margin-top: -40px;
@@ -4460,7 +4500,7 @@ footer.spark_region .footer-content > ul > li.petition {
   box-shadow: 0px 2px 15px 0px #666666;
   width: 39%;
 }
-/* line 111, style/components/_footer.scss */
+/* line 138, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -4472,7 +4512,7 @@ footer.spark_region .footer-content > ul > li.petition .text {
   text-align: center;
   line-height: 25px;
 }
-/* line 119, style/components/_footer.scss */
+/* line 146, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a {
   display: block;
   color: white;
@@ -4487,11 +4527,11 @@ footer.spark_region .footer-content > ul > li.petition .text a {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 131, style/components/_footer.scss */
+/* line 158, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.petition .text a:hover {
   background: #ff00ff;
 }
-/* line 137, style/components/_footer.scss */
+/* line 164, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -4499,27 +4539,27 @@ footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-twe
   padding: 0;
   line-height: 1.3em;
 }
-/* line 142, style/components/_footer.scss */
+/* line 169, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
-/* line 146, style/components/_footer.scss */
+/* line 173, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter .widget_display-latest-tweets li {
   width: 100%;
   padding: 0;
 }
-/* line 151, style/components/_footer.scss */
+/* line 178, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer {
   float: left;
   font-size: 16px;
   line-height: 20px;
 }
-/* line 158, style/components/_footer.scss */
+/* line 185, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer div.post {
   padding: 0px 0px 0px 2px;
 }
-/* line 163, style/components/_footer.scss */
+/* line 190, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3 {
   margin: 0px;
   padding: 0px 0px 15px 0px;
@@ -4529,16 +4569,16 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer h3
   text-transform: uppercase;
   color: #434343;
 }
-/* line 174, style/components/_footer.scss */
+/* line 201, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer a {
   color: #434343;
   text-decoration: none;
 }
-/* line 180, style/components/_footer.scss */
+/* line 207, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer p {
   padding: 0px 0px 24px 0px;
 }
-/* line 185, style/components/_footer.scss */
+/* line 212, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul {
   margin: 0px;
   padding: 0px 0px 29px 2px;
@@ -4547,49 +4587,49 @@ footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul
   line-height: 20px;
   margin-bottom: 20px;
 }
-/* line 195, style/components/_footer.scss */
+/* line 222, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li {
   padding: 0px 12px 0px 0px;
   float: left;
 }
-/* line 201, style/components/_footer.scss */
+/* line 228, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a {
   display: block;
   color: #4d4d4d;
   text-decoration: none;
 }
-/* line 208, style/components/_footer.scss */
+/* line 235, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a:hover {
   color: #9a0197;
   text-decoration: none;
 }
-/* line 214, style/components/_footer.scss */
+/* line 241, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.twitter div.widget-tweet-footer ul li a span {
   display: none;
 }
-/* line 219, style/components/_footer.scss */
+/* line 246, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li a::before {
   font-size: 20px;
 }
-/* line 221, style/components/_footer.scss */
+/* line 248, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.facebook a::before {
   content: "";
 }
-/* line 222, style/components/_footer.scss */
+/* line 249, style/components/_footer.scss */
 footer.spark_region .footer-content > ul > li.mail a::before {
   content: "";
 }
-/* line 226, style/components/_footer.scss */
+/* line 253, style/components/_footer.scss */
 footer.spark_region .footer-contact {
   padding-top: 1em;
   color: white;
 }
-/* line 229, style/components/_footer.scss */
+/* line 256, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-action {
   display: inline-block;
   vertical-align: top;
 }
-/* line 233, style/components/_footer.scss */
+/* line 260, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo {
   background: url("style/images/logo.png");
   display: block;
@@ -4599,24 +4639,24 @@ footer.spark_region .footer-contact .logo {
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 241, style/components/_footer.scss */
+/* line 268, style/components/_footer.scss */
 footer.spark_region .footer-contact .logo:hover {
   background-image: url("style/images/logo_hover.png");
 }
-/* line 245, style/components/_footer.scss */
+/* line 272, style/components/_footer.scss */
 footer.spark_region .footer-contact nav {
   margin: 0px 0 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 249, style/components/_footer.scss */
+/* line 276, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li {
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
   color: #ab01a7;
 }
-/* line 254, style/components/_footer.scss */
+/* line 281, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a {
   color: #ab01a7;
   text-decoration: none;
@@ -4627,34 +4667,34 @@ footer.spark_region .footer-contact nav li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 258, style/components/_footer.scss */
+/* line 285, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:hover {
   color: #21e3db;
 }
-/* line 260, style/components/_footer.scss */
+/* line 287, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li a:before {
   font-family: "FontAwesome";
   font-size: 25px;
 }
-/* line 265, style/components/_footer.scss */
+/* line 292, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.twitter a::before {
   content: "";
 }
-/* line 266, style/components/_footer.scss */
+/* line 293, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.facebook a::before {
   content: "";
 }
-/* line 267, style/components/_footer.scss */
+/* line 294, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li.mail a::before {
   content: "";
 }
-/* line 268, style/components/_footer.scss */
+/* line 295, style/components/_footer.scss */
 footer.spark_region .footer-contact nav li:not(:last-of-type) {
   border-right: 1px solid #ab01a7;
   padding-right: .5em;
   margin-right: .5em;
 }
-/* line 275, style/components/_footer.scss */
+/* line 302, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social {
   margin-left: 60%;
   width: 200px;
@@ -4662,7 +4702,7 @@ footer.spark_region .footer-contact .footer-social {
   text-align: right;
   vertical-align: top;
 }
-/* line 281, style/components/_footer.scss */
+/* line 308, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social h3 {
   font-family: "franklin-gothic-urw-cond";
   font-weight: 400;
@@ -4673,26 +4713,26 @@ footer.spark_region .footer-contact .footer-social h3 {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-/* line 282, style/components/_footer.scss */
+/* line 309, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social li {
   border: none !important;
 }
-/* line 283, style/components/_footer.scss */
+/* line 310, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a {
   color: #ab01a7;
 }
-/* line 284, style/components/_footer.scss */
+/* line 311, style/components/_footer.scss */
 footer.spark_region .footer-contact .footer-social a:hover {
   color: #21e3db;
 }
-/* line 288, style/components/_footer.scss */
+/* line 315, style/components/_footer.scss */
 footer.spark_region .footer-bottom {
   background: #2f2f2f;
   width: 100%;
   padding: 5px;
   color: #dedade;
 }
-/* line 294, style/components/_footer.scss */
+/* line 321, style/components/_footer.scss */
 footer.spark_region .footer-bottom .designed.by {
   width: 100px;
   display: inline-block;
@@ -4701,7 +4741,7 @@ footer.spark_region .footer-bottom .designed.by {
   vertical-align: middle;
   float: right;
 }
-/* line 302, style/components/_footer.scss */
+/* line 329, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo {
   float: right;
   white-space: nowrap;
@@ -4717,21 +4757,21 @@ footer.spark_region .footer-bottom .elefintlogo {
   text-decoration: none;
   font-size: 14px;
 }
-/* line 312, style/components/_footer.scss */
+/* line 339, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo:hover {
   max-width: 1000px;
 }
-/* line 315, style/components/_footer.scss */
+/* line 342, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg {
   width: 30px;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 319, style/components/_footer.scss */
+/* line 346, style/components/_footer.scss */
 footer.spark_region .footer-bottom .elefintlogo svg .logomark {
   fill: #c4c2c7;
 }
-/* line 324, style/components/_footer.scss */
+/* line 351, style/components/_footer.scss */
 footer.spark_region .footer-bottom .copyright {
   font-family: "franklin-gothic-urw-comp";
   font-weight: 700;

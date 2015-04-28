@@ -14,9 +14,7 @@
             data-cycle-fx="scrollHorz" 
     		data-cycle-prev="#slideshow-1 .cycle-prev" 
     		data-cycle-next="#slideshow-1 .cycle-next" 
-            data-cycle-pager="#thumbnail-pager > div" 
             data-cycle-auto-height="container"
-            data-cycle-pager-template=""
     		style="position: relative;">
 
         	{% for slide in feed %}
@@ -43,16 +41,17 @@
         		data-cycle-timeout="0" 
         		data-cycle-prev=".slideshow-2 .prev" 
         		data-cycle-next=".slideshow-2 .next" 
-                data-cycle-fx=carousel 
-                data-cycle-carousel-visible=5
-                data-allow-wrap=false
-                data-cycle-slides=".slide"
-                
+                data-cycle-fx="carousel" 
+                data-cycle-carousel-visible="5"
+                data-allow-wrap="false"
+                data-cycle-slides="> .slide"
+                {# data-cycle-carousel-fluid="true" #}
         >
             {% for slide in feed %}
             <div class="slide">
-                <img src="{{ slide.image.sizes.thumbnail }}"/>
-                
+                <div class="slideframe">
+                    <img src="{{ slide.image.sizes.thumbnail }}"/>
+                </div>
             </div>
             {% endfor %}  
         </div>
@@ -73,7 +72,7 @@
 		    slideshows.not(this).cycle('goto', opts.currSlide);
 		});
 
-		$('#cycle-2 .cycle-slide').click(function(){
+		$('#cycle-2 .slide').click(function(){
 		    var index = $('#cycle-2').data('cycle.API').getSlideIndex(this);
 		    slideshows.cycle('goto', index);
 		});

@@ -36,7 +36,8 @@
 					);
 	$footerContext['social_menu'] = Timber::compile('/views/components/social.html.twig', $socialContext);
 
-	$footerContext['newsletter'] = do_shortcode( '[contact-form-7 id="96" title="Subscribe to Newsletter"]' );
+	// $footerContext['newsletter'] = do_shortcode( '[contact-form-7 id="96" title="Subscribe to Newsletter"]' );
+	$footerContext['newsletter'] = do_shortcode( '[emma_form]' );
 
 	Timber::render('views/content/footer.html.twig', $footerContext);
 
